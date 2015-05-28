@@ -1,0 +1,21 @@
+//
+//  CarusselSalesTool-PrefixHeader.pch
+//  CarusselSalesTool
+//
+//  Created by Eugenity on 26.05.15.
+//  Copyright (c) 2015 ThinkMobiles. All rights reserved.
+//
+
+#ifndef CarusselSalesTool_CarusselSalesTool_PrefixHeader_pch
+#define CarusselSalesTool_CarusselSalesTool_PrefixHeader_pch
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <UIAlertView+Blocks/UIAlertView+Blocks.h>
+#import <AFNetworking.h>
+#import "AlertMessageService.h"
+#import "Constants.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
