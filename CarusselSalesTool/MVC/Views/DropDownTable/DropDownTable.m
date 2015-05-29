@@ -15,6 +15,8 @@ static CGFloat const kSlidingTime = .5f;
 
 @property (copy, nonatomic) DropDownCompletionHandler completion;
 @property (strong, nonatomic) UIView *anchorView;
+@property (weak, nonatomic) UIView *presentedView;
+
 @property (assign, nonatomic) BOOL isExpanded;
 
 @end
@@ -29,7 +31,7 @@ static CGFloat const kSlidingTime = .5f;
 {
     _anchorView = anchorView;
     
-    CGPoint relatedPoint = [_anchorView.superview convertPoint:_anchorView.frame.origin toView:nil];
+    CGPoint relatedPoint = [_anchorView convertPoint:_anchorView.bounds.origin toView:self.presentedView];
     
     savedDropDownTableFrame = CGRectMake(relatedPoint.x, CGRectGetMaxY(_anchorView.bounds) + relatedPoint.y, CGRectGetWidth(_anchorView.frame), 0);
     
@@ -38,8 +40,9 @@ static CGFloat const kSlidingTime = .5f;
 
 #pragma mark - Actions
 
-- (void)dropDownTableBecomeActiveFromAnchorView:(UIView *)anchorView withCompletion:(DropDownCompletionHandler)completion
+- (void)dropDownTableBecomeActiveInView:(UIView *)presentedView fromAnchorView:(UIView *)anchorView  withCompletion:(DropDownCompletionHandler)completion
 {
+    self.presentedView = presentedView;
     self.completion = completion;
     
     if (![anchorView isEqual:self.anchorView]) {
@@ -60,6 +63,8 @@ static CGFloat const kSlidingTime = .5f;
             [self removeFromSuperview];
         }];
     }
+    
+    [self.presentedView addSubview:self];
     
     self.isExpanded = !self.isExpanded;
     

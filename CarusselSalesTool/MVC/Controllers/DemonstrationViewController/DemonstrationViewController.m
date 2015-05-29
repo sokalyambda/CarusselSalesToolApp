@@ -45,8 +45,8 @@
     
     [self.carsListHolder addSubview:self.carsListController.view];
     
-    [self addChildViewController:_carsListController];
-    [_carsListController didMoveToParentViewController:self];
+    [self addChildViewController:self.carsListController];
+    [self.carsListController didMoveToParentViewController:self];
     
     self.carsFiltersController = [[CarsFiltersViewController alloc] initWithNibName:NSStringFromClass([CarsFiltersViewController class]) bundle:nil];
     

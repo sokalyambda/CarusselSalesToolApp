@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C82F01B18507F0031C063 /* AddProspectViewController.m */; };
 		58701B671B15D23D00F0A21E /* DropDownTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 58701B661B15D23D00F0A21E /* DropDownTable.m */; };
 		58701B691B15D56A00F0A21E /* DropDownTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58701B681B15D56A00F0A21E /* DropDownTable.xib */; };
 		58701B6D1B15D59200F0A21E /* DropDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58701B6C1B15D59200F0A21E /* DropDownCell.m */; };
@@ -64,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		13AAC28C56A074F8E04DCEC4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		584C82EF1B18507F0031C063 /* AddProspectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddProspectViewController.h; path = MVC/Controllers/ProspectsControllers/AddProspectViewController/AddProspectViewController.h; sourceTree = "<group>"; };
+		584C82F01B18507F0031C063 /* AddProspectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddProspectViewController.m; path = MVC/Controllers/ProspectsControllers/AddProspectViewController/AddProspectViewController.m; sourceTree = "<group>"; };
 		58701B651B15D23D00F0A21E /* DropDownTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropDownTable.h; path = MVC/Views/DropDownTable/DropDownTable.h; sourceTree = "<group>"; };
 		58701B661B15D23D00F0A21E /* DropDownTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropDownTable.m; path = MVC/Views/DropDownTable/DropDownTable.m; sourceTree = "<group>"; };
 		58701B681B15D56A00F0A21E /* DropDownTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DropDownTable.xib; path = MVC/Views/DropDownTable/DropDownTable.xib; sourceTree = "<group>"; };
@@ -162,6 +165,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		584C82EE1B18505B0031C063 /* AddProspectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				584C82EF1B18507F0031C063 /* AddProspectViewController.h */,
+				584C82F01B18507F0031C063 /* AddProspectViewController.m */,
+			);
+			name = AddProspectViewController;
+			sourceTree = "<group>";
+		};
 		58701B601B15B78C00F0A21E /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +422,7 @@
 		588EE77A1B14795100CE2D91 /* ProspectsControllers */ = {
 			isa = PBXGroup;
 			children = (
+				584C82EE1B18505B0031C063 /* AddProspectViewController */,
 				588EE77C1B147A4A00CE2D91 /* ProspectDetailsViewController */,
 				588EE77B1B14795A00CE2D91 /* ProspectsListViewController */,
 			);
@@ -678,6 +691,7 @@
 				588EE7841B147D5200CE2D91 /* ProspectsListViewController.m in Sources */,
 				588EE7491B1475DF00CE2D91 /* NSString+ContainsString.m in Sources */,
 				58701B6D1B15D59200F0A21E /* DropDownCell.m in Sources */,
+				584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */,
 				588EE7591B14771800CE2D91 /* BaseNavigationController.m in Sources */,
 				588EE77F1B147D2600CE2D91 /* ProspectDetailsViewController.m in Sources */,
 				588EE7A31B14A7D800CE2D91 /* CarCell.m in Sources */,
@@ -822,6 +836,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarusselSalesTool/CarusselSalesTool-PrefixHeader.pch";
 				INFOPLIST_FILE = CarusselSalesTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -835,6 +850,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarusselSalesTool/CarusselSalesTool-PrefixHeader.pch";
 				INFOPLIST_FILE = CarusselSalesTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

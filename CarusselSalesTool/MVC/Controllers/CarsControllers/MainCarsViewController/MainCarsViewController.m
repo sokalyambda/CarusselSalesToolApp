@@ -86,13 +86,7 @@ static CGFloat kSlideTiming = 0.5f;
 //for test only
 - (IBAction)dropDownTestClick:(id)sender
 {
-    __weak typeof(self)weakSelf = self;
-    
-    [self.dropDownTable dropDownTableBecomeActiveFromAnchorView:sender withCompletion:^(DropDownTable *tableView, BOOL isExpanded) {
-        if (isExpanded) {
-            [weakSelf.view addSubview:tableView];
-        }
-    }];
+    [self.dropDownTable dropDownTableBecomeActiveInView:self.view fromAnchorView:sender withCompletion:nil];
 }
 
 - (void)setupChildControllers
@@ -103,8 +97,8 @@ static CGFloat kSlideTiming = 0.5f;
     
     [self.carsListHolder addSubview:self.carsListController.view];
     
-    [self addChildViewController:_carsListController];
-    [_carsListController didMoveToParentViewController:self];
+    [self addChildViewController:self.carsListController];
+    [self.carsListController didMoveToParentViewController:self];
     
     self.carDetailsController = [[CarDetailsViewController alloc] initWithNibName:NSStringFromClass([CarDetailsViewController class]) bundle:nil];
     
@@ -112,8 +106,8 @@ static CGFloat kSlideTiming = 0.5f;
     
     [self.carDetailsHolder addSubview:self.carDetailsController.view];
     
-    [self addChildViewController:_carDetailsController];
-    [_carDetailsController didMoveToParentViewController:self];
+    [self addChildViewController:self.carDetailsController];
+    [self.carDetailsController didMoveToParentViewController:self];
 }
 
 - (UIView *)getFiltersView

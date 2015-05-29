@@ -14,6 +14,6 @@ typedef void(^DropDownCompletionHandler)(DropDownTable *tableView, BOOL isExpand
 
 @interface DropDownTable : UITableView
 
-- (void)dropDownTableBecomeActiveFromAnchorView:(UIView *)anchorView withCompletion:(DropDownCompletionHandler)completion;
+- (void)dropDownTableBecomeActiveInView:(UIView *)presentedView fromAnchorView:(UIView *)anchorView  withCompletion:(DropDownCompletionHandler)completion;
 
 @end
