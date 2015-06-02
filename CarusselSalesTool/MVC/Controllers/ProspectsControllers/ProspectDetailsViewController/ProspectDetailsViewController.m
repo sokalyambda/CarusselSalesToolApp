@@ -8,7 +8,9 @@
 
 #import "ProspectDetailsViewController.h"
 
-@interface ProspectDetailsViewController ()
+@interface ProspectDetailsViewController () <UITextFieldDelegate>
+
+@property (strong, nonatomic) UITextField *activeField;
 @property (weak, nonatomic) IBOutlet UIScrollView *prospectDetailsScrollView;
 
 @end
@@ -30,64 +32,34 @@
 
 #pragma mark - Keyboard methods
 
-static CGFloat DH = 0;
-static CGRect keyboardAbsRect;
-
-- (void)checkForMovement
-{
-    if (DH == 0.f) {
-        return;
-    }
-    
-    CGRect keybRect = [self.prospectDetailsScrollView convertRect:keyboardAbsRect fromView:nil];
-    
-    CGFloat dh = CGRectGetHeight(self.view.frame) - CGRectGetMinY(keybRect);
-    if (dh > 0) {
-        CGPoint offset = self.prospectDetailsScrollView.contentOffset;
-        offset.y += dh;
-        
-        [UIView animateWithDuration:0.3f animations:^{
-            self.prospectDetailsScrollView.contentOffset = offset;
-        }];
-    }
-}
-
 - (void)keyboardWillShow:(NSNotification*) notification
 {
-    NSDictionary *userInfo = [notification userInfo];
-    keyboardAbsRect = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    CGRect keybRect = [self.prospectDetailsScrollView convertRect:keyboardAbsRect fromView:nil];
+    NSDictionary* info = [notification userInfo];
+    CGRect keyBoardFrame = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     
-    CGFloat dh  = CGRectGetHeight(self.prospectDetailsScrollView.frame) + self.prospectDetailsScrollView.contentOffset.y - CGRectGetMinY(keybRect) - DH;
+    keyBoardFrame = [self.view convertRect:keyBoardFrame fromView:nil];
     
-    if (dh != 0) {
-        CGSize contentSize = self.prospectDetailsScrollView.contentSize;
-        contentSize.height += dh;
-        self.prospectDetailsScrollView.contentSize = contentSize;
-        
-        DH += dh;
-        
-        self.prospectDetailsScrollView.scrollEnabled = YES;
-        
-        [self checkForMovement];
+    CGSize kbSize = keyBoardFrame.size;
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    self.prospectDetailsScrollView.contentInset = contentInsets;
+    self.prospectDetailsScrollView.scrollIndicatorInsets = contentInsets;
+
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height;
+    
+    if (CGRectIntersectsRect(keyBoardFrame, self.activeField.frame)) {
+        [self.prospectDetailsScrollView scrollRectToVisible:self.activeField.frame animated:YES];
     }
-    
+//    if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
+//        [self.prospectDetailsScrollView scrollRectToVisible:self.activeField.frame animated:YES];
+//    }
 }
 
 - (void)keyboardWillHide:(NSNotification*) notification
 {
-    if (DH) {
-        CGSize contentSize = self.prospectDetailsScrollView.contentSize;
-        contentSize.height -= DH;
-        DH = 0.f;
-        
-        [UIView animateWithDuration:0.3f animations:^{
-            self.prospectDetailsScrollView.contentSize = contentSize;
-            self.prospectDetailsScrollView.contentOffset = CGPointZero;
-        }];
-    }
-    
-    self.prospectDetailsScrollView.scrollEnabled = NO;
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.prospectDetailsScrollView.contentInset = contentInsets;
+    self.prospectDetailsScrollView.scrollIndicatorInsets = contentInsets;
 }
 
 #pragma mark - Actions
@@ -104,6 +76,19 @@ static CGRect keyboardAbsRect;
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
 }
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.activeField = textField;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.activeField = nil;
+}
+
 
 
 @end

@@ -10,6 +10,8 @@
 #import "Validator.h"
 #import "HomeViewController.h"
 
+static NSString *const kHomeScreenSegue = @"homeScreenSegue";
+
 @interface LoginViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
@@ -47,6 +49,8 @@
 
 - (IBAction)loginClick:(id)sender
 {
+    [self performSegueWithIdentifier:kHomeScreenSegue sender:self];
+    /*
     if (![self.validator validateEmailField:self.userNameField andPasswordField:self.passwordField]) {
         
         NSMutableString *errString = self.validator.validationErrorString;
@@ -58,10 +62,12 @@
         //TODO: Login action
         [self performSegueWithIdentifier:@"homeScreenSegue" sender:self];
     }
+     */
 }
 
 - (IBAction)remindPasswordClick:(id)sender
 {
+    /*
     if (![self.validator validateEmailField:self.userNameField]) {
         
         NSMutableString *errString = self.validator.validationErrorString;
@@ -72,6 +78,7 @@
     } else {
         //TODO: RemindPassword action
     }
+     */
 }
 
 #pragma mark - UITextFieldDelegate
@@ -90,7 +97,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"homeScreenSegue"]) {
+    if ([segue.identifier isEqualToString:kHomeScreenSegue]) {
 //        HomeViewController *controller = (HomeViewController *)segue.destinationViewController;
     }
 }

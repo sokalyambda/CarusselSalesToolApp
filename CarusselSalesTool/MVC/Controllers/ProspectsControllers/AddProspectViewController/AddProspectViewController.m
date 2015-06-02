@@ -29,6 +29,8 @@
     [self setupChildControllers];
 }
 
+#pragma mark - Actions
+
 - (void)setupChildControllers
 {
     self.prospectDetailsController = [[ProspectDetailsViewController alloc] initWithNibName:NSStringFromClass([ProspectDetailsViewController class]) bundle:nil];

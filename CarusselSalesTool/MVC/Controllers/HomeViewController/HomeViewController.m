@@ -13,6 +13,8 @@ typedef enum : NSUInteger {
     SelectedScreenTasks
 } SelectedScreen;
 
+static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
+
 #import "HomeViewController.h"
 #import "MainCarsViewController.h"
 #import "DemonstrationViewController.h"
@@ -44,7 +46,7 @@ typedef enum : NSUInteger {
     switch (segmentedControl.selectedSegmentIndex) {
         case SelectedScreenCars: {
             //cars selected
-            [self performSegueWithIdentifier:mainTabBarSegue sender:self];
+            [self performSegueWithIdentifier:kMainTabBarSegue sender:self];
             break;
         }
         case SelectedScreenProspects: {
@@ -81,7 +83,7 @@ typedef enum : NSUInteger {
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:mainTabBarSegue]) {
+    if ([segue.identifier isEqualToString:kMainTabBarSegue]) {
 //        MainCarsViewController *controller = (MainCarsViewController *)segue.destinationViewController;
     }
 }

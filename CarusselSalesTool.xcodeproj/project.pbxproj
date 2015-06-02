@@ -18,10 +18,6 @@
 		588EE70E1B146F6600CE2D91 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588EE70D1B146F6600CE2D91 /* Images.xcassets */; };
 		588EE7111B146F6600CE2D91 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588EE70F1B146F6600CE2D91 /* LaunchScreen.xib */; };
 		588EE71D1B146F6600CE2D91 /* CarusselSalesToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE71C1B146F6600CE2D91 /* CarusselSalesToolTests.m */; };
-		588EE7481B1475DF00CE2D91 /* NSDictionary+JSONRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7401B1475DF00CE2D91 /* NSDictionary+JSONRepresentation.m */; };
-		588EE7491B1475DF00CE2D91 /* NSString+ContainsString.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7421B1475DF00CE2D91 /* NSString+ContainsString.m */; };
-		588EE74A1B1475DF00CE2D91 /* UIView+MakeFromXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7441B1475DF00CE2D91 /* UIView+MakeFromXib.m */; };
-		588EE74B1B1475DF00CE2D91 /* UIView+Shaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7461B1475DF00CE2D91 /* UIView+Shaking.m */; };
 		588EE7591B14771800CE2D91 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7581B14771800CE2D91 /* BaseNavigationController.m */; };
 		588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE75B1B14772300CE2D91 /* LoginViewController.m */; };
 		588EE7601B14777600CE2D91 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE75F1B14777600CE2D91 /* HomeViewController.m */; };
@@ -43,12 +39,16 @@
 		588EE7931B14843400CE2D91 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7921B14843400CE2D91 /* Validator.m */; };
 		588EE7A31B14A7D800CE2D91 /* CarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7A21B14A7D800CE2D91 /* CarCell.m */; };
 		588EE7A51B14A7E400CE2D91 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588EE7A41B14A7E400CE2D91 /* CarCell.xib */; };
-		588EE7AA1B14A7F700CE2D91 /* AlertMessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7A71B14A7F700CE2D91 /* AlertMessageService.m */; };
-		588EE7AB1B14A7F700CE2D91 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7A91B14A7F700CE2D91 /* Constants.m */; };
 		588EE7B01B14B25A00CE2D91 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7AF1B14B25A00CE2D91 /* Car.m */; };
 		588EE7B31B14B27B00CE2D91 /* Prospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7B21B14B27B00CE2D91 /* Prospect.m */; };
 		588EE7B71B14B69600CE2D91 /* CarImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7B61B14B69600CE2D91 /* CarImageCell.m */; };
 		588EE7B91B14B6AD00CE2D91 /* CarImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588EE7B81B14B6AD00CE2D91 /* CarImageCell.xib */; };
+		588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29561B18AD3900F14AED /* NSDictionary+JSONRepresentation.m */; };
+		588F295A1B18AD4900F14AED /* NSString+ContainsString.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29591B18AD4900F14AED /* NSString+ContainsString.m */; };
+		588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F295C1B18AD5A00F14AED /* UIView+Shaking.m */; };
+		588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F295F1B18AD6E00F14AED /* UIView+MakeFromXib.m */; };
+		588F29651B18ADD300F14AED /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29641B18ADD300F14AED /* Constants.m */; };
+		588F29681B18ADE100F14AED /* AlertMessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29671B18ADE100F14AED /* AlertMessageService.m */; };
 		589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589AC4991B171C8100577D90 /* DemonstrationViewController.m */; };
 		980CAB006F70081193CC7A91 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AAC28C56A074F8E04DCEC4 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -84,14 +84,6 @@
 		588EE7161B146F6600CE2D91 /* CarusselSalesToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarusselSalesToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		588EE71B1B146F6600CE2D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		588EE71C1B146F6600CE2D91 /* CarusselSalesToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarusselSalesToolTests.m; sourceTree = "<group>"; };
-		588EE73F1B1475DF00CE2D91 /* NSDictionary+JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JSONRepresentation.h"; path = "Categories/NSDictionary+JSONRepresentation.h"; sourceTree = "<group>"; };
-		588EE7401B1475DF00CE2D91 /* NSDictionary+JSONRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JSONRepresentation.m"; path = "Categories/NSDictionary+JSONRepresentation.m"; sourceTree = "<group>"; };
-		588EE7411B1475DF00CE2D91 /* NSString+ContainsString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ContainsString.h"; path = "Categories/NSString+ContainsString.h"; sourceTree = "<group>"; };
-		588EE7421B1475DF00CE2D91 /* NSString+ContainsString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ContainsString.m"; path = "Categories/NSString+ContainsString.m"; sourceTree = "<group>"; };
-		588EE7431B1475DF00CE2D91 /* UIView+MakeFromXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MakeFromXib.h"; path = "Categories/UIView+MakeFromXib.h"; sourceTree = "<group>"; };
-		588EE7441B1475DF00CE2D91 /* UIView+MakeFromXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MakeFromXib.m"; path = "Categories/UIView+MakeFromXib.m"; sourceTree = "<group>"; };
-		588EE7451B1475DF00CE2D91 /* UIView+Shaking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Shaking.h"; path = "Categories/UIView+Shaking.h"; sourceTree = "<group>"; };
-		588EE7461B1475DF00CE2D91 /* UIView+Shaking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Shaking.m"; path = "Categories/UIView+Shaking.m"; sourceTree = "<group>"; };
 		588EE7571B14771800CE2D91 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseNavigationController.h; path = MVC/Controllers/BaseNavigationController/BaseNavigationController.h; sourceTree = "<group>"; };
 		588EE7581B14771800CE2D91 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseNavigationController.m; path = MVC/Controllers/BaseNavigationController/BaseNavigationController.m; sourceTree = "<group>"; };
 		588EE75A1B14772300CE2D91 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = MVC/Controllers/AuthorizationControllers/LoginViewController.h; sourceTree = "<group>"; };
@@ -125,10 +117,6 @@
 		588EE7A11B14A7D800CE2D91 /* CarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarCell.h; path = MVC/Views/UITableViewCells/CarCell/CarCell.h; sourceTree = "<group>"; };
 		588EE7A21B14A7D800CE2D91 /* CarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarCell.m; path = MVC/Views/UITableViewCells/CarCell/CarCell.m; sourceTree = "<group>"; };
 		588EE7A41B14A7E400CE2D91 /* CarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarCell.xib; path = MVC/Views/UITableViewCells/CarCell/CarCell.xib; sourceTree = "<group>"; };
-		588EE7A61B14A7F700CE2D91 /* AlertMessageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertMessageService.h; path = Utilities/AlertMessageService.h; sourceTree = "<group>"; };
-		588EE7A71B14A7F700CE2D91 /* AlertMessageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertMessageService.m; path = Utilities/AlertMessageService.m; sourceTree = "<group>"; };
-		588EE7A81B14A7F700CE2D91 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utilities/Constants.h; sourceTree = "<group>"; };
-		588EE7A91B14A7F700CE2D91 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Utilities/Constants.m; sourceTree = "<group>"; };
 		588EE7AE1B14B25A00CE2D91 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Car.h; path = MVC/Models/Car/Car.h; sourceTree = "<group>"; };
 		588EE7AF1B14B25A00CE2D91 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Car.m; path = MVC/Models/Car/Car.m; sourceTree = "<group>"; };
 		588EE7B11B14B27B00CE2D91 /* Prospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prospect.h; path = MVC/Models/Prospect/Prospect.h; sourceTree = "<group>"; };
@@ -136,6 +124,18 @@
 		588EE7B51B14B69600CE2D91 /* CarImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarImageCell.h; path = MVC/Views/UICollectionViewCells/CarImageCell.h; sourceTree = "<group>"; };
 		588EE7B61B14B69600CE2D91 /* CarImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarImageCell.m; path = MVC/Views/UICollectionViewCells/CarImageCell.m; sourceTree = "<group>"; };
 		588EE7B81B14B6AD00CE2D91 /* CarImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarImageCell.xib; path = MVC/Views/UICollectionViewCells/CarImageCell.xib; sourceTree = "<group>"; };
+		588F29551B18AD3900F14AED /* NSDictionary+JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JSONRepresentation.h"; path = "Categories/NSDictionary/NSDictionary+JSONRepresentation/NSDictionary+JSONRepresentation.h"; sourceTree = "<group>"; };
+		588F29561B18AD3900F14AED /* NSDictionary+JSONRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JSONRepresentation.m"; path = "Categories/NSDictionary/NSDictionary+JSONRepresentation/NSDictionary+JSONRepresentation.m"; sourceTree = "<group>"; };
+		588F29581B18AD4900F14AED /* NSString+ContainsString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ContainsString.h"; path = "Categories/NSString/NSString+ContainsString/NSString+ContainsString.h"; sourceTree = "<group>"; };
+		588F29591B18AD4900F14AED /* NSString+ContainsString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ContainsString.m"; path = "Categories/NSString/NSString+ContainsString/NSString+ContainsString.m"; sourceTree = "<group>"; };
+		588F295B1B18AD5A00F14AED /* UIView+Shaking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Shaking.h"; path = "Categories/UIView/UIView+Shaking/UIView+Shaking.h"; sourceTree = "<group>"; };
+		588F295C1B18AD5A00F14AED /* UIView+Shaking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Shaking.m"; path = "Categories/UIView/UIView+Shaking/UIView+Shaking.m"; sourceTree = "<group>"; };
+		588F295E1B18AD6E00F14AED /* UIView+MakeFromXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MakeFromXib.h"; path = "Categories/UIView/UIView+MakeFromXib/UIView+MakeFromXib.h"; sourceTree = "<group>"; };
+		588F295F1B18AD6E00F14AED /* UIView+MakeFromXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MakeFromXib.m"; path = "Categories/UIView/UIView+MakeFromXib/UIView+MakeFromXib.m"; sourceTree = "<group>"; };
+		588F29631B18ADD300F14AED /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utilities/Constants/Constants.h; sourceTree = "<group>"; };
+		588F29641B18ADD300F14AED /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Utilities/Constants/Constants.m; sourceTree = "<group>"; };
+		588F29661B18ADE100F14AED /* AlertMessageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertMessageService.h; path = Utilities/AlertMessageService/AlertMessageService.h; sourceTree = "<group>"; };
+		588F29671B18ADE100F14AED /* AlertMessageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertMessageService.m; path = Utilities/AlertMessageService/AlertMessageService.m; sourceTree = "<group>"; };
 		589AC4981B171C8100577D90 /* DemonstrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemonstrationViewController.h; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.h; sourceTree = "<group>"; };
 		589AC4991B171C8100577D90 /* DemonstrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemonstrationViewController.m; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.m; sourceTree = "<group>"; };
 		A5448A118D3675EBA17F8DEA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,10 +224,7 @@
 		588EE6FF1B146F6600CE2D91 /* CarusselSalesTool */ = {
 			isa = PBXGroup;
 			children = (
-				588EE72C1B1473E900CE2D91 /* Categories */,
-				588EE72B1B1473D600CE2D91 /* Utilities */,
-				588EE72A1B1473BD00CE2D91 /* APIs */,
-				588EE7261B1473A200CE2D91 /* MVC */,
+				588F294D1B18AC1A00F14AED /* Classes */,
 				588EE7041B146F6600CE2D91 /* AppDelegate.h */,
 				588EE7051B146F6600CE2D91 /* AppDelegate.m */,
 				588EE70A1B146F6600CE2D91 /* Main.storyboard */,
@@ -287,6 +284,7 @@
 		588EE7281B1473AB00CE2D91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				588F294A1B18A3CF00F14AED /* CarsFiltersViews */,
 				58701B641B15D07D00F0A21E /* DropDownTable */,
 				588EE7B41B14B66000CE2D91 /* UICollectionViewCells */,
 				588EE79A1B14A70700CE2D91 /* UITableViewCells */,
@@ -318,10 +316,8 @@
 		588EE72B1B1473D600CE2D91 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				588EE7A61B14A7F700CE2D91 /* AlertMessageService.h */,
-				588EE7A71B14A7F700CE2D91 /* AlertMessageService.m */,
-				588EE7A81B14A7F700CE2D91 /* Constants.h */,
-				588EE7A91B14A7F700CE2D91 /* Constants.m */,
+				588F29621B18AD8800F14AED /* Constants */,
+				588F29611B18AD7D00F14AED /* AlertMessageServices */,
 				588EE7901B14841B00CE2D91 /* Validator */,
 			);
 			name = Utilities;
@@ -330,14 +326,9 @@
 		588EE72C1B1473E900CE2D91 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				588EE73F1B1475DF00CE2D91 /* NSDictionary+JSONRepresentation.h */,
-				588EE7401B1475DF00CE2D91 /* NSDictionary+JSONRepresentation.m */,
-				588EE7411B1475DF00CE2D91 /* NSString+ContainsString.h */,
-				588EE7421B1475DF00CE2D91 /* NSString+ContainsString.m */,
-				588EE7431B1475DF00CE2D91 /* UIView+MakeFromXib.h */,
-				588EE7441B1475DF00CE2D91 /* UIView+MakeFromXib.m */,
-				588EE7451B1475DF00CE2D91 /* UIView+Shaking.h */,
-				588EE7461B1475DF00CE2D91 /* UIView+Shaking.m */,
+				588F29541B18AC9500F14AED /* NSDictionary */,
+				588F29531B18AC8C00F14AED /* NSString */,
+				588F29511B18AC7300F14AED /* UIView */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -503,6 +494,111 @@
 				588EE7B81B14B6AD00CE2D91 /* CarImageCell.xib */,
 			);
 			name = UICollectionViewCells;
+			sourceTree = "<group>";
+		};
+		588F294A1B18A3CF00F14AED /* CarsFiltersViews */ = {
+			isa = PBXGroup;
+			children = (
+				588F294B1B18A3DB00F14AED /* New Group */,
+			);
+			name = CarsFiltersViews;
+			sourceTree = "<group>";
+		};
+		588F294B1B18A3DB00F14AED /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		588F294D1B18AC1A00F14AED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				588EE72C1B1473E900CE2D91 /* Categories */,
+				588EE72B1B1473D600CE2D91 /* Utilities */,
+				588EE72A1B1473BD00CE2D91 /* APIs */,
+				588EE7261B1473A200CE2D91 /* MVC */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		588F294E1B18AC4500F14AED /* NSDictionary+JSONRepresentation */ = {
+			isa = PBXGroup;
+			children = (
+				588F29551B18AD3900F14AED /* NSDictionary+JSONRepresentation.h */,
+				588F29561B18AD3900F14AED /* NSDictionary+JSONRepresentation.m */,
+			);
+			name = "NSDictionary+JSONRepresentation";
+			sourceTree = "<group>";
+		};
+		588F294F1B18AC5400F14AED /* NSString+ContainsString */ = {
+			isa = PBXGroup;
+			children = (
+				588F29581B18AD4900F14AED /* NSString+ContainsString.h */,
+				588F29591B18AD4900F14AED /* NSString+ContainsString.m */,
+			);
+			name = "NSString+ContainsString";
+			sourceTree = "<group>";
+		};
+		588F29501B18AC6400F14AED /* UIView+MakeFromXib */ = {
+			isa = PBXGroup;
+			children = (
+				588F295E1B18AD6E00F14AED /* UIView+MakeFromXib.h */,
+				588F295F1B18AD6E00F14AED /* UIView+MakeFromXib.m */,
+			);
+			name = "UIView+MakeFromXib";
+			sourceTree = "<group>";
+		};
+		588F29511B18AC7300F14AED /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				588F29521B18AC7A00F14AED /* UIView+Shaking */,
+				588F29501B18AC6400F14AED /* UIView+MakeFromXib */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		588F29521B18AC7A00F14AED /* UIView+Shaking */ = {
+			isa = PBXGroup;
+			children = (
+				588F295B1B18AD5A00F14AED /* UIView+Shaking.h */,
+				588F295C1B18AD5A00F14AED /* UIView+Shaking.m */,
+			);
+			name = "UIView+Shaking";
+			sourceTree = "<group>";
+		};
+		588F29531B18AC8C00F14AED /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				588F294F1B18AC5400F14AED /* NSString+ContainsString */,
+			);
+			name = NSString;
+			sourceTree = "<group>";
+		};
+		588F29541B18AC9500F14AED /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				588F294E1B18AC4500F14AED /* NSDictionary+JSONRepresentation */,
+			);
+			name = NSDictionary;
+			sourceTree = "<group>";
+		};
+		588F29611B18AD7D00F14AED /* AlertMessageServices */ = {
+			isa = PBXGroup;
+			children = (
+				588F29661B18ADE100F14AED /* AlertMessageService.h */,
+				588F29671B18ADE100F14AED /* AlertMessageService.m */,
+			);
+			name = AlertMessageServices;
+			sourceTree = "<group>";
+		};
+		588F29621B18AD8800F14AED /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				588F29631B18ADD300F14AED /* Constants.h */,
+				588F29641B18ADD300F14AED /* Constants.m */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		589AC4971B171C5B00577D90 /* DemonstrationViewController */ = {
@@ -682,14 +778,15 @@
 				588EE7741B14789F00CE2D91 /* CarsListViewController.m in Sources */,
 				588EE7061B146F6600CE2D91 /* AppDelegate.m in Sources */,
 				58701B671B15D23D00F0A21E /* DropDownTable.m in Sources */,
-				588EE74A1B1475DF00CE2D91 /* UIView+MakeFromXib.m in Sources */,
 				588EE7B71B14B69600CE2D91 /* CarImageCell.m in Sources */,
+				588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */,
 				588EE7B31B14B27B00CE2D91 /* Prospect.m in Sources */,
-				588EE74B1B1475DF00CE2D91 /* UIView+Shaking.m in Sources */,
+				588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */,
+				588F29651B18ADD300F14AED /* Constants.m in Sources */,
 				588EE7601B14777600CE2D91 /* HomeViewController.m in Sources */,
 				588EE7681B14783700CE2D91 /* CarsFiltersViewController.m in Sources */,
 				588EE7841B147D5200CE2D91 /* ProspectsListViewController.m in Sources */,
-				588EE7491B1475DF00CE2D91 /* NSString+ContainsString.m in Sources */,
+				588F295A1B18AD4900F14AED /* NSString+ContainsString.m in Sources */,
 				58701B6D1B15D59200F0A21E /* DropDownCell.m in Sources */,
 				584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */,
 				588EE7591B14771800CE2D91 /* BaseNavigationController.m in Sources */,
@@ -700,11 +797,10 @@
 				588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */,
 				588EE76F1B14787800CE2D91 /* CarDetailsViewController.m in Sources */,
 				588EE7031B146F6600CE2D91 /* main.m in Sources */,
-				588EE7AB1B14A7F700CE2D91 /* Constants.m in Sources */,
 				588EE7931B14843400CE2D91 /* Validator.m in Sources */,
 				588EE7B01B14B25A00CE2D91 /* Car.m in Sources */,
-				588EE7AA1B14A7F700CE2D91 /* AlertMessageService.m in Sources */,
-				588EE7481B1475DF00CE2D91 /* NSDictionary+JSONRepresentation.m in Sources */,
+				588F29681B18ADE100F14AED /* AlertMessageService.m in Sources */,
+				588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

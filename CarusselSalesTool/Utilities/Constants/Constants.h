@@ -9,8 +9,4 @@
 #ifndef CarusselSalesTool_Constants_h
 #define CarusselSalesTool_Constants_h
 
-#pragma mark - Segue Identifiers
-
-extern NSString *const mainTabBarSegue;
-
 #endif
