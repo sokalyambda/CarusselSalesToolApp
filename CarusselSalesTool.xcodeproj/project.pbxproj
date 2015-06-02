@@ -50,6 +50,8 @@
 		588F29651B18ADD300F14AED /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29641B18ADD300F14AED /* Constants.m */; };
 		588F29681B18ADE100F14AED /* AlertMessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29671B18ADE100F14AED /* AlertMessageService.m */; };
 		589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589AC4991B171C8100577D90 /* DemonstrationViewController.m */; };
+		589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */; };
+		589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */; };
 		980CAB006F70081193CC7A91 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AAC28C56A074F8E04DCEC4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +140,10 @@
 		588F29671B18ADE100F14AED /* AlertMessageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertMessageService.m; path = Utilities/AlertMessageService/AlertMessageService.m; sourceTree = "<group>"; };
 		589AC4981B171C8100577D90 /* DemonstrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemonstrationViewController.h; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.h; sourceTree = "<group>"; };
 		589AC4991B171C8100577D90 /* DemonstrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemonstrationViewController.m; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.m; sourceTree = "<group>"; };
+		589E20871B1DDA29006A6C81 /* CSTLeftTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTLeftTabBarController.h; path = MVC/Controllers/LeftTabBarController/CSTLeftTabBarController.h; sourceTree = "<group>"; };
+		589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTLeftTabBarController.m; path = MVC/Controllers/LeftTabBarController/CSTLeftTabBarController.m; sourceTree = "<group>"; };
+		589E208B1B1DDA74006A6C81 /* CSTNavigationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTNavigationSegue.h; path = StoryboardSegues/CSTNavigationSegue.h; sourceTree = "<group>"; };
+		589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTNavigationSegue.m; path = StoryboardSegues/CSTNavigationSegue.m; sourceTree = "<group>"; };
 		A5448A118D3675EBA17F8DEA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BA692D198C476BE8C2BF647E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -295,6 +301,7 @@
 		588EE7291B1473B000CE2D91 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				589E20861B1DD9F4006A6C81 /* LeftTabBarController */,
 				589AC4971B171C5B00577D90 /* DemonstrationViewController */,
 				58701B601B15B78C00F0A21E /* BaseViewController */,
 				588EE77A1B14795100CE2D91 /* ProspectsControllers */,
@@ -499,21 +506,14 @@
 		588F294A1B18A3CF00F14AED /* CarsFiltersViews */ = {
 			isa = PBXGroup;
 			children = (
-				588F294B1B18A3DB00F14AED /* New Group */,
 			);
 			name = CarsFiltersViews;
-			sourceTree = "<group>";
-		};
-		588F294B1B18A3DB00F14AED /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 		588F294D1B18AC1A00F14AED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				589E208A1B1DDA38006A6C81 /* StoryboardSegues */,
 				588EE72C1B1473E900CE2D91 /* Categories */,
 				588EE72B1B1473D600CE2D91 /* Utilities */,
 				588EE72A1B1473BD00CE2D91 /* APIs */,
@@ -608,6 +608,24 @@
 				589AC4991B171C8100577D90 /* DemonstrationViewController.m */,
 			);
 			name = DemonstrationViewController;
+			sourceTree = "<group>";
+		};
+		589E20861B1DD9F4006A6C81 /* LeftTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				589E20871B1DDA29006A6C81 /* CSTLeftTabBarController.h */,
+				589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */,
+			);
+			name = LeftTabBarController;
+			sourceTree = "<group>";
+		};
+		589E208A1B1DDA38006A6C81 /* StoryboardSegues */ = {
+			isa = PBXGroup;
+			children = (
+				589E208B1B1DDA74006A6C81 /* CSTNavigationSegue.h */,
+				589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */,
+			);
+			name = StoryboardSegues;
 			sourceTree = "<group>";
 		};
 		8DD4BD65C40C72DC41D1B194 /* Pods */ = {
@@ -799,8 +817,10 @@
 				588EE7031B146F6600CE2D91 /* main.m in Sources */,
 				588EE7931B14843400CE2D91 /* Validator.m in Sources */,
 				588EE7B01B14B25A00CE2D91 /* Car.m in Sources */,
+				589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */,
 				588F29681B18ADE100F14AED /* AlertMessageService.m in Sources */,
 				588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */,
+				589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
