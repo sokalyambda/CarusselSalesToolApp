@@ -14,8 +14,11 @@ static NSString *const kHomeScreenSegue = @"homeScreenSegue";
 
 @interface LoginViewController () <UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UIScrollView *authScrollView;
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
+
+@property (strong, nonatomic) UITextField *activeField;
 @property (strong, nonatomic) Validator *validator;
 
 @end
@@ -37,12 +40,18 @@ static NSString *const kHomeScreenSegue = @"homeScreenSegue";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self handleKeyboardNotifications];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Actions
@@ -81,6 +90,48 @@ static NSString *const kHomeScreenSegue = @"homeScreenSegue";
      */
 }
 
+- (void)handleKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+#pragma mark - Keyboard methods
+
+- (void)keyboardWillShow:(NSNotification*) notification
+{
+    NSDictionary* info = [notification userInfo];
+    CGRect keyBoardFrame = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    keyBoardFrame = [self.view convertRect:keyBoardFrame fromView:nil];
+    
+    CGSize kbSize = keyBoardFrame.size;
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    self.authScrollView.contentInset = contentInsets;
+    self.authScrollView.scrollIndicatorInsets = contentInsets;
+    
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height;
+
+    if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
+        [self.authScrollView scrollRectToVisible:self.activeField.frame animated:YES];
+    }
+}
+
+- (void)keyboardWillHide:(NSNotification*) notification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.authScrollView.contentInset = contentInsets;
+    self.authScrollView.scrollIndicatorInsets = contentInsets;
+}
+
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -91,6 +142,16 @@ static NSString *const kHomeScreenSegue = @"homeScreenSegue";
         [textField resignFirstResponder];
     }
     return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.activeField = textField;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.activeField = nil;
 }
 
 #pragma mark - Navigation

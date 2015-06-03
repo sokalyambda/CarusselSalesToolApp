@@ -34,20 +34,14 @@
 - (void)setupChildControllers
 {
     self.prospectDetailsController = [[ProspectDetailsViewController alloc] initWithNibName:NSStringFromClass([ProspectDetailsViewController class]) bundle:nil];
-    
     [self.prospectDetailsController.view setFrame:self.prospectDetailsHolder.frame];
-    
     [self.prospectDetailsHolder addSubview:self.prospectDetailsController.view];
-    
     [self addChildViewController:self.prospectDetailsController];
     [self.prospectDetailsController didMoveToParentViewController:self];
     
     self.carsFiltersController = [[CarsFiltersViewController alloc] initWithNibName:NSStringFromClass([CarsFiltersViewController class]) bundle:nil];
-    
     [self.carsFiltersController.view setFrame:self.carsFiltersHolder.frame];
-    
     [self.carsFiltersHolder addSubview:self.carsFiltersController.view];
-    
     [self addChildViewController:self.carsFiltersController];
     [self.carsFiltersController didMoveToParentViewController:self];
 }

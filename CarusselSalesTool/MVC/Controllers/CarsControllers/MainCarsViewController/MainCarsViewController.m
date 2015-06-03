@@ -92,20 +92,14 @@ static CGFloat kSlideTiming = 0.5f;
 - (void)setupChildControllers
 {
     self.carsListController = [[CarsListViewController alloc] initWithNibName:NSStringFromClass([CarsListViewController class]) bundle:nil];
-    
     [self.carsListController.view setFrame:self.carsListHolder.frame];
-    
     [self.carsListHolder addSubview:self.carsListController.view];
-    
     [self addChildViewController:self.carsListController];
     [self.carsListController didMoveToParentViewController:self];
     
     self.carDetailsController = [[CarDetailsViewController alloc] initWithNibName:NSStringFromClass([CarDetailsViewController class]) bundle:nil];
-    
     [self.carDetailsController.view setFrame:self.carDetailsHolder.frame];
-    
     [self.carDetailsHolder addSubview:self.carDetailsController.view];
-    
     [self addChildViewController:self.carDetailsController];
     [self.carDetailsController didMoveToParentViewController:self];
 }
