@@ -7,6 +7,7 @@
 //
 
 #import "CarsFiltersViewController.h"
+#import "CSTBorderedPlaceholderTextView.h"
 
 @interface CarsFiltersViewController ()
 
@@ -14,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *mileageValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *perfomanceValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *displacementValueLabel;
+@property (weak, nonatomic) IBOutlet CSTBorderedPlaceholderTextView *extraDataTextView;
 
 @end
 
@@ -24,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.extraDataTextView.placeholder = NSLocalizedString(@"Extra data", nil);
 }
 
 #pragma mark - Actions
