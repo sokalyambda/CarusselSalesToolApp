@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AD30DBEB-E96E-4B68-BC43-F9579BA07608</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CarusselSalesTool</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>75D13E3189A685D0F333F800A40DC296475018AB</key>
+		<string>https://bitbucket.org/Sokalyambda/carusselsalestoolapp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CarusselSalesTool.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>75D13E3189A685D0F333F800A40DC296475018AB</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/Sokalyambda/carusselsalestoolapp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>75D13E3189A685D0F333F800A40DC296475018AB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>75D13E3189A685D0F333F800A40DC296475018AB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Carussel</string>
+		</dict>
+	</array>
+</dict>
+</plist>

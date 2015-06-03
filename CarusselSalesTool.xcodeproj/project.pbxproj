@@ -17,7 +17,6 @@
 		588EE70C1B146F6600CE2D91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588EE70A1B146F6600CE2D91 /* Main.storyboard */; };
 		588EE70E1B146F6600CE2D91 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588EE70D1B146F6600CE2D91 /* Images.xcassets */; };
 		588EE7111B146F6600CE2D91 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588EE70F1B146F6600CE2D91 /* LaunchScreen.xib */; };
-		588EE71D1B146F6600CE2D91 /* CarusselSalesToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE71C1B146F6600CE2D91 /* CarusselSalesToolTests.m */; };
 		588EE7591B14771800CE2D91 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7581B14771800CE2D91 /* BaseNavigationController.m */; };
 		588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE75B1B14772300CE2D91 /* LoginViewController.m */; };
 		588EE7601B14777600CE2D91 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE75F1B14777600CE2D91 /* HomeViewController.m */; };
@@ -52,18 +51,11 @@
 		589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589AC4991B171C8100577D90 /* DemonstrationViewController.m */; };
 		589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */; };
 		589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */; };
+		841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7A1B1EFAD70012BFE3 /* CSTCache.m */; };
+		841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7C1B1EFAD70012BFE3 /* CSTDataManager.m */; };
+		841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */; };
 		980CAB006F70081193CC7A91 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AAC28C56A074F8E04DCEC4 /* libPods.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		588EE7171B146F6600CE2D91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 588EE6F51B146F6600CE2D91 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 588EE6FC1B146F6600CE2D91;
-			remoteInfo = CarusselSalesTool;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		13AAC28C56A074F8E04DCEC4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,9 +75,6 @@
 		588EE70B1B146F6600CE2D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		588EE70D1B146F6600CE2D91 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		588EE7101B146F6600CE2D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		588EE7161B146F6600CE2D91 /* CarusselSalesToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarusselSalesToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		588EE71B1B146F6600CE2D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		588EE71C1B146F6600CE2D91 /* CarusselSalesToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarusselSalesToolTests.m; sourceTree = "<group>"; };
 		588EE7571B14771800CE2D91 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseNavigationController.h; path = MVC/Controllers/BaseNavigationController/BaseNavigationController.h; sourceTree = "<group>"; };
 		588EE7581B14771800CE2D91 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseNavigationController.m; path = MVC/Controllers/BaseNavigationController/BaseNavigationController.m; sourceTree = "<group>"; };
 		588EE75A1B14772300CE2D91 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = MVC/Controllers/AuthorizationControllers/LoginViewController.h; sourceTree = "<group>"; };
@@ -144,6 +133,12 @@
 		589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTLeftTabBarController.m; path = MVC/Controllers/LeftTabBarController/CSTLeftTabBarController.m; sourceTree = "<group>"; };
 		589E208B1B1DDA74006A6C81 /* CSTNavigationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTNavigationSegue.h; path = StoryboardSegues/CSTNavigationSegue.h; sourceTree = "<group>"; };
 		589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTNavigationSegue.m; path = StoryboardSegues/CSTNavigationSegue.m; sourceTree = "<group>"; };
+		841DFB791B1EFAD70012BFE3 /* CSTCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTCache.h; sourceTree = "<group>"; };
+		841DFB7A1B1EFAD70012BFE3 /* CSTCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTCache.m; sourceTree = "<group>"; };
+		841DFB7B1B1EFAD70012BFE3 /* CSTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTDataManager.h; sourceTree = "<group>"; };
+		841DFB7C1B1EFAD70012BFE3 /* CSTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTDataManager.m; sourceTree = "<group>"; };
+		841DFB7E1B1EFAD70012BFE3 /* CSTNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTNetworkManager.h; sourceTree = "<group>"; };
+		841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTNetworkManager.m; sourceTree = "<group>"; };
 		A5448A118D3675EBA17F8DEA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BA692D198C476BE8C2BF647E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,13 +153,6 @@
 				588EE78A1B14805800CE2D91 /* UIKit.framework in Frameworks */,
 				588EE7881B14805200CE2D91 /* Foundation.framework in Frameworks */,
 				980CAB006F70081193CC7A91 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		588EE7131B146F6600CE2D91 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				588EE6FF1B146F6600CE2D91 /* CarusselSalesTool */,
-				588EE7191B146F6600CE2D91 /* CarusselSalesToolTests */,
 				588EE6FE1B146F6600CE2D91 /* Products */,
 				8DD4BD65C40C72DC41D1B194 /* Pods */,
 				E850D0DFDBBC891AC1BB7706 /* Frameworks */,
@@ -222,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				588EE6FD1B146F6600CE2D91 /* CarusselSalesTool.app */,
-				588EE7161B146F6600CE2D91 /* CarusselSalesToolTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,11 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				588F294D1B18AC1A00F14AED /* Classes */,
-				588EE7041B146F6600CE2D91 /* AppDelegate.h */,
-				588EE7051B146F6600CE2D91 /* AppDelegate.m */,
-				588EE70A1B146F6600CE2D91 /* Main.storyboard */,
 				588EE70D1B146F6600CE2D91 /* Images.xcassets */,
-				588EE70F1B146F6600CE2D91 /* LaunchScreen.xib */,
 				588EE7001B146F6600CE2D91 /* Supporting Files */,
 			);
 			path = CarusselSalesTool;
@@ -244,26 +226,13 @@
 		588EE7001B146F6600CE2D91 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				588EE7041B146F6600CE2D91 /* AppDelegate.h */,
+				588EE7051B146F6600CE2D91 /* AppDelegate.m */,
+				588EE70F1B146F6600CE2D91 /* LaunchScreen.xib */,
+				588EE70A1B146F6600CE2D91 /* Main.storyboard */,
 				588EE7011B146F6600CE2D91 /* Info.plist */,
 				588EE7021B146F6600CE2D91 /* main.m */,
 				588EE78F1B1480E900CE2D91 /* CarusselSalesTool-PrefixHeader.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		588EE7191B146F6600CE2D91 /* CarusselSalesToolTests */ = {
-			isa = PBXGroup;
-			children = (
-				588EE71C1B146F6600CE2D91 /* CarusselSalesToolTests.m */,
-				588EE71A1B146F6600CE2D91 /* Supporting Files */,
-			);
-			path = CarusselSalesToolTests;
-			sourceTree = "<group>";
-		};
-		588EE71A1B146F6600CE2D91 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				588EE71B1B146F6600CE2D91 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -311,13 +280,6 @@
 				588EE7521B14764100CE2D91 /* AuthorizationControllers */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		588EE72A1B1473BD00CE2D91 /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = APIs;
 			sourceTree = "<group>";
 		};
 		588EE72B1B1473D600CE2D91 /* Utilities */ = {
@@ -513,10 +475,10 @@
 		588F294D1B18AC1A00F14AED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				841DFB771B1EFAD70012BFE3 /* APIs */,
 				589E208A1B1DDA38006A6C81 /* StoryboardSegues */,
 				588EE72C1B1473E900CE2D91 /* Categories */,
 				588EE72B1B1473D600CE2D91 /* Utilities */,
-				588EE72A1B1473BD00CE2D91 /* APIs */,
 				588EE7261B1473A200CE2D91 /* MVC */,
 			);
 			name = Classes;
@@ -628,6 +590,35 @@
 			name = StoryboardSegues;
 			sourceTree = "<group>";
 		};
+		841DFB771B1EFAD70012BFE3 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				841DFB781B1EFAD70012BFE3 /* Cache */,
+				841DFB7B1B1EFAD70012BFE3 /* CSTDataManager.h */,
+				841DFB7C1B1EFAD70012BFE3 /* CSTDataManager.m */,
+				841DFB7D1B1EFAD70012BFE3 /* Network */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		841DFB781B1EFAD70012BFE3 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				841DFB791B1EFAD70012BFE3 /* CSTCache.h */,
+				841DFB7A1B1EFAD70012BFE3 /* CSTCache.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		841DFB7D1B1EFAD70012BFE3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				841DFB7E1B1EFAD70012BFE3 /* CSTNetworkManager.h */,
+				841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		8DD4BD65C40C72DC41D1B194 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,24 +662,6 @@
 			productReference = 588EE6FD1B146F6600CE2D91 /* CarusselSalesTool.app */;
 			productType = "com.apple.product-type.application";
 		};
-		588EE7151B146F6600CE2D91 /* CarusselSalesToolTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 588EE7231B146F6600CE2D91 /* Build configuration list for PBXNativeTarget "CarusselSalesToolTests" */;
-			buildPhases = (
-				588EE7121B146F6600CE2D91 /* Sources */,
-				588EE7131B146F6600CE2D91 /* Frameworks */,
-				588EE7141B146F6600CE2D91 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				588EE7181B146F6600CE2D91 /* PBXTargetDependency */,
-			);
-			name = CarusselSalesToolTests;
-			productName = CarusselSalesToolTests;
-			productReference = 588EE7161B146F6600CE2D91 /* CarusselSalesToolTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -700,10 +673,6 @@
 				TargetAttributes = {
 					588EE6FC1B146F6600CE2D91 = {
 						CreatedOnToolsVersion = 6.3.1;
-					};
-					588EE7151B146F6600CE2D91 = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 588EE6FC1B146F6600CE2D91;
 					};
 				};
 			};
@@ -721,7 +690,6 @@
 			projectRoot = "";
 			targets = (
 				588EE6FC1B146F6600CE2D91 /* CarusselSalesTool */,
-				588EE7151B146F6600CE2D91 /* CarusselSalesToolTests */,
 			);
 		};
 /* End PBXProject section */
@@ -743,13 +711,6 @@
 				588EE7A51B14A7E400CE2D91 /* CarCell.xib in Resources */,
 				588EE7B91B14B6AD00CE2D91 /* CarImageCell.xib in Resources */,
 				588EE76C1B14785B00CE2D91 /* CarsFiltersViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		588EE7141B146F6600CE2D91 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +759,7 @@
 				58701B671B15D23D00F0A21E /* DropDownTable.m in Sources */,
 				588EE7B71B14B69600CE2D91 /* CarImageCell.m in Sources */,
 				588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */,
+				841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */,
 				588EE7B31B14B27B00CE2D91 /* Prospect.m in Sources */,
 				588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */,
 				588F29651B18ADD300F14AED /* Constants.m in Sources */,
@@ -815,7 +777,9 @@
 				588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */,
 				588EE76F1B14787800CE2D91 /* CarDetailsViewController.m in Sources */,
 				588EE7031B146F6600CE2D91 /* main.m in Sources */,
+				841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */,
 				588EE7931B14843400CE2D91 /* Validator.m in Sources */,
+				841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */,
 				588EE7B01B14B25A00CE2D91 /* Car.m in Sources */,
 				589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */,
 				588F29681B18ADE100F14AED /* AlertMessageService.m in Sources */,
@@ -824,23 +788,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		588EE7121B146F6600CE2D91 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				588EE71D1B146F6600CE2D91 /* CarusselSalesToolTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		588EE7181B146F6600CE2D91 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 588EE6FC1B146F6600CE2D91 /* CarusselSalesTool */;
-			targetProxy = 588EE7171B146F6600CE2D91 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		588EE70A1B146F6600CE2D91 /* Main.storyboard */ = {
@@ -898,7 +846,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -936,7 +884,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -972,40 +920,6 @@
 			};
 			name = Release;
 		};
-		588EE7241B146F6600CE2D91 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CarusselSalesToolTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarusselSalesTool.app/CarusselSalesTool";
-			};
-			name = Debug;
-		};
-		588EE7251B146F6600CE2D91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CarusselSalesToolTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarusselSalesTool.app/CarusselSalesTool";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1023,15 +937,6 @@
 			buildConfigurations = (
 				588EE7211B146F6600CE2D91 /* Debug */,
 				588EE7221B146F6600CE2D91 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		588EE7231B146F6600CE2D91 /* Build configuration list for PBXNativeTarget "CarusselSalesToolTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				588EE7241B146F6600CE2D91 /* Debug */,
-				588EE7251B146F6600CE2D91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
