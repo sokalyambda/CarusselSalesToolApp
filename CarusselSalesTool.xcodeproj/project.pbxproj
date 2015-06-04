@@ -54,8 +54,6 @@
 		58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A522AC1B20A70500773273 /* AlertMessageService.m */; };
 		58DA0A841B202B5300FF0343 /* CSTProspectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA0A831B202B5300FF0343 /* CSTProspectCell.m */; };
 		58DA0A861B202B6C00FF0343 /* CSTProspectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58DA0A851B202B6C00FF0343 /* CSTProspectCell.xib */; };
-		58DA0ABC1B2084A700FF0343 /* CSTRoundBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA0ABB1B2084A700FF0343 /* CSTRoundBorderedView.m */; };
-		58DA0AC01B208CBB00FF0343 /* CSTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA0ABF1B208CBB00FF0343 /* CSTAttributedLabel.m */; };
 		58FC70CB1B1E4A6A005286E1 /* CSTBorderedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FC70CA1B1E4A6A005286E1 /* CSTBorderedTextField.m */; };
 		58FC70CF1B1E4DD4005286E1 /* CSTAuthorizationTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FC70CE1B1E4DD4005286E1 /* CSTAuthorizationTextField.m */; };
 		841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7A1B1EFAD70012BFE3 /* CSTCache.m */; };
@@ -68,6 +66,8 @@
 		84EBD4BC1B2078C7001F4CF5 /* OHMakeCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4B31B2078C7001F4CF5 /* OHMakeCar.m */; };
 		84EBD4BD1B2078C7001F4CF5 /* OHModelGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4B61B2078C7001F4CF5 /* OHModelGroup.m */; };
 		84EBD4C11B20A6E7001F4CF5 /* CSTCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4C01B20A6E7001F4CF5 /* CSTCompany.m */; };
+		84EBD4C51B20BC25001F4CF5 /* CSTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4C41B20BC25001F4CF5 /* CSTAttributedLabel.m */; };
+		84EBD4C91B20BC64001F4CF5 /* CSTRoundBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4C81B20BC64001F4CF5 /* CSTRoundBorderedView.m */; };
 		980CAB006F70081193CC7A91 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AAC28C56A074F8E04DCEC4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -152,10 +152,6 @@
 		58DA0A821B202B5300FF0343 /* CSTProspectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTProspectCell.h; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.h; sourceTree = "<group>"; };
 		58DA0A831B202B5300FF0343 /* CSTProspectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTProspectCell.m; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.m; sourceTree = "<group>"; };
 		58DA0A851B202B6C00FF0343 /* CSTProspectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTProspectCell.xib; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.xib; sourceTree = "<group>"; };
-		58DA0ABA1B2084A700FF0343 /* CSTRoundBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTRoundBorderedView.h; path = MVC/Views/RoundBorderedView/CSTRoundBorderedView.h; sourceTree = "<group>"; };
-		58DA0ABB1B2084A700FF0343 /* CSTRoundBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTRoundBorderedView.m; path = MVC/Views/RoundBorderedView/CSTRoundBorderedView.m; sourceTree = "<group>"; };
-		58DA0ABE1B208CBB00FF0343 /* CSTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTAttributedLabel.h; path = MVC/Views/AttributedLabel/CSTAttributedLabel.h; sourceTree = "<group>"; };
-		58DA0ABF1B208CBB00FF0343 /* CSTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTAttributedLabel.m; path = MVC/Views/AttributedLabel/CSTAttributedLabel.m; sourceTree = "<group>"; };
 		58FC70C91B1E4A6A005286E1 /* CSTBorderedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBorderedTextField.h; path = MVC/Views/BorderedTextField/CSTBorderedTextField.h; sourceTree = "<group>"; };
 		58FC70CA1B1E4A6A005286E1 /* CSTBorderedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBorderedTextField.m; path = MVC/Views/BorderedTextField/CSTBorderedTextField.m; sourceTree = "<group>"; };
 		58FC70CD1B1E4DD4005286E1 /* CSTAuthorizationTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTAuthorizationTextField.h; path = MVC/Views/AuthorizationTextField/CSTAuthorizationTextField.h; sourceTree = "<group>"; };
@@ -180,6 +176,10 @@
 		84EBD4B61B2078C7001F4CF5 /* OHModelGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHModelGroup.m; sourceTree = "<group>"; };
 		84EBD4BF1B20A6E7001F4CF5 /* CSTCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTCompany.h; sourceTree = "<group>"; };
 		84EBD4C01B20A6E7001F4CF5 /* CSTCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTCompany.m; sourceTree = "<group>"; };
+		84EBD4C31B20BC25001F4CF5 /* CSTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTAttributedLabel.h; sourceTree = "<group>"; };
+		84EBD4C41B20BC25001F4CF5 /* CSTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTAttributedLabel.m; sourceTree = "<group>"; };
+		84EBD4C71B20BC64001F4CF5 /* CSTRoundBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTRoundBorderedView.h; sourceTree = "<group>"; };
+		84EBD4C81B20BC64001F4CF5 /* CSTRoundBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTRoundBorderedView.m; sourceTree = "<group>"; };
 		A5448A118D3675EBA17F8DEA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BA692D198C476BE8C2BF647E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -324,8 +324,8 @@
 		588EE7281B1473AB00CE2D91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				58DA0ABD1B208CA100FF0343 /* AttributedLabel */,
-				58DA0AB91B20847800FF0343 /* RoundBorderedView */,
+				84EBD4C61B20BC64001F4CF5 /* RoundBorderedView */,
+				84EBD4C21B20BC25001F4CF5 /* AttributedLabel */,
 				583713A11B1F0FBF00C6C2C8 /* CustomSlider */,
 				5837139D1B1EF17300C6C2C8 /* BorderedPlaceholderTextView */,
 				58FC70CC1B1E4DB3005286E1 /* AuthorizationTextField */,
@@ -780,6 +780,26 @@
 			path = MVC/Models/Company;
 			sourceTree = "<group>";
 		};
+		84EBD4C21B20BC25001F4CF5 /* AttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				84EBD4C31B20BC25001F4CF5 /* CSTAttributedLabel.h */,
+				84EBD4C41B20BC25001F4CF5 /* CSTAttributedLabel.m */,
+			);
+			name = AttributedLabel;
+			path = MVC/Views/AttributedLabel;
+			sourceTree = "<group>";
+		};
+		84EBD4C61B20BC64001F4CF5 /* RoundBorderedView */ = {
+			isa = PBXGroup;
+			children = (
+				84EBD4C71B20BC64001F4CF5 /* CSTRoundBorderedView.h */,
+				84EBD4C81B20BC64001F4CF5 /* CSTRoundBorderedView.m */,
+			);
+			name = RoundBorderedView;
+			path = MVC/Views/RoundBorderedView;
+			sourceTree = "<group>";
+		};
 		8DD4BD65C40C72DC41D1B194 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -921,10 +941,10 @@
 				58FC70CB1B1E4A6A005286E1 /* CSTBorderedTextField.m in Sources */,
 				84EBD4B71B2078C7001F4CF5 /* CSTCar.m in Sources */,
 				58701B671B15D23D00F0A21E /* DropDownTable.m in Sources */,
+				84EBD4C51B20BC25001F4CF5 /* CSTAttributedLabel.m in Sources */,
 				588EE7B71B14B69600CE2D91 /* CarImageCell.m in Sources */,
 				588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */,
 				841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */,
-				58DA0AC01B208CBB00FF0343 /* CSTAttributedLabel.m in Sources */,
 				588EE7B31B14B27B00CE2D91 /* Prospect.m in Sources */,
 				588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */,
 				588F29651B18ADD300F14AED /* Constants.m in Sources */,
@@ -941,6 +961,7 @@
 				84EBD4BA1B2078C7001F4CF5 /* CSTLocation.m in Sources */,
 				588EE7A31B14A7D800CE2D91 /* CarCell.m in Sources */,
 				588EE7791B1478CA00CE2D91 /* MainCarsViewController.m in Sources */,
+				84EBD4C91B20BC64001F4CF5 /* CSTRoundBorderedView.m in Sources */,
 				583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */,
 				589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */,
 				84EBD4BC1B2078C7001F4CF5 /* OHMakeCar.m in Sources */,
@@ -950,7 +971,6 @@
 				588EE7031B146F6600CE2D91 /* main.m in Sources */,
 				58DA0A841B202B5300FF0343 /* CSTProspectCell.m in Sources */,
 				841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */,
-				58DA0ABC1B2084A700FF0343 /* CSTRoundBorderedView.m in Sources */,
 				588EE7931B14843400CE2D91 /* CSTValidator.m in Sources */,
 				841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */,
 				84EBD4B91B2078C7001F4CF5 /* OHImagesCar.m in Sources */,
