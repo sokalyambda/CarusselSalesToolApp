@@ -184,7 +184,7 @@ static CGFloat kSlideTiming = 0.5f;
         cell = [DropDownCell makeFromXib];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell %i", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"Cell %li", (long)indexPath.row];
     
     return cell;
 }
