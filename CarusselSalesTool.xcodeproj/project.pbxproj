@@ -49,10 +49,10 @@
 		588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F295C1B18AD5A00F14AED /* UIView+Shaking.m */; };
 		588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F295F1B18AD6E00F14AED /* UIView+MakeFromXib.m */; };
 		588F29651B18ADD300F14AED /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29641B18ADD300F14AED /* Constants.m */; };
-		588F29681B18ADE100F14AED /* CSTAlertMessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29671B18ADE100F14AED /* CSTAlertMessageService.m */; };
 		589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589AC4991B171C8100577D90 /* DemonstrationViewController.m */; };
 		589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */; };
 		589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */; };
+		58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A522AC1B20A70500773273 /* AlertMessageService.m */; };
 		58DA0A841B202B5300FF0343 /* CSTProspectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA0A831B202B5300FF0343 /* CSTProspectCell.m */; };
 		58DA0A861B202B6C00FF0343 /* CSTProspectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58DA0A851B202B6C00FF0343 /* CSTProspectCell.xib */; };
 		58DA0ABC1B2084A700FF0343 /* CSTRoundBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA0ABB1B2084A700FF0343 /* CSTRoundBorderedView.m */; };
@@ -137,14 +137,14 @@
 		588F295F1B18AD6E00F14AED /* UIView+MakeFromXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MakeFromXib.m"; path = "Categories/UIView/UIView+MakeFromXib/UIView+MakeFromXib.m"; sourceTree = "<group>"; };
 		588F29631B18ADD300F14AED /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utilities/Constants/Constants.h; sourceTree = "<group>"; };
 		588F29641B18ADD300F14AED /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Utilities/Constants/Constants.m; sourceTree = "<group>"; };
-		588F29661B18ADE100F14AED /* CSTAlertMessageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTAlertMessageService.h; path = Utilities/AlertMessageService/CSTAlertMessageService.h; sourceTree = "<group>"; };
-		588F29671B18ADE100F14AED /* CSTAlertMessageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTAlertMessageService.m; path = Utilities/AlertMessageService/CSTAlertMessageService.m; sourceTree = "<group>"; };
 		589AC4981B171C8100577D90 /* DemonstrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemonstrationViewController.h; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.h; sourceTree = "<group>"; };
 		589AC4991B171C8100577D90 /* DemonstrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemonstrationViewController.m; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.m; sourceTree = "<group>"; };
 		589E20871B1DDA29006A6C81 /* CSTLeftTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTLeftTabBarController.h; path = MVC/Controllers/LeftTabBarController/CSTLeftTabBarController.h; sourceTree = "<group>"; };
 		589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTLeftTabBarController.m; path = MVC/Controllers/LeftTabBarController/CSTLeftTabBarController.m; sourceTree = "<group>"; };
 		589E208B1B1DDA74006A6C81 /* CSTNavigationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTNavigationSegue.h; path = StoryboardSegues/CSTNavigationSegue.h; sourceTree = "<group>"; };
 		589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTNavigationSegue.m; path = StoryboardSegues/CSTNavigationSegue.m; sourceTree = "<group>"; };
+		58A522AB1B20A70500773273 /* AlertMessageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertMessageService.h; path = Utilities/AlertMessageService/AlertMessageService.h; sourceTree = "<group>"; };
+		58A522AC1B20A70500773273 /* AlertMessageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertMessageService.m; path = Utilities/AlertMessageService/AlertMessageService.m; sourceTree = "<group>"; };
 		58DA0A821B202B5300FF0343 /* CSTProspectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTProspectCell.h; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.h; sourceTree = "<group>"; };
 		58DA0A831B202B5300FF0343 /* CSTProspectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTProspectCell.m; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.m; sourceTree = "<group>"; };
 		58DA0A851B202B6C00FF0343 /* CSTProspectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTProspectCell.xib; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.xib; sourceTree = "<group>"; };
@@ -596,8 +596,8 @@
 		588F29611B18AD7D00F14AED /* AlertMessageServices */ = {
 			isa = PBXGroup;
 			children = (
-				588F29661B18ADE100F14AED /* CSTAlertMessageService.h */,
-				588F29671B18ADE100F14AED /* CSTAlertMessageService.m */,
+				58A522AB1B20A70500773273 /* AlertMessageService.h */,
+				58A522AC1B20A70500773273 /* AlertMessageService.m */,
 			);
 			name = AlertMessageServices;
 			sourceTree = "<group>";
@@ -884,8 +884,8 @@
 				588EE7B01B14B25A00CE2D91 /* Car.m in Sources */,
 				589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */,
 				583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */,
-				588F29681B18ADE100F14AED /* CSTAlertMessageService.m in Sources */,
 				588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */,
+				58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */,
 				589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
