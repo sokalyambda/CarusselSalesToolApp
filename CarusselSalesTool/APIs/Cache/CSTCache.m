@@ -20,9 +20,9 @@
     return self;
 }
 
-- (Car *)getCarWithID:(NSNumber *)ID
+- (CSTCar *)getCarWithID:(NSNumber *)ID
 {
-    Car *car = [self.carsList objectForKey:ID];
+    CSTCar *car = [self.carsList objectForKey:ID];
     return car;
 }
 

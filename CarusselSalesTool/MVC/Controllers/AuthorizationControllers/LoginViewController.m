@@ -62,8 +62,9 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 
 - (IBAction)loginClick:(id)sender
 {
-    [[CSTDataManager sharedInstance] signInWithUserName:self.userNameField.text password:self.passwordField.text withResult:^(BOOL success, NSString *error) {
-        success ? [self performSegueWithIdentifier:kMainTabBarSegue sender:self] : NSLog(@"%@", error);
+    __weak LoginViewController *weakSelf = self;
+    [[CSTDataManager sharedInstance] signInWithUserName:self.userNameField.text password:self.passwordField.text withResult:^(BOOL success, NSError *error) {
+        success ? [weakSelf performSegueWithIdentifier:kMainTabBarSegue sender:weakSelf] : NSLog(@"%@", error.debugDescription);
     }];
     
     /*

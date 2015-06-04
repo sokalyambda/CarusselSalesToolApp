@@ -40,7 +40,6 @@
 		588EE7931B14843400CE2D91 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7921B14843400CE2D91 /* Validator.m */; };
 		588EE7A31B14A7D800CE2D91 /* CarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7A21B14A7D800CE2D91 /* CarCell.m */; };
 		588EE7A51B14A7E400CE2D91 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588EE7A41B14A7E400CE2D91 /* CarCell.xib */; };
-		588EE7B01B14B25A00CE2D91 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7AF1B14B25A00CE2D91 /* Car.m */; };
 		588EE7B31B14B27B00CE2D91 /* Prospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7B21B14B27B00CE2D91 /* Prospect.m */; };
 		588EE7B71B14B69600CE2D91 /* CarImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7B61B14B69600CE2D91 /* CarImageCell.m */; };
 		588EE7B91B14B6AD00CE2D91 /* CarImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588EE7B81B14B6AD00CE2D91 /* CarImageCell.xib */; };
@@ -60,6 +59,13 @@
 		841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7A1B1EFAD70012BFE3 /* CSTCache.m */; };
 		841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7C1B1EFAD70012BFE3 /* CSTDataManager.m */; };
 		841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */; };
+		84EBD4B71B2078C7001F4CF5 /* CSTCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4A41B2078C7001F4CF5 /* CSTCar.m */; };
+		84EBD4B81B2078C7001F4CF5 /* OHError.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4A71B2078C7001F4CF5 /* OHError.m */; };
+		84EBD4B91B2078C7001F4CF5 /* OHImagesCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4AA1B2078C7001F4CF5 /* OHImagesCar.m */; };
+		84EBD4BA1B2078C7001F4CF5 /* CSTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4AD1B2078C7001F4CF5 /* CSTLocation.m */; };
+		84EBD4BC1B2078C7001F4CF5 /* OHMakeCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4B31B2078C7001F4CF5 /* OHMakeCar.m */; };
+		84EBD4BD1B2078C7001F4CF5 /* OHModelGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4B61B2078C7001F4CF5 /* OHModelGroup.m */; };
+		84EBD4C11B20A6E7001F4CF5 /* CSTCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4C01B20A6E7001F4CF5 /* CSTCompany.m */; };
 		980CAB006F70081193CC7A91 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AAC28C56A074F8E04DCEC4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -118,8 +124,6 @@
 		588EE7A11B14A7D800CE2D91 /* CarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarCell.h; path = MVC/Views/UITableViewCells/CarCell/CarCell.h; sourceTree = "<group>"; };
 		588EE7A21B14A7D800CE2D91 /* CarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarCell.m; path = MVC/Views/UITableViewCells/CarCell/CarCell.m; sourceTree = "<group>"; };
 		588EE7A41B14A7E400CE2D91 /* CarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarCell.xib; path = MVC/Views/UITableViewCells/CarCell/CarCell.xib; sourceTree = "<group>"; };
-		588EE7AE1B14B25A00CE2D91 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Car.h; path = MVC/Models/Car/Car.h; sourceTree = "<group>"; };
-		588EE7AF1B14B25A00CE2D91 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Car.m; path = MVC/Models/Car/Car.m; sourceTree = "<group>"; };
 		588EE7B11B14B27B00CE2D91 /* Prospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prospect.h; path = MVC/Models/Prospect/Prospect.h; sourceTree = "<group>"; };
 		588EE7B21B14B27B00CE2D91 /* Prospect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Prospect.m; path = MVC/Models/Prospect/Prospect.m; sourceTree = "<group>"; };
 		588EE7B51B14B69600CE2D91 /* CarImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarImageCell.h; path = MVC/Views/UICollectionViewCells/CarImageCell.h; sourceTree = "<group>"; };
@@ -156,6 +160,20 @@
 		841DFB7C1B1EFAD70012BFE3 /* CSTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTDataManager.m; sourceTree = "<group>"; };
 		841DFB7E1B1EFAD70012BFE3 /* CSTNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTNetworkManager.h; sourceTree = "<group>"; };
 		841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTNetworkManager.m; sourceTree = "<group>"; };
+		84EBD4A31B2078C7001F4CF5 /* CSTCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTCar.h; sourceTree = "<group>"; };
+		84EBD4A41B2078C7001F4CF5 /* CSTCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTCar.m; sourceTree = "<group>"; };
+		84EBD4A61B2078C7001F4CF5 /* OHError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHError.h; sourceTree = "<group>"; };
+		84EBD4A71B2078C7001F4CF5 /* OHError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHError.m; sourceTree = "<group>"; };
+		84EBD4A91B2078C7001F4CF5 /* OHImagesCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHImagesCar.h; sourceTree = "<group>"; };
+		84EBD4AA1B2078C7001F4CF5 /* OHImagesCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHImagesCar.m; sourceTree = "<group>"; };
+		84EBD4AC1B2078C7001F4CF5 /* CSTLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTLocation.h; sourceTree = "<group>"; };
+		84EBD4AD1B2078C7001F4CF5 /* CSTLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTLocation.m; sourceTree = "<group>"; };
+		84EBD4B21B2078C7001F4CF5 /* OHMakeCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHMakeCar.h; sourceTree = "<group>"; };
+		84EBD4B31B2078C7001F4CF5 /* OHMakeCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHMakeCar.m; sourceTree = "<group>"; };
+		84EBD4B51B2078C7001F4CF5 /* OHModelGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHModelGroup.h; sourceTree = "<group>"; };
+		84EBD4B61B2078C7001F4CF5 /* OHModelGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHModelGroup.m; sourceTree = "<group>"; };
+		84EBD4BF1B20A6E7001F4CF5 /* CSTCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTCompany.h; sourceTree = "<group>"; };
+		84EBD4C01B20A6E7001F4CF5 /* CSTCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTCompany.m; sourceTree = "<group>"; };
 		A5448A118D3675EBA17F8DEA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BA692D198C476BE8C2BF647E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,8 +303,14 @@
 		588EE7271B1473A600CE2D91 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84EBD4BE1B20A6E7001F4CF5 /* Company */,
+				84EBD4AB1B2078C7001F4CF5 /* Location */,
+				84EBD4A21B2078C7001F4CF5 /* Car */,
+				84EBD4A51B2078C7001F4CF5 /* Error */,
+				84EBD4A81B2078C7001F4CF5 /* ImagesCar */,
+				84EBD4B11B2078C7001F4CF5 /* MakeCar */,
+				84EBD4B41B2078C7001F4CF5 /* ModelGroup */,
 				588EE7AD1B14B23F00CE2D91 /* Prospect */,
-				588EE7AC1B14B23A00CE2D91 /* Car */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -477,15 +501,6 @@
 			name = CarCell;
 			sourceTree = "<group>";
 		};
-		588EE7AC1B14B23A00CE2D91 /* Car */ = {
-			isa = PBXGroup;
-			children = (
-				588EE7AE1B14B25A00CE2D91 /* Car.h */,
-				588EE7AF1B14B25A00CE2D91 /* Car.m */,
-			);
-			name = Car;
-			sourceTree = "<group>";
-		};
 		588EE7AD1B14B23F00CE2D91 /* Prospect */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,6 +645,34 @@
 			name = StoryboardSegues;
 			sourceTree = "<group>";
 		};
+		58DA0A811B202B1700FF0343 /* ProspectCell */ = {
+			isa = PBXGroup;
+			children = (
+				58DA0A821B202B5300FF0343 /* CSTProspectCell.h */,
+				58DA0A831B202B5300FF0343 /* CSTProspectCell.m */,
+				58DA0A851B202B6C00FF0343 /* CSTProspectCell.xib */,
+			);
+			name = ProspectCell;
+			sourceTree = "<group>";
+		};
+		58FC70C81B1E4A42005286E1 /* BorderedTextField */ = {
+			isa = PBXGroup;
+			children = (
+				58FC70C91B1E4A6A005286E1 /* CSTBorderedTextField.h */,
+				58FC70CA1B1E4A6A005286E1 /* CSTBorderedTextField.m */,
+			);
+			name = BorderedTextField;
+			sourceTree = "<group>";
+		};
+		58FC70CC1B1E4DB3005286E1 /* AuthorizationTextField */ = {
+			isa = PBXGroup;
+			children = (
+				58FC70CD1B1E4DD4005286E1 /* CSTAuthorizationTextField.h */,
+				58FC70CE1B1E4DD4005286E1 /* CSTAuthorizationTextField.m */,
+			);
+			name = AuthorizationTextField;
+			sourceTree = "<group>";
+		};
 		841DFB771B1EFAD70012BFE3 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -659,35 +702,76 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-
-58DA0A811B202B1700FF0343 /* ProspectCell */ = {
-isa = PBXGroup;
-children = (
-58DA0A821B202B5300FF0343 /* CSTProspectCell.h */,
-58DA0A831B202B5300FF0343 /* CSTProspectCell.m */,
-58DA0A851B202B6C00FF0343 /* CSTProspectCell.xib */,
-);
-name = ProspectCell;
-sourceTree = "<group>";
-};
-58FC70C81B1E4A42005286E1 /* BorderedTextField */ = {
-isa = PBXGroup;
-children = (
-58FC70C91B1E4A6A005286E1 /* CSTBorderedTextField.h */,
-58FC70CA1B1E4A6A005286E1 /* CSTBorderedTextField.m */,
-);
-name = BorderedTextField;
-sourceTree = "<group>";
-};
-58FC70CC1B1E4DB3005286E1 /* AuthorizationTextField */ = {
-isa = PBXGroup;
-children = (
-58FC70CD1B1E4DD4005286E1 /* CSTAuthorizationTextField.h */,
-58FC70CE1B1E4DD4005286E1 /* CSTAuthorizationTextField.m */,
-);
-name = AuthorizationTextField;
-sourceTree = "<group>";
-};
+		84EBD4A21B2078C7001F4CF5 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				84EBD4A31B2078C7001F4CF5 /* CSTCar.h */,
+				84EBD4A41B2078C7001F4CF5 /* CSTCar.m */,
+			);
+			name = Car;
+			path = MVC/Models/Car;
+			sourceTree = "<group>";
+		};
+		84EBD4A51B2078C7001F4CF5 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				84EBD4A61B2078C7001F4CF5 /* OHError.h */,
+				84EBD4A71B2078C7001F4CF5 /* OHError.m */,
+			);
+			name = Error;
+			path = MVC/Models/Error;
+			sourceTree = "<group>";
+		};
+		84EBD4A81B2078C7001F4CF5 /* ImagesCar */ = {
+			isa = PBXGroup;
+			children = (
+				84EBD4A91B2078C7001F4CF5 /* OHImagesCar.h */,
+				84EBD4AA1B2078C7001F4CF5 /* OHImagesCar.m */,
+			);
+			name = ImagesCar;
+			path = MVC/Models/ImagesCar;
+			sourceTree = "<group>";
+		};
+		84EBD4AB1B2078C7001F4CF5 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				84EBD4AC1B2078C7001F4CF5 /* CSTLocation.h */,
+				84EBD4AD1B2078C7001F4CF5 /* CSTLocation.m */,
+			);
+			name = Location;
+			path = MVC/Models/Location;
+			sourceTree = "<group>";
+		};
+		84EBD4B11B2078C7001F4CF5 /* MakeCar */ = {
+			isa = PBXGroup;
+			children = (
+				84EBD4B21B2078C7001F4CF5 /* OHMakeCar.h */,
+				84EBD4B31B2078C7001F4CF5 /* OHMakeCar.m */,
+			);
+			name = MakeCar;
+			path = MVC/Models/MakeCar;
+			sourceTree = "<group>";
+		};
+		84EBD4B41B2078C7001F4CF5 /* ModelGroup */ = {
+			isa = PBXGroup;
+			children = (
+				84EBD4B51B2078C7001F4CF5 /* OHModelGroup.h */,
+				84EBD4B61B2078C7001F4CF5 /* OHModelGroup.m */,
+			);
+			name = ModelGroup;
+			path = MVC/Models/ModelGroup;
+			sourceTree = "<group>";
+		};
+		84EBD4BE1B20A6E7001F4CF5 /* Company */ = {
+			isa = PBXGroup;
+			children = (
+				84EBD4BF1B20A6E7001F4CF5 /* CSTCompany.h */,
+				84EBD4C01B20A6E7001F4CF5 /* CSTCompany.m */,
+			);
+			name = Company;
+			path = MVC/Models/Company;
+			sourceTree = "<group>";
+		};
 		8DD4BD65C40C72DC41D1B194 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -827,6 +911,7 @@ sourceTree = "<group>";
 				588EE7741B14789F00CE2D91 /* CarsListViewController.m in Sources */,
 				588EE7061B146F6600CE2D91 /* AppDelegate.m in Sources */,
 				58FC70CB1B1E4A6A005286E1 /* CSTBorderedTextField.m in Sources */,
+				84EBD4B71B2078C7001F4CF5 /* CSTCar.m in Sources */,
 				58701B671B15D23D00F0A21E /* DropDownTable.m in Sources */,
 				588EE7B71B14B69600CE2D91 /* CarImageCell.m in Sources */,
 				588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */,
@@ -841,25 +926,30 @@ sourceTree = "<group>";
 				588F295A1B18AD4900F14AED /* NSString+ContainsString.m in Sources */,
 				58701B6D1B15D59200F0A21E /* DropDownCell.m in Sources */,
 				584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */,
+				84EBD4BD1B2078C7001F4CF5 /* OHModelGroup.m in Sources */,
 				588EE7591B14771800CE2D91 /* BaseNavigationController.m in Sources */,
 				588EE77F1B147D2600CE2D91 /* ProspectDetailsViewController.m in Sources */,
+				84EBD4BA1B2078C7001F4CF5 /* CSTLocation.m in Sources */,
 				588EE7A31B14A7D800CE2D91 /* CarCell.m in Sources */,
 				588EE7791B1478CA00CE2D91 /* MainCarsViewController.m in Sources */,
 				583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */,
 				589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */,
+				84EBD4BC1B2078C7001F4CF5 /* OHMakeCar.m in Sources */,
 				588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */,
+				84EBD4C11B20A6E7001F4CF5 /* CSTCompany.m in Sources */,
 				588EE76F1B14787800CE2D91 /* CarDetailsViewController.m in Sources */,
 				588EE7031B146F6600CE2D91 /* main.m in Sources */,
 				58DA0A841B202B5300FF0343 /* CSTProspectCell.m in Sources */,
 				841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */,
 				588EE7931B14843400CE2D91 /* Validator.m in Sources */,
 				841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */,
-				588EE7B01B14B25A00CE2D91 /* Car.m in Sources */,
+				84EBD4B91B2078C7001F4CF5 /* OHImagesCar.m in Sources */,
 				589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */,
 				583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */,
 				588F29681B18ADE100F14AED /* AlertMessageService.m in Sources */,
 				588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */,
 				589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */,
+				84EBD4B81B2078C7001F4CF5 /* OHError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

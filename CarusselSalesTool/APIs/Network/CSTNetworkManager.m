@@ -8,21 +8,47 @@
 
 #import "CSTNetworkManager.h"
 
+NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt.com";
+
 @implementation CSTNetworkManager
+
+- (instancetype)init
+{
+    NSURL *baseURL = [NSURL URLWithString:baseURLString];
+    self = [super initWithBaseURL:baseURL];
+    if (self) {
+        self.requestSerializer = [AFHTTPRequestSerializer serializer];
+        self.responseSerializer = [AFJSONResponseSerializer serializer];
+    }
+    
+    return self;
+}
 
 - (void)signInWithUserName:(NSString *)userName password:(NSString *)password withResult:(SuccessBlock)result
 {
-    return result(YES, nil);
+    NSDictionary *parameter = @{@"j_username" : userName,
+                                @"j_password": password};
+    [self POST:@"/vacs-rest/j_spring_security_check" parameters:parameter success:^(NSURLSessionDataTask *task, id responseObject) {
+#warning need implement user profile
+        CSTCompany *company = [[CSTCompany alloc] initWithDictionary:responseObject];
+        return result(YES, nil);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        return result(NO, error);
+    }];
 }
 
 - (void)getCarListWithParameters:(NSArray *)parameters result:(CarListBlock)result
 {
-    return result (@[[Car new], [Car new], [Car new]], nil);
+    [self GET:@"/vacs-rest/vehicle/list?rowIndex=0&pageSize=10" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        return result(responseObject, nil);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        return result(NO, error);
+    }];
 }
 
 - (void)getCarWithID:(NSInteger)ID result:(CarBlock)result
 {
-    return result([Car new], nil);
+    return result([CSTCar new], nil);
 }
 
 @end

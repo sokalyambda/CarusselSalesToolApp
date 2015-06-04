@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "Car.h"
+#import "CSTCar.h"
 #import "Prospect.h"
 
 @interface CSTCache : NSObject
@@ -16,6 +16,6 @@
 @property (strong, atomic) NSCache *carsList;
 @property (strong, atomic) NSCache *prospectList;
 
-- (Car *)getCarWithID:(NSNumber *)ID;
+- (CSTCar *)getCarWithID:(NSNumber *)ID;
 
 @end

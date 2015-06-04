@@ -42,24 +42,24 @@
 
 - (void)signInWithUserName:(NSString *)userName password:(NSString *)password withResult:(SuccessBlock)result
 {
-    [self.network signInWithUserName:userName password:password withResult:^(BOOL success, NSString *error) {
+    [self.network signInWithUserName:userName password:password withResult:^(BOOL success, NSError *error) {
         return result(success, error);
     }];
 }
 
 - (void)getCarListWithParameters:(NSArray *)parameters result:(CarListBlock)result
 {
-    [self.network getCarListWithParameters:parameters result:^(NSArray *carList, NSString *error) {
+    [self.network getCarListWithParameters:parameters result:^(NSArray *carList, NSError *error) {
         return result(carList, error);
     }];
 }
 
 - (void)getCarWithID:(NSInteger)ID result:(CarBlock)result
 {
-    Car *car = [_cache getCarWithID:@(ID)];
+    CSTCar *car = [_cache getCarWithID:@(ID)];
     if (!car) {
-        [self.network getCarWithID:ID result:^(Car *car, NSString *error) {
-            return result(car, @"Network");
+        [self.network getCarWithID:ID result:^(CSTCar *car, NSError *error) {
+            return result(car, error);
         }];
     } else {
         return result(car, nil);

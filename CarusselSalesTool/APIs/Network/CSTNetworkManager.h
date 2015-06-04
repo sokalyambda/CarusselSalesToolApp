@@ -6,15 +6,16 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
 
-#import "Car.h"
+#import "CSTCompany.h"
+#import "CSTCar.h"
 
-typedef void(^SuccessBlock)(BOOL success, NSString *error);
-typedef void(^CarBlock)(Car *car, NSString *error);
-typedef void(^CarListBlock)(NSArray *carList, NSString *error);
+typedef void(^SuccessBlock)(BOOL success, NSError *error);
+typedef void(^CarBlock)(CSTCar *car, NSError *error);
+typedef void(^CarListBlock)(NSArray *carList, NSError *error);
 
-@interface CSTNetworkManager : NSObject
+@interface CSTNetworkManager : AFHTTPSessionManager
 
 - (void)signInWithUserName:(NSString *)userName password:(NSString *)password withResult:(SuccessBlock)result;
 - (void)getCarListWithParameters:(NSArray *)parameters result:(CarListBlock)result;

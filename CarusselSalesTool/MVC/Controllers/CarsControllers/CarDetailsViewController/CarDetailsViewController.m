@@ -7,7 +7,7 @@
 //
 
 #import "CarDetailsViewController.h"
-#import "Car.h"
+#import "CSTCar.h"
 #import "CarImageCell.h"
 #import "UIView+MakeFromXib.h"
 

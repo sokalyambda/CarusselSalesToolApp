@@ -9,9 +9,7 @@
 #ifndef CarusselSalesTool_CarusselSalesTool_PrefixHeader_pch
 #define CarusselSalesTool_CarusselSalesTool_PrefixHeader_pch
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <AFNetworking.h>
 #import "AlertMessageService.h"
 #import "Constants.h"
 // Include any system framework and library headers here that should be included in all compilation units.

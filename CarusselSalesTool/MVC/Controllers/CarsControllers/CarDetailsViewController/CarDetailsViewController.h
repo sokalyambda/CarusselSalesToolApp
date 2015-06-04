@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class Car;
+@class CSTCar;
 
 @interface CarDetailsViewController : UIViewController
 
-@property (strong, nonatomic) Car *currentCar;
+@property (strong, nonatomic) CSTCar *currentCar;
 
 @end

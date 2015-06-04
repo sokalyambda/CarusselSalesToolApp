@@ -18,6 +18,8 @@
 @property (strong, nonatomic) NSArray *cars;
 @property (strong, nonatomic) CSTDataManager *dataManager;
 
+@property (weak, nonatomic) IBOutlet UITableView *carListTbleView;
+
 @end
 
 @implementation CarsListViewController
@@ -28,8 +30,11 @@
     [super viewDidLoad];
     
     self.dataManager = [CSTDataManager sharedInstance];
-    [self.dataManager getCarListWithParameters:nil result:^(NSArray *carList, NSString *error) {
-        self.cars = [carList copy];
+    
+    __weak CarsListViewController *weakSelf = self;
+    [self.dataManager getCarListWithParameters:nil result:^(NSArray *carList, NSError *error) {
+        weakSelf.cars = [carList copy];
+        [weakSelf.carListTbleView reloadData];        
     }];
 }
 
