@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837139F1B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m */; };
+		583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 583713A31B1F0FDE00C6C2C8 /* CSTCustomSlider.m */; };
 		584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C82F01B18507F0031C063 /* AddProspectViewController.m */; };
 		58701B671B15D23D00F0A21E /* DropDownTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 58701B661B15D23D00F0A21E /* DropDownTable.m */; };
 		58701B691B15D56A00F0A21E /* DropDownTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58701B681B15D56A00F0A21E /* DropDownTable.xib */; };
@@ -59,6 +61,10 @@
 
 /* Begin PBXFileReference section */
 		13AAC28C56A074F8E04DCEC4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5837139E1B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBorderedPlaceholderTextView.h; path = MVC/Views/BorderedPlaceholderTextView/CSTBorderedPlaceholderTextView.h; sourceTree = "<group>"; };
+		5837139F1B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBorderedPlaceholderTextView.m; path = MVC/Views/BorderedPlaceholderTextView/CSTBorderedPlaceholderTextView.m; sourceTree = "<group>"; };
+		583713A21B1F0FDE00C6C2C8 /* CSTCustomSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTCustomSlider.h; path = MVC/Views/CustomSlider/CSTCustomSlider.h; sourceTree = "<group>"; };
+		583713A31B1F0FDE00C6C2C8 /* CSTCustomSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCustomSlider.m; path = MVC/Views/CustomSlider/CSTCustomSlider.m; sourceTree = "<group>"; };
 		584C82EF1B18507F0031C063 /* AddProspectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddProspectViewController.h; path = MVC/Controllers/ProspectsControllers/AddProspectViewController/AddProspectViewController.h; sourceTree = "<group>"; };
 		584C82F01B18507F0031C063 /* AddProspectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddProspectViewController.m; path = MVC/Controllers/ProspectsControllers/AddProspectViewController/AddProspectViewController.m; sourceTree = "<group>"; };
 		58701B651B15D23D00F0A21E /* DropDownTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropDownTable.h; path = MVC/Views/DropDownTable/DropDownTable.h; sourceTree = "<group>"; };
@@ -159,6 +165,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5837139D1B1EF17300C6C2C8 /* BorderedPlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				5837139E1B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.h */,
+				5837139F1B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m */,
+			);
+			name = BorderedPlaceholderTextView;
+			sourceTree = "<group>";
+		};
+		583713A11B1F0FBF00C6C2C8 /* CustomSlider */ = {
+			isa = PBXGroup;
+			children = (
+				583713A21B1F0FDE00C6C2C8 /* CSTCustomSlider.h */,
+				583713A31B1F0FDE00C6C2C8 /* CSTCustomSlider.m */,
+			);
+			name = CustomSlider;
+			sourceTree = "<group>";
+		};
 		584C82EE1B18505B0031C063 /* AddProspectViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +283,10 @@
 		588EE7281B1473AB00CE2D91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				583713A11B1F0FBF00C6C2C8 /* CustomSlider */,
+				5837139D1B1EF17300C6C2C8 /* BorderedPlaceholderTextView */,
+				58FC70CC1B1E4DB3005286E1 /* AuthorizationTextField */,
+				58FC70C81B1E4A42005286E1 /* BorderedTextField */,
 				588F294A1B18A3CF00F14AED /* CarsFiltersViews */,
 				58701B641B15D07D00F0A21E /* DropDownTable */,
 				588EE7B41B14B66000CE2D91 /* UICollectionViewCells */,
@@ -421,6 +449,7 @@
 		588EE79A1B14A70700CE2D91 /* UITableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				58DA0A811B202B1700FF0343 /* ProspectCell */,
 				58701B6A1B15D57100F0A21E /* DropDownCell */,
 				588EE7A01B14A75A00CE2D91 /* CarCell */,
 			);
@@ -709,6 +738,7 @@
 				58701B691B15D56A00F0A21E /* DropDownTable.xib in Resources */,
 				588EE7861B147D6100CE2D91 /* ProspectsListViewController.xib in Resources */,
 				588EE7A51B14A7E400CE2D91 /* CarCell.xib in Resources */,
+				58DA0A861B202B6C00FF0343 /* CSTProspectCell.xib in Resources */,
 				588EE7B91B14B6AD00CE2D91 /* CarImageCell.xib in Resources */,
 				588EE76C1B14785B00CE2D91 /* CarsFiltersViewController.xib in Resources */,
 			);
@@ -756,6 +786,7 @@
 			files = (
 				588EE7741B14789F00CE2D91 /* CarsListViewController.m in Sources */,
 				588EE7061B146F6600CE2D91 /* AppDelegate.m in Sources */,
+				58FC70CB1B1E4A6A005286E1 /* CSTBorderedTextField.m in Sources */,
 				58701B671B15D23D00F0A21E /* DropDownTable.m in Sources */,
 				588EE7B71B14B69600CE2D91 /* CarImageCell.m in Sources */,
 				588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */,
@@ -766,6 +797,7 @@
 				588EE7601B14777600CE2D91 /* HomeViewController.m in Sources */,
 				588EE7681B14783700CE2D91 /* CarsFiltersViewController.m in Sources */,
 				588EE7841B147D5200CE2D91 /* ProspectsListViewController.m in Sources */,
+				58FC70CF1B1E4DD4005286E1 /* CSTAuthorizationTextField.m in Sources */,
 				588F295A1B18AD4900F14AED /* NSString+ContainsString.m in Sources */,
 				58701B6D1B15D59200F0A21E /* DropDownCell.m in Sources */,
 				584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */,
@@ -773,6 +805,7 @@
 				588EE77F1B147D2600CE2D91 /* ProspectDetailsViewController.m in Sources */,
 				588EE7A31B14A7D800CE2D91 /* CarCell.m in Sources */,
 				588EE7791B1478CA00CE2D91 /* MainCarsViewController.m in Sources */,
+				583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */,
 				589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */,
 				588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */,
 				588EE76F1B14787800CE2D91 /* CarDetailsViewController.m in Sources */,
@@ -782,6 +815,7 @@
 				841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */,
 				588EE7B01B14B25A00CE2D91 /* Car.m in Sources */,
 				589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */,
+				583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */,
 				588F29681B18ADE100F14AED /* AlertMessageService.m in Sources */,
 				588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */,
 				589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */,

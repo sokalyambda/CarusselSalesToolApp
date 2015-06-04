@@ -66,9 +66,9 @@ static NSString *const kTasksListSegueIdentifier = @"tasksListSegue";
     if ([self.availableIdentifiers containsObject:segue.identifier]) {
         for (UIButton *btn in self.tabBarButtons) {
             if (sender && ![btn isEqual:sender]) {
-                [btn setSelected: NO];
+                [btn setSelected:NO];
             } else if (sender) {
-                [btn setSelected: YES];
+                [btn setSelected:YES];
             }
         }
     }

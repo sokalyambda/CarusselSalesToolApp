@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.cars = [NSArray arrayWithObjects:@"car 1", @"car 2", @"car 3", @"car 4", nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -41,6 +42,8 @@
     }
     
     //TODO: configure cell
+
+    
     
     return cell;
 }
