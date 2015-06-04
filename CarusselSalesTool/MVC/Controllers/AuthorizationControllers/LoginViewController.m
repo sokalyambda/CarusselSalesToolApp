@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "Validator.h"
+#import "CSTValidator.h"
 #import "HomeViewController.h"
 
 #import "CSTDataManager.h"
@@ -21,7 +21,7 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 
 @property (strong, nonatomic) UITextField *activeField;
-@property (strong, nonatomic) Validator *validator;
+@property (strong, nonatomic) CSTValidator *validator;
 
 @end
 
@@ -29,10 +29,10 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 
 #pragma mark - Accessors
 
-- (Validator *)validator
+- (CSTValidator *)validator
 {
     if (!_validator) {
-        _validator = [Validator sharedValidator];
+        _validator = [CSTValidator sharedValidator];
     }
     return _validator;
 }
@@ -42,8 +42,6 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self handleKeyboardNotifications];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -51,10 +49,13 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:YES];
+    
+    [self handleKeyboardNotifications];
 }
 
-- (void)dealloc
+- (void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

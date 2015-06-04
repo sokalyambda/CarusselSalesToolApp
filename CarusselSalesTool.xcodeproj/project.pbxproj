@@ -37,7 +37,7 @@
 		588EE78A1B14805800CE2D91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588EE7891B14805800CE2D91 /* UIKit.framework */; };
 		588EE78C1B14805D00CE2D91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588EE78B1B14805D00CE2D91 /* QuartzCore.framework */; };
 		588EE78E1B14806400CE2D91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588EE78D1B14806400CE2D91 /* CoreGraphics.framework */; };
-		588EE7931B14843400CE2D91 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7921B14843400CE2D91 /* Validator.m */; };
+		588EE7931B14843400CE2D91 /* CSTValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7921B14843400CE2D91 /* CSTValidator.m */; };
 		588EE7A31B14A7D800CE2D91 /* CarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7A21B14A7D800CE2D91 /* CarCell.m */; };
 		588EE7A51B14A7E400CE2D91 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588EE7A41B14A7E400CE2D91 /* CarCell.xib */; };
 		588EE7B31B14B27B00CE2D91 /* Prospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7B21B14B27B00CE2D91 /* Prospect.m */; };
@@ -48,12 +48,14 @@
 		588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F295C1B18AD5A00F14AED /* UIView+Shaking.m */; };
 		588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F295F1B18AD6E00F14AED /* UIView+MakeFromXib.m */; };
 		588F29651B18ADD300F14AED /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29641B18ADD300F14AED /* Constants.m */; };
-		588F29681B18ADE100F14AED /* AlertMessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29671B18ADE100F14AED /* AlertMessageService.m */; };
 		589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589AC4991B171C8100577D90 /* DemonstrationViewController.m */; };
 		589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */; };
 		589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */; };
+		58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A522AC1B20A70500773273 /* AlertMessageService.m */; };
 		58DA0A841B202B5300FF0343 /* CSTProspectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA0A831B202B5300FF0343 /* CSTProspectCell.m */; };
 		58DA0A861B202B6C00FF0343 /* CSTProspectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58DA0A851B202B6C00FF0343 /* CSTProspectCell.xib */; };
+		58DA0ABC1B2084A700FF0343 /* CSTRoundBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA0ABB1B2084A700FF0343 /* CSTRoundBorderedView.m */; };
+		58DA0AC01B208CBB00FF0343 /* CSTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA0ABF1B208CBB00FF0343 /* CSTAttributedLabel.m */; };
 		58FC70CB1B1E4A6A005286E1 /* CSTBorderedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FC70CA1B1E4A6A005286E1 /* CSTBorderedTextField.m */; };
 		58FC70CF1B1E4DD4005286E1 /* CSTAuthorizationTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FC70CE1B1E4DD4005286E1 /* CSTAuthorizationTextField.m */; };
 		841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7A1B1EFAD70012BFE3 /* CSTCache.m */; };
@@ -119,8 +121,8 @@
 		588EE78B1B14805D00CE2D91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		588EE78D1B14806400CE2D91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		588EE78F1B1480E900CE2D91 /* CarusselSalesTool-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarusselSalesTool-PrefixHeader.pch"; sourceTree = "<group>"; };
-		588EE7911B14843400CE2D91 /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Validator.h; path = Utilities/Validator/Validator.h; sourceTree = "<group>"; };
-		588EE7921B14843400CE2D91 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Validator.m; path = Utilities/Validator/Validator.m; sourceTree = "<group>"; };
+		588EE7911B14843400CE2D91 /* CSTValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTValidator.h; path = Utilities/Validator/CSTValidator.h; sourceTree = "<group>"; };
+		588EE7921B14843400CE2D91 /* CSTValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTValidator.m; path = Utilities/Validator/CSTValidator.m; sourceTree = "<group>"; };
 		588EE7A11B14A7D800CE2D91 /* CarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarCell.h; path = MVC/Views/UITableViewCells/CarCell/CarCell.h; sourceTree = "<group>"; };
 		588EE7A21B14A7D800CE2D91 /* CarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarCell.m; path = MVC/Views/UITableViewCells/CarCell/CarCell.m; sourceTree = "<group>"; };
 		588EE7A41B14A7E400CE2D91 /* CarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarCell.xib; path = MVC/Views/UITableViewCells/CarCell/CarCell.xib; sourceTree = "<group>"; };
@@ -139,17 +141,21 @@
 		588F295F1B18AD6E00F14AED /* UIView+MakeFromXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MakeFromXib.m"; path = "Categories/UIView/UIView+MakeFromXib/UIView+MakeFromXib.m"; sourceTree = "<group>"; };
 		588F29631B18ADD300F14AED /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utilities/Constants/Constants.h; sourceTree = "<group>"; };
 		588F29641B18ADD300F14AED /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Utilities/Constants/Constants.m; sourceTree = "<group>"; };
-		588F29661B18ADE100F14AED /* AlertMessageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertMessageService.h; path = Utilities/AlertMessageService/AlertMessageService.h; sourceTree = "<group>"; };
-		588F29671B18ADE100F14AED /* AlertMessageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertMessageService.m; path = Utilities/AlertMessageService/AlertMessageService.m; sourceTree = "<group>"; };
 		589AC4981B171C8100577D90 /* DemonstrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemonstrationViewController.h; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.h; sourceTree = "<group>"; };
 		589AC4991B171C8100577D90 /* DemonstrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemonstrationViewController.m; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.m; sourceTree = "<group>"; };
 		589E20871B1DDA29006A6C81 /* CSTLeftTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTLeftTabBarController.h; path = MVC/Controllers/LeftTabBarController/CSTLeftTabBarController.h; sourceTree = "<group>"; };
 		589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTLeftTabBarController.m; path = MVC/Controllers/LeftTabBarController/CSTLeftTabBarController.m; sourceTree = "<group>"; };
 		589E208B1B1DDA74006A6C81 /* CSTNavigationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTNavigationSegue.h; path = StoryboardSegues/CSTNavigationSegue.h; sourceTree = "<group>"; };
 		589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTNavigationSegue.m; path = StoryboardSegues/CSTNavigationSegue.m; sourceTree = "<group>"; };
+		58A522AB1B20A70500773273 /* AlertMessageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertMessageService.h; path = Utilities/AlertMessageService/AlertMessageService.h; sourceTree = "<group>"; };
+		58A522AC1B20A70500773273 /* AlertMessageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertMessageService.m; path = Utilities/AlertMessageService/AlertMessageService.m; sourceTree = "<group>"; };
 		58DA0A821B202B5300FF0343 /* CSTProspectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTProspectCell.h; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.h; sourceTree = "<group>"; };
 		58DA0A831B202B5300FF0343 /* CSTProspectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTProspectCell.m; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.m; sourceTree = "<group>"; };
 		58DA0A851B202B6C00FF0343 /* CSTProspectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTProspectCell.xib; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.xib; sourceTree = "<group>"; };
+		58DA0ABA1B2084A700FF0343 /* CSTRoundBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTRoundBorderedView.h; path = MVC/Views/RoundBorderedView/CSTRoundBorderedView.h; sourceTree = "<group>"; };
+		58DA0ABB1B2084A700FF0343 /* CSTRoundBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTRoundBorderedView.m; path = MVC/Views/RoundBorderedView/CSTRoundBorderedView.m; sourceTree = "<group>"; };
+		58DA0ABE1B208CBB00FF0343 /* CSTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTAttributedLabel.h; path = MVC/Views/AttributedLabel/CSTAttributedLabel.h; sourceTree = "<group>"; };
+		58DA0ABF1B208CBB00FF0343 /* CSTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTAttributedLabel.m; path = MVC/Views/AttributedLabel/CSTAttributedLabel.m; sourceTree = "<group>"; };
 		58FC70C91B1E4A6A005286E1 /* CSTBorderedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBorderedTextField.h; path = MVC/Views/BorderedTextField/CSTBorderedTextField.h; sourceTree = "<group>"; };
 		58FC70CA1B1E4A6A005286E1 /* CSTBorderedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBorderedTextField.m; path = MVC/Views/BorderedTextField/CSTBorderedTextField.m; sourceTree = "<group>"; };
 		58FC70CD1B1E4DD4005286E1 /* CSTAuthorizationTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTAuthorizationTextField.h; path = MVC/Views/AuthorizationTextField/CSTAuthorizationTextField.h; sourceTree = "<group>"; };
@@ -318,6 +324,8 @@
 		588EE7281B1473AB00CE2D91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				58DA0ABD1B208CA100FF0343 /* AttributedLabel */,
+				58DA0AB91B20847800FF0343 /* RoundBorderedView */,
 				583713A11B1F0FBF00C6C2C8 /* CustomSlider */,
 				5837139D1B1EF17300C6C2C8 /* BorderedPlaceholderTextView */,
 				58FC70CC1B1E4DB3005286E1 /* AuthorizationTextField */,
@@ -475,8 +483,8 @@
 		588EE7901B14841B00CE2D91 /* Validator */ = {
 			isa = PBXGroup;
 			children = (
-				588EE7911B14843400CE2D91 /* Validator.h */,
-				588EE7921B14843400CE2D91 /* Validator.m */,
+				588EE7911B14843400CE2D91 /* CSTValidator.h */,
+				588EE7921B14843400CE2D91 /* CSTValidator.m */,
 			);
 			name = Validator;
 			sourceTree = "<group>";
@@ -603,8 +611,8 @@
 		588F29611B18AD7D00F14AED /* AlertMessageServices */ = {
 			isa = PBXGroup;
 			children = (
-				588F29661B18ADE100F14AED /* AlertMessageService.h */,
-				588F29671B18ADE100F14AED /* AlertMessageService.m */,
+				58A522AB1B20A70500773273 /* AlertMessageService.h */,
+				58A522AC1B20A70500773273 /* AlertMessageService.m */,
 			);
 			name = AlertMessageServices;
 			sourceTree = "<group>";
@@ -916,6 +924,7 @@
 				588EE7B71B14B69600CE2D91 /* CarImageCell.m in Sources */,
 				588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */,
 				841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */,
+				58DA0AC01B208CBB00FF0343 /* CSTAttributedLabel.m in Sources */,
 				588EE7B31B14B27B00CE2D91 /* Prospect.m in Sources */,
 				588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */,
 				588F29651B18ADD300F14AED /* Constants.m in Sources */,
@@ -941,13 +950,14 @@
 				588EE7031B146F6600CE2D91 /* main.m in Sources */,
 				58DA0A841B202B5300FF0343 /* CSTProspectCell.m in Sources */,
 				841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */,
-				588EE7931B14843400CE2D91 /* Validator.m in Sources */,
+				58DA0ABC1B2084A700FF0343 /* CSTRoundBorderedView.m in Sources */,
+				588EE7931B14843400CE2D91 /* CSTValidator.m in Sources */,
 				841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */,
 				84EBD4B91B2078C7001F4CF5 /* OHImagesCar.m in Sources */,
 				589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */,
 				583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */,
-				588F29681B18ADE100F14AED /* AlertMessageService.m in Sources */,
 				588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */,
+				58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */,
 				589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */,
 				84EBD4B81B2078C7001F4CF5 /* OHError.m in Sources */,
 			);

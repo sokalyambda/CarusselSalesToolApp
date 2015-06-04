@@ -6,18 +6,18 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-#import "Validator.h"
+#import "CSTValidator.h"
 #import "UIView+Shaking.h"
 
 static const NSInteger kMinPasswordSymbols = 8;
 
-@implementation Validator
+@implementation CSTValidator
 
 #pragma mark - Init & Lifecycle
 
-+ (Validator *)sharedValidator
++ (CSTValidator *)sharedValidator
 {
-    static Validator *validator = nil;
+    static CSTValidator *validator = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
