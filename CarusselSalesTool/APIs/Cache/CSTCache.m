@@ -10,4 +10,20 @@
 
 @implementation CSTCache
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _carsList = [NSCache new];
+        _prospectList = [NSCache new];
+    }
+    return self;
+}
+
+- (Car *)getCarWithID:(NSNumber *)ID
+{
+    Car *car = [self.carsList objectForKey:ID];
+    return car;
+}
+
 @end

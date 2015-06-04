@@ -16,5 +16,7 @@
 + (CSTDataManager *)sharedInstance;
 
 - (void)signInWithUserName:(NSString *)userName password:(NSString *)password withResult:(SuccessBlock)result;
+- (void)getCarListWithParameters:(NSArray *)parameters result:(CarListBlock)result;
+- (void)getCarWithID:(NSInteger)ID result:(CarBlock)result;
 
 @end

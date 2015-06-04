@@ -12,7 +12,17 @@
 
 - (void)signInWithUserName:(NSString *)userName password:(NSString *)password withResult:(SuccessBlock)result
 {
-    
+    return result(YES, nil);
+}
+
+- (void)getCarListWithParameters:(NSArray *)parameters result:(CarListBlock)result
+{
+    return result (@[[Car new], [Car new], [Car new]], nil);
+}
+
+- (void)getCarWithID:(NSInteger)ID result:(CarBlock)result
+{
+    return result([Car new], nil);
 }
 
 @end

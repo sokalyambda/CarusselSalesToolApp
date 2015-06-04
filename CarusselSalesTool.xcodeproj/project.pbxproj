@@ -53,6 +53,10 @@
 		589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589AC4991B171C8100577D90 /* DemonstrationViewController.m */; };
 		589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */; };
 		589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */; };
+		58DA0A841B202B5300FF0343 /* CSTProspectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA0A831B202B5300FF0343 /* CSTProspectCell.m */; };
+		58DA0A861B202B6C00FF0343 /* CSTProspectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58DA0A851B202B6C00FF0343 /* CSTProspectCell.xib */; };
+		58FC70CB1B1E4A6A005286E1 /* CSTBorderedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FC70CA1B1E4A6A005286E1 /* CSTBorderedTextField.m */; };
+		58FC70CF1B1E4DD4005286E1 /* CSTAuthorizationTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FC70CE1B1E4DD4005286E1 /* CSTAuthorizationTextField.m */; };
 		841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7A1B1EFAD70012BFE3 /* CSTCache.m */; };
 		841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7C1B1EFAD70012BFE3 /* CSTDataManager.m */; };
 		841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */; };
@@ -139,6 +143,13 @@
 		589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTLeftTabBarController.m; path = MVC/Controllers/LeftTabBarController/CSTLeftTabBarController.m; sourceTree = "<group>"; };
 		589E208B1B1DDA74006A6C81 /* CSTNavigationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTNavigationSegue.h; path = StoryboardSegues/CSTNavigationSegue.h; sourceTree = "<group>"; };
 		589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTNavigationSegue.m; path = StoryboardSegues/CSTNavigationSegue.m; sourceTree = "<group>"; };
+		58DA0A821B202B5300FF0343 /* CSTProspectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTProspectCell.h; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.h; sourceTree = "<group>"; };
+		58DA0A831B202B5300FF0343 /* CSTProspectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTProspectCell.m; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.m; sourceTree = "<group>"; };
+		58DA0A851B202B6C00FF0343 /* CSTProspectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTProspectCell.xib; path = MVC/Views/UITableViewCells/ProspectCell/CSTProspectCell.xib; sourceTree = "<group>"; };
+		58FC70C91B1E4A6A005286E1 /* CSTBorderedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBorderedTextField.h; path = MVC/Views/BorderedTextField/CSTBorderedTextField.h; sourceTree = "<group>"; };
+		58FC70CA1B1E4A6A005286E1 /* CSTBorderedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBorderedTextField.m; path = MVC/Views/BorderedTextField/CSTBorderedTextField.m; sourceTree = "<group>"; };
+		58FC70CD1B1E4DD4005286E1 /* CSTAuthorizationTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTAuthorizationTextField.h; path = MVC/Views/AuthorizationTextField/CSTAuthorizationTextField.h; sourceTree = "<group>"; };
+		58FC70CE1B1E4DD4005286E1 /* CSTAuthorizationTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTAuthorizationTextField.m; path = MVC/Views/AuthorizationTextField/CSTAuthorizationTextField.m; sourceTree = "<group>"; };
 		841DFB791B1EFAD70012BFE3 /* CSTCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTCache.h; sourceTree = "<group>"; };
 		841DFB7A1B1EFAD70012BFE3 /* CSTCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTCache.m; sourceTree = "<group>"; };
 		841DFB7B1B1EFAD70012BFE3 /* CSTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTDataManager.h; sourceTree = "<group>"; };
@@ -648,6 +659,35 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+
+58DA0A811B202B1700FF0343 /* ProspectCell */ = {
+isa = PBXGroup;
+children = (
+58DA0A821B202B5300FF0343 /* CSTProspectCell.h */,
+58DA0A831B202B5300FF0343 /* CSTProspectCell.m */,
+58DA0A851B202B6C00FF0343 /* CSTProspectCell.xib */,
+);
+name = ProspectCell;
+sourceTree = "<group>";
+};
+58FC70C81B1E4A42005286E1 /* BorderedTextField */ = {
+isa = PBXGroup;
+children = (
+58FC70C91B1E4A6A005286E1 /* CSTBorderedTextField.h */,
+58FC70CA1B1E4A6A005286E1 /* CSTBorderedTextField.m */,
+);
+name = BorderedTextField;
+sourceTree = "<group>";
+};
+58FC70CC1B1E4DB3005286E1 /* AuthorizationTextField */ = {
+isa = PBXGroup;
+children = (
+58FC70CD1B1E4DD4005286E1 /* CSTAuthorizationTextField.h */,
+58FC70CE1B1E4DD4005286E1 /* CSTAuthorizationTextField.m */,
+);
+name = AuthorizationTextField;
+sourceTree = "<group>";
+};
 		8DD4BD65C40C72DC41D1B194 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -810,6 +850,7 @@
 				588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */,
 				588EE76F1B14787800CE2D91 /* CarDetailsViewController.m in Sources */,
 				588EE7031B146F6600CE2D91 /* main.m in Sources */,
+				58DA0A841B202B5300FF0343 /* CSTProspectCell.m in Sources */,
 				841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */,
 				588EE7931B14843400CE2D91 /* Validator.m in Sources */,
 				841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */,
