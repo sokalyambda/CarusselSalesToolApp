@@ -22,11 +22,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self handleKeyboardNotifications];
 }
 
-- (void)dealloc
+- (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Validator : NSObject
+@interface CSTValidator : NSObject
 
 @property (strong, nonatomic) NSMutableString *validationErrorString;
 
-+ (Validator *)sharedValidator;
++ (CSTValidator *)sharedValidator;
 
 - (BOOL)validateEmailField:(UITextField *)emailField;
 - (BOOL)validateEmailField:(UITextField *)emailField andPasswordField:(UITextField *)passwordField;
