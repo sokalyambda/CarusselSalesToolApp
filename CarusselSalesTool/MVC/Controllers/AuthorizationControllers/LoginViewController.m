@@ -10,6 +10,8 @@
 #import "Validator.h"
 #import "HomeViewController.h"
 
+#import "CSTDataManager.h"
+
 static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 
 @interface LoginViewController () <UITextFieldDelegate>
@@ -40,12 +42,14 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self handleKeyboardNotifications];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     [self.navigationController setNavigationBarHidden:YES];
 }
 
@@ -58,7 +62,10 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 
 - (IBAction)loginClick:(id)sender
 {
-    [self performSegueWithIdentifier:kMainTabBarSegue sender:self];
+    [[CSTDataManager sharedInstance] signInWithUserName:self.userNameField.text password:self.passwordField.text withResult:^(BOOL success, NSString *error) {
+        success ? [self performSegueWithIdentifier:kMainTabBarSegue sender:self] : NSLog(@"%@", error);
+    }];
+    
     /*
     if (![self.validator validateEmailField:self.userNameField andPasswordField:self.passwordField]) {
         

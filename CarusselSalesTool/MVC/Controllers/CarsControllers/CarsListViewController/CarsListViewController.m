@@ -7,13 +7,16 @@
 //
 
 #import "CarsListViewController.h"
+
 #import "CarCell.h"
 #import "UIView+MakeFromXib.h"
-#import "Car.h"
+
+#import "CSTDataManager.h"
 
 @interface CarsListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSArray *cars;
+@property (strong, nonatomic) CSTDataManager *dataManager;
 
 @end
 
@@ -23,7 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.cars = [NSArray arrayWithObjects:@"car 1", @"car 2", @"car 3", @"car 4", nil];
+    
+    self.dataManager = [CSTDataManager sharedInstance];
+    [self.dataManager getCarListWithParameters:nil result:^(NSArray *carList, NSString *error) {
+        self.cars = [carList copy];
+    }];
 }
 
 #pragma mark - UITableViewDataSource
