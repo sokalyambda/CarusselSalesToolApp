@@ -12,6 +12,7 @@
 #import "UIView+MakeFromXib.h"
 
 @interface CarDetailsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *carDetailsScrollView;
 
 //TODO: outlets
 

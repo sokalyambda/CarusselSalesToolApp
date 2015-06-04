@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarsFiltersViewController">
             <connections>
+                <outlet property="carsFiltersScrollView" destination="hjC-iP-b72" id="H7N-zI-lme"/>
                 <outlet property="extraDataTextView" destination="pa3-NF-Zi2" id="nhr-XV-gZS"/>
                 <outlet property="view" destination="iN0-l3-epB" id="WHt-EO-yQu"/>
             </connections>
@@ -62,6 +63,9 @@
                                             <include reference="hpz-NW-zD4"/>
                                         </mask>
                                     </variation>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="8ws-Sb-hAZ"/>
+                                    </connections>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fueltype" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjQ-8I-CJF" customClass="CSTBorderedTextField">
                                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -80,6 +84,9 @@
                                             <include reference="VYA-Qh-1gf"/>
                                         </mask>
                                     </variation>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Dyx-Tq-jhn"/>
+                                    </connections>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bodytype" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T1D-hr-02Y" customClass="CSTBorderedTextField">
                                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -98,39 +105,33 @@
                                             <include reference="8ob-5U-uSB"/>
                                         </mask>
                                     </variation>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Fap-rZ-ODO"/>
+                                    </connections>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N2b-8z-izy" customClass="CSTBorderedTextField">
-                                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="L93-PL-ts7"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="L93-PL-ts7"/>
-                                        </mask>
-                                    </variation>
-                                    <variation key="widthClass=regular">
-                                        <mask key="constraints">
-                                            <include reference="L93-PL-ts7"/>
-                                        </mask>
-                                    </variation>
-                                </textField>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PeB-wJ-u30">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PeB-wJ-u30" customClass="CSTCustomSlider">
                                     <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                     <color key="minimumTrackTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="maximumTrackTintColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="thumbTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </slider>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IER-HO-TgM">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IER-HO-TgM" customClass="CSTCustomSlider">
                                     <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                    <color key="minimumTrackTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="maximumTrackTintColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="thumbTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </slider>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-nY-zB0">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-nY-zB0" customClass="CSTCustomSlider">
                                     <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                    <color key="minimumTrackTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="maximumTrackTintColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="thumbTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </slider>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yBR-5w-Vl5">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yBR-5w-Vl5" customClass="CSTCustomSlider">
                                     <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                    <color key="minimumTrackTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="maximumTrackTintColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="thumbTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </slider>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q73-Xb-NI1">
                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -157,7 +158,31 @@
                                             <include reference="QLw-Ku-hzL"/>
                                         </mask>
                                     </variation>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="HTy-7K-LgP"/>
+                                    </connections>
                                 </textView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N2b-8z-izy" customClass="CSTBorderedTextField">
+                                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="L93-PL-ts7"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="L93-PL-ts7"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=regular">
+                                        <mask key="constraints">
+                                            <include reference="L93-PL-ts7"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="APJ-Yh-2P4"/>
+                                    </connections>
+                                </textField>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -203,41 +228,35 @@
                                     <exclude reference="tGJ-Gr-gvE"/>
                                     <exclude reference="bjQ-8I-CJF"/>
                                     <exclude reference="T1D-hr-02Y"/>
-                                    <exclude reference="N2b-8z-izy"/>
                                     <exclude reference="PeB-wJ-u30"/>
                                     <exclude reference="IER-HO-TgM"/>
                                     <exclude reference="Vhv-nY-zB0"/>
                                     <exclude reference="yBR-5w-Vl5"/>
                                     <exclude reference="q73-Xb-NI1"/>
                                     <exclude reference="pa3-NF-Zi2"/>
+                                    <exclude reference="N2b-8z-izy"/>
                                 </mask>
                                 <mask key="constraints">
-                                    <exclude reference="YYu-sO-YUC"/>
-                                    <exclude reference="tJk-NY-uLo"/>
-                                    <exclude reference="KX5-bw-l57"/>
-                                    <exclude reference="Tsv-Qe-vvr"/>
-                                    <exclude reference="gjA-lO-1S5"/>
-                                    <exclude reference="qqW-0a-cz1"/>
-                                    <exclude reference="riZ-gd-zYF"/>
-                                    <exclude reference="X5l-CJ-WMm"/>
-                                    <exclude reference="9I4-iB-WX3"/>
-                                    <exclude reference="VOi-qQ-HXg"/>
-                                    <exclude reference="ojN-p1-C0Z"/>
-                                    <exclude reference="sZ5-1b-HAz"/>
-                                    <exclude reference="xWI-PG-Py4"/>
-                                    <exclude reference="u1k-sC-EGK"/>
                                     <exclude reference="EQ0-oQ-HQ5"/>
                                     <exclude reference="FUT-SO-48s"/>
                                     <exclude reference="SGw-19-XEa"/>
                                     <exclude reference="igh-C7-hYo"/>
                                     <exclude reference="ps8-oU-BRh"/>
-                                    <exclude reference="iF6-er-qTB"/>
+                                    <exclude reference="u1k-sC-EGK"/>
+                                    <exclude reference="9I4-iB-WX3"/>
+                                    <exclude reference="VOi-qQ-HXg"/>
+                                    <exclude reference="ojN-p1-C0Z"/>
+                                    <exclude reference="sZ5-1b-HAz"/>
+                                    <exclude reference="xWI-PG-Py4"/>
+                                    <exclude reference="X5l-CJ-WMm"/>
+                                    <exclude reference="YYu-sO-YUC"/>
+                                    <exclude reference="tJk-NY-uLo"/>
+                                    <exclude reference="RIu-Hk-6Hk"/>
                                     <exclude reference="5n3-cR-7nH"/>
                                     <exclude reference="5vh-fb-rQb"/>
                                     <exclude reference="gHr-fh-cKz"/>
                                     <exclude reference="hwS-FS-Q8l"/>
                                     <exclude reference="rTy-sB-L0m"/>
-                                    <exclude reference="RIu-Hk-6Hk"/>
                                     <exclude reference="ATw-zF-pND"/>
                                     <exclude reference="Hvh-Jr-rGP"/>
                                     <exclude reference="Na4-DQ-pnR"/>
@@ -246,6 +265,12 @@
                                     <exclude reference="xE5-ti-cit"/>
                                     <exclude reference="7wN-TN-bPd"/>
                                     <exclude reference="liy-TW-KqN"/>
+                                    <exclude reference="iF6-er-qTB"/>
+                                    <exclude reference="KX5-bw-l57"/>
+                                    <exclude reference="Tsv-Qe-vvr"/>
+                                    <exclude reference="gjA-lO-1S5"/>
+                                    <exclude reference="qqW-0a-cz1"/>
+                                    <exclude reference="riZ-gd-zYF"/>
                                 </mask>
                             </variation>
                             <variation key="widthClass=regular">
@@ -255,41 +280,35 @@
                                     <include reference="tGJ-Gr-gvE"/>
                                     <include reference="bjQ-8I-CJF"/>
                                     <include reference="T1D-hr-02Y"/>
-                                    <include reference="N2b-8z-izy"/>
                                     <include reference="PeB-wJ-u30"/>
                                     <include reference="IER-HO-TgM"/>
                                     <include reference="Vhv-nY-zB0"/>
                                     <include reference="yBR-5w-Vl5"/>
                                     <include reference="q73-Xb-NI1"/>
                                     <include reference="pa3-NF-Zi2"/>
+                                    <include reference="N2b-8z-izy"/>
                                 </mask>
                                 <mask key="constraints">
-                                    <include reference="YYu-sO-YUC"/>
-                                    <include reference="tJk-NY-uLo"/>
-                                    <include reference="KX5-bw-l57"/>
-                                    <include reference="Tsv-Qe-vvr"/>
-                                    <include reference="gjA-lO-1S5"/>
-                                    <include reference="qqW-0a-cz1"/>
-                                    <include reference="riZ-gd-zYF"/>
-                                    <include reference="X5l-CJ-WMm"/>
-                                    <include reference="9I4-iB-WX3"/>
-                                    <include reference="VOi-qQ-HXg"/>
-                                    <include reference="ojN-p1-C0Z"/>
-                                    <include reference="sZ5-1b-HAz"/>
-                                    <include reference="xWI-PG-Py4"/>
-                                    <include reference="u1k-sC-EGK"/>
                                     <include reference="EQ0-oQ-HQ5"/>
                                     <include reference="FUT-SO-48s"/>
                                     <include reference="SGw-19-XEa"/>
                                     <include reference="igh-C7-hYo"/>
                                     <include reference="ps8-oU-BRh"/>
-                                    <include reference="iF6-er-qTB"/>
+                                    <include reference="u1k-sC-EGK"/>
+                                    <include reference="9I4-iB-WX3"/>
+                                    <include reference="VOi-qQ-HXg"/>
+                                    <include reference="ojN-p1-C0Z"/>
+                                    <include reference="sZ5-1b-HAz"/>
+                                    <include reference="xWI-PG-Py4"/>
+                                    <include reference="X5l-CJ-WMm"/>
+                                    <include reference="YYu-sO-YUC"/>
+                                    <include reference="tJk-NY-uLo"/>
+                                    <include reference="RIu-Hk-6Hk"/>
                                     <include reference="5n3-cR-7nH"/>
                                     <include reference="5vh-fb-rQb"/>
                                     <include reference="gHr-fh-cKz"/>
                                     <include reference="hwS-FS-Q8l"/>
                                     <include reference="rTy-sB-L0m"/>
-                                    <include reference="RIu-Hk-6Hk"/>
                                     <include reference="ATw-zF-pND"/>
                                     <include reference="Hvh-Jr-rGP"/>
                                     <include reference="Na4-DQ-pnR"/>
@@ -298,6 +317,12 @@
                                     <include reference="xE5-ti-cit"/>
                                     <include reference="7wN-TN-bPd"/>
                                     <include reference="liy-TW-KqN"/>
+                                    <include reference="iF6-er-qTB"/>
+                                    <include reference="KX5-bw-l57"/>
+                                    <include reference="Tsv-Qe-vvr"/>
+                                    <include reference="gjA-lO-1S5"/>
+                                    <include reference="qqW-0a-cz1"/>
+                                    <include reference="riZ-gd-zYF"/>
                                 </mask>
                             </variation>
                         </view>

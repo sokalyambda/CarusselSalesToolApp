@@ -330,180 +330,12 @@
                         <outlet property="authScrollView" destination="Ugx-Dc-62a" id="lB2-I4-Aaq"/>
                         <outlet property="passwordField" destination="1gP-Xw-dV5" id="AFC-Im-0GB"/>
                         <outlet property="userNameField" destination="u6I-Ep-uk0" id="WHu-vD-IVm"/>
-                        <segue destination="9Ot-mX-9G1" kind="show" identifier="homeScreenSegue" id="99V-WS-YTu"/>
+                        <segue destination="gjw-m6-Aer" kind="show" identifier="mainTabBarSegue" id="WtD-qi-U7n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AsR-b5-6yq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1326" y="311"/>
-        </scene>
-        <!--Home View Controller-->
-        <scene sceneID="Hz7-BF-4SD">
-            <objects>
-                <viewController id="9Ot-mX-9G1" customClass="HomeViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="A5M-Kt-bFU"/>
-                        <viewControllerLayoutGuide type="bottom" id="3jl-B7-a4j"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FnI-MO-0D6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Hv-5fb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carussel Sales Tool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps3-yM-rTk">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="8gy-fu-ccp"/>
-                                            <constraint firstAttribute="width" constant="199" id="lxT-vh-ekL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
-                                        <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="8gy-fu-ccp"/>
-                                                <exclude reference="lxT-vh-ekL"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="8gy-fu-ccp"/>
-                                                <include reference="lxT-vh-ekL"/>
-                                            </mask>
-                                        </variation>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="1rD-6r-tS5"/>
-                                    <constraint firstItem="Ps3-yM-rTk" firstAttribute="top" secondItem="Kxg-Hv-5fb" secondAttribute="top" constant="8" id="g3I-Je-DVP"/>
-                                    <constraint firstAttribute="centerX" secondItem="Ps3-yM-rTk" secondAttribute="centerX" constant="-0.5" id="nOJ-AK-0Lb"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="Ps3-yM-rTk"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="1rD-6r-tS5"/>
-                                        <exclude reference="g3I-Je-DVP"/>
-                                        <exclude reference="nOJ-AK-0Lb"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=regular">
-                                    <mask key="subviews">
-                                        <include reference="Ps3-yM-rTk"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <include reference="1rD-6r-tS5"/>
-                                        <include reference="g3I-Je-DVP"/>
-                                        <include reference="nOJ-AK-0Lb"/>
-                                    </mask>
-                                </variation>
-                            </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="C4I-6s-koO">
-                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="391" id="Jd9-rx-e49"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Cars"/>
-                                    <segment title="Prospects"/>
-                                    <segment title="New Prospect"/>
-                                    <segment title="Tasks"/>
-                                </segments>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Jd9-rx-e49"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="Jd9-rx-e49"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="selectScreenClick:" destination="9Ot-mX-9G1" eventType="valueChanged" id="Fv9-FB-lQ3"/>
-                                </connections>
-                            </segmentedControl>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="w57-Hr-l0b">
-                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
-                                <connections>
-                                    <action selector="demonstrationClick:" destination="9Ot-mX-9G1" eventType="valueChanged" id="hP9-JZ-vlI"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="demonstration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2T9-zZ-uAT">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="C4I-6s-koO" firstAttribute="top" secondItem="Kxg-Hv-5fb" secondAttribute="bottom" constant="8" id="0jx-Pe-7pO"/>
-                            <constraint firstItem="2T9-zZ-uAT" firstAttribute="bottom" secondItem="w57-Hr-l0b" secondAttribute="bottom" id="6cg-4P-eIS"/>
-                            <constraint firstItem="w57-Hr-l0b" firstAttribute="top" secondItem="C4I-6s-koO" secondAttribute="bottom" constant="49" id="GCN-dN-Ara"/>
-                            <constraint firstItem="Kxg-Hv-5fb" firstAttribute="top" secondItem="A5M-Kt-bFU" secondAttribute="bottom" constant="-20" id="XZf-cs-V0s">
-                                <variation key="widthClass=regular" constant="0.0"/>
-                            </constraint>
-                            <constraint firstItem="Kxg-Hv-5fb" firstAttribute="leading" secondItem="FnI-MO-0D6" secondAttribute="leading" id="Yh4-eO-o0X"/>
-                            <constraint firstItem="C4I-6s-koO" firstAttribute="centerX" secondItem="Kxg-Hv-5fb" secondAttribute="centerX" constant="0.5" id="ala-K0-Oqp"/>
-                            <constraint firstItem="C4I-6s-koO" firstAttribute="leading" secondItem="w57-Hr-l0b" secondAttribute="leading" id="gDc-GT-rc0"/>
-                            <constraint firstItem="2T9-zZ-uAT" firstAttribute="top" secondItem="w57-Hr-l0b" secondAttribute="top" id="oKi-BN-0EC"/>
-                            <constraint firstItem="2T9-zZ-uAT" firstAttribute="leading" secondItem="w57-Hr-l0b" secondAttribute="trailing" constant="8" id="quF-aM-39V"/>
-                            <constraint firstAttribute="trailing" secondItem="Kxg-Hv-5fb" secondAttribute="trailing" id="xDZ-Hr-DZe"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Kxg-Hv-5fb"/>
-                                <exclude reference="C4I-6s-koO"/>
-                                <exclude reference="w57-Hr-l0b"/>
-                                <exclude reference="2T9-zZ-uAT"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="6cg-4P-eIS"/>
-                                <exclude reference="oKi-BN-0EC"/>
-                                <exclude reference="quF-aM-39V"/>
-                                <exclude reference="GCN-dN-Ara"/>
-                                <exclude reference="0jx-Pe-7pO"/>
-                                <exclude reference="ala-K0-Oqp"/>
-                                <exclude reference="gDc-GT-rc0"/>
-                                <exclude reference="XZf-cs-V0s"/>
-                                <exclude reference="Yh4-eO-o0X"/>
-                                <exclude reference="xDZ-Hr-DZe"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=regular">
-                            <mask key="subviews">
-                                <include reference="Kxg-Hv-5fb"/>
-                                <include reference="C4I-6s-koO"/>
-                                <include reference="w57-Hr-l0b"/>
-                                <include reference="2T9-zZ-uAT"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="6cg-4P-eIS"/>
-                                <include reference="oKi-BN-0EC"/>
-                                <include reference="quF-aM-39V"/>
-                                <include reference="GCN-dN-Ara"/>
-                                <include reference="0jx-Pe-7pO"/>
-                                <include reference="ala-K0-Oqp"/>
-                                <include reference="gDc-GT-rc0"/>
-                                <include reference="XZf-cs-V0s"/>
-                                <include reference="Yh4-eO-o0X"/>
-                                <include reference="xDZ-Hr-DZe"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="selectScreenControl" destination="C4I-6s-koO" id="K3r-na-McW"/>
-                        <segue destination="gjw-m6-Aer" kind="show" identifier="mainTabBarSegue" id="jl1-gj-jbv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NwM-kP-H8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1957.5" y="311"/>
         </scene>
         <!--Left Tab Bar Controller-->
         <scene sceneID="zym-rc-HLO">
@@ -702,7 +534,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvS-UX-cDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2611.5" y="311"/>
+            <point key="canvasLocation" x="2089.5" y="311"/>
         </scene>
         <!--Cars-->
         <scene sceneID="g1z-iv-qOS">

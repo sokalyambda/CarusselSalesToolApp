@@ -10,7 +10,7 @@
 #import "Validator.h"
 #import "HomeViewController.h"
 
-static NSString *const kHomeScreenSegue = @"homeScreenSegue";
+static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 
 @interface LoginViewController () <UITextFieldDelegate>
 
@@ -58,7 +58,7 @@ static NSString *const kHomeScreenSegue = @"homeScreenSegue";
 
 - (IBAction)loginClick:(id)sender
 {
-    [self performSegueWithIdentifier:kHomeScreenSegue sender:self];
+    [self performSegueWithIdentifier:kMainTabBarSegue sender:self];
     /*
     if (![self.validator validateEmailField:self.userNameField andPasswordField:self.passwordField]) {
         
@@ -125,7 +125,7 @@ static NSString *const kHomeScreenSegue = @"homeScreenSegue";
     }
 }
 
-- (void)keyboardWillHide:(NSNotification*) notification
+- (void)keyboardWillHide:(NSNotification*)notification
 {
     UIEdgeInsets contentInsets = UIEdgeInsetsZero;
     self.authScrollView.contentInset = contentInsets;
@@ -158,7 +158,7 @@ static NSString *const kHomeScreenSegue = @"homeScreenSegue";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:kHomeScreenSegue]) {
+    if ([segue.identifier isEqualToString:kMainTabBarSegue]) {
 //        HomeViewController *controller = (HomeViewController *)segue.destinationViewController;
     }
 }
