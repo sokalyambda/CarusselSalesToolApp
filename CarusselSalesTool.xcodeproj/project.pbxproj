@@ -14,6 +14,9 @@
 		58701B691B15D56A00F0A21E /* DropDownTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58701B681B15D56A00F0A21E /* DropDownTable.xib */; };
 		58701B6D1B15D59200F0A21E /* DropDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58701B6C1B15D59200F0A21E /* DropDownCell.m */; };
 		58701B6F1B15D5A500F0A21E /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58701B6E1B15D5A500F0A21E /* DropDownCell.xib */; };
+		5877CE771B21787D0097DF86 /* CSTTasksListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5877CE761B21787D0097DF86 /* CSTTasksListController.m */; };
+		5877CE7B1B2178AF0097DF86 /* CSTTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5877CE7A1B2178AF0097DF86 /* CSTTaskCell.m */; };
+		5877CE7D1B2178C20097DF86 /* CSTTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5877CE7C1B2178C20097DF86 /* CSTTaskCell.xib */; };
 		588EE7031B146F6600CE2D91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7021B146F6600CE2D91 /* main.m */; };
 		588EE7061B146F6600CE2D91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7051B146F6600CE2D91 /* AppDelegate.m */; };
 		588EE70C1B146F6600CE2D91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588EE70A1B146F6600CE2D91 /* Main.storyboard */; };
@@ -85,6 +88,11 @@
 		58701B6B1B15D59200F0A21E /* DropDownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropDownCell.h; path = MVC/Views/DropDownCell/DropDownCell.h; sourceTree = "<group>"; };
 		58701B6C1B15D59200F0A21E /* DropDownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropDownCell.m; path = MVC/Views/DropDownCell/DropDownCell.m; sourceTree = "<group>"; };
 		58701B6E1B15D5A500F0A21E /* DropDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DropDownCell.xib; path = MVC/Views/DropDownCell/DropDownCell.xib; sourceTree = "<group>"; };
+		5877CE751B21787D0097DF86 /* CSTTasksListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTTasksListController.h; path = MVC/Controllers/TasksListViewController/CSTTasksListController.h; sourceTree = "<group>"; };
+		5877CE761B21787D0097DF86 /* CSTTasksListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTTasksListController.m; path = MVC/Controllers/TasksListViewController/CSTTasksListController.m; sourceTree = "<group>"; };
+		5877CE791B2178AF0097DF86 /* CSTTaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTTaskCell.h; path = MVC/Views/UITableViewCells/TaskCell/CSTTaskCell.h; sourceTree = "<group>"; };
+		5877CE7A1B2178AF0097DF86 /* CSTTaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTTaskCell.m; path = MVC/Views/UITableViewCells/TaskCell/CSTTaskCell.m; sourceTree = "<group>"; };
+		5877CE7C1B2178C20097DF86 /* CSTTaskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTTaskCell.xib; path = MVC/Views/UITableViewCells/TaskCell/CSTTaskCell.xib; sourceTree = "<group>"; };
 		588EE6FD1B146F6600CE2D91 /* CarusselSalesTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarusselSalesTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		588EE7011B146F6600CE2D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		588EE7021B146F6600CE2D91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -254,6 +262,25 @@
 			name = DropDownCell;
 			sourceTree = "<group>";
 		};
+		5877CE741B2178610097DF86 /* TasksListController */ = {
+			isa = PBXGroup;
+			children = (
+				5877CE751B21787D0097DF86 /* CSTTasksListController.h */,
+				5877CE761B21787D0097DF86 /* CSTTasksListController.m */,
+			);
+			name = TasksListController;
+			sourceTree = "<group>";
+		};
+		5877CE781B2178920097DF86 /* TaskCell */ = {
+			isa = PBXGroup;
+			children = (
+				5877CE791B2178AF0097DF86 /* CSTTaskCell.h */,
+				5877CE7A1B2178AF0097DF86 /* CSTTaskCell.m */,
+				5877CE7C1B2178C20097DF86 /* CSTTaskCell.xib */,
+			);
+			name = TaskCell;
+			sourceTree = "<group>";
+		};
 		588EE6F41B146F6600CE2D91 = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +368,7 @@
 		588EE7291B1473B000CE2D91 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5877CE741B2178610097DF86 /* TasksListController */,
 				589E20861B1DD9F4006A6C81 /* LeftTabBarController */,
 				589AC4971B171C5B00577D90 /* DemonstrationViewController */,
 				58701B601B15B78C00F0A21E /* BaseViewController */,
@@ -492,6 +520,7 @@
 		588EE79A1B14A70700CE2D91 /* UITableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				5877CE781B2178920097DF86 /* TaskCell */,
 				58DA0A811B202B1700FF0343 /* ProspectCell */,
 				58701B6A1B15D57100F0A21E /* DropDownCell */,
 				588EE7A01B14A75A00CE2D91 /* CarCell */,
@@ -883,6 +912,7 @@
 				588EE70C1B146F6600CE2D91 /* Main.storyboard in Resources */,
 				588EE7761B1478AB00CE2D91 /* CarsListViewController.xib in Resources */,
 				588EE7711B14788500CE2D91 /* CarDetailsViewController.xib in Resources */,
+				5877CE7D1B2178C20097DF86 /* CSTTaskCell.xib in Resources */,
 				588EE7111B146F6600CE2D91 /* LaunchScreen.xib in Resources */,
 				588EE7811B147D3600CE2D91 /* ProspectDetailsViewController.xib in Resources */,
 				588EE70E1B146F6600CE2D91 /* Images.xcassets in Resources */,
@@ -961,9 +991,11 @@
 				84EBD4BA1B2078C7001F4CF5 /* CSTLocation.m in Sources */,
 				588EE7A31B14A7D800CE2D91 /* CarCell.m in Sources */,
 				588EE7791B1478CA00CE2D91 /* MainCarsViewController.m in Sources */,
+				5877CE771B21787D0097DF86 /* CSTTasksListController.m in Sources */,
 				84EBD4C91B20BC64001F4CF5 /* CSTRoundBorderedView.m in Sources */,
 				583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */,
 				589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */,
+				5877CE7B1B2178AF0097DF86 /* CSTTaskCell.m in Sources */,
 				84EBD4BC1B2078C7001F4CF5 /* OHMakeCar.m in Sources */,
 				588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */,
 				84EBD4C11B20A6E7001F4CF5 /* CSTCompany.m in Sources */,
