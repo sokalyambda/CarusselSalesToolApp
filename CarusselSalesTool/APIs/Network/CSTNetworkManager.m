@@ -52,7 +52,12 @@ NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt
 
 - (void)getCarWithID:(NSInteger)ID result:(CarBlock)result
 {
-    return result([CSTCar new], nil);
+    ID = 24498;
+    [self GET:[NSString stringWithFormat:@"/vacs-rest/vehicle/%i", ID] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        return result([[CSTCar alloc] initWithDictionary:responseObject], nil);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        return result(NO, error);
+    }];
 }
 
 @end

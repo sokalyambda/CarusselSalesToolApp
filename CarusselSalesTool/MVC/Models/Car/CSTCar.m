@@ -17,12 +17,23 @@
         _ID = [dictionary[@"id"] integerValue];
         _title = dictionary[@"title"];
         _status = [dictionary[@"status"] integerValue];
-        _price = [dictionary[@"price"] integerValue];
-        _discountPrice = [dictionary[@"discountPrice"] integerValue];
+        if (![dictionary[@"price"] isKindOfClass:[NSNull class]]) {
+            _price = [dictionary[@"price"] integerValue];
+        }
+        if (![dictionary[@"discountPrice"] isKindOfClass:[NSNull class]]) {
+            _discountPrice = [dictionary[@"discountPrice"] integerValue];
+        }
         _mileage = [dictionary[@"mileage"] integerValue];
         _make = [[CSTMakeCar alloc] initWithDictionary:dictionary[@"make"]];
         _modelGroup = [[CSTModelGroup alloc] initWithDictionary:dictionary[@"modelGroup"]];
         _defaultImage = [[CSTImageCar alloc] initWithDictionary:dictionary[@"defaultImage"]];
+        if (![dictionary[@"images"] isKindOfClass:[NSNull class]]) {
+            NSMutableArray *tempList = [NSMutableArray new];
+            for (NSDictionary *dic in dictionary[@"images"]) {
+                [tempList addObject:[[CSTImageCar alloc] initWithDictionary:dic]];
+            }
+            _images = [tempList copy];
+        }
     }
     return self;
 }
