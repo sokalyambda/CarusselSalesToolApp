@@ -378,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				588EE7521B14764100CE2D91 /* AuthorizationControllers */,
+				5877CE741B2178610097DF86 /* TasksListController */,
 				589E20861B1DD9F4006A6C81 /* LeftTabBarController */,
 				589AC4971B171C5B00577D90 /* DemonstrationViewController */,
 				58701B601B15B78C00F0A21E /* BaseViewController */,
@@ -995,6 +996,7 @@
 				84EBD4C91B20BC64001F4CF5 /* CSTRoundBorderedView.m in Sources */,
 				583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */,
 				589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */,
+				5877CE7B1B2178AF0097DF86 /* CSTTaskCell.m in Sources */,
 				84EBD4BC1B2078C7001F4CF5 /* CSTMakeCar.m in Sources */,
 				588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */,
 				84EBD4C11B20A6E7001F4CF5 /* CSTCompany.m in Sources */,
