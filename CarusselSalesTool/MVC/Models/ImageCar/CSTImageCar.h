@@ -1,5 +1,5 @@
 //
-//  OHImagesCar.h
+//  CSTImageCar.h
 //  OpelHu
 //
 //  Created by AnatoliyDalekorey on 23.12.14.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OHImagesCar : NSObject
+@interface CSTImageCar : NSObject
 
 @property (assign) NSInteger ID;
 @property (copy) NSString *thumbnailUrl;
@@ -16,7 +16,6 @@
 @property (copy) NSString *origUrl;
 @property (assign) NSInteger orderIndex;
 
-//+ (RKObjectMapping *)entityMapping;
-//+ (RKResponseDescriptor *)responseDescriptorUploadImage;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

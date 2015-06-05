@@ -40,7 +40,11 @@ NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt
 - (void)getCarListWithParameters:(NSArray *)parameters result:(CarListBlock)result
 {
     [self GET:@"/vacs-rest/vehicle/list?rowIndex=0&pageSize=10" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        return result(responseObject, nil);
+        NSMutableArray *listCard = [NSMutableArray new];
+        for (NSDictionary *dic in responseObject) {
+            [listCard addObject:[[CSTCar alloc] initWithDictionary:dic]];
+        }
+        return result([listCard copy], nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         return result(NO, error);
     }];

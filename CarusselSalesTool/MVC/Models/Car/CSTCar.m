@@ -20,6 +20,9 @@
         _price = [dictionary[@"price"] integerValue];
         _discountPrice = [dictionary[@"discountPrice"] integerValue];
         _mileage = [dictionary[@"mileage"] integerValue];
+        _make = [[CSTMakeCar alloc] initWithDictionary:dictionary[@"make"]];
+        _modelGroup = [[CSTModelGroup alloc] initWithDictionary:dictionary[@"modelGroup"]];
+        _defaultImage = [[CSTImageCar alloc] initWithDictionary:dictionary[@"defaultImage"]];
     }
     return self;
 }
