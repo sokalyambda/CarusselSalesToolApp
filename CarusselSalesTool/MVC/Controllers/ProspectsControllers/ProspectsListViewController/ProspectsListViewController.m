@@ -14,7 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *prospectsTableView;
 @property (strong, nonatomic) NSArray *prospectsList;
-@property (weak, nonatomic) IBOutlet UISearchBar *prospectSearchBar;
 
 @end
 

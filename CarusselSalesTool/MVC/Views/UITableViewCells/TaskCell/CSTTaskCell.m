@@ -7,6 +7,15 @@
 //
 
 #import "CSTTaskCell.h"
+#import "CSTBorderedTextField.h"
+
+@interface CSTTaskCell ()
+
+@property (weak, nonatomic) IBOutlet CSTBorderedTextField *taskTextField;
+@property (weak, nonatomic) IBOutlet CSTBorderedTextField *dateTextField;
+@property (weak, nonatomic) IBOutlet CSTBorderedTextField *timeTextField;
+
+@end
 
 @implementation CSTTaskCell
 
