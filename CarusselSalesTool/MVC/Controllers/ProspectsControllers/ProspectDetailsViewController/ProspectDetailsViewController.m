@@ -27,6 +27,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self handleKeyboardNotifications];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -52,12 +53,9 @@
     CGRect aRect = self.view.frame;
     aRect.size.height -= kbSize.height;
     
-    if (CGRectIntersectsRect(keyBoardFrame, self.activeField.frame)) {
+    if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
         [self.prospectDetailsScrollView scrollRectToVisible:self.activeField.frame animated:YES];
     }
-//    if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
-//        [self.prospectDetailsScrollView scrollRectToVisible:self.activeField.frame animated:YES];
-//    }
 }
 
 - (void)keyboardWillHide:(NSNotification*) notification
@@ -93,7 +91,5 @@
 {
     self.activeField = nil;
 }
-
-
 
 @end
