@@ -7,8 +7,13 @@
 //
 
 #import "CSTTasksListController.h"
+#import "CSTTaskCell.h"
+#import "UIView+MakeFromXib.h"
 
-@interface CSTTasksListController ()
+@interface CSTTasksListController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) NSArray *tasksDataSource;
+@property (weak, nonatomic) IBOutlet UITableView *taskTableView;
 
 @end
 
@@ -16,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tasksDataSource = [NSArray arrayWithObjects:@1, @2, @3, @4, nil];
     // Do any additional setup after loading the view.
 }
 
@@ -23,15 +29,27 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - UITableViewDataSource
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.tasksDataSource count];
 }
-*/
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CSTTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CSTTaskCell class])];
+    
+    if(!cell) {
+        cell = [CSTTaskCell makeFromXib];
+    }
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 @end

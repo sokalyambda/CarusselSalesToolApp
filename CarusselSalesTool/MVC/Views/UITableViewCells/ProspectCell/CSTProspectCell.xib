@@ -14,6 +14,15 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eFt-mQ-Rdh" id="NT7-QL-tou">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KHB-Iz-XmJ" customClass="CSTBorderedTextField">
+                        <rect key="frame" x="8" y="10" width="304" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="2Yl-PZ-fFw"/>
+                            <constraint firstAttribute="width" constant="304" id="wbi-1e-MjI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Town" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcq-ZN-vJU" customClass="CSTAuthorizationTextField">
                         <rect key="frame" x="317" y="10" width="213" height="40"/>
                         <constraints>
@@ -32,15 +41,6 @@
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cars matches" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZK-Du-Rr9" customClass="CSTBorderedTextField">
                         <rect key="frame" x="635" y="10" width="117" height="40"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
-                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KHB-Iz-XmJ" customClass="CSTBorderedTextField">
-                        <rect key="frame" x="8" y="10" width="304" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" priority="999" constant="40" id="2Yl-PZ-fFw"/>
-                            <constraint firstAttribute="width" constant="304" id="wbi-1e-MjI"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
