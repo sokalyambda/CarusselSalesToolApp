@@ -15,7 +15,9 @@
     self = [super init];
     if (self) {
         _ID = [dictionary[@"id"] integerValue];
-        _title = dictionary[@"title"];
+        if (![dictionary[@"title"] isKindOfClass:[NSNull class]]) {
+            _title = dictionary[@"title"];
+        }
         _status = [dictionary[@"status"] integerValue];
         if (![dictionary[@"price"] isKindOfClass:[NSNull class]]) {
             _price = [dictionary[@"price"] integerValue];

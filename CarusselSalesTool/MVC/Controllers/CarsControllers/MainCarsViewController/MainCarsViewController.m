@@ -58,12 +58,6 @@ static CGFloat kSlideTiming = 0.5f;
     self.tabBarController.navigationItem.title = NSLocalizedString(@"Carussel Sales Tool", nil);
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO];
-}
-
 #pragma mark - Actions
 
 - (IBAction)showFiltersClick:(id)sender

@@ -53,10 +53,17 @@
         cell = [CarCell makeFromXib];
     }
     
-    //TODO: configure cell
-
+    CSTCar *currentCar = self.cars[indexPath.row];
     
+    cell.carPriceLabel.text = [NSString stringWithFormat:@"%i",currentCar.price];
+    cell.carTitleLabel.text = currentCar.title;
     
+    NSURL *carImageURL = [NSURL URLWithString:currentCar.defaultImage.mediumUrl];
+    
+    if (![carImageURL isEqual:[NSNull null]]) {
+        [cell.carImage sd_setImageWithURL:carImageURL];
+    }
+ 
     return cell;
 }
 

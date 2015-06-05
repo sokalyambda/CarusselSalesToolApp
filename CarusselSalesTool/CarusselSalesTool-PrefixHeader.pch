@@ -10,6 +10,7 @@
 #define CarusselSalesTool_CarusselSalesTool_PrefixHeader_pch
 
 #import <UIKit/UIKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "AlertMessageService.h"
 #import "Constants.h"
 #import "CSTDataManager.h"

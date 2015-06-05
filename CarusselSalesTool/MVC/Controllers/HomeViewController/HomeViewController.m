@@ -33,12 +33,6 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
     [super viewDidLoad];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES];
-}
-
 #pragma mark - Actions
 
 - (IBAction)selectScreenClick:(UISegmentedControl *)segmentedControl

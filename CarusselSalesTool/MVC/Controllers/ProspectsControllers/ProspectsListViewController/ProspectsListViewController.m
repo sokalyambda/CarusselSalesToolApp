@@ -13,6 +13,8 @@
 @interface ProspectsListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *prospectsTableView;
+@property (weak, nonatomic) IBOutlet UISearchBar *prospectsSearchBar;
+
 @property (strong, nonatomic) NSArray *prospectsList;
 
 @end
