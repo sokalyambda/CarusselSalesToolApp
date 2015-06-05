@@ -36,11 +36,9 @@ static CGFloat kLeftViewWidth = 10.f;
 
 - (void)commonInit
 {
-    self.backgroundColor = [UIColor colorWithWhite:.9f alpha:.5f];
-    self.layer.masksToBounds = YES;
-    self.layer.cornerRadius = 5.f;
-    self.layer.borderWidth = 1.f;
-    self.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    if (!self.background) {
+        [self setBackground:[UIImage imageNamed:@"username_box"]];
+    }
     [self addLeftView];
 }
 

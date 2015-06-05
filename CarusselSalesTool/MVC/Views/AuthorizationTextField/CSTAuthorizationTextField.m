@@ -8,7 +8,7 @@
 
 #import "CSTAuthorizationTextField.h"
 
-static CGFloat kLeftViewWidth = 51.0;
+static CGFloat kLeftViewWidth = 36.f;
 
 @interface CSTAuthorizationTextField ()
 

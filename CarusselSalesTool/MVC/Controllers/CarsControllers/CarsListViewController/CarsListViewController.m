@@ -71,8 +71,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //TODO: pass car to detail controller
+    CSTCar *chosenCar = self.cars[indexPath.row];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (self.carSelectedCompletion) {
+        self.carSelectedCompletion(chosenCar);
+    }
 }
 
 @end

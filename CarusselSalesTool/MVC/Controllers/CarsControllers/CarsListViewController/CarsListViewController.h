@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class CSTCar;
+
+typedef void(^CarSelectedCompletion)(CSTCar *car);
+
 @interface CarsListViewController : UIViewController
+
+@property (copy, nonatomic) CarSelectedCompletion carSelectedCompletion;
 
 @end

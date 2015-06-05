@@ -8,7 +8,7 @@
 
 #import "LoginViewController.h"
 #import "CSTValidator.h"
-#import "HomeViewController.h"
+#import "CSTAuthorizationTextField.h"
 
 #import "CSTDataManager.h"
 
@@ -17,8 +17,8 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 @interface LoginViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *authScrollView;
-@property (weak, nonatomic) IBOutlet UITextField *userNameField;
-@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet CSTAuthorizationTextField *userNameField;
+@property (weak, nonatomic) IBOutlet CSTAuthorizationTextField *passwordField;
 
 @property (strong, nonatomic) UITextField *activeField;
 @property (strong, nonatomic) CSTValidator *validator;
@@ -42,6 +42,7 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self customizeFields];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -64,8 +65,10 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 - (IBAction)loginClick:(id)sender
 {
     WEAK_SELF;
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[CSTDataManager sharedInstance] signInWithUserName:self.userNameField.text password:self.passwordField.text withResult:^(BOOL success, NSError *error) {
-        success ? [weakSelf performSegueWithIdentifier:kMainTabBarSegue sender:weakSelf] : NSLog(@"%@", error.debugDescription);
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        success ? [weakSelf performSegueWithIdentifier:kMainTabBarSegue sender:weakSelf] : ShowErrorAlert(error);
     }];
     
     /*
@@ -110,6 +113,12 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+}
+
+- (void)customizeFields
+{
+    [self.userNameField setImageName:@"icn_user"];
+    [self.passwordField setImageName:@"icn_pass"];
 }
 
 #pragma mark - Keyboard methods
@@ -168,7 +177,6 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:kMainTabBarSegue]) {
-//        HomeViewController *controller = (HomeViewController *)segue.destinationViewController;
     }
 }
 

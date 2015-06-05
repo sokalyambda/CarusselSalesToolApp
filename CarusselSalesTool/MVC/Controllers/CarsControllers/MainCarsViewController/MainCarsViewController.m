@@ -90,6 +90,8 @@ static CGFloat kSlideTiming = 0.5f;
     [self.carsListHolder addSubview:self.carsListController.view];
     [self addChildViewController:self.carsListController];
     [self.carsListController didMoveToParentViewController:self];
+    //setup completion block for carsListController to determine what car has been selected
+    [self handleCarSelection];
     
     self.carDetailsController = [[CarDetailsViewController alloc] initWithNibName:NSStringFromClass([CarDetailsViewController class]) bundle:nil];
     [self.carDetailsController.view setFrame:self.carDetailsHolder.frame];
@@ -161,6 +163,14 @@ static CGFloat kSlideTiming = 0.5f;
     self.dropDownTable = [DropDownTable makeFromXib];
     self.dropDownTable.dataSource = self;
     self.dropDownTable.delegate = self;
+}
+
+- (void)handleCarSelection {
+    __weak typeof(self)weakSelf = self;
+    [self.carsListController setCarSelectedCompletion:^(CSTCar *car) {
+        weakSelf.carDetailsController.currentCar = car;
+        NSLog(@"car with title %@ has been selected", car.title);
+    }];
 }
 
 #pragma mark - UITableViewDataSource
