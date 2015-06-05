@@ -1,5 +1,5 @@
 //
-//  OHModelGroup.h
+//  CSTModelGroup.h
 //  OpelHu
 //
 //  Created by AnatoliyDalekorey on 23.12.14.
@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OHModelGroup : NSObject
+@interface CSTModelGroup : NSObject
 
 @property (assign) NSInteger ID;
 @property (copy) NSString *title;
 
-//+ (RKObjectMapping *)entityMapping;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

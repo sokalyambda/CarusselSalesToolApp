@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Thinkmobiles. All rights reserved.
 //
 
-#import "OHMakeCar.h"
-#import "OHModelGroup.h"
-#import "OHImagesCar.h"
+#import "CSTMakeCar.h"
+#import "CSTModelGroup.h"
+#import "CSTImageCar.h"
 
 @interface CSTCar : NSObject
 
@@ -18,9 +18,9 @@
 @property (assign) NSInteger price;
 @property (assign) NSInteger discountPrice;
 @property (assign) NSInteger mileage;
-@property (strong) OHMakeCar *make;
-@property (strong) OHModelGroup *modelGroup;
-@property (strong) OHImagesCar *defaultImage;
+@property (strong) CSTMakeCar *make;
+@property (strong) CSTModelGroup *modelGroup;
+@property (strong) CSTImageCar *defaultImage;
 @property (strong) NSMutableArray *images;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;

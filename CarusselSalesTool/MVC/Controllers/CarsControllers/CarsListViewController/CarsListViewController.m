@@ -33,7 +33,7 @@
     
     __weak CarsListViewController *weakSelf = self;
     [self.dataManager getCarListWithParameters:nil result:^(NSArray *carList, NSError *error) {
-        weakSelf.cars = [carList copy];
+        weakSelf.cars = carList;
         [weakSelf.carListTbleView reloadData];        
     }];
 }
