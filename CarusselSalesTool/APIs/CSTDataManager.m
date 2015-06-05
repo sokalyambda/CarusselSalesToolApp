@@ -42,14 +42,16 @@
 
 - (void)signInWithUserName:(NSString *)userName password:(NSString *)password withResult:(SuccessBlock)result
 {
-    [self.network signInWithUserName:userName password:password withResult:^(BOOL success, NSError *error) {
+    WEAK_SELF;
+    [self.network signInWithUserName:userName password:password withResult:^(BOOL success, CSTCompany *company, NSError *error) {
+        weakSelf.cache.companyInfo = company;
         return result(success, error);
     }];
 }
 
-- (void)getCarListWithParameters:(NSArray *)parameters result:(CarListBlock)result
+- (void)getCarListForRow:(NSInteger)row pageSize:(NSInteger)pageSize parameter:(NSDictionary *)parameters result:(CarListBlock)result
 {
-    [self.network getCarListWithParameters:parameters result:^(NSArray *carList, NSError *error) {
+    [self.network getCarListForRow:row pageSize:pageSize parameter:parameters result:^(NSArray *carList, NSError *error) {
         return result(carList, error);
     }];
 }

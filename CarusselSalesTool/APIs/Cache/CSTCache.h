@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #import "CSTCar.h"
 #import "Prospect.h"
+#import "CSTCompany.h"
 
 @interface CSTCache : NSObject
 
 @property (strong, atomic) NSCache *carsList;
 @property (strong, atomic) NSCache *prospectList;
+@property (strong, atomic) CSTCompany *companyInfo;
 
 - (CSTCar *)getCarWithID:(NSNumber *)ID;
 

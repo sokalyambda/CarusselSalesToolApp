@@ -12,13 +12,14 @@
 #import "CSTCar.h"
 
 typedef void(^SuccessBlock)(BOOL success, NSError *error);
+typedef void(^CompanyBlock)(BOOL success, CSTCompany *company, NSError *error);
 typedef void(^CarBlock)(CSTCar *car, NSError *error);
 typedef void(^CarListBlock)(NSArray *carList, NSError *error);
 
 @interface CSTNetworkManager : AFHTTPSessionManager
 
-- (void)signInWithUserName:(NSString *)userName password:(NSString *)password withResult:(SuccessBlock)result;
-- (void)getCarListWithParameters:(NSArray *)parameters result:(CarListBlock)result;
+- (void)signInWithUserName:(NSString *)userName password:(NSString *)password withResult:(CompanyBlock)result;
+- (void)getCarListForRow:(NSInteger)row pageSize:(NSInteger)pageSize parameter:(NSDictionary *)parameters result:(CarListBlock)result;
 - (void)getCarWithID:(NSInteger)ID result:(CarBlock)result;
 
 @end

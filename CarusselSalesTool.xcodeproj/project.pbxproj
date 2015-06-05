@@ -22,7 +22,6 @@
 		588EE7061B146F6600CE2D91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7051B146F6600CE2D91 /* AppDelegate.m */; };
 		588EE70C1B146F6600CE2D91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588EE70A1B146F6600CE2D91 /* Main.storyboard */; };
 		588EE70E1B146F6600CE2D91 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588EE70D1B146F6600CE2D91 /* Images.xcassets */; };
-		588EE7111B146F6600CE2D91 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588EE70F1B146F6600CE2D91 /* LaunchScreen.xib */; };
 		588EE7591B14771800CE2D91 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7581B14771800CE2D91 /* BaseNavigationController.m */; };
 		588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE75B1B14772300CE2D91 /* LoginViewController.m */; };
 		588EE7601B14777600CE2D91 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE75F1B14777600CE2D91 /* HomeViewController.m */; };
@@ -102,7 +101,6 @@
 		588EE7051B146F6600CE2D91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		588EE70B1B146F6600CE2D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		588EE70D1B146F6600CE2D91 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		588EE7101B146F6600CE2D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		588EE7571B14771800CE2D91 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseNavigationController.h; path = MVC/Controllers/BaseNavigationController/BaseNavigationController.h; sourceTree = "<group>"; };
 		588EE7581B14771800CE2D91 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseNavigationController.m; path = MVC/Controllers/BaseNavigationController/BaseNavigationController.m; sourceTree = "<group>"; };
 		588EE75A1B14772300CE2D91 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = MVC/Controllers/AuthorizationControllers/LoginViewController.h; sourceTree = "<group>"; };
@@ -188,6 +186,7 @@
 		84EBD4C81B20BC64001F4CF5 /* CSTRoundBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTRoundBorderedView.m; sourceTree = "<group>"; };
 		84F2D6FC1B2197D400719617 /* CSTImageCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTImageCar.h; sourceTree = "<group>"; };
 		84F2D6FD1B2197D400719617 /* CSTImageCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTImageCar.m; sourceTree = "<group>"; };
+		84F2D7001B21D29F00719617 /* CSTMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTMacros.h; sourceTree = "<group>"; };
 		A5448A118D3675EBA17F8DEA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BA692D198C476BE8C2BF647E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -321,9 +320,9 @@
 		588EE7001B146F6600CE2D91 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84F2D6FF1B21D29F00719617 /* Macros */,
 				588EE7041B146F6600CE2D91 /* AppDelegate.h */,
 				588EE7051B146F6600CE2D91 /* AppDelegate.m */,
-				588EE70F1B146F6600CE2D91 /* LaunchScreen.xib */,
 				588EE70A1B146F6600CE2D91 /* Main.storyboard */,
 				588EE7011B146F6600CE2D91 /* Info.plist */,
 				588EE7021B146F6600CE2D91 /* main.m */,
@@ -828,6 +827,14 @@
 			path = MVC/Models/ImageCar;
 			sourceTree = "<group>";
 		};
+		84F2D6FF1B21D29F00719617 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				84F2D7001B21D29F00719617 /* CSTMacros.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
 		8DD4BD65C40C72DC41D1B194 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -912,7 +919,6 @@
 				588EE7761B1478AB00CE2D91 /* CarsListViewController.xib in Resources */,
 				588EE7711B14788500CE2D91 /* CarDetailsViewController.xib in Resources */,
 				5877CE7D1B2178C20097DF86 /* CSTTaskCell.xib in Resources */,
-				588EE7111B146F6600CE2D91 /* LaunchScreen.xib in Resources */,
 				588EE7811B147D3600CE2D91 /* ProspectDetailsViewController.xib in Resources */,
 				588EE70E1B146F6600CE2D91 /* Images.xcassets in Resources */,
 				58701B6F1B15D5A500F0A21E /* DropDownCell.xib in Resources */,
@@ -1023,14 +1029,6 @@
 				588EE70B1B146F6600CE2D91 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		588EE70F1B146F6600CE2D91 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				588EE7101B146F6600CE2D91 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

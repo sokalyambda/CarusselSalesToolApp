@@ -31,8 +31,8 @@
     
     self.dataManager = [CSTDataManager sharedInstance];
     
-    __weak CarsListViewController *weakSelf = self;
-    [self.dataManager getCarListWithParameters:nil result:^(NSArray *carList, NSError *error) {
+    WEAK_SELF;
+    [self.dataManager getCarListForRow:0 pageSize:10 parameter:nil result:^(NSArray *carList, NSError *error) {
         weakSelf.cars = carList;
         [weakSelf.carListTbleView reloadData];        
     }];
