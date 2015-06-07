@@ -26,16 +26,12 @@
 
 #pragma mark - View Lifecycle
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.dataManager = [CSTDataManager sharedInstance];
-    
-    WEAK_SELF;
-    [self.dataManager getCarListForRow:0 pageSize:10 parameter:nil result:^(NSArray *carList, NSError *error) {
-        weakSelf.cars = carList;
-        [weakSelf.carListTbleView reloadData];        
-    }];
+    [self getCarsList];
 }
 
 #pragma mark - UITableViewDataSource
@@ -77,6 +73,19 @@
     if (self.carSelectedCompletion) {
         self.carSelectedCompletion(chosenCar);
     }
+}
+
+#pragma mark - Actions 
+
+- (void)getCarsList
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    WEAK_SELF;
+    [self.dataManager getCarListForRow:0 pageSize:10 parameter:nil result:^(NSArray *carList, NSError *error) {
+        [MBProgressHUD hideAllHUDsForView:weakSelf.view animated:YES];
+        weakSelf.cars = carList;
+        [weakSelf.carListTbleView reloadData];
+    }];
 }
 
 @end

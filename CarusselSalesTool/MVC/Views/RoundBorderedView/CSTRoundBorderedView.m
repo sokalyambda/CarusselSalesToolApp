@@ -32,8 +32,8 @@
 {
 //    self.backgroundColor = [UIColor colorWithWhite:.9f alpha:.5f];
     self.layer.masksToBounds = YES;
-    self.layer.cornerRadius = 5.f;
-    self.layer.borderWidth = 1.f;
+    self.layer.cornerRadius = 7.f;
+    self.layer.borderWidth = 2.f;
     self.layer.borderColor = [UIColor lightGrayColor].CGColor;
 }
 

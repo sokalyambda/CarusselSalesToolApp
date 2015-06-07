@@ -12,7 +12,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CSTRoundBorderedView">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -24,38 +24,81 @@
                         <outlet property="delegate" destination="-1" id="Wtg-Cs-kQQ"/>
                     </connections>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cars List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7J-gi-9o3">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVj-1r-wbh" userLabel="Gradient Divider">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" red="0.81728001640000003" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="Ab9-tn-ru0"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Ab9-tn-ru0"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="Ab9-tn-ru0"/>
+                        </mask>
+                    </variation>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="PK9-xV-GsW" firstAttribute="top" secondItem="XVj-1r-wbh" secondAttribute="bottom" constant="8" id="AKb-Kk-AVv"/>
+                <constraint firstItem="e7J-gi-9o3" firstAttribute="leading" secondItem="XVj-1r-wbh" secondAttribute="leading" id="BsC-EM-2y6"/>
+                <constraint firstItem="XVj-1r-wbh" firstAttribute="top" secondItem="e7J-gi-9o3" secondAttribute="bottom" constant="6" id="ENW-9p-PSp"/>
                 <constraint firstAttribute="bottom" secondItem="PK9-xV-GsW" secondAttribute="bottom" id="IyE-Mc-a3F">
                     <variation key="widthClass=regular" constant="8"/>
                 </constraint>
                 <constraint firstItem="PK9-xV-GsW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KXd-DB-MpF"/>
                 <constraint firstAttribute="trailing" secondItem="PK9-xV-GsW" secondAttribute="trailing" id="OMv-NW-eNp"/>
-                <constraint firstItem="PK9-xV-GsW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cPt-mO-eNJ"/>
+                <constraint firstItem="e7J-gi-9o3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="P6S-Qt-iPv"/>
+                <constraint firstAttribute="trailing" secondItem="XVj-1r-wbh" secondAttribute="trailing" constant="8" id="cHt-R5-MGr"/>
+                <constraint firstItem="e7J-gi-9o3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="nir-3T-Hls"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="PK9-xV-GsW"/>
+                    <exclude reference="e7J-gi-9o3"/>
+                    <exclude reference="XVj-1r-wbh"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="BsC-EM-2y6"/>
+                    <exclude reference="P6S-Qt-iPv"/>
+                    <exclude reference="nir-3T-Hls"/>
+                    <exclude reference="ENW-9p-PSp"/>
+                    <exclude reference="cHt-R5-MGr"/>
+                    <exclude reference="AKb-Kk-AVv"/>
                     <exclude reference="IyE-Mc-a3F"/>
                     <exclude reference="KXd-DB-MpF"/>
                     <exclude reference="OMv-NW-eNp"/>
-                    <exclude reference="cPt-mO-eNJ"/>
                 </mask>
             </variation>
             <variation key="widthClass=regular">
                 <mask key="subviews">
                     <include reference="PK9-xV-GsW"/>
+                    <include reference="e7J-gi-9o3"/>
+                    <include reference="XVj-1r-wbh"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="BsC-EM-2y6"/>
+                    <include reference="P6S-Qt-iPv"/>
+                    <include reference="nir-3T-Hls"/>
+                    <include reference="ENW-9p-PSp"/>
+                    <include reference="cHt-R5-MGr"/>
+                    <include reference="AKb-Kk-AVv"/>
                     <include reference="IyE-Mc-a3F"/>
                     <include reference="KXd-DB-MpF"/>
                     <include reference="OMv-NW-eNp"/>
-                    <include reference="cPt-mO-eNJ"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="245" y="282"/>
         </view>
     </objects>
 </document>

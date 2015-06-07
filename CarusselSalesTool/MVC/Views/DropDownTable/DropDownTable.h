@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class DropDownTable;
+@class DropDownTable, CSTBaseDropDownDataSource;
 
-typedef void(^DropDownCompletionHandler)(DropDownTable *tableView, BOOL isExpanded);
+typedef void(^DropDownCompletionHandler)(DropDownTable *dropDownTable, BOOL isExpanded, BOOL isApply);
 
-@interface DropDownTable : UITableView
+@interface DropDownTable : UIView
 
-- (void)dropDownTableBecomeActiveInView:(UIView *)presentedView fromAnchorView:(UIView *)anchorView  withCompletion:(DropDownCompletionHandler)completion;
+- (void)dropDownTableBecomeActiveInView:(UIView *)presentedView
+                         fromAnchorView:(UIView *)anchorView
+                         withDataSource:(CSTBaseDropDownDataSource *)dataSource
+                         withCompletion:(DropDownCompletionHandler)completion;
 
 @end

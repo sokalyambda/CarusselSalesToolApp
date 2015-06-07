@@ -10,14 +10,10 @@
 #import "CarsListViewController.h"
 #import "CarDetailsViewController.h"
 #import "CarsFiltersViewController.h"
-#import "DropDownTable.h"
-#import "UIView+MakeFromXib.h"
-
-#import "DropDownCell.h"
 
 static CGFloat kSlideTiming = 0.5f;
 
-@interface MainCarsViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MainCarsViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *carsListHolder;
 @property (weak, nonatomic) IBOutlet UIView *carDetailsHolder;
@@ -27,8 +23,6 @@ static CGFloat kSlideTiming = 0.5f;
 @property (strong, nonatomic) CarsListViewController *carsListController;
 @property (strong, nonatomic) CarsFiltersViewController *carsFiltersController;
 @property (strong, nonatomic) CarDetailsViewController *carDetailsController;
-
-@property (strong, nonatomic) DropDownTable *dropDownTable;
 
 @end
 
@@ -54,7 +48,6 @@ static CGFloat kSlideTiming = 0.5f;
 {
     [super viewDidLoad];
     [self setupChildControllers];
-    [self initDropDownTableView];
     self.tabBarController.navigationItem.title = NSLocalizedString(@"Carussel Sales Tool", nil);
 }
 
@@ -75,12 +68,6 @@ static CGFloat kSlideTiming = 0.5f;
         default:
             break;
     }
-}
-
-//for test only
-- (IBAction)dropDownTestClick:(id)sender
-{
-    [self.dropDownTable dropDownTableBecomeActiveInView:self.view fromAnchorView:sender withCompletion:nil];
 }
 
 - (void)setupChildControllers
@@ -158,13 +145,6 @@ static CGFloat kSlideTiming = 0.5f;
     }
 }
 
-- (void)initDropDownTableView
-{
-    self.dropDownTable = [DropDownTable makeFromXib];
-    self.dropDownTable.dataSource = self;
-    self.dropDownTable.delegate = self;
-}
-
 - (void)handleCarSelection {
     __weak typeof(self)weakSelf = self;
     [self.carsListController setCarSelectedCompletion:^(CSTCar *car) {
@@ -172,27 +152,5 @@ static CGFloat kSlideTiming = 0.5f;
         NSLog(@"car with title %@ has been selected", car.title);
     }];
 }
-
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 10;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DropDownCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([DropDownCell class])];
-    
-    if (cell == nil) {
-        cell = [DropDownCell makeFromXib];
-    }
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell %li", (long)indexPath.row];
-    
-    return cell;
-}
-
-#pragma mark - UITableViewDelegate
 
 @end

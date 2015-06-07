@@ -52,6 +52,12 @@
 		588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F295C1B18AD5A00F14AED /* UIView+Shaking.m */; };
 		588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F295F1B18AD6E00F14AED /* UIView+MakeFromXib.m */; };
 		588F29651B18ADD300F14AED /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29641B18ADD300F14AED /* Constants.m */; };
+		589235FB1B243EFD00E79D49 /* CSTBaseDropDownDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 589235FA1B243EFD00E79D49 /* CSTBaseDropDownDataSource.m */; };
+		589235FF1B243F8C00E79D49 /* CSTMakeCarDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 589235FE1B243F8C00E79D49 /* CSTMakeCarDataSource.m */; };
+		589236031B243FCC00E79D49 /* CSTFuelTypeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 589236021B243FCC00E79D49 /* CSTFuelTypeDataSource.m */; };
+		589236071B243FED00E79D49 /* CSTBodyTypeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 589236061B243FED00E79D49 /* CSTBodyTypeDataSource.m */; };
+		5892360B1B24401100E79D49 /* CSTCarColorDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5892360A1B24401100E79D49 /* CSTCarColorDataSource.m */; };
+		5892360F1B24403900E79D49 /* CSTCarYearFromDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5892360E1B24403900E79D49 /* CSTCarYearFromDataSource.m */; };
 		589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589AC4991B171C8100577D90 /* DemonstrationViewController.m */; };
 		589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */; };
 		589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */; };
@@ -152,6 +158,18 @@
 		588F295F1B18AD6E00F14AED /* UIView+MakeFromXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MakeFromXib.m"; path = "Categories/UIView/UIView+MakeFromXib/UIView+MakeFromXib.m"; sourceTree = "<group>"; };
 		588F29631B18ADD300F14AED /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utilities/Constants/Constants.h; sourceTree = "<group>"; };
 		588F29641B18ADD300F14AED /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Utilities/Constants/Constants.m; sourceTree = "<group>"; };
+		589235F91B243EFD00E79D49 /* CSTBaseDropDownDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBaseDropDownDataSource.h; path = Utilities/DataSources/BaseDropDownDataSource/CSTBaseDropDownDataSource.h; sourceTree = "<group>"; };
+		589235FA1B243EFD00E79D49 /* CSTBaseDropDownDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBaseDropDownDataSource.m; path = Utilities/DataSources/BaseDropDownDataSource/CSTBaseDropDownDataSource.m; sourceTree = "<group>"; };
+		589235FD1B243F8C00E79D49 /* CSTMakeCarDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTMakeCarDataSource.h; path = Utilities/DataSources/MakeCarDataSource/CSTMakeCarDataSource.h; sourceTree = "<group>"; };
+		589235FE1B243F8C00E79D49 /* CSTMakeCarDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTMakeCarDataSource.m; path = Utilities/DataSources/MakeCarDataSource/CSTMakeCarDataSource.m; sourceTree = "<group>"; };
+		589236011B243FCC00E79D49 /* CSTFuelTypeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTFuelTypeDataSource.h; path = Utilities/DataSources/FuelTypeDataSource/CSTFuelTypeDataSource.h; sourceTree = "<group>"; };
+		589236021B243FCC00E79D49 /* CSTFuelTypeDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTFuelTypeDataSource.m; path = Utilities/DataSources/FuelTypeDataSource/CSTFuelTypeDataSource.m; sourceTree = "<group>"; };
+		589236051B243FED00E79D49 /* CSTBodyTypeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBodyTypeDataSource.h; path = Utilities/DataSources/BodyTypeDataSource/CSTBodyTypeDataSource.h; sourceTree = "<group>"; };
+		589236061B243FED00E79D49 /* CSTBodyTypeDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBodyTypeDataSource.m; path = Utilities/DataSources/BodyTypeDataSource/CSTBodyTypeDataSource.m; sourceTree = "<group>"; };
+		589236091B24401100E79D49 /* CSTCarColorDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTCarColorDataSource.h; path = Utilities/DataSources/CarColorDataSource/CSTCarColorDataSource.h; sourceTree = "<group>"; };
+		5892360A1B24401100E79D49 /* CSTCarColorDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCarColorDataSource.m; path = Utilities/DataSources/CarColorDataSource/CSTCarColorDataSource.m; sourceTree = "<group>"; };
+		5892360D1B24403900E79D49 /* CSTCarYearFromDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTCarYearFromDataSource.h; path = Utilities/DataSources/CarYearFromDataSource/CSTCarYearFromDataSource.h; sourceTree = "<group>"; };
+		5892360E1B24403900E79D49 /* CSTCarYearFromDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCarYearFromDataSource.m; path = Utilities/DataSources/CarYearFromDataSource/CSTCarYearFromDataSource.m; sourceTree = "<group>"; };
 		589AC4981B171C8100577D90 /* DemonstrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemonstrationViewController.h; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.h; sourceTree = "<group>"; };
 		589AC4991B171C8100577D90 /* DemonstrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemonstrationViewController.m; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.m; sourceTree = "<group>"; };
 		589E20871B1DDA29006A6C81 /* CSTLeftTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTLeftTabBarController.h; path = MVC/Controllers/LeftTabBarController/CSTLeftTabBarController.h; sourceTree = "<group>"; };
@@ -405,6 +423,7 @@
 		588EE72B1B1473D600CE2D91 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				589235F71B243EB900E79D49 /* DataSources */,
 				588F29621B18AD8800F14AED /* Constants */,
 				588F29611B18AD7D00F14AED /* AlertMessageServices */,
 				588EE7901B14841B00CE2D91 /* Validator */,
@@ -674,6 +693,73 @@
 				588F29641B18ADD300F14AED /* Constants.m */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		589235F71B243EB900E79D49 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				5892360C1B24401800E79D49 /* CarYearFromDataSource */,
+				589236081B243FF200E79D49 /* CarColorDataSource */,
+				589236041B243FD100E79D49 /* BodyTypeDataSource */,
+				589236001B243F9100E79D49 /* FuelTypeDataSource */,
+				589235FC1B243F5300E79D49 /* MakeCarDataSource */,
+				589235F81B243EC900E79D49 /* BaseDropDownDataSource */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+		589235F81B243EC900E79D49 /* BaseDropDownDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				589235F91B243EFD00E79D49 /* CSTBaseDropDownDataSource.h */,
+				589235FA1B243EFD00E79D49 /* CSTBaseDropDownDataSource.m */,
+			);
+			name = BaseDropDownDataSource;
+			sourceTree = "<group>";
+		};
+		589235FC1B243F5300E79D49 /* MakeCarDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				589235FD1B243F8C00E79D49 /* CSTMakeCarDataSource.h */,
+				589235FE1B243F8C00E79D49 /* CSTMakeCarDataSource.m */,
+			);
+			name = MakeCarDataSource;
+			sourceTree = "<group>";
+		};
+		589236001B243F9100E79D49 /* FuelTypeDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				589236011B243FCC00E79D49 /* CSTFuelTypeDataSource.h */,
+				589236021B243FCC00E79D49 /* CSTFuelTypeDataSource.m */,
+			);
+			name = FuelTypeDataSource;
+			sourceTree = "<group>";
+		};
+		589236041B243FD100E79D49 /* BodyTypeDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				589236051B243FED00E79D49 /* CSTBodyTypeDataSource.h */,
+				589236061B243FED00E79D49 /* CSTBodyTypeDataSource.m */,
+			);
+			name = BodyTypeDataSource;
+			sourceTree = "<group>";
+		};
+		589236081B243FF200E79D49 /* CarColorDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				589236091B24401100E79D49 /* CSTCarColorDataSource.h */,
+				5892360A1B24401100E79D49 /* CSTCarColorDataSource.m */,
+			);
+			name = CarColorDataSource;
+			sourceTree = "<group>";
+		};
+		5892360C1B24401800E79D49 /* CarYearFromDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				5892360D1B24403900E79D49 /* CSTCarYearFromDataSource.h */,
+				5892360E1B24403900E79D49 /* CSTCarYearFromDataSource.m */,
+			);
+			name = CarYearFromDataSource;
 			sourceTree = "<group>";
 		};
 		589AC4971B171C5B00577D90 /* DemonstrationViewController */ = {
@@ -994,9 +1080,11 @@
 				84EBD4C51B20BC25001F4CF5 /* CSTAttributedLabel.m in Sources */,
 				588EE7B71B14B69600CE2D91 /* CarImageCell.m in Sources */,
 				588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */,
+				589235FF1B243F8C00E79D49 /* CSTMakeCarDataSource.m in Sources */,
 				841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */,
 				588EE7B31B14B27B00CE2D91 /* Prospect.m in Sources */,
 				588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */,
+				5892360F1B24403900E79D49 /* CSTCarYearFromDataSource.m in Sources */,
 				588F29651B18ADD300F14AED /* Constants.m in Sources */,
 				588EE7601B14777600CE2D91 /* HomeViewController.m in Sources */,
 				588EE7681B14783700CE2D91 /* CarsFiltersViewController.m in Sources */,
@@ -1009,6 +1097,7 @@
 				588EE7591B14771800CE2D91 /* BaseNavigationController.m in Sources */,
 				588EE77F1B147D2600CE2D91 /* ProspectDetailsViewController.m in Sources */,
 				84EBD4BA1B2078C7001F4CF5 /* CSTLocation.m in Sources */,
+				589236071B243FED00E79D49 /* CSTBodyTypeDataSource.m in Sources */,
 				588EE7A31B14A7D800CE2D91 /* CarCell.m in Sources */,
 				588EE7791B1478CA00CE2D91 /* MainCarsViewController.m in Sources */,
 				5877CE771B21787D0097DF86 /* CSTTasksListController.m in Sources */,
@@ -1018,13 +1107,16 @@
 				589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */,
 				5877CE7B1B2178AF0097DF86 /* CSTTaskCell.m in Sources */,
 				84EBD4BC1B2078C7001F4CF5 /* CSTMakeCar.m in Sources */,
+				5892360B1B24401100E79D49 /* CSTCarColorDataSource.m in Sources */,
 				588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */,
+				589235FB1B243EFD00E79D49 /* CSTBaseDropDownDataSource.m in Sources */,
 				84EBD4C11B20A6E7001F4CF5 /* CSTCompany.m in Sources */,
 				588EE76F1B14787800CE2D91 /* CarDetailsViewController.m in Sources */,
 				588EE7031B146F6600CE2D91 /* main.m in Sources */,
 				58DA0A841B202B5300FF0343 /* CSTProspectCell.m in Sources */,
 				841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */,
 				588EE7931B14843400CE2D91 /* CSTValidator.m in Sources */,
+				589236031B243FCC00E79D49 /* CSTFuelTypeDataSource.m in Sources */,
 				841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */,
 				589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */,
 				583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */,

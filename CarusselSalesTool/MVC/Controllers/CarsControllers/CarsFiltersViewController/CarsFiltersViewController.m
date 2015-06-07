@@ -8,6 +8,10 @@
 
 #import "CarsFiltersViewController.h"
 #import "CSTBorderedPlaceholderTextView.h"
+#import "DropDownTable.h"
+#import "UIView+MakeFromXib.h"
+#import "CSTBorderedTextField.h"
+#import "CSTBaseDropDownDataSource.h"
 
 @interface CarsFiltersViewController () <UITextFieldDelegate, UITextViewDelegate>
 
@@ -18,7 +22,13 @@
 @property (weak, nonatomic) IBOutlet CSTBorderedPlaceholderTextView *extraDataTextView;
 @property (weak, nonatomic) IBOutlet UIScrollView *carsFiltersScrollView;
 
+@property (weak, nonatomic) IBOutlet CSTBorderedTextField *carMakeField;
+@property (weak, nonatomic) IBOutlet CSTBorderedTextField *fuelTypeField;
+@property (weak, nonatomic) IBOutlet CSTBorderedTextField *bodyTypeField;
+@property (weak, nonatomic) IBOutlet CSTBorderedTextField *yearFromField;
+
 @property (strong, nonatomic) UIView *activeField;
+@property (strong, nonatomic) DropDownTable *dropDownTable;
 
 @end
 
@@ -29,6 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initDropDownTableView];
     self.extraDataTextView.placeholder = NSLocalizedString(@"Extra Data", nil);
 }
 
@@ -79,6 +90,13 @@
                                                object:nil];
 }
 
+- (void)initDropDownTableView
+{
+    self.dropDownTable = [DropDownTable makeFromXib];
+//    self.dropDownTable.dataSource = self;
+//    self.dropDownTable.delegate = self;
+}
+
 #pragma mark - Keyboard methods
 
 - (void)keyboardWillShow:(NSNotification*)notification
@@ -106,6 +124,27 @@
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
     [self.carsFiltersScrollView scrollRectToVisible:self.extraDataTextView.frame animated:YES];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    CSTBaseDropDownDataSource *dataSource =[self getCurrentDataSourceForDropDownTableFromTextField:textField];
+    
+    [self.dropDownTable dropDownTableBecomeActiveInView:self.view fromAnchorView:textField withDataSource:dataSource withCompletion:^(DropDownTable *dropDownTable, BOOL isExpanded, BOOL isApply) {
+        NSLog(@"is apply? %i", isApply);
+    }];
+}
+
+- (CSTBaseDropDownDataSource *)getCurrentDataSourceForDropDownTableFromTextField:(UITextField *)textField
+{
+    CSTBaseDropDownDataSource *currentDataSource = nil;
+    
+    if ([textField isEqual:self.yearFromField]) {
+        currentDataSource = [[CSTBaseDropDownDataSource alloc] initWithDataSourceType:DropDownDataSourceTypeYearFrom];
+    }
+    return currentDataSource;
 }
 
 @end
