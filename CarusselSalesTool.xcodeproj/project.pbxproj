@@ -12,6 +12,8 @@
 		584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C82F01B18507F0031C063 /* AddProspectViewController.m */; };
 		585585291B25780400FB0C46 /* CSTModelGroupSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 585585281B25780400FB0C46 /* CSTModelGroupSectionHeader.m */; };
 		5855852B1B25781600FB0C46 /* CSTModelGroupSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5855852A1B25781600FB0C46 /* CSTModelGroupSectionHeader.xib */; };
+		5855852F1B25E2BD00FB0C46 /* CSTCommonTopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5855852E1B25E2BD00FB0C46 /* CSTCommonTopController.m */; };
+		585585311B25E2CC00FB0C46 /* CSTCommonTopController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 585585301B25E2CC00FB0C46 /* CSTCommonTopController.xib */; };
 		58701B671B15D23D00F0A21E /* DropDownTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 58701B661B15D23D00F0A21E /* DropDownTable.m */; };
 		58701B691B15D56A00F0A21E /* DropDownTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58701B681B15D56A00F0A21E /* DropDownTable.xib */; };
 		58701B6D1B15D59200F0A21E /* DropDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58701B6C1B15D59200F0A21E /* DropDownCell.m */; };
@@ -93,6 +95,9 @@
 		585585271B25780400FB0C46 /* CSTModelGroupSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTModelGroupSectionHeader.h; path = MVC/Views/ModelGroupSectionHeader/CSTModelGroupSectionHeader.h; sourceTree = "<group>"; };
 		585585281B25780400FB0C46 /* CSTModelGroupSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTModelGroupSectionHeader.m; path = MVC/Views/ModelGroupSectionHeader/CSTModelGroupSectionHeader.m; sourceTree = "<group>"; };
 		5855852A1B25781600FB0C46 /* CSTModelGroupSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTModelGroupSectionHeader.xib; path = MVC/Views/ModelGroupSectionHeader/CSTModelGroupSectionHeader.xib; sourceTree = "<group>"; };
+		5855852D1B25E2BD00FB0C46 /* CSTCommonTopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTCommonTopController.h; path = MVC/Controllers/CommonTopController/CSTCommonTopController.h; sourceTree = "<group>"; };
+		5855852E1B25E2BD00FB0C46 /* CSTCommonTopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCommonTopController.m; path = MVC/Controllers/CommonTopController/CSTCommonTopController.m; sourceTree = "<group>"; };
+		585585301B25E2CC00FB0C46 /* CSTCommonTopController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTCommonTopController.xib; path = MVC/Controllers/CommonTopController/CSTCommonTopController.xib; sourceTree = "<group>"; };
 		58701B651B15D23D00F0A21E /* DropDownTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropDownTable.h; path = MVC/Views/DropDownTable/DropDownTable.h; sourceTree = "<group>"; };
 		58701B661B15D23D00F0A21E /* DropDownTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropDownTable.m; path = MVC/Views/DropDownTable/DropDownTable.m; sourceTree = "<group>"; };
 		58701B681B15D56A00F0A21E /* DropDownTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DropDownTable.xib; path = MVC/Views/DropDownTable/DropDownTable.xib; sourceTree = "<group>"; };
@@ -271,6 +276,16 @@
 			name = ModelGroupSectionHeader;
 			sourceTree = "<group>";
 		};
+		5855852C1B25E28900FB0C46 /* CommonTopController */ = {
+			isa = PBXGroup;
+			children = (
+				5855852D1B25E2BD00FB0C46 /* CSTCommonTopController.h */,
+				5855852E1B25E2BD00FB0C46 /* CSTCommonTopController.m */,
+				585585301B25E2CC00FB0C46 /* CSTCommonTopController.xib */,
+			);
+			name = CommonTopController;
+			sourceTree = "<group>";
+		};
 		58701B601B15B78C00F0A21E /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +438,7 @@
 		588EE7291B1473B000CE2D91 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5855852C1B25E28900FB0C46 /* CommonTopController */,
 				587398F41B21A7C000633641 /* BaseTabBarController */,
 				588EE7521B14764100CE2D91 /* AuthorizationControllers */,
 				5877CE741B2178610097DF86 /* TasksListController */,
@@ -1034,6 +1050,7 @@
 			files = (
 				588EE70C1B146F6600CE2D91 /* Main.storyboard in Resources */,
 				588EE7761B1478AB00CE2D91 /* CarsListViewController.xib in Resources */,
+				585585311B25E2CC00FB0C46 /* CSTCommonTopController.xib in Resources */,
 				588EE7711B14788500CE2D91 /* CarDetailsViewController.xib in Resources */,
 				5877CE7D1B2178C20097DF86 /* CSTTaskCell.xib in Resources */,
 				588EE7811B147D3600CE2D91 /* ProspectDetailsViewController.xib in Resources */,
@@ -1143,6 +1160,7 @@
 				588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */,
 				58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */,
 				589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */,
+				5855852F1B25E2BD00FB0C46 /* CSTCommonTopController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
