@@ -185,6 +185,7 @@
 		58FC70CA1B1E4A6A005286E1 /* CSTBorderedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBorderedTextField.m; path = MVC/Views/BorderedTextField/CSTBorderedTextField.m; sourceTree = "<group>"; };
 		58FC70CD1B1E4DD4005286E1 /* CSTAuthorizationTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTAuthorizationTextField.h; path = MVC/Views/AuthorizationTextField/CSTAuthorizationTextField.h; sourceTree = "<group>"; };
 		58FC70CE1B1E4DD4005286E1 /* CSTAuthorizationTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTAuthorizationTextField.m; path = MVC/Views/AuthorizationTextField/CSTAuthorizationTextField.m; sourceTree = "<group>"; };
+		8408DED31B2594B700E5BBD0 /* CSTApiConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSTApiConstants.h; sourceTree = "<group>"; };
 		841DFB791B1EFAD70012BFE3 /* CSTCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTCache.h; sourceTree = "<group>"; };
 		841DFB7A1B1EFAD70012BFE3 /* CSTCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTCache.m; sourceTree = "<group>"; };
 		841DFB7B1B1EFAD70012BFE3 /* CSTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTDataManager.h; sourceTree = "<group>"; };
@@ -824,6 +825,7 @@
 				841DFB7B1B1EFAD70012BFE3 /* CSTDataManager.h */,
 				841DFB7C1B1EFAD70012BFE3 /* CSTDataManager.m */,
 				841DFB7D1B1EFAD70012BFE3 /* Network */,
+				8408DED31B2594B700E5BBD0 /* CSTApiConstants.h */,
 			);
 			path = APIs;
 			sourceTree = "<group>";

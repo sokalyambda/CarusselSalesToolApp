@@ -11,7 +11,12 @@
 #import "CSTNetworkManager.h"
 #import "CSTCache.h"
 
+#import "CSTApiConstants.h"
+
 @interface CSTDataManager : NSObject
+
+@property (strong, atomic, readonly) NSDictionary *statusCar;
+@property (strong, atomic, readonly) CSTCompany *companyInfo;
 
 + (CSTDataManager *)sharedInstance;
 

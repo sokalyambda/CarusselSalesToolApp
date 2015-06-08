@@ -14,7 +14,6 @@
 
 @property (strong, atomic) NSCache *carsList;
 @property (strong, atomic) NSCache *prospectList;
-@property (strong, atomic) CSTCompany *companyInfo;
 
 - (CSTCar *)getCarWithID:(NSNumber *)ID;
 

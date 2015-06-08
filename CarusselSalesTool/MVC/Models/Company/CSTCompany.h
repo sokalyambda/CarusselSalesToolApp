@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CSTLocation.h"
 
 @interface CSTCompany : NSObject
 

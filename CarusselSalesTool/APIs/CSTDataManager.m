@@ -36,15 +36,18 @@
     if (self) {
         _network = [CSTNetworkManager new];
         _cache = [CSTCache new];
+        
+        _statusCar = @{@0: @"Used",
+                       @1: @"Demo",
+                       @2: @"New"};
     }
     return self;
 }
 
 - (void)signInWithUserName:(NSString *)userName password:(NSString *)password withResult:(SuccessBlock)result
 {
-    WEAK_SELF;
     [self.network signInWithUserName:userName password:password withResult:^(BOOL success, CSTCompany *company, NSError *error) {
-        weakSelf.cache.companyInfo = company;
+        _companyInfo = company;
         return result(success, error);
     }];
 }
@@ -61,6 +64,7 @@
     CSTCar *car = [_cache getCarWithID:@(ID)];
     if (!car) {
         [self.network getCarWithID:ID result:^(CSTCar *car, NSError *error) {
+            [self.cache.carsList setObject:car forKey:@(ID)];
             return result(car, error);
         }];
     } else {

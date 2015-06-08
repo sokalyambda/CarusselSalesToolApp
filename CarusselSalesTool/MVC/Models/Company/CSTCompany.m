@@ -7,7 +7,6 @@
 //
 
 #import "CSTCompany.h"
-#import "CSTLocation.h"
 
 @implementation CSTCompany
 
@@ -19,7 +18,13 @@
         _lastName = dictionary[@"lastName"];
         _companyName = dictionary[@"companyName"];
         _dealerCodes = dictionary[@"dealerCodes"];
-        _location = dictionary[@"locations"];
+        if (![dictionary[@"locations"] isKindOfClass:[NSNull class]]) {
+            NSMutableArray *tempList = [NSMutableArray new];
+            for (NSDictionary *dic in dictionary[@"locations"]) {
+                [tempList addObject:[[CSTLocation alloc] initWithDictionary:dic]];
+            }
+            _location = [tempList copy];
+        }
     }
     return self;
 }
