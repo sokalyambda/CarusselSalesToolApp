@@ -11,19 +11,12 @@
             <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUB-7b-4PQ">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUB-7b-4PQ" userLabel="Model Group Title">
                     <rect key="frame" x="8" y="5" width="336" height="40"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzy-l0-FdF" userLabel="Separator">
-                    <rect key="frame" x="0.0" y="49" width="400" height="1"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="7GX-Qy-CSa"/>
-                    </constraints>
-                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="meW-8r-iPW">
                     <rect key="frame" x="362" y="10" width="30" height="30"/>
                     <constraints>
@@ -37,13 +30,10 @@
                 <constraint firstItem="vUB-7b-4PQ" firstAttribute="bottom" secondItem="meW-8r-iPW" secondAttribute="bottom" constant="5" id="ATG-x5-wrO"/>
                 <constraint firstItem="vUB-7b-4PQ" firstAttribute="top" secondItem="meW-8r-iPW" secondAttribute="top" constant="-5" id="AgO-xh-ZYQ"/>
                 <constraint firstItem="meW-8r-iPW" firstAttribute="leading" secondItem="vUB-7b-4PQ" secondAttribute="trailing" constant="18" id="RCo-ip-m1Y"/>
-                <constraint firstAttribute="trailing" secondItem="kzy-l0-FdF" secondAttribute="trailing" id="Rp9-jF-qns"/>
                 <constraint firstAttribute="bottom" secondItem="vUB-7b-4PQ" secondAttribute="bottom" constant="5" id="Vqs-ID-S6B"/>
                 <constraint firstItem="vUB-7b-4PQ" firstAttribute="leading" secondItem="fxe-Zl-eLL" secondAttribute="leading" constant="8" id="WUg-7W-yC0"/>
-                <constraint firstAttribute="bottom" secondItem="kzy-l0-FdF" secondAttribute="bottom" id="eHq-GS-jeR"/>
                 <constraint firstAttribute="trailing" secondItem="meW-8r-iPW" secondAttribute="trailing" constant="8" id="kd3-59-iZs"/>
                 <constraint firstItem="vUB-7b-4PQ" firstAttribute="top" secondItem="fxe-Zl-eLL" secondAttribute="top" constant="5" id="rMt-rT-IK3"/>
-                <constraint firstItem="kzy-l0-FdF" firstAttribute="leading" secondItem="fxe-Zl-eLL" secondAttribute="leading" id="v3y-0X-lJc"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

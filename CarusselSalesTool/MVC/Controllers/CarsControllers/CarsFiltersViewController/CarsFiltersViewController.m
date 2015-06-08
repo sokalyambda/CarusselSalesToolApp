@@ -93,8 +93,6 @@
 - (void)initDropDownTableView
 {
     self.dropDownTable = [DropDownTable makeFromXib];
-//    self.dropDownTable.dataSource = self;
-//    self.dropDownTable.delegate = self;
 }
 
 #pragma mark - Keyboard methods
@@ -132,7 +130,10 @@
 {
     CSTBaseDropDownDataSource *dataSource = [self getCurrentDataSourceForDropDownTableFromTextField:textField];
     
-    [self.dropDownTable dropDownTableBecomeActiveInView:self.view fromAnchorView:textField withDataSource:dataSource withCompletion:^(DropDownTable *dropDownTable, BOOL isExpanded, BOOL isApply) {
+    [self.dropDownTable dropDownTableBecomeActiveInView:self.view
+                                         fromAnchorView:textField
+                                         withDataSource:dataSource
+                                         withCompletion:^(DropDownTable *dropDownTable, BOOL isExpanded, BOOL isApply) {
         NSLog(@"is apply? %i", isApply);
     }];
 }

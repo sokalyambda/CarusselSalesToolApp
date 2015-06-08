@@ -32,6 +32,16 @@
 
 - (void)commonInit
 {
+    CALayer *bottomLayer = [CALayer layer],
+    *topLeayer = [CALayer layer];
+    CGRect frame = self.bounds;
+    bottomLayer.frame = CGRectMake(0, CGRectGetHeight(frame) - 0.5f, CGRectGetWidth(frame), 0.5f);
+    bottomLayer.backgroundColor = [UIColor whiteColor].CGColor;
+    topLeayer.frame = CGRectMake(0, 0, CGRectGetWidth(frame), 0.5f);
+    topLeayer.backgroundColor = [UIColor whiteColor].CGColor;
+    [self.layer addSublayer:topLeayer];
+    [self.layer addSublayer:bottomLayer];
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(expandSection)];
     [self addGestureRecognizer:tap];
 }

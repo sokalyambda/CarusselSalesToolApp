@@ -440,7 +440,7 @@
                                 <constraint firstItem="PeB-wJ-u30" firstAttribute="top" secondItem="1G2-tU-MbA" secondAttribute="bottom" constant="2" id="i3n-yc-3UD"/>
                                 <constraint firstItem="pa3-NF-Zi2" firstAttribute="top" secondItem="N2b-8z-izy" secondAttribute="bottom" constant="8" id="iF6-er-qTB"/>
                                 <constraint firstItem="N2b-8z-izy" firstAttribute="leading" secondItem="T1D-hr-02Y" secondAttribute="leading" id="igh-C7-hYo"/>
-                                <constraint firstAttribute="bottom" secondItem="q73-Xb-NI1" secondAttribute="bottom" constant="24" id="liy-TW-KqN"/>
+                                <constraint firstAttribute="bottom" secondItem="q73-Xb-NI1" secondAttribute="bottom" constant="8" id="liy-TW-KqN"/>
                                 <constraint firstItem="dFN-XT-em8" firstAttribute="trailing" secondItem="Vhv-nY-zB0" secondAttribute="trailing" id="o1G-iX-NuW"/>
                                 <constraint firstItem="bjQ-8I-CJF" firstAttribute="top" secondItem="tGJ-Gr-gvE" secondAttribute="bottom" constant="8" id="ojN-p1-C0Z"/>
                                 <constraint firstItem="N2b-8z-izy" firstAttribute="trailing" secondItem="T1D-hr-02Y" secondAttribute="trailing" id="ps8-oU-BRh"/>
@@ -676,7 +676,7 @@
                     <include reference="tlc-sa-L75"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="134" y="195.5"/>
+            <point key="canvasLocation" x="134" y="235.5"/>
         </view>
     </objects>
 </document>

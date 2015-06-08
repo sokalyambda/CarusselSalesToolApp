@@ -68,11 +68,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CSTCar *chosenCar = self.cars[indexPath.row];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    WEAK_SELF;
+    [self.dataManager getCarWithID:chosenCar.ID result:^(CSTCar *car, NSError *error) {
+        [MBProgressHUD hideAllHUDsForView:weakSelf.view animated:YES];
+        if (weakSelf.carSelectedCompletion && car) {
+            weakSelf.carSelectedCompletion(car);
+        }
+    }];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (self.carSelectedCompletion) {
-        self.carSelectedCompletion(chosenCar);
-    }
 }
 
 #pragma mark - Actions 

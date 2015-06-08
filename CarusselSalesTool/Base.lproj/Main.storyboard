@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1F0-ao-sOY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1F0-ao-sOY">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -380,7 +380,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="167" id="8ax-FP-8ob"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.98039215690000003" green="0.43529411759999997" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -556,7 +556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2R9-cU-wtb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3291" y="-568"/>
+            <point key="canvasLocation" x="3291" y="-570"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="mcX-ve-smE">
@@ -570,21 +570,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="800" height="751"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yq3-61-pCJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TASKS LIST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yq3-61-pCJ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="Tbg-6V-etY"/>
                                     <constraint firstAttribute="height" constant="24" id="Txr-BV-35O"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="TASKS LIST">
-                                        <attributes>
-                                            <color key="NSColor" red="0.98431372549019602" green="0.53333333333333333" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.98431372549019602" green="0.53333333333333333" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -593,7 +586,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                     <mask key="constraints">
                                         <include reference="Tbg-6V-etY"/>
                                         <include reference="Txr-BV-35O"/>
@@ -883,8 +876,8 @@
                             </constraint>
                             <constraint firstItem="KdX-tg-oAi" firstAttribute="top" secondItem="hjg-Zl-zwU" secondAttribute="top" id="YcU-Y8-xaO"/>
                             <constraint firstItem="Yq3-61-pCJ" firstAttribute="leading" secondItem="xmC-ZU-IoK" secondAttribute="leading" constant="20" id="d8i-Mf-ULF"/>
-                            <constraint firstItem="Yq3-61-pCJ" firstAttribute="top" secondItem="Pre-87-vUy" secondAttribute="bottom" constant="50" id="i1E-bP-CSM">
-                                <variation key="widthClass=regular" constant="50"/>
+                            <constraint firstItem="Yq3-61-pCJ" firstAttribute="top" secondItem="Pre-87-vUy" secondAttribute="bottom" constant="20" id="i1E-bP-CSM">
+                                <variation key="widthClass=regular" constant="20"/>
                             </constraint>
                             <constraint firstItem="lNJ-rU-Ysl" firstAttribute="leading" secondItem="dTU-Tb-CPo" secondAttribute="trailing" constant="6" id="lwI-WG-pq8"/>
                             <constraint firstItem="KdX-tg-oAi" firstAttribute="top" secondItem="Yq3-61-pCJ" secondAttribute="bottom" constant="20" id="qMH-Yo-qpc"/>
@@ -965,7 +958,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0WB-t1-Udh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3291" y="1505"/>
+            <point key="canvasLocation" x="3291" y="2030"/>
         </scene>
         <!--Add New Prospect-->
         <scene sceneID="CL5-ls-mfv">
@@ -981,7 +974,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Fc-yn-kQX" userLabel="Preferences">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="6N1-Eb-Dxu">
                                         <variation key="widthClass=regular" constant="300"/>
@@ -1022,7 +1015,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2H8-7v-lvK" userLabel="Basic Data">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="cSg-ly-2eQ">
                                         <variation key="widthClass=regular" constant="300"/>
@@ -1044,10 +1037,14 @@
                         <constraints>
                             <constraint firstItem="2H8-7v-lvK" firstAttribute="leading" secondItem="zky-dk-xPW" secondAttribute="leading" constant="20" id="558-2s-F8m"/>
                             <constraint firstItem="qja-vW-TOc" firstAttribute="leading" secondItem="zky-dk-xPW" secondAttribute="leading" constant="20" id="5JC-CI-KdS"/>
-                            <constraint firstItem="qja-vW-TOc" firstAttribute="top" secondItem="ZBM-DO-KRr" secondAttribute="bottom" constant="50" id="B2I-c2-jY8"/>
+                            <constraint firstItem="qja-vW-TOc" firstAttribute="top" secondItem="ZBM-DO-KRr" secondAttribute="bottom" constant="20" id="B2I-c2-jY8"/>
                             <constraint firstItem="4Fc-yn-kQX" firstAttribute="leading" secondItem="2H8-7v-lvK" secondAttribute="trailing" constant="20" id="FgC-fo-KXc"/>
-                            <constraint firstItem="vos-pF-BD6" firstAttribute="top" secondItem="2H8-7v-lvK" secondAttribute="bottom" id="bsU-uI-i6B"/>
-                            <constraint firstItem="vos-pF-BD6" firstAttribute="top" secondItem="4Fc-yn-kQX" secondAttribute="bottom" id="eBE-TT-Aef"/>
+                            <constraint firstItem="vos-pF-BD6" firstAttribute="top" secondItem="2H8-7v-lvK" secondAttribute="bottom" id="bsU-uI-i6B">
+                                <variation key="widthClass=regular" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="vos-pF-BD6" firstAttribute="top" secondItem="4Fc-yn-kQX" secondAttribute="bottom" id="eBE-TT-Aef">
+                                <variation key="widthClass=regular" constant="20"/>
+                            </constraint>
                             <constraint firstItem="4Fc-yn-kQX" firstAttribute="top" secondItem="2H8-7v-lvK" secondAttribute="top" id="u7P-GR-PzO"/>
                             <constraint firstItem="2H8-7v-lvK" firstAttribute="top" secondItem="qja-vW-TOc" secondAttribute="bottom" constant="20" id="zY5-a1-PwS"/>
                         </constraints>
@@ -1060,12 +1057,12 @@
                             <mask key="constraints">
                                 <exclude reference="5JC-CI-KdS"/>
                                 <exclude reference="B2I-c2-jY8"/>
+                                <exclude reference="bsU-uI-i6B"/>
+                                <exclude reference="eBE-TT-Aef"/>
                                 <exclude reference="558-2s-F8m"/>
                                 <exclude reference="zY5-a1-PwS"/>
                                 <exclude reference="FgC-fo-KXc"/>
                                 <exclude reference="u7P-GR-PzO"/>
-                                <exclude reference="bsU-uI-i6B"/>
-                                <exclude reference="eBE-TT-Aef"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -1077,12 +1074,12 @@
                             <mask key="constraints">
                                 <include reference="5JC-CI-KdS"/>
                                 <include reference="B2I-c2-jY8"/>
+                                <include reference="bsU-uI-i6B"/>
+                                <include reference="eBE-TT-Aef"/>
                                 <include reference="558-2s-F8m"/>
                                 <include reference="zY5-a1-PwS"/>
                                 <include reference="FgC-fo-KXc"/>
                                 <include reference="u7P-GR-PzO"/>
-                                <include reference="bsU-uI-i6B"/>
-                                <include reference="eBE-TT-Aef"/>
                             </mask>
                         </variation>
                     </view>
@@ -1095,7 +1092,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ST1-St-mCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3291" y="1287"/>
+            <point key="canvasLocation" x="3291" y="1163"/>
         </scene>
         <!--Prospects-->
         <scene sceneID="1gD-33-e7C">
@@ -1426,8 +1423,8 @@
                             <constraint firstItem="WOj-5B-g9q" firstAttribute="leading" secondItem="6N8-HQ-ClC" secondAttribute="leading" id="5jR-TD-zWv"/>
                             <constraint firstItem="C9E-IX-bxD" firstAttribute="trailing" secondItem="sZV-TL-113" secondAttribute="trailing" id="5wQ-K7-DIS"/>
                             <constraint firstItem="fpA-Ir-jSY" firstAttribute="leading" secondItem="SNA-kQ-fqv" secondAttribute="leading" id="7Au-pe-Lfm"/>
-                            <constraint firstItem="6N8-HQ-ClC" firstAttribute="top" secondItem="rJU-CF-6xK" secondAttribute="bottom" constant="50" id="GdR-be-d00">
-                                <variation key="widthClass=regular" constant="50"/>
+                            <constraint firstItem="6N8-HQ-ClC" firstAttribute="top" secondItem="rJU-CF-6xK" secondAttribute="bottom" constant="20" id="GdR-be-d00">
+                                <variation key="widthClass=regular" constant="20"/>
                             </constraint>
                             <constraint firstItem="C9E-IX-bxD" firstAttribute="trailing" secondItem="wHP-fQ-cXa" secondAttribute="trailing" id="OLp-vm-bWQ"/>
                             <constraint firstItem="WOj-5B-g9q" firstAttribute="top" secondItem="6N8-HQ-ClC" secondAttribute="bottom" constant="20" id="SkP-uX-8mV"/>
@@ -1520,7 +1517,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLJ-hP-wsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3291" y="300"/>
+            <point key="canvasLocation" x="3291" y="298"/>
         </scene>
         <!--Demonstration View Controller-->
         <scene sceneID="OL3-pP-pso">
@@ -1690,7 +1687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzx-qs-xsl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.5" y="987"/>
+            <point key="canvasLocation" x="2115.75" y="1203"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="qd8-n7-L4R">
