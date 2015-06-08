@@ -130,7 +130,7 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    CSTBaseDropDownDataSource *dataSource =[self getCurrentDataSourceForDropDownTableFromTextField:textField];
+    CSTBaseDropDownDataSource *dataSource = [self getCurrentDataSourceForDropDownTableFromTextField:textField];
     
     [self.dropDownTable dropDownTableBecomeActiveInView:self.view fromAnchorView:textField withDataSource:dataSource withCompletion:^(DropDownTable *dropDownTable, BOOL isExpanded, BOOL isApply) {
         NSLog(@"is apply? %i", isApply);
@@ -143,7 +143,14 @@
     
     if ([textField isEqual:self.yearFromField]) {
         currentDataSource = [[CSTBaseDropDownDataSource alloc] initWithDataSourceType:DropDownDataSourceTypeYearFrom];
+    } else if ([textField isEqual:self.bodyTypeField]) {
+        currentDataSource = [[CSTBaseDropDownDataSource alloc] initWithDataSourceType:DropDownDataSourceTypeBodyType];
+    } else if ([textField isEqual:self.fuelTypeField]) {
+        currentDataSource = [[CSTBaseDropDownDataSource alloc] initWithDataSourceType:DropDownDataSourceTypeFuelType];
+    } else if ([textField isEqual:self.carMakeField]) {
+        currentDataSource = [[CSTBaseDropDownDataSource alloc] initWithDataSourceType:DropDownDataSourceTypeMakeCar];
     }
+    
     return currentDataSource;
 }
 

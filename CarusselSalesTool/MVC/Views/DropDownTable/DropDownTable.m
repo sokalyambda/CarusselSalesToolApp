@@ -31,6 +31,13 @@ static CGFloat const kSlidingTime = .5f;
     CGRect savedDropDownTableFrame;
 }
 
+#pragma mark - Lifecycle
+
+- (void)awakeFromNib
+{
+    self.dropDownList.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+}
+
 #pragma mark - Accessors
 
 - (void)setAnchorView:(UIView *)anchorView
@@ -73,7 +80,9 @@ static CGFloat const kSlidingTime = .5f;
     
     //changing the table's data source and reload table's data
     self.dropDownDataSource = dataSource;
+    self.dropDownDataSource.dropDownTableView = self.dropDownList;
     self.dropDownList.dataSource = self.dropDownDataSource;
+    self.dropDownList.delegate = self.dropDownDataSource;
     [self.dropDownList reloadData];
     
     if (!self.isExpanded) {

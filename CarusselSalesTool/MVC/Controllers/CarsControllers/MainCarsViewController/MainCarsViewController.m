@@ -146,7 +146,7 @@ static CGFloat kSlideTiming = 0.5f;
 }
 
 - (void)handleCarSelection {
-    __weak typeof(self)weakSelf = self;
+    WEAK_SELF;
     [self.carsListController setCarSelectedCompletion:^(CSTCar *car) {
         weakSelf.carDetailsController.currentCar = car;
         NSLog(@"car with title %@ has been selected", car.title);
