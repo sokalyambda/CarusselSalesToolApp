@@ -8,21 +8,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CSTTaskCell" rowHeight="52" id="SD9-i7-wfz" customClass="CSTTaskCell">
-            <rect key="frame" x="0.0" y="0.0" width="638" height="61"/>
+            <rect key="frame" x="0.0" y="0.0" width="638" height="49"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SD9-i7-wfz" id="eYQ-WD-5Wd">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Task" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNL-nP-cSs" customClass="CSTBorderedTextField">
-                        <rect key="frame" x="8" y="10" width="304" height="40"/>
+                        <rect key="frame" x="8" y="3" width="304" height="42"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="RYh-mf-gla"/>
+                            <constraint firstAttribute="height" constant="42" id="RYh-mf-gla"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emy-R4-mwT" customClass="CSTBorderedTextField">
-                        <rect key="frame" x="317" y="10" width="213" height="40"/>
+                        <rect key="frame" x="317" y="3" width="213" height="42"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="213" id="xth-9e-r09"/>
                         </constraints>
@@ -30,7 +30,7 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Time" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crR-Pc-VE1" customClass="CSTBorderedTextField">
-                        <rect key="frame" x="535" y="10" width="95" height="40"/>
+                        <rect key="frame" x="535" y="3" width="95" height="42"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="95" id="TbO-YB-kKQ"/>
                         </constraints>
@@ -40,16 +40,16 @@
                 </subviews>
                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="emy-R4-mwT" firstAttribute="top" secondItem="eYQ-WD-5Wd" secondAttribute="top" constant="10" id="AGb-oP-kVa"/>
-                    <constraint firstAttribute="bottom" secondItem="crR-Pc-VE1" secondAttribute="bottom" constant="10" id="FPd-yU-nug"/>
-                    <constraint firstItem="SNL-nP-cSs" firstAttribute="top" secondItem="eYQ-WD-5Wd" secondAttribute="top" constant="10" id="GYb-81-XKx"/>
+                    <constraint firstAttribute="bottom" secondItem="SNL-nP-cSs" secondAttribute="bottom" constant="3" id="6HJ-Xt-SlZ"/>
+                    <constraint firstItem="SNL-nP-cSs" firstAttribute="top" secondItem="eYQ-WD-5Wd" secondAttribute="top" constant="3" id="8if-85-Vxr"/>
+                    <constraint firstItem="crR-Pc-VE1" firstAttribute="top" secondItem="eYQ-WD-5Wd" secondAttribute="top" constant="3" id="AZt-uD-Iuw"/>
+                    <constraint firstItem="emy-R4-mwT" firstAttribute="top" secondItem="eYQ-WD-5Wd" secondAttribute="top" constant="3" id="Fr4-Sc-4cF"/>
+                    <constraint firstAttribute="bottom" secondItem="emy-R4-mwT" secondAttribute="bottom" constant="3" id="G4R-Wj-dMc"/>
+                    <constraint firstAttribute="bottom" secondItem="crR-Pc-VE1" secondAttribute="bottom" constant="3" id="Prg-lx-PBt"/>
                     <constraint firstItem="emy-R4-mwT" firstAttribute="leading" secondItem="SNL-nP-cSs" secondAttribute="trailing" constant="5" id="Qkk-LJ-DsF"/>
-                    <constraint firstAttribute="bottom" secondItem="SNL-nP-cSs" secondAttribute="bottom" constant="10" id="Yrg-nz-JHY"/>
                     <constraint firstItem="SNL-nP-cSs" firstAttribute="leading" secondItem="eYQ-WD-5Wd" secondAttribute="leading" constant="8" id="aj2-pG-jB4"/>
                     <constraint firstAttribute="trailing" secondItem="crR-Pc-VE1" secondAttribute="trailing" constant="8" id="cz4-Tq-P8N"/>
-                    <constraint firstAttribute="bottom" secondItem="emy-R4-mwT" secondAttribute="bottom" constant="10" id="dVy-bi-z9b"/>
                     <constraint firstItem="crR-Pc-VE1" firstAttribute="leading" secondItem="emy-R4-mwT" secondAttribute="trailing" constant="5" id="u1P-6m-arc"/>
-                    <constraint firstItem="crR-Pc-VE1" firstAttribute="top" secondItem="eYQ-WD-5Wd" secondAttribute="top" constant="10" id="z7Q-Uz-yOw"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

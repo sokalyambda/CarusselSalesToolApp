@@ -10,6 +10,8 @@
 		583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837139F1B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m */; };
 		583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 583713A31B1F0FDE00C6C2C8 /* CSTCustomSlider.m */; };
 		584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C82F01B18507F0031C063 /* AddProspectViewController.m */; };
+		585585291B25780400FB0C46 /* CSTModelGroupSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 585585281B25780400FB0C46 /* CSTModelGroupSectionHeader.m */; };
+		5855852B1B25781600FB0C46 /* CSTModelGroupSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5855852A1B25781600FB0C46 /* CSTModelGroupSectionHeader.xib */; };
 		58701B671B15D23D00F0A21E /* DropDownTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 58701B661B15D23D00F0A21E /* DropDownTable.m */; };
 		58701B691B15D56A00F0A21E /* DropDownTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58701B681B15D56A00F0A21E /* DropDownTable.xib */; };
 		58701B6D1B15D59200F0A21E /* DropDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58701B6C1B15D59200F0A21E /* DropDownCell.m */; };
@@ -88,6 +90,9 @@
 		583713A31B1F0FDE00C6C2C8 /* CSTCustomSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCustomSlider.m; path = MVC/Views/CustomSlider/CSTCustomSlider.m; sourceTree = "<group>"; };
 		584C82EF1B18507F0031C063 /* AddProspectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddProspectViewController.h; path = MVC/Controllers/ProspectsControllers/AddProspectViewController/AddProspectViewController.h; sourceTree = "<group>"; };
 		584C82F01B18507F0031C063 /* AddProspectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddProspectViewController.m; path = MVC/Controllers/ProspectsControllers/AddProspectViewController/AddProspectViewController.m; sourceTree = "<group>"; };
+		585585271B25780400FB0C46 /* CSTModelGroupSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTModelGroupSectionHeader.h; path = MVC/Views/ModelGroupSectionHeader/CSTModelGroupSectionHeader.h; sourceTree = "<group>"; };
+		585585281B25780400FB0C46 /* CSTModelGroupSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTModelGroupSectionHeader.m; path = MVC/Views/ModelGroupSectionHeader/CSTModelGroupSectionHeader.m; sourceTree = "<group>"; };
+		5855852A1B25781600FB0C46 /* CSTModelGroupSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTModelGroupSectionHeader.xib; path = MVC/Views/ModelGroupSectionHeader/CSTModelGroupSectionHeader.xib; sourceTree = "<group>"; };
 		58701B651B15D23D00F0A21E /* DropDownTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropDownTable.h; path = MVC/Views/DropDownTable/DropDownTable.h; sourceTree = "<group>"; };
 		58701B661B15D23D00F0A21E /* DropDownTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropDownTable.m; path = MVC/Views/DropDownTable/DropDownTable.m; sourceTree = "<group>"; };
 		58701B681B15D56A00F0A21E /* DropDownTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DropDownTable.xib; path = MVC/Views/DropDownTable/DropDownTable.xib; sourceTree = "<group>"; };
@@ -256,6 +261,16 @@
 			name = AddProspectViewController;
 			sourceTree = "<group>";
 		};
+		585585261B2577C600FB0C46 /* ModelGroupSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				585585271B25780400FB0C46 /* CSTModelGroupSectionHeader.h */,
+				585585281B25780400FB0C46 /* CSTModelGroupSectionHeader.m */,
+				5855852A1B25781600FB0C46 /* CSTModelGroupSectionHeader.xib */,
+			);
+			name = ModelGroupSectionHeader;
+			sourceTree = "<group>";
+		};
 		58701B601B15B78C00F0A21E /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +404,7 @@
 		588EE7281B1473AB00CE2D91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				585585261B2577C600FB0C46 /* ModelGroupSectionHeader */,
 				5877CE7E1B2180DC0097DF86 /* CheckBoxButton */,
 				84EBD4C61B20BC64001F4CF5 /* RoundBorderedView */,
 				84EBD4C21B20BC25001F4CF5 /* AttributedLabel */,
@@ -1029,6 +1045,7 @@
 				58DA0A861B202B6C00FF0343 /* CSTProspectCell.xib in Resources */,
 				588EE7B91B14B6AD00CE2D91 /* CarImageCell.xib in Resources */,
 				588EE76C1B14785B00CE2D91 /* CarsFiltersViewController.xib in Resources */,
+				5855852B1B25781600FB0C46 /* CSTModelGroupSectionHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1105,6 +1122,7 @@
 				5877CE771B21787D0097DF86 /* CSTTasksListController.m in Sources */,
 				84EBD4C91B20BC64001F4CF5 /* CSTRoundBorderedView.m in Sources */,
 				583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */,
+				585585291B25780400FB0C46 /* CSTModelGroupSectionHeader.m in Sources */,
 				587398F71B21A7E000633641 /* CSTBaseTabBarController.m in Sources */,
 				589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */,
 				5877CE7B1B2178AF0097DF86 /* CSTTaskCell.m in Sources */,

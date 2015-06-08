@@ -10,6 +10,7 @@
 
 @property (assign) NSInteger ID;
 @property (copy) NSString *title;
+@property (assign, nonatomic) BOOL showModels;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

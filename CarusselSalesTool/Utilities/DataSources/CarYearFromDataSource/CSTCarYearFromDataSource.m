@@ -8,6 +8,8 @@
 
 #import "CSTCarYearFromDataSource.h"
 
+static NSString *cellIdentifier = @"YearCell";
+
 @interface CSTCarYearFromDataSource ()
 
 @property (strong, nonatomic) NSArray *years;
@@ -39,22 +41,10 @@
     return [self.years count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"YearCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    }
-    
     NSString *yearString = self.years[indexPath.row];
-    
     cell.textLabel.text = yearString;
-    cell.backgroundColor = [UIColor clearColor];
-    cell.contentView.backgroundColor = [UIColor clearColor];
-    return cell;
 }
 
 @end

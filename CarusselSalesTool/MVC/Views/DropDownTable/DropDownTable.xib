@@ -102,7 +102,7 @@
                         </mask>
                     </variation>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ruL-QM-6IM" userLabel="Drop Down Table">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ruL-QM-6IM" userLabel="Drop Down Table">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
@@ -125,13 +125,13 @@
                     <exclude reference="ruL-QM-6IM"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="J1u-mO-xkG"/>
-                    <exclude reference="bTu-fE-EjP"/>
-                    <exclude reference="lqd-pX-anA"/>
                     <exclude reference="Tc8-iK-k0f"/>
                     <exclude reference="dnr-iT-lat"/>
                     <exclude reference="u60-dh-SZ7"/>
                     <exclude reference="wc6-Sn-wSk"/>
+                    <exclude reference="J1u-mO-xkG"/>
+                    <exclude reference="bTu-fE-EjP"/>
+                    <exclude reference="lqd-pX-anA"/>
                 </mask>
             </variation>
             <variation key="widthClass=regular">
@@ -140,13 +140,13 @@
                     <include reference="ruL-QM-6IM"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="J1u-mO-xkG"/>
-                    <include reference="bTu-fE-EjP"/>
-                    <include reference="lqd-pX-anA"/>
                     <include reference="Tc8-iK-k0f"/>
                     <include reference="dnr-iT-lat"/>
                     <include reference="u60-dh-SZ7"/>
                     <include reference="wc6-Sn-wSk"/>
+                    <include reference="J1u-mO-xkG"/>
+                    <include reference="bTu-fE-EjP"/>
+                    <include reference="lqd-pX-anA"/>
                 </mask>
             </variation>
             <connections>

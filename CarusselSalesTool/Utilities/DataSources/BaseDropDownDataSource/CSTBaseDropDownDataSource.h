@@ -18,6 +18,8 @@ typedef enum : NSUInteger {
 
 @interface CSTBaseDropDownDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) UITableView *dropDownTableView;
+
 - (instancetype)initWithDataSourceType:(DropDownDataSourceType)dataSourceType;
 
 @end

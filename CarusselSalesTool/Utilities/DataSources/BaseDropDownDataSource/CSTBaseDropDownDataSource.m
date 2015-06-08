@@ -14,6 +14,8 @@
 #import "CSTCarColorDataSource.h"
 #import "CSTCarYearFromDataSource.h"
 
+static NSString *cellIdentifier = @"";
+
 @implementation CSTBaseDropDownDataSource
 
 - (instancetype)initWithDataSourceType:(DropDownDataSourceType)dataSourceType
@@ -52,7 +54,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.contentView.backgroundColor = [UIColor clearColor];
+    
+    [self configureCell:cell forIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
+{
+
 }
 
 @end
