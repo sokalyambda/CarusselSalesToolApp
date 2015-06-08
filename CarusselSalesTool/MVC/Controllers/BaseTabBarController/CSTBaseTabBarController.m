@@ -7,8 +7,14 @@
 //
 
 #import "CSTBaseTabBarController.h"
+#import "CSTCommonTopController.h"
+
+static CGFloat const kTopViewHeight = 44.f;
+static CGFloat const kStatusBarHeight = 20.f;
 
 @interface CSTBaseTabBarController () <UITabBarControllerDelegate>
+
+@property (strong, nonatomic) CSTCommonTopController *topController;
 
 @end
 
@@ -26,7 +32,10 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
+    [self addTopController];
 }
+
+#pragma mark - Actions
 
 - (void)initTabBar
 {
@@ -78,6 +87,15 @@
     fifthItem = [fifthItem initWithTitle:NSLocalizedString(@"Logout", nil) image:fifthImage selectedImage:fifthSelectedImage];
 }
 
+- (void)addTopController
+{
+    self.topController = [[CSTCommonTopController alloc] initWithNibName:NSStringFromClass([CSTCommonTopController class]) bundle:nil];
+    [self.topController.view setFrame:CGRectMake(0, kStatusBarHeight, CGRectGetWidth(self.view.frame), kTopViewHeight)];
+    [self.view addSubview:self.topController.view];
+    [self addChildViewController:self.topController];
+    [self.topController didMoveToParentViewController:self];
+}
+
 #pragma mark - UITabBarControllerDelegaet
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
@@ -87,6 +105,5 @@
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
-
 
 @end
