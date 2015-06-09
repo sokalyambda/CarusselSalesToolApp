@@ -24,6 +24,7 @@
 		5877CE7D1B2178C20097DF86 /* CSTTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5877CE7C1B2178C20097DF86 /* CSTTaskCell.xib */; };
 		5877CE811B2181010097DF86 /* CSTCheckBoxButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5877CE801B2181010097DF86 /* CSTCheckBoxButton.m */; };
 		587E82311B271AAE0081F933 /* CSTCommonSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 587E82301B271AAE0081F933 /* CSTCommonSearchBar.m */; };
+		587E82351B2727550081F933 /* CSTUnderlinedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 587E82341B2727550081F933 /* CSTUnderlinedButton.m */; };
 		588EE7031B146F6600CE2D91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7021B146F6600CE2D91 /* main.m */; };
 		588EE7061B146F6600CE2D91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7051B146F6600CE2D91 /* AppDelegate.m */; };
 		588EE70C1B146F6600CE2D91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588EE70A1B146F6600CE2D91 /* Main.storyboard */; };
@@ -116,6 +117,8 @@
 		5877CE801B2181010097DF86 /* CSTCheckBoxButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCheckBoxButton.m; path = MVC/Views/CheckBoxButton/CSTCheckBoxButton.m; sourceTree = "<group>"; };
 		587E822F1B271AAE0081F933 /* CSTCommonSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTCommonSearchBar.h; path = MVC/Views/CommonSearchBar/CSTCommonSearchBar.h; sourceTree = "<group>"; };
 		587E82301B271AAE0081F933 /* CSTCommonSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCommonSearchBar.m; path = MVC/Views/CommonSearchBar/CSTCommonSearchBar.m; sourceTree = "<group>"; };
+		587E82331B2727550081F933 /* CSTUnderlinedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTUnderlinedButton.h; path = MVC/Views/UnderlinedButton/CSTUnderlinedButton.h; sourceTree = "<group>"; };
+		587E82341B2727550081F933 /* CSTUnderlinedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTUnderlinedButton.m; path = MVC/Views/UnderlinedButton/CSTUnderlinedButton.m; sourceTree = "<group>"; };
 		588EE6FD1B146F6600CE2D91 /* CarusselSalesTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarusselSalesTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		588EE7011B146F6600CE2D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		588EE7021B146F6600CE2D91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -362,6 +365,15 @@
 			name = CommonSearchBar;
 			sourceTree = "<group>";
 		};
+		587E82321B27270C0081F933 /* UnderlinedButton */ = {
+			isa = PBXGroup;
+			children = (
+				587E82331B2727550081F933 /* CSTUnderlinedButton.h */,
+				587E82341B2727550081F933 /* CSTUnderlinedButton.m */,
+			);
+			name = UnderlinedButton;
+			sourceTree = "<group>";
+		};
 		588EE6F41B146F6600CE2D91 = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +443,7 @@
 		588EE7281B1473AB00CE2D91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				587E82321B27270C0081F933 /* UnderlinedButton */,
 				587E822E1B271A7C0081F933 /* CommonSearchBar */,
 				585585261B2577C600FB0C46 /* ModelGroupSectionHeader */,
 				5877CE7E1B2180DC0097DF86 /* CheckBoxButton */,
@@ -1173,6 +1186,7 @@
 				583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */,
 				588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */,
 				58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */,
+				587E82351B2727550081F933 /* CSTUnderlinedButton.m in Sources */,
 				589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */,
 				5855852F1B25E2BD00FB0C46 /* CSTCommonTopController.m in Sources */,
 			);
