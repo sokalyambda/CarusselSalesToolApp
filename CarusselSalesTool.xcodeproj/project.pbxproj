@@ -80,6 +80,8 @@
 		84EBD4C11B20A6E7001F4CF5 /* CSTCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4C01B20A6E7001F4CF5 /* CSTCompany.m */; };
 		84EBD4C51B20BC25001F4CF5 /* CSTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4C41B20BC25001F4CF5 /* CSTAttributedLabel.m */; };
 		84EBD4C91B20BC64001F4CF5 /* CSTRoundBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4C81B20BC64001F4CF5 /* CSTRoundBorderedView.m */; };
+		84EF16161B26EF98008DEC29 /* UIImagePickerController+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EF16151B26EF98008DEC29 /* UIImagePickerController+fixOrientation.m */; };
+		84EF161A1B26F1F1008DEC29 /* UIViewController+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EF16191B26F1F1008DEC29 /* UIViewController+fixOrientation.m */; };
 		84F2D6FE1B2197D400719617 /* CSTImageCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F2D6FD1B2197D400719617 /* CSTImageCar.m */; };
 		980CAB006F70081193CC7A91 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AAC28C56A074F8E04DCEC4 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -216,6 +218,10 @@
 		84EBD4C41B20BC25001F4CF5 /* CSTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTAttributedLabel.m; sourceTree = "<group>"; };
 		84EBD4C71B20BC64001F4CF5 /* CSTRoundBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTRoundBorderedView.h; sourceTree = "<group>"; };
 		84EBD4C81B20BC64001F4CF5 /* CSTRoundBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTRoundBorderedView.m; sourceTree = "<group>"; };
+		84EF16141B26EF98008DEC29 /* UIImagePickerController+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+fixOrientation.h"; sourceTree = "<group>"; };
+		84EF16151B26EF98008DEC29 /* UIImagePickerController+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+fixOrientation.m"; sourceTree = "<group>"; };
+		84EF16181B26F1F1008DEC29 /* UIViewController+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+fixOrientation.h"; sourceTree = "<group>"; };
+		84EF16191B26F1F1008DEC29 /* UIViewController+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+fixOrientation.m"; sourceTree = "<group>"; };
 		84F2D6FC1B2197D400719617 /* CSTImageCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTImageCar.h; sourceTree = "<group>"; };
 		84F2D6FD1B2197D400719617 /* CSTImageCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTImageCar.m; sourceTree = "<group>"; };
 		84F2D7001B21D29F00719617 /* CSTMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTMacros.h; sourceTree = "<group>"; };
@@ -467,6 +473,8 @@
 		588EE72C1B1473E900CE2D91 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				84EF16171B26F1C6008DEC29 /* UIViewController */,
+				84EF16131B26EF1B008DEC29 /* UIImagePickerView */,
 				588F29541B18AC9500F14AED /* NSDictionary */,
 				588F29531B18AC8C00F14AED /* NSString */,
 				588F29511B18AC7300F14AED /* UIView */,
@@ -950,6 +958,26 @@
 			path = MVC/Views/RoundBorderedView;
 			sourceTree = "<group>";
 		};
+		84EF16131B26EF1B008DEC29 /* UIImagePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				84EF16141B26EF98008DEC29 /* UIImagePickerController+fixOrientation.h */,
+				84EF16151B26EF98008DEC29 /* UIImagePickerController+fixOrientation.m */,
+			);
+			name = UIImagePickerView;
+			path = Categories/UIImagePickerView;
+			sourceTree = "<group>";
+		};
+		84EF16171B26F1C6008DEC29 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84EF16181B26F1F1008DEC29 /* UIViewController+fixOrientation.h */,
+				84EF16191B26F1F1008DEC29 /* UIViewController+fixOrientation.m */,
+			);
+			name = UIViewController;
+			path = Categories/UIViewController;
+			sourceTree = "<group>";
+		};
 		84F2D6FB1B2197D400719617 /* ImageCar */ = {
 			isa = PBXGroup;
 			children = (
@@ -1127,6 +1155,7 @@
 				588EE7841B147D5200CE2D91 /* ProspectsListViewController.m in Sources */,
 				58FC70CF1B1E4DD4005286E1 /* CSTAuthorizationTextField.m in Sources */,
 				588F295A1B18AD4900F14AED /* NSString+ContainsString.m in Sources */,
+				84EF161A1B26F1F1008DEC29 /* UIViewController+fixOrientation.m in Sources */,
 				58701B6D1B15D59200F0A21E /* DropDownCell.m in Sources */,
 				584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */,
 				84EBD4BD1B2078C7001F4CF5 /* CSTModelGroup.m in Sources */,
@@ -1158,6 +1187,7 @@
 				589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */,
 				583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */,
 				588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */,
+				84EF16161B26EF98008DEC29 /* UIImagePickerController+fixOrientation.m in Sources */,
 				58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */,
 				589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */,
 				5855852F1B25E2BD00FB0C46 /* CSTCommonTopController.m in Sources */,

@@ -7,12 +7,16 @@
 //
 
 #import "CarDetailsViewController.h"
+
 #import "CSTCar.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+
 #import "CarImageCell.h"
 #import "UIView+MakeFromXib.h"
 #import "CSTAttributedLabel.h"
 
 @interface CarDetailsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UIScrollView *carDetailsScrollView;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UICollectionView *carImagesCollectionView;
@@ -50,18 +54,18 @@
     [self.carExtraLabel setText:@"Extra: paratext, etc. Therefore, when literary criticism is concerned with the determination of a text, it is concerned with the distinguishing of the original information content from whatever has been added to or subtracted from that content as it appears in a given textual document (that is, a physical representation of text).s, paratext, etc. Therefore, when literary criticism is concerned with the determination of a text, it is concerned with the distinguishing of the original information content from whatever has been added to or subtracted from that content as it appears in a given textual document (that is, a physical representation of text).s, paratext, etc. Therefore, when literary criticism is concerned with the determination of a text, it is concerned with the distinguishing of the original information content from whatever has been added to or subtracted from that content as it appears in a given textual document (that is, a physical representation" withAttributedWordsCount:1 withColor:[UIColor greenColor]];
     
     [self.carImagesCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CarImageCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([CarImageCell class])];
-    
+}
+
+#pragma mark - Metods
+
+- (void)showImagePickerViewWithType:(UIImagePickerControllerSourceType)type
+{
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.modalPresentationStyle = UIModalPresentationCurrentContext;
     picker.delegate = self;
     picker.allowsEditing = YES;
-    
-    NSInteger buttonIndex = 1;
-    if (buttonIndex == 0) {
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    } else if (buttonIndex == 1) {
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    }
-    [self presentViewController:picker animated:YES completion:NULL];
+    picker.sourceType = type;
+    [self.parentViewController presentViewController:picker animated:YES completion:NULL];
 }
 
 #pragma mark - Actions
@@ -73,12 +77,12 @@
 
 - (IBAction)galleryClick:(id)sender
 {
-    
+    [self showImagePickerViewWithType:UIImagePickerControllerSourceTypePhotoLibrary];
 }
 
 - (IBAction)showCameraClick:(id)sender
 {
-    
+    [self showImagePickerViewWithType:UIImagePickerControllerSourceTypeCamera];
 }
 
 - (void)updateCarInformation
@@ -113,6 +117,33 @@
     CSTImageCar *currentImage = self.currentCar.images[indexPath.row];
     NSURL *currentImageURL = [NSURL URLWithString:currentImage.origUrl];
     [self.carOriginalImageView sd_setImageWithURL:currentImageURL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    NSURL *imagePath = [info objectForKey:UIImagePickerControllerReferenceURL];
+    if (!imagePath) {
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        [library writeImageToSavedPhotosAlbum:chosenImage.CGImage
+                                     metadata:[info objectForKey:UIImagePickerControllerMediaMetadata]
+                              completionBlock:^(NSURL *assetURL, NSError *error) {
+                                  NSLog(@"assetURL %@", assetURL);
+                              }];
+    }
+    
+    WEAK_SELF;
+    [[CSTDataManager sharedInstance] postImage:chosenImage withID:24498 result:^(BOOL success, CSTImageCar *image) {
+        //TO DO
+    }];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

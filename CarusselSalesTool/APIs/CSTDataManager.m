@@ -72,4 +72,11 @@
     }
 }
 
+- (void)postImage:(UIImage *)image withID:(NSInteger)ID result:(ImageCarBlock)result
+{
+    [self.network postImage:image withID:ID result:^(BOOL success, CSTImageCar *image) {
+        return result(success, image);
+    }];
+}
+
 @end

@@ -23,5 +23,6 @@
 - (void)signInWithUserName:(NSString *)userName password:(NSString *)password withResult:(SuccessBlock)result;
 - (void)getCarListForRow:(NSInteger)row pageSize:(NSInteger)pageSize parameter:(NSDictionary *)parameters result:(CarListBlock)result;
 - (void)getCarWithID:(NSInteger)ID result:(CarBlock)result;
+- (void)postImage:(UIImage *)image withID:(NSInteger)ID result:(ImageCarBlock)result;
 
 @end
