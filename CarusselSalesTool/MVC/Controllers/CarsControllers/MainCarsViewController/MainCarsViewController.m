@@ -57,11 +57,11 @@ static CGFloat kSlideTiming = 0.5f;
 {
     NSUInteger filtersPanelState = self.carsFiltersController.state;
     switch (filtersPanelState) {
-        case FiltersPanelStateOpened: {
+        case CSTFiltersPanelStateOpened: {
             [self movePanelToOriginalPosition];
             break;
         }
-        case FiltersPanelStateClosed: {
+        case CSTFiltersPanelStateClosed: {
             [self showFilters];
             break;
         }
@@ -118,7 +118,7 @@ static CGFloat kSlideTiming = 0.5f;
                      }
                      completion:^(BOOL finished) {
                          if (finished) {
-                             self.carsFiltersController.state = FiltersPanelStateOpened;
+                             self.carsFiltersController.state = CSTFiltersPanelStateOpened;
                          }
                      }];
 }
@@ -141,7 +141,7 @@ static CGFloat kSlideTiming = 0.5f;
     if (self.carsFiltersController) {
         [self.carsFiltersController.view removeFromSuperview];
         self.carsFiltersController = nil;
-        self.carsFiltersController.state = FiltersPanelStateClosed;
+        self.carsFiltersController.state = CSTFiltersPanelStateClosed;
     }
 }
 

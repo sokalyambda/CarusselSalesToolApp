@@ -7,11 +7,11 @@
 //
 
 typedef enum : NSUInteger {
-    SelectedScreenCars,
-    SelectedScreenProspects,
-    SelectedScreenNewProspect,
-    SelectedScreenTasks
-} SelectedScreen;
+    CSTSelectedScreenCars,
+    CSTSelectedScreenProspects,
+    CSTSelectedScreenNewProspect,
+    CSTSelectedScreenTasks
+} CSTSelectedScreen;
 
 static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 
@@ -38,22 +38,22 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 - (IBAction)selectScreenClick:(UISegmentedControl *)segmentedControl
 {
     switch (segmentedControl.selectedSegmentIndex) {
-        case SelectedScreenCars: {
+        case CSTSelectedScreenCars: {
             //cars selected
             [self performSegueWithIdentifier:kMainTabBarSegue sender:self];
             break;
         }
-        case SelectedScreenProspects: {
+        case CSTSelectedScreenProspects: {
             //prospects list selected
             
             break;
         }
-        case SelectedScreenNewProspect: {
+        case CSTSelectedScreenNewProspect: {
             //new prospect selected
             
             break;
         }
-        case SelectedScreenTasks: {
+        case CSTSelectedScreenTasks: {
             //tasks selected
             
             break;

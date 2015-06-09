@@ -7,12 +7,12 @@
 //
 
 typedef enum : NSUInteger {
-    DropDownDataSourceTypeMakeCar,
-    DropDownDataSourceTypeFuelType,
-    DropDownDataSourceTypeBodyType,
-    DropDownDataSourceTypeCarColor,
-    DropDownDataSourceTypeYearFrom
-} DropDownDataSourceType;
+    CSTDropDownDataSourceTypeMakeCar,
+    CSTDropDownDataSourceTypeFuelType,
+    CSTDropDownDataSourceTypeBodyType,
+    CSTDropDownDataSourceTypeCarColor,
+    CSTDropDownDataSourceTypeYearFrom
+} CSTDropDownDataSourceType;
 
 #import <Foundation/Foundation.h>
 
@@ -20,6 +20,6 @@ typedef enum : NSUInteger {
 
 @property (strong, nonatomic) UITableView *dropDownTableView;
 
-- (instancetype)initWithDataSourceType:(DropDownDataSourceType)dataSourceType;
+- (instancetype)initWithDataSourceType:(CSTDropDownDataSourceType)dataSourceType;
 
 @end

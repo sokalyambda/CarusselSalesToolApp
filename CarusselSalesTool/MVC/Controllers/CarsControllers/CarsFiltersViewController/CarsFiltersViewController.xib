@@ -16,6 +16,7 @@
                 <outlet property="mileageValueLabel" destination="Y2w-pc-DfE" id="AIF-mg-bgZ"/>
                 <outlet property="perfomanceValueLabel" destination="dFN-XT-em8" id="GC8-7J-95R"/>
                 <outlet property="priceValueLabel" destination="1G2-tU-MbA" id="bLm-0H-p4E"/>
+                <outlet property="scrollContainer" destination="2ux-gI-8q1" id="21G-V6-cZe"/>
                 <outlet property="view" destination="iN0-l3-epB" id="WHt-EO-yQu"/>
                 <outlet property="yearFromField" destination="N2b-8z-izy" id="HHM-Hs-XPW"/>
             </connections>

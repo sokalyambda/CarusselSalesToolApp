@@ -6,10 +6,18 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
+typedef enum : NSUInteger {
+    CSTSelectedControllerTypeCarsList,
+    CSTSelectedControllerTypeProspectsList,
+    CSTSelectedControllerTypeAddNewProspect,
+    CSTSelectedControllerTypeTasksList,
+    CSTSelectedControllerTypeLogout
+} CSTSelectedControllerType;
+
 #import "CSTBaseTabBarController.h"
 #import "CSTCommonTopController.h"
 
-static CGFloat const kTopViewHeight = 44.f;
+static CGFloat const kTopViewHeight = 48.f;
 static CGFloat const kStatusBarHeight = 20.f;
 
 @interface CSTBaseTabBarController () <UITabBarControllerDelegate>
@@ -63,8 +71,8 @@ static CGFloat const kStatusBarHeight = 20.f;
     UITabBarItem *fifthItem     = self.tabBar.items[4];
     
     for (UITabBarItem *item in self.tabBar.items) {
-        [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
-        [item setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor darkGrayColor], NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+        [item setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColorFromRGB(0xCCCFD1)} forState:UIControlStateNormal];
+        [item setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: UIColorFromRGB(0x336666), NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
     }
     
     //set up icons for all tabs and rendering mode for they
@@ -101,7 +109,7 @@ static CGFloat const kStatusBarHeight = 20.f;
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
     //TODO: logout logic
-    if (self.selectedIndex == 4) {
+    if (self.selectedIndex == CSTSelectedControllerTypeLogout) {
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
