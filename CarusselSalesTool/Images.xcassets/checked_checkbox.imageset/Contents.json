@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "icn_sheck_in.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "checked_checkbox.png"
+      "filename" : "icn_sheck_in@2x.png"
     },
     {
       "idiom" : "universal",

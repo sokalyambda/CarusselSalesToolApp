@@ -67,7 +67,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNo-af-57f" userLabel="Car Title">
-                        <rect key="frame" x="8" y="7" width="425" height="24"/>
+                        <rect key="frame" x="8" y="7" width="408" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="x8H-gE-ceF"/>
                         </constraints>
@@ -84,7 +84,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="C1Q-R6-rXa" firstAttribute="top" secondItem="55q-Dy-zhc" secondAttribute="bottom" constant="8" id="2bt-9p-asa"/>
-                    <constraint firstItem="diO-ha-zMV" firstAttribute="leading" secondItem="xNo-af-57f" secondAttribute="trailing" constant="-9" id="3uC-3Q-l5g"/>
+                    <constraint firstItem="diO-ha-zMV" firstAttribute="leading" secondItem="xNo-af-57f" secondAttribute="trailing" constant="8" id="3uC-3Q-l5g"/>
                     <constraint firstItem="kEm-n9-ZoD" firstAttribute="top" secondItem="xNo-af-57f" secondAttribute="bottom" constant="5" id="8Lx-DF-0Zl"/>
                     <constraint firstItem="55q-Dy-zhc" firstAttribute="top" secondItem="iYP-Ag-8b9" secondAttribute="bottom" constant="8" id="9fO-kr-AC2"/>
                     <constraint firstItem="iYP-Ag-8b9" firstAttribute="leading" secondItem="kEm-n9-ZoD" secondAttribute="trailing" constant="8" id="ARh-rb-fBg"/>

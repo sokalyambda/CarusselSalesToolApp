@@ -22,8 +22,6 @@
 
 #pragma mark - Init
 
-#warning set correctly selected/unselected images names instead of temporary!
-
 -(void)awakeFromNib
 {
     [self setSelectedImageName:@"checked_checkbox"];

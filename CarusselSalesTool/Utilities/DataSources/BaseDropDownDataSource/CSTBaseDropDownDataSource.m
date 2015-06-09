@@ -18,24 +18,24 @@ static NSString *cellIdentifier = @"";
 
 @implementation CSTBaseDropDownDataSource
 
-- (instancetype)initWithDataSourceType:(DropDownDataSourceType)dataSourceType
+- (instancetype)initWithDataSourceType:(CSTDropDownDataSourceType)dataSourceType
 {
     id currentDataSource = nil;
     
     switch (dataSourceType) {
-        case DropDownDataSourceTypeMakeCar:
+        case CSTDropDownDataSourceTypeMakeCar:
             currentDataSource = [[CSTMakeCarDataSource alloc] init];
             break;
-        case DropDownDataSourceTypeFuelType:
+        case CSTDropDownDataSourceTypeFuelType:
             currentDataSource = [[CSTFuelTypeDataSource alloc] init];
             break;
-        case DropDownDataSourceTypeBodyType:
+        case CSTDropDownDataSourceTypeBodyType:
             currentDataSource = [[CSTBodyTypeDataSource alloc] init];
             break;
-        case DropDownDataSourceTypeCarColor:
+        case CSTDropDownDataSourceTypeCarColor:
             currentDataSource = [[CSTCarColorDataSource alloc] init];
             break;
-        case DropDownDataSourceTypeYearFrom:
+        case CSTDropDownDataSourceTypeYearFrom:
             currentDataSource = [[CSTCarYearFromDataSource alloc] init];
             break;
             

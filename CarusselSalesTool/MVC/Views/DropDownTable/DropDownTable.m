@@ -23,8 +23,6 @@ static CGFloat const kSlidingTime = .5f;
 @property (weak, nonatomic) UIView *anchorView;
 @property (weak, nonatomic) UIView *presentedView;
 
-@property (assign, nonatomic) BOOL isExpanded;
-
 @end
 
 @implementation DropDownTable {

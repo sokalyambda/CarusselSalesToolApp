@@ -7,14 +7,14 @@
 //
 
 typedef enum : NSUInteger {
-    FiltersPanelStateClosed,
-    FiltersPanelStateOpened
-} FiltersPanelState;
+    CSTFiltersPanelStateClosed,
+    CSTFiltersPanelStateOpened
+} CSTFiltersPanelState;
 
 #import <UIKit/UIKit.h>
 
 @interface CarsFiltersViewController : UIViewController
 
-@property (assign, nonatomic) FiltersPanelState state;
+@property (assign, nonatomic) CSTFiltersPanelState state;
 
 @end

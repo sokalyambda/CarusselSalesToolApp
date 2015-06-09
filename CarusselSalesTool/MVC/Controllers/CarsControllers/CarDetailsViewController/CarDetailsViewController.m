@@ -66,6 +66,21 @@
 
 #pragma mark - Actions
 
+- (IBAction)fullPhotoClick:(id)sender
+{
+    
+}
+
+- (IBAction)galleryClick:(id)sender
+{
+    
+}
+
+- (IBAction)showCameraClick:(id)sender
+{
+    
+}
+
 - (void)updateCarInformation
 {
     [self.carImagesCollectionView reloadData];

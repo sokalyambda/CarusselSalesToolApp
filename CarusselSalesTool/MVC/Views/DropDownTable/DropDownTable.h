@@ -14,6 +14,8 @@ typedef void(^DropDownCompletionHandler)(DropDownTable *dropDownTable, BOOL isEx
 
 @interface DropDownTable : UIView
 
+@property (assign, nonatomic) BOOL isExpanded;
+
 - (void)dropDownTableBecomeActiveInView:(UIView *)presentedView
                          fromAnchorView:(UIView *)anchorView
                          withDataSource:(CSTBaseDropDownDataSource *)dataSource
