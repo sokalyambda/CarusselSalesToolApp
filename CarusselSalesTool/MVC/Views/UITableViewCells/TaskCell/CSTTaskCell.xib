@@ -13,24 +13,27 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SD9-i7-wfz" id="eYQ-WD-5Wd">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Task" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNL-nP-cSs" customClass="CSTBorderedTextField">
-                        <rect key="frame" x="8" y="3" width="310" height="32"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Time" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crR-Pc-VE1" customClass="CSTBorderedTextField">
-                        <rect key="frame" x="558" y="3" width="134" height="32"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="134" id="TbO-YB-kKQ"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emy-R4-mwT" customClass="CSTBorderedTextField">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" textAlignment="center" minimumFontSize="17" background="tab_raw_2" translatesAutoresizingMaskIntoConstraints="NO" id="emy-R4-mwT">
                         <rect key="frame" x="324" y="3" width="228" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="228" id="xth-9e-r09"/>
                         </constraints>
+                        <color key="textColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Time" textAlignment="center" minimumFontSize="17" background="tab_raw_3" translatesAutoresizingMaskIntoConstraints="NO" id="crR-Pc-VE1">
+                        <rect key="frame" x="558" y="3" width="134" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="134" id="TbO-YB-kKQ"/>
+                        </constraints>
+                        <color key="textColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Task" minimumFontSize="17" background="tab_row_1" translatesAutoresizingMaskIntoConstraints="NO" id="SNL-nP-cSs" customClass="CSTBorderedTextField">
+                        <rect key="frame" x="8" y="3" width="310" height="32"/>
+                        <color key="textColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -57,4 +60,9 @@
             <point key="canvasLocation" x="396" y="96"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="tab_raw_2" width="255" height="32"/>
+        <image name="tab_raw_3" width="144" height="32"/>
+        <image name="tab_row_1" width="473" height="32"/>
+    </resources>
 </document>
