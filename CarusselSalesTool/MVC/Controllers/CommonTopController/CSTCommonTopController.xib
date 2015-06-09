@@ -153,7 +153,7 @@
                     <variation key="widthClass=regular" constant="16"/>
                 </constraint>
                 <constraint firstItem="cjp-Ut-chX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N4s-yG-NG2">
-                    <variation key="widthClass=regular" constant="0.0"/>
+                    <variation key="widthClass=regular" constant="2"/>
                 </constraint>
                 <constraint firstAttribute="bottom" secondItem="HGT-ty-cBs" secondAttribute="bottom" id="NyD-fH-5Jh">
                     <variation key="widthClass=regular" constant="12"/>

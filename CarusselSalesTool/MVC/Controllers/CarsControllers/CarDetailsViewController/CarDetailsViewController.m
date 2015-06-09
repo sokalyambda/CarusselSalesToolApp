@@ -13,6 +13,7 @@
 #import "CSTAttributedLabel.h"
 
 @interface CarDetailsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIScrollView *carDetailsScrollView;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UICollectionView *carImagesCollectionView;
@@ -53,6 +54,21 @@
 }
 
 #pragma mark - Actions
+
+- (IBAction)fullPhotoClick:(id)sender
+{
+    
+}
+
+- (IBAction)galleryClick:(id)sender
+{
+    
+}
+
+- (IBAction)showCameraClick:(id)sender
+{
+    
+}
 
 - (void)updateCarInformation
 {
