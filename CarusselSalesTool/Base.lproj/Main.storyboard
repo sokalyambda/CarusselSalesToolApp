@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1F0-ao-sOY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1F0-ao-sOY">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </mutableArray>
+        <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="w7i-ZD-6UN">
@@ -38,6 +46,7 @@
                                                             </constraint>
                                                             <constraint firstAttribute="width" constant="82" id="gbQ-pz-Ge3"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                         <state key="normal" title="LOG IN" backgroundImage="btn_login">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,7 +97,7 @@
                                                             <constraint firstAttribute="height" constant="40" id="n8Z-Q9-ryk"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.15686274510000001" green="0.21960784310000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                                         <variation key="default">
                                                             <mask key="constraints">

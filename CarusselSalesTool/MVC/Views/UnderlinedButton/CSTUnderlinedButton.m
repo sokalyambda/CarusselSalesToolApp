@@ -10,6 +10,32 @@
 
 @implementation CSTUnderlinedButton
 
+#pragma mark - Init
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (void)commonInit
+{
+    self.titleLabel.font = [UIFont fontWithName:@"Lato-Regular" size:12.f];
+    self.titleLabel.textColor = UIColorFromRGB(0x858585);
+}
+
 - (void)drawRect:(CGRect)rect
 {
     CGFloat descender = self.titleLabel.font.descender;
