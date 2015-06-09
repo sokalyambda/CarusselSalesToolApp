@@ -9,26 +9,32 @@
 #import "CSTTasksListController.h"
 #import "CSTTaskCell.h"
 #import "UIView+MakeFromXib.h"
+#import "CSTCommonSearchBar.h"
 
 @interface CSTTasksListController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSArray *tasksDataSource;
 @property (weak, nonatomic) IBOutlet UITableView *taskTableView;
+@property (weak, nonatomic) IBOutlet CSTCommonSearchBar *tasksSearchBar;
 
 @end
 
 @implementation CSTTasksListController
 
-- (void)viewDidLoad {
+#pragma mark - View Lifecycle
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.tasksDataSource = [NSArray arrayWithObjects:@1, @2, @3, @4, nil];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self customizeSearchBar];
 }
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -43,6 +49,7 @@
     if(!cell) {
         cell = [CSTTaskCell makeFromXib];
     }
+    
     return cell;
 }
 
@@ -52,4 +59,13 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+#pragma mark - Actions
+
+- (void)customizeSearchBar
+{
+    [self.tasksSearchBar setRightImageName:@"icn_search"];
+    self.tasksSearchBar.placeholder = NSLocalizedString(@"Task's name", nil);
+}
+
 @end
