@@ -83,7 +83,7 @@ static NSInteger const kPlaceholderLabelPaddingValue = 8.f;
 
 - (void)addBorder
 {
-    self.backgroundColor = [UIColor colorWithWhite:0.9f alpha:0.5f];
+    self.backgroundColor = [UIColor colorWithWhite:1.f alpha:0.6f];
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = 5.0;
     self.layer.borderWidth = 1.f;

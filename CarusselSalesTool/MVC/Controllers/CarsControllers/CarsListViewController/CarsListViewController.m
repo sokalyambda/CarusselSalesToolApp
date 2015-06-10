@@ -13,6 +13,7 @@
 
 #import "CSTDataManager.h"
 
+
 @interface CarsListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSArray *cars;
@@ -45,7 +46,7 @@
 {
     CarCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CarCell class])];
     
-    if (cell == nil) {
+    if (!cell) {
         cell = [CarCell makeFromXib];
     }
     
