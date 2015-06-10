@@ -63,7 +63,7 @@
 		588EE7931B14843400CE2D91 /* CSTValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7921B14843400CE2D91 /* CSTValidator.m */; };
 		588EE7A31B14A7D800CE2D91 /* CarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7A21B14A7D800CE2D91 /* CarCell.m */; };
 		588EE7A51B14A7E400CE2D91 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588EE7A41B14A7E400CE2D91 /* CarCell.xib */; };
-		588EE7B31B14B27B00CE2D91 /* Prospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7B21B14B27B00CE2D91 /* Prospect.m */; };
+		588EE7B31B14B27B00CE2D91 /* CSTProspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7B21B14B27B00CE2D91 /* CSTProspect.m */; };
 		588EE7B71B14B69600CE2D91 /* CarImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 588EE7B61B14B69600CE2D91 /* CarImageCell.m */; };
 		588EE7B91B14B6AD00CE2D91 /* CarImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588EE7B81B14B6AD00CE2D91 /* CarImageCell.xib */; };
 		588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 588F29561B18AD3900F14AED /* NSDictionary+JSONRepresentation.m */; };
@@ -191,8 +191,8 @@
 		588EE7A11B14A7D800CE2D91 /* CarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarCell.h; path = MVC/Views/UITableViewCells/CarCell/CarCell.h; sourceTree = "<group>"; };
 		588EE7A21B14A7D800CE2D91 /* CarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarCell.m; path = MVC/Views/UITableViewCells/CarCell/CarCell.m; sourceTree = "<group>"; };
 		588EE7A41B14A7E400CE2D91 /* CarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarCell.xib; path = MVC/Views/UITableViewCells/CarCell/CarCell.xib; sourceTree = "<group>"; };
-		588EE7B11B14B27B00CE2D91 /* Prospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prospect.h; path = MVC/Models/Prospect/Prospect.h; sourceTree = "<group>"; };
-		588EE7B21B14B27B00CE2D91 /* Prospect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Prospect.m; path = MVC/Models/Prospect/Prospect.m; sourceTree = "<group>"; };
+		588EE7B11B14B27B00CE2D91 /* CSTProspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTProspect.h; path = MVC/Models/Prospect/CSTProspect.h; sourceTree = "<group>"; };
+		588EE7B21B14B27B00CE2D91 /* CSTProspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTProspect.m; path = MVC/Models/Prospect/CSTProspect.m; sourceTree = "<group>"; };
 		588EE7B51B14B69600CE2D91 /* CarImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarImageCell.h; path = MVC/Views/UICollectionViewCells/CarImageCell.h; sourceTree = "<group>"; };
 		588EE7B61B14B69600CE2D91 /* CarImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarImageCell.m; path = MVC/Views/UICollectionViewCells/CarImageCell.m; sourceTree = "<group>"; };
 		588EE7B81B14B6AD00CE2D91 /* CarImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarImageCell.xib; path = MVC/Views/UICollectionViewCells/CarImageCell.xib; sourceTree = "<group>"; };
@@ -737,8 +737,8 @@
 		588EE7AD1B14B23F00CE2D91 /* Prospect */ = {
 			isa = PBXGroup;
 			children = (
-				588EE7B11B14B27B00CE2D91 /* Prospect.h */,
-				588EE7B21B14B27B00CE2D91 /* Prospect.m */,
+				588EE7B11B14B27B00CE2D91 /* CSTProspect.h */,
+				588EE7B21B14B27B00CE2D91 /* CSTProspect.m */,
 			);
 			name = Prospect;
 			sourceTree = "<group>";
@@ -1282,7 +1282,7 @@
 				588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */,
 				589235FF1B243F8C00E79D49 /* CSTMakeCarDataSource.m in Sources */,
 				841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */,
-				588EE7B31B14B27B00CE2D91 /* Prospect.m in Sources */,
+				588EE7B31B14B27B00CE2D91 /* CSTProspect.m in Sources */,
 				588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */,
 				5892360F1B24403900E79D49 /* CSTCarYearFromDataSource.m in Sources */,
 				588F29651B18ADD300F14AED /* Constants.m in Sources */,
@@ -1437,12 +1437,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Viktor Nagy (355F5TU3TD)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarusselSalesTool/CarusselSalesTool-PrefixHeader.pch";
 				INFOPLIST_FILE = CarusselSalesTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7aaaf83b-9911-433a-988e-54ce302c4dcf";
 			};
 			name = Debug;
 		};
@@ -1452,12 +1454,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: CDM eStrategiai Tanacsado Korlatolt Felelossegu Tarsasag (WS3PE3NE4X)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarusselSalesTool/CarusselSalesTool-PrefixHeader.pch";
 				INFOPLIST_FILE = CarusselSalesTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "00842459-b288-4e96-8dd1-3d755529c538";
 			};
 			name = Release;
 		};

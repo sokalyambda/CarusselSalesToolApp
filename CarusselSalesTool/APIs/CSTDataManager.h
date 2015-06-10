@@ -28,4 +28,6 @@
 
 - (void)getTasksList:(TasksListBlock)result;
 
+- (void)getProspectsList:(ProspectsListBlock)result;
+
 @end

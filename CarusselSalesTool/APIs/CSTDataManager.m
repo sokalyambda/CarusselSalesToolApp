@@ -95,4 +95,11 @@
     }];
 }
 
+- (void)getProspectsList:(TasksListBlock)result
+{
+    [self.network getProspectsList:^(NSArray *prospectsList, NSError *error) {
+        return result(prospectsList, error);
+    }];
+}
+
 @end

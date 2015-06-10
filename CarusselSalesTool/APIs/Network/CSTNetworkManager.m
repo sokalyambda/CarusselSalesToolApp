@@ -110,4 +110,16 @@ NSString *const baseURLString = @"http://mobileapp.vacs.hu.opel.dwt.carusselgrou
     return result([taskList copy], nil);
 }
 
+#pragma mark - Prospects
+
+- (void)getProspectsList:(ProspectsListBlock)result
+{
+    NSMutableArray *prospectList = [NSMutableArray new];
+    for (int i = 0; i < 6; i++) {
+        [prospectList addObject:[[CSTProspect alloc] initWithDictionary:nil]];
+    }
+    return result([prospectList copy], nil);
+}
+
+
 @end

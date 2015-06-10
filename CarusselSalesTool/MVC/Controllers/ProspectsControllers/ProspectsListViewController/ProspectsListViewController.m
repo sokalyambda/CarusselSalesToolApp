@@ -27,7 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.prospectsList = [NSArray arrayWithObjects:@"1", @"2", @"3", @"4",@"5", nil];
+    
+    WEAK_SELF;
+    [[CSTDataManager sharedInstance] getProspectsList:^(NSArray *prospectsList, NSError *error) {
+        weakSelf.prospectsList = prospectsList;
+        [weakSelf.prospectsTableView reloadData];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated

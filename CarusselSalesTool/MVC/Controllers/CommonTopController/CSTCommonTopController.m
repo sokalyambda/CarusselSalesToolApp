@@ -22,6 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    CSTCompany *companyInfo = [CSTDataManager sharedInstance].companyInfo;
+    self.userNameLabel.text = [NSString stringWithFormat:@"%@ %@", companyInfo.firstName, companyInfo.lastName];
 }
 
 #pragma mark - Actions

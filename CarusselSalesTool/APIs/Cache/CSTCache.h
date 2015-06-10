@@ -7,7 +7,7 @@
 //
 
 #import "CSTCar.h"
-#import "Prospect.h"
+#import "CSTProspect.h"
 #import "CSTCompany.h"
 
 @interface CSTCache : NSObject

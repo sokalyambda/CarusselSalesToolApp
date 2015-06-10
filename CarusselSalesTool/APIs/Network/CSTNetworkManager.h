@@ -12,6 +12,7 @@
 #import "CSTCar.h"
 #import "CSTImageCar.h"
 #import "CSTTask.h"
+#import "CSTProspect.h"
 
 typedef void(^SuccessBlock)(BOOL success, NSError *error);
 typedef void(^IntBlock)(NSInteger count, NSError *error);
@@ -21,6 +22,8 @@ typedef void(^CarListBlock)(NSArray *carList, NSError *error);
 typedef void(^ImageCarBlock)(BOOL success, CSTImageCar *image);
 
 typedef void(^TasksListBlock)(NSArray *tasksList, NSError *error);
+
+typedef void(^ProspectsListBlock)(NSArray *prospectsList, NSError *error);
 
 @interface CSTNetworkManager : AFHTTPSessionManager
 
@@ -33,5 +36,8 @@ typedef void(^TasksListBlock)(NSArray *tasksList, NSError *error);
 
 //tasks
 - (void)getTasksList:(TasksListBlock)result;
+
+//prospects
+- (void)getProspectsList:(ProspectsListBlock)result;
 
 @end
