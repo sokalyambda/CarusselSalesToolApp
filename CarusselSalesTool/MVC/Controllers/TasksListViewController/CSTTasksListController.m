@@ -21,7 +21,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tasksDataSource = [NSArray arrayWithObjects:@1, @2, @3, @4, nil];
+    
+    WEAK_SELF;
+    [[CSTDataManager sharedInstance] getTasksList:^(NSArray *tasksList, NSError *error) {
+        weakSelf.tasksDataSource = tasksList;
+        [weakSelf.taskTableView reloadData];
+    }];
     // Do any additional setup after loading the view.
 }
 

@@ -73,6 +73,7 @@
 		841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7A1B1EFAD70012BFE3 /* CSTCache.m */; };
 		841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7C1B1EFAD70012BFE3 /* CSTDataManager.m */; };
 		841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */; };
+		84673ABC1B281BBB009D890E /* CSTTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 84673ABB1B281BBB009D890E /* CSTTask.m */; };
 		84EBD4B71B2078C7001F4CF5 /* CSTCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4A41B2078C7001F4CF5 /* CSTCar.m */; };
 		84EBD4BA1B2078C7001F4CF5 /* CSTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4AD1B2078C7001F4CF5 /* CSTLocation.m */; };
 		84EBD4BC1B2078C7001F4CF5 /* CSTMakeCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4B31B2078C7001F4CF5 /* CSTMakeCar.m */; };
@@ -204,6 +205,8 @@
 		841DFB7C1B1EFAD70012BFE3 /* CSTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTDataManager.m; sourceTree = "<group>"; };
 		841DFB7E1B1EFAD70012BFE3 /* CSTNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTNetworkManager.h; sourceTree = "<group>"; };
 		841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTNetworkManager.m; sourceTree = "<group>"; };
+		84673ABA1B281BBB009D890E /* CSTTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTTask.h; sourceTree = "<group>"; };
+		84673ABB1B281BBB009D890E /* CSTTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTTask.m; sourceTree = "<group>"; };
 		84EBD4A31B2078C7001F4CF5 /* CSTCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTCar.h; sourceTree = "<group>"; };
 		84EBD4A41B2078C7001F4CF5 /* CSTCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTCar.m; sourceTree = "<group>"; };
 		84EBD4AC1B2078C7001F4CF5 /* CSTLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTLocation.h; sourceTree = "<group>"; };
@@ -411,6 +414,7 @@
 		588EE7271B1473A600CE2D91 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84673AB91B281B94009D890E /* Task */,
 				84EBD4BE1B20A6E7001F4CF5 /* Company */,
 				84EBD4AB1B2078C7001F4CF5 /* Location */,
 				84EBD4A21B2078C7001F4CF5 /* Car */,
@@ -888,6 +892,16 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		84673AB91B281B94009D890E /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				84673ABA1B281BBB009D890E /* CSTTask.h */,
+				84673ABB1B281BBB009D890E /* CSTTask.m */,
+			);
+			name = Task;
+			path = MVC/Models/Task;
+			sourceTree = "<group>";
+		};
 		84EBD4A21B2078C7001F4CF5 /* Car */ = {
 			isa = PBXGroup;
 			children = (
@@ -1183,6 +1197,7 @@
 				841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */,
 				588EE7931B14843400CE2D91 /* CSTValidator.m in Sources */,
 				589236031B243FCC00E79D49 /* CSTFuelTypeDataSource.m in Sources */,
+				84673ABC1B281BBB009D890E /* CSTTask.m in Sources */,
 				841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */,
 				589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */,
 				583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */,

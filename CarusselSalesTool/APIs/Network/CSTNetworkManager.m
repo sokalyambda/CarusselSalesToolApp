@@ -8,7 +8,8 @@
 
 #import "CSTNetworkManager.h"
 
-NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt.com";
+//NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt.com/vacs-rest";
+NSString *const baseURLString = @"http://mobileapp.vacs.hu.opel.dwt.carusselgroup.com";
 
 @implementation CSTNetworkManager
 
@@ -24,15 +25,28 @@ NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt
     return self;
 }
 
+#pragma mark - SignIn
+
 - (void)signInWithUserName:(NSString *)userName password:(NSString *)password withResult:(CompanyBlock)result
 {
     NSDictionary *parameter = @{@"j_username" : userName,
                                 @"j_password": password};
-    [self POST:@"/vacs-rest/j_spring_security_check" parameters:parameter success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self POST:@"/j_spring_security_check" parameters:parameter success:^(NSURLSessionDataTask *task, id responseObject) {
         CSTCompany *company = [[CSTCompany alloc] initWithDictionary:responseObject];
         return result(YES, company, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         return result(NO, nil, error);
+    }];
+}
+
+#pragma mark - Cars
+
+- (void)getCarsCount:(IntBlock)result
+{
+    [self POST:@"/vehicle/count" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        return result((NSInteger)responseObject, nil);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        return result(0, error);
     }];
 }
 
@@ -46,7 +60,7 @@ NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt
     }
     [parameterToGet setObject:@(row) forKey:@"rowIndex"];
     [parameterToGet setObject:@(pageSize) forKey:@"pageSize"];
-    [self GET:@"/vacs-rest/vehicle/list" parameters:parameterToGet success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self GET:@"/vehicle/list" parameters:parameterToGet success:^(NSURLSessionDataTask *task, id responseObject) {
         NSMutableArray *listCard = [NSMutableArray new];
         for (NSDictionary *dic in responseObject) {
             [listCard addObject:[[CSTCar alloc] initWithDictionary:dic]];
@@ -59,7 +73,7 @@ NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt
 
 - (void)getCarWithID:(NSInteger)ID result:(CarBlock)result
 {
-    [self GET:[NSString stringWithFormat:@"/vacs-rest/vehicle/%li", ID] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self GET:[NSString stringWithFormat:@"/vehicle/%li", ID] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         return result([[CSTCar alloc] initWithDictionary:responseObject], nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         return result(nil, error);
@@ -83,17 +97,17 @@ NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         return result(NO, nil);
     }];
-//    AFHTTPRequestOperation *operation = [self POST:@"/vacs-rest/vehicle/upload" parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-//        //do not put image inside parameters dictionary as I did, but append it!
-//        [formData appendPartWithFileData:imageData name:@"file" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
-//    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"Success: %@ ***** %@", operation.responseString, responseObject);
-//        return result(YES, responseObject);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"Error: %@ ***** %@", operation.responseString, error);
-//        return result(NO, nil);
-//    }];
-//    [operation start];
+}
+
+#pragma mark - Tasks List
+
+- (void)getTasksList:(TasksListBlock)result
+{
+    NSMutableArray *taskList = [NSMutableArray new];
+    for (int i = 0; i < 3; i++) {
+        [taskList addObject:[[CSTTask alloc] initWithDictionary:nil]];
+    }
+    return result([taskList copy], nil);
 }
 
 @end

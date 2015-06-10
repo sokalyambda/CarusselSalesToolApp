@@ -52,6 +52,13 @@
     }];
 }
 
+- (void)getCarsCount:(IntBlock)result
+{
+    [self.network getCarsCount:^(NSInteger count, NSError *error) {
+        return result(count, error);
+    }];
+}
+
 - (void)getCarListForRow:(NSInteger)row pageSize:(NSInteger)pageSize parameter:(NSDictionary *)parameters result:(CarListBlock)result
 {
     [self.network getCarListForRow:row pageSize:pageSize parameter:parameters result:^(NSArray *carList, NSError *error) {
@@ -64,7 +71,9 @@
     CSTCar *car = [_cache getCarWithID:@(ID)];
     if (!car) {
         [self.network getCarWithID:ID result:^(CSTCar *car, NSError *error) {
-            [self.cache.carsList setObject:car forKey:@(ID)];
+            if (car && !error) {
+                [self.cache.carsList setObject:car forKey:@(ID)];
+            }            
             return result(car, error);
         }];
     } else {
@@ -76,6 +85,13 @@
 {
     [self.network postImage:image withID:ID result:^(BOOL success, CSTImageCar *image) {
         return result(success, image);
+    }];
+}
+
+- (void)getTasksList:(TasksListBlock)result
+{
+    [self.network getTasksList:^(NSArray *tasksList, NSError *error) {
+        return result(tasksList, error);
     }];
 }
 
