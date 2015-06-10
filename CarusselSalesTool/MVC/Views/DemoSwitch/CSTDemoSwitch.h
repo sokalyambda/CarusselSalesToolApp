@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CSTDemoSwitchDelegate <NSObject>
+
+- (void)changeTabBarItemsEnabled:(BOOL)enabled;
+
+@end
+
 @interface CSTDemoSwitch : UISwitch
+
+@property (nonatomic, weak) id<CSTDemoSwitchDelegate> delegate;
 
 @end

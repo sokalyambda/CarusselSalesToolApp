@@ -75,41 +75,41 @@
                         <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aD-4e-CcO" userLabel="Point">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aD-4e-CcO" userLabel="Mark" customClass="CSTRoundedMark">
                         <rect key="frame" x="224" y="45" width="5" height="5"/>
-                        <color key="backgroundColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="5" id="5PM-m9-Big"/>
                             <constraint firstAttribute="height" constant="5" id="FO6-d2-YV9"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgX-hG-zld" userLabel="Point">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgX-hG-zld" userLabel="Mark" customClass="CSTRoundedMark">
                         <rect key="frame" x="224" y="72" width="5" height="5"/>
-                        <color key="backgroundColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="5" id="Y26-GA-DnK"/>
                             <constraint firstAttribute="height" constant="5" id="Z9N-lh-ZGL"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ItT-Jg-j6f" userLabel="Point">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ItT-Jg-j6f" userLabel="Mark" customClass="CSTRoundedMark">
                         <rect key="frame" x="224" y="99" width="5" height="5"/>
-                        <color key="backgroundColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="5" id="BqZ-Q3-Nqx"/>
                             <constraint firstAttribute="height" constant="5" id="yF3-ZD-ivj"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebn-iu-XKb" userLabel="Point">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebn-iu-XKb" userLabel="Mark" customClass="CSTRoundedMark">
                         <rect key="frame" x="224" y="126" width="5" height="5"/>
-                        <color key="backgroundColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="5" id="jNA-an-j8i"/>
                             <constraint firstAttribute="width" constant="5" id="kbq-M6-fzh"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7I-i2-A6h" userLabel="Point">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7I-i2-A6h" userLabel="Mark" customClass="CSTRoundedMark">
                         <rect key="frame" x="224" y="153" width="5" height="5"/>
-                        <color key="backgroundColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="5" id="DXv-lh-uRA"/>
                             <constraint firstAttribute="width" constant="5" id="EI6-l8-WLd"/>

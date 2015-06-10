@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class CSTDemoSwitch;
+
 @interface CSTCommonTopController : UIViewController
+
+@property (weak, nonatomic) IBOutlet CSTDemoSwitch *demoSwitch;
 
 @end

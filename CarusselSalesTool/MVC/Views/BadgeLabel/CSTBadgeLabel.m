@@ -33,7 +33,7 @@
 - (void)commonInit
 {
     self.layer.backgroundColor = UIColorFromRGB(0x33CC66).CGColor;
-    self.layer.cornerRadius = self.bounds.size.height / 2;
+    self.layer.cornerRadius = CGRectGetHeight(self.bounds) / 2;
 }
 
 @end

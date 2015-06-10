@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -15,6 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CSTCommonTopController">
             <connections>
+                <outlet property="demoSwitch" destination="jif-0X-1LJ" id="Nmv-7r-fsa"/>
                 <outlet property="notificationsCountLabel" destination="UeE-o8-sLO" id="jnB-RM-BGi"/>
                 <outlet property="userNameLabel" destination="Tds-9k-xFs" id="DPW-lz-HaX"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Upo-e2-Y3z"/>
@@ -214,20 +215,7 @@
                     <exclude reference="9Zb-Fn-LD8"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="C6N-yZ-gyw"/>
-                    <exclude reference="Prl-jK-D6A"/>
-                    <exclude reference="QO6-ue-c66"/>
-                    <exclude reference="Uzv-Lx-0VS"/>
-                    <exclude reference="saE-pJ-pkn"/>
-                    <exclude reference="ycQ-UT-JHe"/>
-                    <exclude reference="GwZ-tk-Edj"/>
-                    <exclude reference="NyD-fH-5Jh"/>
-                    <exclude reference="U1P-Bd-a30"/>
-                    <exclude reference="b7E-72-u8I"/>
-                    <exclude reference="mfz-D3-Lcv"/>
-                    <exclude reference="EZP-O6-Unx"/>
-                    <exclude reference="UED-sm-wfV"/>
-                    <exclude reference="jA7-mm-3pe"/>
+                    <exclude reference="VkC-rG-7yn"/>
                     <exclude reference="KSn-Gx-NMu"/>
                     <exclude reference="Q9e-yI-7NV"/>
                     <exclude reference="UbO-Z7-mQO"/>
@@ -236,10 +224,23 @@
                     <exclude reference="8Fw-be-zWF"/>
                     <exclude reference="kbH-k4-Qrr"/>
                     <exclude reference="wep-i5-8u8"/>
-                    <exclude reference="VkC-rG-7yn"/>
+                    <exclude reference="EZP-O6-Unx"/>
+                    <exclude reference="UED-sm-wfV"/>
+                    <exclude reference="jA7-mm-3pe"/>
+                    <exclude reference="b7E-72-u8I"/>
+                    <exclude reference="mfz-D3-Lcv"/>
+                    <exclude reference="GwZ-tk-Edj"/>
+                    <exclude reference="NyD-fH-5Jh"/>
+                    <exclude reference="U1P-Bd-a30"/>
                     <exclude reference="BWa-hz-Qtn"/>
                     <exclude reference="N4s-yG-NG2"/>
                     <exclude reference="nBD-dz-d7v"/>
+                    <exclude reference="C6N-yZ-gyw"/>
+                    <exclude reference="Prl-jK-D6A"/>
+                    <exclude reference="QO6-ue-c66"/>
+                    <exclude reference="Uzv-Lx-0VS"/>
+                    <exclude reference="saE-pJ-pkn"/>
+                    <exclude reference="ycQ-UT-JHe"/>
                 </mask>
             </variation>
             <variation key="widthClass=regular">
@@ -255,20 +256,7 @@
                     <include reference="9Zb-Fn-LD8"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="C6N-yZ-gyw"/>
-                    <include reference="Prl-jK-D6A"/>
-                    <exclude reference="QO6-ue-c66"/>
-                    <include reference="Uzv-Lx-0VS"/>
-                    <include reference="saE-pJ-pkn"/>
-                    <include reference="ycQ-UT-JHe"/>
-                    <include reference="GwZ-tk-Edj"/>
-                    <include reference="NyD-fH-5Jh"/>
-                    <include reference="U1P-Bd-a30"/>
-                    <include reference="b7E-72-u8I"/>
-                    <include reference="mfz-D3-Lcv"/>
-                    <include reference="EZP-O6-Unx"/>
-                    <include reference="UED-sm-wfV"/>
-                    <include reference="jA7-mm-3pe"/>
+                    <include reference="VkC-rG-7yn"/>
                     <include reference="KSn-Gx-NMu"/>
                     <include reference="Q9e-yI-7NV"/>
                     <include reference="UbO-Z7-mQO"/>
@@ -277,10 +265,23 @@
                     <include reference="8Fw-be-zWF"/>
                     <include reference="kbH-k4-Qrr"/>
                     <include reference="wep-i5-8u8"/>
-                    <include reference="VkC-rG-7yn"/>
+                    <include reference="EZP-O6-Unx"/>
+                    <include reference="UED-sm-wfV"/>
+                    <include reference="jA7-mm-3pe"/>
+                    <include reference="b7E-72-u8I"/>
+                    <include reference="mfz-D3-Lcv"/>
+                    <include reference="GwZ-tk-Edj"/>
+                    <include reference="NyD-fH-5Jh"/>
+                    <include reference="U1P-Bd-a30"/>
                     <include reference="BWa-hz-Qtn"/>
                     <include reference="N4s-yG-NG2"/>
                     <include reference="nBD-dz-d7v"/>
+                    <include reference="C6N-yZ-gyw"/>
+                    <include reference="Prl-jK-D6A"/>
+                    <exclude reference="QO6-ue-c66"/>
+                    <include reference="Uzv-Lx-0VS"/>
+                    <include reference="saE-pJ-pkn"/>
+                    <include reference="ycQ-UT-JHe"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="642" y="-55"/>

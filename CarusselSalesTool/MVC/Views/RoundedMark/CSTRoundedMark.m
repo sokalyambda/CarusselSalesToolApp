@@ -10,12 +10,30 @@
 
 @implementation CSTRoundedMark
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark - Init
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
 }
-*/
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (void)commonInit
+{
+    self.layer.backgroundColor = UIColorFromRGB(0x33CC66).CGColor;
+    self.layer.cornerRadius = CGRectGetHeight(self.bounds) / 2;
+}
 
 @end

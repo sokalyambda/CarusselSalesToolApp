@@ -7,8 +7,10 @@
 //
 
 #import "CSTCommonTopController.h"
+#import "CSTDemoSwitch.h"
 
 @interface CSTCommonTopController ()
+
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *notificationsCountLabel;
 
@@ -24,8 +26,10 @@
 
 #pragma mark - Actions
 
-- (IBAction)demoModeClick:(UISwitch *)demoSwitch {
-    NSLog(@"us on? %i", demoSwitch.isOn);
+- (IBAction)demoModeClick:(CSTDemoSwitch *)demoSwitch {
+    if ([demoSwitch.delegate respondsToSelector:@selector(changeTabBarItemsEnabled:)]) {
+        [demoSwitch.delegate changeTabBarItemsEnabled:demoSwitch.isOn];
+    }
 }
 
 

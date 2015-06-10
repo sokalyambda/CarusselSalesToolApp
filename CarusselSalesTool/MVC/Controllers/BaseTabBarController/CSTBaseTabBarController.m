@@ -16,11 +16,12 @@ typedef enum : NSUInteger {
 
 #import "CSTBaseTabBarController.h"
 #import "CSTCommonTopController.h"
+#import "CSTDemoSwitch.h"
 
 static CGFloat const kTopViewHeight = 48.f;
 static CGFloat const kStatusBarHeight = 20.f;
 
-@interface CSTBaseTabBarController () <UITabBarControllerDelegate>
+@interface CSTBaseTabBarController () <UITabBarControllerDelegate, CSTDemoSwitchDelegate>
 
 @property (strong, nonatomic) CSTCommonTopController *topController;
 
@@ -102,6 +103,8 @@ static CGFloat const kStatusBarHeight = 20.f;
     [self.view addSubview:self.topController.view];
     [self addChildViewController:self.topController];
     [self.topController didMoveToParentViewController:self];
+    
+    self.topController.demoSwitch.delegate = self;
 }
 
 #pragma mark - UITabBarControllerDelegaet
@@ -114,4 +117,16 @@ static CGFloat const kStatusBarHeight = 20.f;
     }
 }
 
+- (void)changeTabBarItemsEnabled:(BOOL)enabled
+{
+    [self.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem *tabBarItem, NSUInteger idx, BOOL *stop) {
+        if (idx % 4 != 0) {
+            tabBarItem.enabled = !enabled;
+        }
+    }];
+    
+    if (self.selectedIndex != CSTSelectedControllerTypeCarsList) {
+        [self setSelectedIndex:0];
+    }
+}
 @end
