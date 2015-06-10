@@ -59,6 +59,7 @@
     
     self.barTintColor = [UIColor clearColor];
     self.backgroundImage = [UIImage new];
+    [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setFont:[UIFont fontWithName:@"Lato-Light" size:16]];
 }
 
 @end
