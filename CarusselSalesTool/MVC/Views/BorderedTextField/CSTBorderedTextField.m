@@ -16,6 +16,8 @@ static CGFloat kLeftViewWidth = 10.f;
 
 @implementation CSTBorderedTextField
 
+#pragma mark - Init
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -40,6 +42,9 @@ static CGFloat kLeftViewWidth = 10.f;
         [self setBackground:[UIImage imageNamed:@"username_box"]];
     }
     [self addLeftView];
+    
+    self.font = [UIFont fontWithName:@"Lato-Light" size:14.f];
+    self.textColor = UIColorFromRGB(0x405663);
 }
 
 - (void)addLeftView

@@ -117,7 +117,7 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 
 - (void)customizeFields
 {
-    [self.userNameField setImageName:@"icn_user"];
+    [self.userNameField setImageName:@"icn_user_login"];
     [self.passwordField setImageName:@"icn_pass"];
 }
 
