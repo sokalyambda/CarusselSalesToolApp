@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837139F1B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m */; };
 		583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 583713A31B1F0FDE00C6C2C8 /* CSTCustomSlider.m */; };
+		584C015B1B282B8D0047DB7A /* CSTBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C015A1B282B8D0047DB7A /* CSTBadgeLabel.m */; };
+		584C015F1B2832C80047DB7A /* CSTDemoSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C015E1B2832C80047DB7A /* CSTDemoSwitch.m */; };
+		584C01621B284D040047DB7A /* CSTRoundedMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C01611B284D040047DB7A /* CSTRoundedMark.m */; };
 		584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C82F01B18507F0031C063 /* AddProspectViewController.m */; };
 		585585291B25780400FB0C46 /* CSTModelGroupSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 585585281B25780400FB0C46 /* CSTModelGroupSectionHeader.m */; };
 		5855852B1B25781600FB0C46 /* CSTModelGroupSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5855852A1B25781600FB0C46 /* CSTModelGroupSectionHeader.xib */; };
@@ -102,6 +105,12 @@
 		5837139F1B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBorderedPlaceholderTextView.m; path = MVC/Views/BorderedPlaceholderTextView/CSTBorderedPlaceholderTextView.m; sourceTree = "<group>"; };
 		583713A21B1F0FDE00C6C2C8 /* CSTCustomSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTCustomSlider.h; path = MVC/Views/CustomSlider/CSTCustomSlider.h; sourceTree = "<group>"; };
 		583713A31B1F0FDE00C6C2C8 /* CSTCustomSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCustomSlider.m; path = MVC/Views/CustomSlider/CSTCustomSlider.m; sourceTree = "<group>"; };
+		584C01591B282B8D0047DB7A /* CSTBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBadgeLabel.h; path = MVC/Views/BadgeLabel/CSTBadgeLabel.h; sourceTree = "<group>"; };
+		584C015A1B282B8D0047DB7A /* CSTBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBadgeLabel.m; path = MVC/Views/BadgeLabel/CSTBadgeLabel.m; sourceTree = "<group>"; };
+		584C015D1B2832C80047DB7A /* CSTDemoSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTDemoSwitch.h; path = MVC/Views/DemoSwitch/CSTDemoSwitch.h; sourceTree = "<group>"; };
+		584C015E1B2832C80047DB7A /* CSTDemoSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTDemoSwitch.m; path = MVC/Views/DemoSwitch/CSTDemoSwitch.m; sourceTree = "<group>"; };
+		584C01601B284D040047DB7A /* CSTRoundedMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTRoundedMark.h; path = MVC/Views/RoundedMark/CSTRoundedMark.h; sourceTree = "<group>"; };
+		584C01611B284D040047DB7A /* CSTRoundedMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTRoundedMark.m; path = MVC/Views/RoundedMark/CSTRoundedMark.m; sourceTree = "<group>"; };
 		584C82EF1B18507F0031C063 /* AddProspectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddProspectViewController.h; path = MVC/Controllers/ProspectsControllers/AddProspectViewController/AddProspectViewController.h; sourceTree = "<group>"; };
 		584C82F01B18507F0031C063 /* AddProspectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddProspectViewController.m; path = MVC/Controllers/ProspectsControllers/AddProspectViewController/AddProspectViewController.m; sourceTree = "<group>"; };
 		585585271B25780400FB0C46 /* CSTModelGroupSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTModelGroupSectionHeader.h; path = MVC/Views/ModelGroupSectionHeader/CSTModelGroupSectionHeader.h; sourceTree = "<group>"; };
@@ -281,6 +290,33 @@
 				583713A31B1F0FDE00C6C2C8 /* CSTCustomSlider.m */,
 			);
 			name = CustomSlider;
+			sourceTree = "<group>";
+		};
+		584C01541B28150C0047DB7A /* RoundedMark */ = {
+			isa = PBXGroup;
+			children = (
+				584C01601B284D040047DB7A /* CSTRoundedMark.h */,
+				584C01611B284D040047DB7A /* CSTRoundedMark.m */,
+			);
+			name = RoundedMark;
+			sourceTree = "<group>";
+		};
+		584C01581B282B6B0047DB7A /* BadgeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				584C01591B282B8D0047DB7A /* CSTBadgeLabel.h */,
+				584C015A1B282B8D0047DB7A /* CSTBadgeLabel.m */,
+			);
+			name = BadgeLabel;
+			sourceTree = "<group>";
+		};
+		584C015C1B2832240047DB7A /* DemoSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				584C015D1B2832C80047DB7A /* CSTDemoSwitch.h */,
+				584C015E1B2832C80047DB7A /* CSTDemoSwitch.m */,
+			);
+			name = DemoSwitch;
 			sourceTree = "<group>";
 		};
 		584C82EE1B18505B0031C063 /* AddProspectViewController */ = {
@@ -489,6 +525,9 @@
 		588EE7281B1473AB00CE2D91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				584C015C1B2832240047DB7A /* DemoSwitch */,
+				584C01581B282B6B0047DB7A /* BadgeLabel */,
+				584C01541B28150C0047DB7A /* RoundedMark */,
 				587E82321B27270C0081F933 /* UnderlinedButton */,
 				587E822E1B271A7C0081F933 /* CommonSearchBar */,
 				585585261B2577C600FB0C46 /* ModelGroupSectionHeader */,
@@ -1197,6 +1236,7 @@
 				58701B671B15D23D00F0A21E /* DropDownTable.m in Sources */,
 				84EBD4C51B20BC25001F4CF5 /* CSTAttributedLabel.m in Sources */,
 				588EE7B71B14B69600CE2D91 /* CarImageCell.m in Sources */,
+				584C01621B284D040047DB7A /* CSTRoundedMark.m in Sources */,
 				588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */,
 				589235FF1B243F8C00E79D49 /* CSTMakeCarDataSource.m in Sources */,
 				841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */,
@@ -1213,6 +1253,7 @@
 				584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */,
 				84EBD4BD1B2078C7001F4CF5 /* CSTModelGroup.m in Sources */,
 				588EE7591B14771800CE2D91 /* BaseNavigationController.m in Sources */,
+				584C015B1B282B8D0047DB7A /* CSTBadgeLabel.m in Sources */,
 				588EE77F1B147D2600CE2D91 /* ProspectDetailsViewController.m in Sources */,
 				84EBD4BA1B2078C7001F4CF5 /* CSTLocation.m in Sources */,
 				589236071B243FED00E79D49 /* CSTBodyTypeDataSource.m in Sources */,
@@ -1228,6 +1269,7 @@
 				5877CE7B1B2178AF0097DF86 /* CSTTaskCell.m in Sources */,
 				84EBD4BC1B2078C7001F4CF5 /* CSTMakeCar.m in Sources */,
 				5892360B1B24401100E79D49 /* CSTCarColorDataSource.m in Sources */,
+				584C015F1B2832C80047DB7A /* CSTDemoSwitch.m in Sources */,
 				588EE75C1B14772300CE2D91 /* LoginViewController.m in Sources */,
 				589235FB1B243EFD00E79D49 /* CSTBaseDropDownDataSource.m in Sources */,
 				84EBD4C11B20A6E7001F4CF5 /* CSTCompany.m in Sources */,

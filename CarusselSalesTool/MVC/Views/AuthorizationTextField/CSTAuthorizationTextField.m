@@ -18,32 +18,6 @@ static CGFloat kLeftViewWidth = 36.f;
 
 @implementation CSTAuthorizationTextField
 
-#pragma mark - Init
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
-}
-
-- (void)commonInit
-{
-    self.font = [UIFont fontWithName:@"Lato-Light" size:14.f];
-    self.textColor = UIColorFromRGB(0x405663);
-}
-
 #pragma mark - Accessors
 
 - (void)setImageName:(NSString *)imageName
