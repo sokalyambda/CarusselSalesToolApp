@@ -17,6 +17,7 @@ static CGFloat kSlideTiming = 0.5f;
 
 @property (weak, nonatomic) IBOutlet UIView *carsListHolder;
 @property (weak, nonatomic) IBOutlet UIView *carDetailsHolder;
+@property (weak, nonatomic) IBOutlet UIView *searchView;
 
 @property (assign, nonatomic) CGRect originalPanelPosition;
 
@@ -110,7 +111,7 @@ static CGFloat kSlideTiming = 0.5f;
     UIView *childView = [self getFiltersView];
 
     //to correct the appearance of left panel
-    [self.view bringSubviewToFront:childView];
+    [self.view bringSubviewToFront:self.searchView];
     
     [UIView animateWithDuration:kSlideTiming delay:0 options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{

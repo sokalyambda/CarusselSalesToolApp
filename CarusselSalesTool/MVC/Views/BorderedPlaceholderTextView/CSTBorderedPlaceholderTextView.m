@@ -72,11 +72,12 @@ static NSInteger const kPlaceholderLabelPaddingValue = 8.f;
         return;
     }
     
+    WEAK_SELF;
     [UIView animateWithDuration:kPlaceHolderDisappearingTime animations:^{
-        if (!self.text.length) {
-            self.placeHolderLabel.alpha = 1.f;
+        if (!weakSelf.text.length) {
+            weakSelf.placeHolderLabel.alpha = 1.f;
         } else {
-            self.placeHolderLabel.alpha = 0.f;
+            weakSelf.placeHolderLabel.alpha = 0.f;
         }
     }];
 }
@@ -107,7 +108,7 @@ static NSInteger const kPlaceholderLabelPaddingValue = 8.f;
         
         self.placeHolderLabel.text = self.placeholder;
         [self.placeHolderLabel sizeToFit];
-        [self sendSubviewToBack:_placeHolderLabel];
+        [self sendSubviewToBack:self.placeHolderLabel];
     }
     
     if (!self.text.length && self.placeholder.length) {

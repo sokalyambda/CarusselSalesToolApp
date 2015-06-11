@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarsListViewController">
             <connections>
@@ -12,93 +17,103 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CSTRoundBorderedView">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="176" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PK9-xV-GsW">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="176" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PK9-xV-GsW">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="4dG-eL-I4C"/>
                         <outlet property="delegate" destination="-1" id="Wtg-Cs-kQQ"/>
                     </connections>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cars List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7J-gi-9o3">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7J-gi-9o3">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                    <color key="textColor" red="0.18823529410000001" green="0.75686274509999996" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
+                    <variation key="widthClass=regular" misplaced="YES">
+                        <rect key="frame" x="8" y="8" width="66" height="23"/>
+                    </variation>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVj-1r-wbh" userLabel="Gradient Divider">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <color key="backgroundColor" red="0.81728001640000003" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_divider" translatesAutoresizingMaskIntoConstraints="NO" id="yKZ-yg-u9q" userLabel="Gradient Divider">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="2" id="Ab9-tn-ru0"/>
+                        <constraint firstAttribute="height" constant="2" id="kUu-fG-pXZ"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="Ab9-tn-ru0"/>
+                            <exclude reference="kUu-fG-pXZ"/>
                         </mask>
                     </variation>
                     <variation key="widthClass=regular">
                         <mask key="constraints">
-                            <include reference="Ab9-tn-ru0"/>
+                            <include reference="kUu-fG-pXZ"/>
                         </mask>
                     </variation>
-                </view>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="PK9-xV-GsW" firstAttribute="top" secondItem="XVj-1r-wbh" secondAttribute="bottom" constant="8" id="AKb-Kk-AVv"/>
-                <constraint firstItem="e7J-gi-9o3" firstAttribute="leading" secondItem="XVj-1r-wbh" secondAttribute="leading" id="BsC-EM-2y6"/>
-                <constraint firstItem="XVj-1r-wbh" firstAttribute="top" secondItem="e7J-gi-9o3" secondAttribute="bottom" constant="6" id="ENW-9p-PSp"/>
+                <constraint firstAttribute="trailing" secondItem="yKZ-yg-u9q" secondAttribute="trailing" constant="8" id="Erv-ic-1B6"/>
                 <constraint firstAttribute="bottom" secondItem="PK9-xV-GsW" secondAttribute="bottom" id="IyE-Mc-a3F">
                     <variation key="widthClass=regular" constant="8"/>
                 </constraint>
-                <constraint firstItem="PK9-xV-GsW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KXd-DB-MpF"/>
-                <constraint firstAttribute="trailing" secondItem="PK9-xV-GsW" secondAttribute="trailing" id="OMv-NW-eNp"/>
+                <constraint firstItem="PK9-xV-GsW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KXd-DB-MpF">
+                    <variation key="widthClass=regular" constant="8"/>
+                </constraint>
+                <constraint firstItem="yKZ-yg-u9q" firstAttribute="top" secondItem="e7J-gi-9o3" secondAttribute="bottom" constant="6" id="NJV-87-Qiv"/>
+                <constraint firstAttribute="trailing" secondItem="PK9-xV-GsW" secondAttribute="trailing" id="OMv-NW-eNp">
+                    <variation key="widthClass=regular" constant="8"/>
+                </constraint>
                 <constraint firstItem="e7J-gi-9o3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="P6S-Qt-iPv"/>
-                <constraint firstAttribute="trailing" secondItem="XVj-1r-wbh" secondAttribute="trailing" constant="8" id="cHt-R5-MGr"/>
+                <constraint firstItem="e7J-gi-9o3" firstAttribute="leading" secondItem="yKZ-yg-u9q" secondAttribute="leading" id="S4l-mh-qYh"/>
                 <constraint firstItem="e7J-gi-9o3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="nir-3T-Hls"/>
+                <constraint firstItem="PK9-xV-GsW" firstAttribute="top" secondItem="yKZ-yg-u9q" secondAttribute="bottom" constant="8" id="oN6-GB-SQd"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="PK9-xV-GsW"/>
                     <exclude reference="e7J-gi-9o3"/>
-                    <exclude reference="XVj-1r-wbh"/>
+                    <exclude reference="yKZ-yg-u9q"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="BsC-EM-2y6"/>
                     <exclude reference="P6S-Qt-iPv"/>
+                    <exclude reference="S4l-mh-qYh"/>
                     <exclude reference="nir-3T-Hls"/>
-                    <exclude reference="ENW-9p-PSp"/>
-                    <exclude reference="cHt-R5-MGr"/>
-                    <exclude reference="AKb-Kk-AVv"/>
+                    <exclude reference="Erv-ic-1B6"/>
+                    <exclude reference="NJV-87-Qiv"/>
                     <exclude reference="IyE-Mc-a3F"/>
                     <exclude reference="KXd-DB-MpF"/>
                     <exclude reference="OMv-NW-eNp"/>
+                    <exclude reference="oN6-GB-SQd"/>
                 </mask>
             </variation>
             <variation key="widthClass=regular">
                 <mask key="subviews">
                     <include reference="PK9-xV-GsW"/>
                     <include reference="e7J-gi-9o3"/>
-                    <include reference="XVj-1r-wbh"/>
+                    <include reference="yKZ-yg-u9q"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="BsC-EM-2y6"/>
                     <include reference="P6S-Qt-iPv"/>
+                    <include reference="S4l-mh-qYh"/>
                     <include reference="nir-3T-Hls"/>
-                    <include reference="ENW-9p-PSp"/>
-                    <include reference="cHt-R5-MGr"/>
-                    <include reference="AKb-Kk-AVv"/>
+                    <include reference="Erv-ic-1B6"/>
+                    <include reference="NJV-87-Qiv"/>
                     <include reference="IyE-Mc-a3F"/>
                     <include reference="KXd-DB-MpF"/>
                     <include reference="OMv-NW-eNp"/>
+                    <include reference="oN6-GB-SQd"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="245" y="282"/>
         </view>
     </objects>
+    <resources>
+        <image name="search_divider" width="446" height="2"/>
+    </resources>
 </document>
