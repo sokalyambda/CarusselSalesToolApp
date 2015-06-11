@@ -16,6 +16,39 @@
 
 @implementation CSTSliderPopup
 
+#pragma mark - Accessors
+
+- (void)setValue:(CGFloat)aValue {
+    _value = aValue;
+    self.text = [NSString stringWithFormat:@"%4.2f", _value];
+    [self setNeedsDisplay];
+}
+
+#pragma mark - Init
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (void)commonInit
+{
+    [self.textLabel sizeToFit];
+}
+
 - (void)drawRect:(CGRect)rect {
     
     // Set the fill color
@@ -43,12 +76,6 @@
     if (self.text) {
         [self.textLabel setText:self.text];
     }
-}
-
-- (void)setValue:(CGFloat)aValue {
-    _value = aValue;
-    self.text = [NSString stringWithFormat:@"%4.2f", _value];
-    [self setNeedsDisplay];
 }
 
 @end

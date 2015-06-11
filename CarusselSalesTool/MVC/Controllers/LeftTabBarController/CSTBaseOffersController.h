@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CSTLeftTabBarController : UIViewController
+@interface CSTBaseOffersController : UIViewController
 
 @property (nonatomic, strong) UIViewController *currentViewController;
 @property (nonatomic, weak) IBOutlet UIView *placeholderView;

@@ -12,7 +12,10 @@
 		584AB3C41B29860C00052A50 /* CSTSliderPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AB3C31B29860C00052A50 /* CSTSliderPopup.m */; };
 		584AB3C61B298A3800052A50 /* CSTSliderPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584AB3C51B298A3800052A50 /* CSTSliderPopup.xib */; };
 		584AB3CA1B29A20D00052A50 /* CSTOfferCarsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AB3C91B29A20D00052A50 /* CSTOfferCarsController.m */; };
-		584AB3CC1B29A22000052A50 /* CSTOfferCarsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584AB3CB1B29A22000052A50 /* CSTOfferCarsController.xib */; };
+		584AB3D21B29B7CB00052A50 /* CSTOfferHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AB3D11B29B7CB00052A50 /* CSTOfferHistoryController.m */; };
+		584AB3D51B29B7E800052A50 /* CSTCarsByProspectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AB3D41B29B7E800052A50 /* CSTCarsByProspectController.m */; };
+		584AB3D91B29BABA00052A50 /* CSTOfferDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AB3D81B29BABA00052A50 /* CSTOfferDataController.m */; };
+		584AB3DB1B29BCEA00052A50 /* CSTOfferDataController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584AB3DA1B29BCEA00052A50 /* CSTOfferDataController.xib */; };
 		584C015B1B282B8D0047DB7A /* CSTBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C015A1B282B8D0047DB7A /* CSTBadgeLabel.m */; };
 		584C015F1B2832C80047DB7A /* CSTDemoSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C015E1B2832C80047DB7A /* CSTDemoSwitch.m */; };
 		584C01621B284D040047DB7A /* CSTRoundedMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C01611B284D040047DB7A /* CSTRoundedMark.m */; };
@@ -82,7 +85,7 @@
 		5892360B1B24401100E79D49 /* CSTCarColorDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5892360A1B24401100E79D49 /* CSTCarColorDataSource.m */; };
 		5892360F1B24403900E79D49 /* CSTCarYearFromDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5892360E1B24403900E79D49 /* CSTCarYearFromDataSource.m */; };
 		589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589AC4991B171C8100577D90 /* DemonstrationViewController.m */; };
-		589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */; };
+		589E20891B1DDA29006A6C81 /* CSTBaseOffersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E20881B1DDA29006A6C81 /* CSTBaseOffersController.m */; };
 		589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */; };
 		58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A522AC1B20A70500773273 /* AlertMessageService.m */; };
 		58DA0A841B202B5300FF0343 /* CSTProspectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DA0A831B202B5300FF0343 /* CSTProspectCell.m */; };
@@ -117,7 +120,13 @@
 		584AB3C51B298A3800052A50 /* CSTSliderPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTSliderPopup.xib; path = MVC/Views/SliderPopup/CSTSliderPopup.xib; sourceTree = "<group>"; };
 		584AB3C81B29A20D00052A50 /* CSTOfferCarsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTOfferCarsController.h; path = MVC/Controllers/OfferCarsController/CSTOfferCarsController.h; sourceTree = "<group>"; };
 		584AB3C91B29A20D00052A50 /* CSTOfferCarsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTOfferCarsController.m; path = MVC/Controllers/OfferCarsController/CSTOfferCarsController.m; sourceTree = "<group>"; };
-		584AB3CB1B29A22000052A50 /* CSTOfferCarsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTOfferCarsController.xib; path = MVC/Controllers/OfferCarsController/CSTOfferCarsController.xib; sourceTree = "<group>"; };
+		584AB3D01B29B7CB00052A50 /* CSTOfferHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTOfferHistoryController.h; path = MVC/Controllers/OfferHistoryController/CSTOfferHistoryController.h; sourceTree = "<group>"; };
+		584AB3D11B29B7CB00052A50 /* CSTOfferHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTOfferHistoryController.m; path = MVC/Controllers/OfferHistoryController/CSTOfferHistoryController.m; sourceTree = "<group>"; };
+		584AB3D31B29B7E800052A50 /* CSTCarsByProspectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTCarsByProspectController.h; path = MVC/Controllers/CarsByProspectController/CSTCarsByProspectController.h; sourceTree = "<group>"; };
+		584AB3D41B29B7E800052A50 /* CSTCarsByProspectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCarsByProspectController.m; path = MVC/Controllers/CarsByProspectController/CSTCarsByProspectController.m; sourceTree = "<group>"; };
+		584AB3D71B29BABA00052A50 /* CSTOfferDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTOfferDataController.h; path = MVC/Controllers/OfferDataController/CSTOfferDataController.h; sourceTree = "<group>"; };
+		584AB3D81B29BABA00052A50 /* CSTOfferDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTOfferDataController.m; path = MVC/Controllers/OfferDataController/CSTOfferDataController.m; sourceTree = "<group>"; };
+		584AB3DA1B29BCEA00052A50 /* CSTOfferDataController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTOfferDataController.xib; path = MVC/Controllers/OfferDataController/CSTOfferDataController.xib; sourceTree = "<group>"; };
 		584C01591B282B8D0047DB7A /* CSTBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBadgeLabel.h; path = MVC/Views/BadgeLabel/CSTBadgeLabel.h; sourceTree = "<group>"; };
 		584C015A1B282B8D0047DB7A /* CSTBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBadgeLabel.m; path = MVC/Views/BadgeLabel/CSTBadgeLabel.m; sourceTree = "<group>"; };
 		584C015D1B2832C80047DB7A /* CSTDemoSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTDemoSwitch.h; path = MVC/Views/DemoSwitch/CSTDemoSwitch.h; sourceTree = "<group>"; };
@@ -230,8 +239,8 @@
 		5892360E1B24403900E79D49 /* CSTCarYearFromDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCarYearFromDataSource.m; path = Utilities/DataSources/CarYearFromDataSource/CSTCarYearFromDataSource.m; sourceTree = "<group>"; };
 		589AC4981B171C8100577D90 /* DemonstrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemonstrationViewController.h; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.h; sourceTree = "<group>"; };
 		589AC4991B171C8100577D90 /* DemonstrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemonstrationViewController.m; path = MVC/Controllers/DemonstrationViewController/DemonstrationViewController.m; sourceTree = "<group>"; };
-		589E20871B1DDA29006A6C81 /* CSTLeftTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTLeftTabBarController.h; path = MVC/Controllers/LeftTabBarController/CSTLeftTabBarController.h; sourceTree = "<group>"; };
-		589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTLeftTabBarController.m; path = MVC/Controllers/LeftTabBarController/CSTLeftTabBarController.m; sourceTree = "<group>"; };
+		589E20871B1DDA29006A6C81 /* CSTBaseOffersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBaseOffersController.h; path = MVC/Controllers/LeftTabBarController/CSTBaseOffersController.h; sourceTree = "<group>"; };
+		589E20881B1DDA29006A6C81 /* CSTBaseOffersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBaseOffersController.m; path = MVC/Controllers/LeftTabBarController/CSTBaseOffersController.m; sourceTree = "<group>"; };
 		589E208B1B1DDA74006A6C81 /* CSTNavigationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTNavigationSegue.h; path = StoryboardSegues/CSTNavigationSegue.h; sourceTree = "<group>"; };
 		589E208C1B1DDA74006A6C81 /* CSTNavigationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTNavigationSegue.m; path = StoryboardSegues/CSTNavigationSegue.m; sourceTree = "<group>"; };
 		58A522AB1B20A70500773273 /* AlertMessageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertMessageService.h; path = Utilities/AlertMessageService/AlertMessageService.h; sourceTree = "<group>"; };
@@ -326,9 +335,47 @@
 			children = (
 				584AB3C81B29A20D00052A50 /* CSTOfferCarsController.h */,
 				584AB3C91B29A20D00052A50 /* CSTOfferCarsController.m */,
-				584AB3CB1B29A22000052A50 /* CSTOfferCarsController.xib */,
 			);
 			name = OfferCarsController;
+			sourceTree = "<group>";
+		};
+		584AB3CD1B29B78B00052A50 /* OffersControllers */ = {
+			isa = PBXGroup;
+			children = (
+				584AB3D61B29BAA200052A50 /* OfferDataController */,
+				584AB3CF1B29B7A100052A50 /* CarsByProspectController */,
+				584AB3CE1B29B79700052A50 /* OfferHistoryController */,
+				584AB3C71B29A1EC00052A50 /* OfferCarsController */,
+			);
+			name = OffersControllers;
+			sourceTree = "<group>";
+		};
+		584AB3CE1B29B79700052A50 /* OfferHistoryController */ = {
+			isa = PBXGroup;
+			children = (
+				584AB3D01B29B7CB00052A50 /* CSTOfferHistoryController.h */,
+				584AB3D11B29B7CB00052A50 /* CSTOfferHistoryController.m */,
+			);
+			name = OfferHistoryController;
+			sourceTree = "<group>";
+		};
+		584AB3CF1B29B7A100052A50 /* CarsByProspectController */ = {
+			isa = PBXGroup;
+			children = (
+				584AB3D31B29B7E800052A50 /* CSTCarsByProspectController.h */,
+				584AB3D41B29B7E800052A50 /* CSTCarsByProspectController.m */,
+			);
+			name = CarsByProspectController;
+			sourceTree = "<group>";
+		};
+		584AB3D61B29BAA200052A50 /* OfferDataController */ = {
+			isa = PBXGroup;
+			children = (
+				584AB3DA1B29BCEA00052A50 /* CSTOfferDataController.xib */,
+				584AB3D71B29BABA00052A50 /* CSTOfferDataController.h */,
+				584AB3D81B29BABA00052A50 /* CSTOfferDataController.m */,
+			);
+			name = OfferDataController;
 			sourceTree = "<group>";
 		};
 		584C01541B28150C0047DB7A /* RoundedMark */ = {
@@ -590,7 +637,7 @@
 		588EE7291B1473B000CE2D91 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				584AB3C71B29A1EC00052A50 /* OfferCarsController */,
+				584AB3CD1B29B78B00052A50 /* OffersControllers */,
 				5855852C1B25E28900FB0C46 /* CommonTopController */,
 				587398F41B21A7C000633641 /* BaseTabBarController */,
 				588EE7521B14764100CE2D91 /* AuthorizationControllers */,
@@ -962,8 +1009,8 @@
 		589E20861B1DD9F4006A6C81 /* LeftTabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				589E20871B1DDA29006A6C81 /* CSTLeftTabBarController.h */,
-				589E20881B1DDA29006A6C81 /* CSTLeftTabBarController.m */,
+				589E20871B1DDA29006A6C81 /* CSTBaseOffersController.h */,
+				589E20881B1DDA29006A6C81 /* CSTBaseOffersController.m */,
 			);
 			name = LeftTabBarController;
 			sourceTree = "<group>";
@@ -1238,11 +1285,11 @@
 				588EE7761B1478AB00CE2D91 /* CarsListViewController.xib in Resources */,
 				585585311B25E2CC00FB0C46 /* CSTCommonTopController.xib in Resources */,
 				586867601B27793400857FB0 /* Lato-Italic.ttf in Resources */,
+				584AB3DB1B29BCEA00052A50 /* CSTOfferDataController.xib in Resources */,
 				588EE7711B14788500CE2D91 /* CarDetailsViewController.xib in Resources */,
 				5868675A1B27793400857FB0 /* Lato-Black.ttf in Resources */,
 				586867611B27793400857FB0 /* Lato-Light.ttf in Resources */,
 				5868675E1B27793400857FB0 /* Lato-Hairline.ttf in Resources */,
-				584AB3CC1B29A22000052A50 /* CSTOfferCarsController.xib in Resources */,
 				5877CE7D1B2178C20097DF86 /* CSTTaskCell.xib in Resources */,
 				588EE7811B147D3600CE2D91 /* ProspectDetailsViewController.xib in Resources */,
 				5868675C1B27793400857FB0 /* Lato-Bold.ttf in Resources */,
@@ -1303,6 +1350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584AB3D51B29B7E800052A50 /* CSTCarsByProspectController.m in Sources */,
 				588EE7741B14789F00CE2D91 /* CarsListViewController.m in Sources */,
 				588EE7061B146F6600CE2D91 /* AppDelegate.m in Sources */,
 				58FC70CB1B1E4A6A005286E1 /* CSTBorderedTextField.m in Sources */,
@@ -1321,6 +1369,7 @@
 				588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */,
 				5892360F1B24403900E79D49 /* CSTCarYearFromDataSource.m in Sources */,
 				588F29651B18ADD300F14AED /* Constants.m in Sources */,
+				584AB3D21B29B7CB00052A50 /* CSTOfferHistoryController.m in Sources */,
 				588EE7601B14777600CE2D91 /* HomeViewController.m in Sources */,
 				588EE7681B14783700CE2D91 /* CarsFiltersViewController.m in Sources */,
 				588EE7841B147D5200CE2D91 /* ProspectsListViewController.m in Sources */,
@@ -1342,6 +1391,7 @@
 				84EBD4C91B20BC64001F4CF5 /* CSTRoundBorderedView.m in Sources */,
 				583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */,
 				585585291B25780400FB0C46 /* CSTModelGroupSectionHeader.m in Sources */,
+				584AB3D91B29BABA00052A50 /* CSTOfferDataController.m in Sources */,
 				587398F71B21A7E000633641 /* CSTBaseTabBarController.m in Sources */,
 				589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */,
 				5877CE7B1B2178AF0097DF86 /* CSTTaskCell.m in Sources */,
@@ -1366,7 +1416,7 @@
 				84EF16161B26EF98008DEC29 /* UIImagePickerController+fixOrientation.m in Sources */,
 				58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */,
 				587E82351B2727550081F933 /* CSTUnderlinedButton.m in Sources */,
-				589E20891B1DDA29006A6C81 /* CSTLeftTabBarController.m in Sources */,
+				589E20891B1DDA29006A6C81 /* CSTBaseOffersController.m in Sources */,
 				5855852F1B25E2BD00FB0C46 /* CSTCommonTopController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

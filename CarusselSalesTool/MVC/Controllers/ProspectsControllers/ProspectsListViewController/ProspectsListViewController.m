@@ -10,6 +10,7 @@
 #import "CSTProspectCell.h"
 #import "UIView+MakeFromXib.h"
 #import "CSTCommonSearchBar.h"
+#import "CSTBaseOffersController.h"
 
 @interface ProspectsListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -63,7 +64,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    CSTBaseOffersController *controller = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CSTBaseOffersController class])];
+    [self.navigationController pushViewController:controller animated:YES];
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Actions

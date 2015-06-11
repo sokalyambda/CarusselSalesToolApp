@@ -7,13 +7,13 @@
 //
 
 #import "CSTNavigationSegue.h"
-#import "CSTLeftTabBarController.h"
+#import "CSTBaseOffersController.h"
 
 @implementation CSTNavigationSegue
 
 - (void)perform
 {
-    CSTLeftTabBarController *tabBarController = (CSTLeftTabBarController *) self.sourceViewController;
+    CSTBaseOffersController *tabBarController = (CSTBaseOffersController *) self.sourceViewController;
     UIViewController *destinationController = (UIViewController *) self.destinationViewController;
     
     for (UIView *view in tabBarController.placeholderView.subviews) {

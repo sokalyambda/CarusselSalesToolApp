@@ -6,30 +6,28 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-#import "CSTLeftTabBarController.h"
+#import "CSTBaseOffersController.h"
 
-static NSString *const kCarsListSegueIdentifier = @"carsListSegue";
-static NSString *const kProspectsListSegueIdentifier = @"prospectsListSegue";
-static NSString *const kAddNewProspectSegueIdentifier = @"addNewProspectSegue";
-static NSString *const kTasksListSegueIdentifier = @"tasksListSegue";
+static NSString *const kCarsByProspectSegueIdentifier = @"carsByProspectSegue";
+static NSString *const kOfferCarsSegueIdentifier = @"offerCarsSegue";
+static NSString *const kOfferHistorySegueIdentifier = @"offerHistorySegue";
 
-@interface CSTLeftTabBarController ()
+@interface CSTBaseOffersController ()
 
 @property (strong, nonatomic) NSArray *availableIdentifiers;
 
 @end
 
-@implementation CSTLeftTabBarController
+@implementation CSTBaseOffersController
 
 #pragma mark - Accessors
 
 - (NSArray *)availableIdentifiers
 {
     if (!_availableIdentifiers) {
-        _availableIdentifiers = @[kCarsListSegueIdentifier,
-                                  kProspectsListSegueIdentifier,
-                                  kAddNewProspectSegueIdentifier,
-                                  kTasksListSegueIdentifier];
+        _availableIdentifiers = @[kCarsByProspectSegueIdentifier,
+                                  kOfferCarsSegueIdentifier,
+                                  kOfferHistorySegueIdentifier];
     }
     return _availableIdentifiers;
 }
@@ -56,7 +54,7 @@ static NSString *const kTasksListSegueIdentifier = @"tasksListSegue";
     [super viewDidAppear:animated];
     
     if ([self.tabBarButtons count]) {
-        [self performSegueWithIdentifier:kCarsListSegueIdentifier
+        [self performSegueWithIdentifier:kCarsByProspectSegueIdentifier
                                   sender:self.tabBarButtons[0]];
     }
 }

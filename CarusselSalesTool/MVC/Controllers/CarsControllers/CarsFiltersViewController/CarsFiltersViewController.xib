@@ -106,7 +106,7 @@
                                         <outlet property="delegate" destination="-1" id="Fap-rZ-ODO"/>
                                     </connections>
                                 </textField>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PeB-wJ-u30" userLabel="Price Slider" customClass="CSTCustomSlider">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1000000" translatesAutoresizingMaskIntoConstraints="NO" id="PeB-wJ-u30" userLabel="Price Slider" customClass="CSTCustomSlider">
                                     <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                     <color key="minimumTrackTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="maximumTrackTintColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -115,7 +115,7 @@
                                         <action selector="priceSliderAction:" destination="-1" eventType="valueChanged" id="OIo-GJ-0W9"/>
                                     </connections>
                                 </slider>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IER-HO-TgM" userLabel="Mileage Slider" customClass="CSTCustomSlider">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100000" translatesAutoresizingMaskIntoConstraints="NO" id="IER-HO-TgM" userLabel="Mileage Slider" customClass="CSTCustomSlider">
                                     <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                     <color key="minimumTrackTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="maximumTrackTintColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -124,7 +124,7 @@
                                         <action selector="mileageSliderAction:" destination="-1" eventType="valueChanged" id="u3i-rf-1CT"/>
                                     </connections>
                                 </slider>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-nY-zB0" userLabel="Perfomance Slider" customClass="CSTCustomSlider">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-nY-zB0" userLabel="Perfomance Slider" customClass="CSTCustomSlider">
                                     <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                     <color key="minimumTrackTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="maximumTrackTintColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -133,7 +133,7 @@
                                         <action selector="perfomanceSliderAction:" destination="-1" eventType="valueChanged" id="ekU-3B-iAu"/>
                                     </connections>
                                 </slider>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yBR-5w-Vl5" userLabel="Displacement Slider" customClass="CSTCustomSlider">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="yBR-5w-Vl5" userLabel="Displacement Slider" customClass="CSTCustomSlider">
                                     <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                     <color key="minimumTrackTintColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="maximumTrackTintColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -173,7 +173,7 @@
                                 </button>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pa3-NF-Zi2" userLabel="Extra Data Text View" customClass="CSTBorderedPlaceholderTextView">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="110" id="QLw-Ku-hzL"/>
                                     </constraints>
@@ -485,27 +485,32 @@
                                     <exclude reference="8uf-TE-DsK"/>
                                 </mask>
                                 <mask key="constraints">
-                                    <exclude reference="YYu-sO-YUC"/>
-                                    <exclude reference="tJk-NY-uLo"/>
-                                    <exclude reference="4J3-iR-9Ay"/>
-                                    <exclude reference="6VG-7q-RS9"/>
-                                    <exclude reference="yFa-fp-9ic"/>
-                                    <exclude reference="5kv-QE-wht"/>
-                                    <exclude reference="oRg-FQ-8C3"/>
-                                    <exclude reference="rAx-br-e0n"/>
-                                    <exclude reference="9I4-iB-WX3"/>
-                                    <exclude reference="VOi-qQ-HXg"/>
-                                    <exclude reference="ojN-p1-C0Z"/>
-                                    <exclude reference="sZ5-1b-HAz"/>
-                                    <exclude reference="xWI-PG-Py4"/>
-                                    <exclude reference="u1k-sC-EGK"/>
+                                    <exclude reference="XKS-Fw-Lbo"/>
+                                    <exclude reference="7EZ-Rq-hGs"/>
+                                    <exclude reference="9s0-It-ika"/>
+                                    <exclude reference="Nvy-kY-yTZ"/>
                                     <exclude reference="EQ0-oQ-HQ5"/>
                                     <exclude reference="FUT-SO-48s"/>
                                     <exclude reference="SGw-19-XEa"/>
                                     <exclude reference="igh-C7-hYo"/>
                                     <exclude reference="ps8-oU-BRh"/>
-                                    <exclude reference="iF6-er-qTB"/>
+                                    <exclude reference="u1k-sC-EGK"/>
+                                    <exclude reference="9I4-iB-WX3"/>
+                                    <exclude reference="VOi-qQ-HXg"/>
+                                    <exclude reference="ojN-p1-C0Z"/>
+                                    <exclude reference="sZ5-1b-HAz"/>
+                                    <exclude reference="xWI-PG-Py4"/>
+                                    <exclude reference="o1G-iX-NuW"/>
                                     <exclude reference="b6y-gj-D2n"/>
+                                    <exclude reference="5kv-QE-wht"/>
+                                    <exclude reference="oRg-FQ-8C3"/>
+                                    <exclude reference="rAx-br-e0n"/>
+                                    <exclude reference="YYu-sO-YUC"/>
+                                    <exclude reference="tJk-NY-uLo"/>
+                                    <exclude reference="1tk-4X-sr1"/>
+                                    <exclude reference="5aF-EX-Rs6"/>
+                                    <exclude reference="dJ2-x9-EHs"/>
+                                    <exclude reference="gGX-3U-TdV"/>
                                     <exclude reference="5n3-cR-7nH"/>
                                     <exclude reference="90H-XA-hY8"/>
                                     <exclude reference="963-ye-p90"/>
@@ -514,12 +519,6 @@
                                     <exclude reference="hwS-FS-Q8l"/>
                                     <exclude reference="i3n-yc-3UD"/>
                                     <exclude reference="rTy-sB-L0m"/>
-                                    <exclude reference="1tk-4X-sr1"/>
-                                    <exclude reference="5aF-EX-Rs6"/>
-                                    <exclude reference="dJ2-x9-EHs"/>
-                                    <exclude reference="gGX-3U-TdV"/>
-                                    <exclude reference="7EZ-Rq-hGs"/>
-                                    <exclude reference="9s0-It-ika"/>
                                     <exclude reference="ATw-zF-pND"/>
                                     <exclude reference="Hvh-Jr-rGP"/>
                                     <exclude reference="KR5-E5-Rvz"/>
@@ -527,15 +526,16 @@
                                     <exclude reference="PSV-Jq-7cD"/>
                                     <exclude reference="XTm-YR-rpu"/>
                                     <exclude reference="Ypx-5I-CQA"/>
-                                    <exclude reference="Nvy-kY-yTZ"/>
                                     <exclude reference="Ti6-di-XCu"/>
                                     <exclude reference="gsy-d3-Pvf"/>
                                     <exclude reference="wu9-ux-64c"/>
-                                    <exclude reference="XKS-Fw-Lbo"/>
-                                    <exclude reference="o1G-iX-NuW"/>
                                     <exclude reference="7wN-TN-bPd"/>
                                     <exclude reference="ARx-6y-KZn"/>
                                     <exclude reference="liy-TW-KqN"/>
+                                    <exclude reference="4J3-iR-9Ay"/>
+                                    <exclude reference="6VG-7q-RS9"/>
+                                    <exclude reference="yFa-fp-9ic"/>
+                                    <exclude reference="iF6-er-qTB"/>
                                 </mask>
                             </variation>
                             <variation key="widthClass=regular">
@@ -562,27 +562,32 @@
                                     <include reference="8uf-TE-DsK"/>
                                 </mask>
                                 <mask key="constraints">
-                                    <include reference="YYu-sO-YUC"/>
-                                    <include reference="tJk-NY-uLo"/>
-                                    <include reference="4J3-iR-9Ay"/>
-                                    <include reference="6VG-7q-RS9"/>
-                                    <include reference="yFa-fp-9ic"/>
-                                    <include reference="5kv-QE-wht"/>
-                                    <include reference="oRg-FQ-8C3"/>
-                                    <include reference="rAx-br-e0n"/>
-                                    <include reference="9I4-iB-WX3"/>
-                                    <include reference="VOi-qQ-HXg"/>
-                                    <include reference="ojN-p1-C0Z"/>
-                                    <include reference="sZ5-1b-HAz"/>
-                                    <include reference="xWI-PG-Py4"/>
-                                    <include reference="u1k-sC-EGK"/>
+                                    <include reference="XKS-Fw-Lbo"/>
+                                    <include reference="7EZ-Rq-hGs"/>
+                                    <include reference="9s0-It-ika"/>
+                                    <include reference="Nvy-kY-yTZ"/>
                                     <include reference="EQ0-oQ-HQ5"/>
                                     <include reference="FUT-SO-48s"/>
                                     <include reference="SGw-19-XEa"/>
                                     <include reference="igh-C7-hYo"/>
                                     <include reference="ps8-oU-BRh"/>
-                                    <include reference="iF6-er-qTB"/>
+                                    <include reference="u1k-sC-EGK"/>
+                                    <include reference="9I4-iB-WX3"/>
+                                    <include reference="VOi-qQ-HXg"/>
+                                    <include reference="ojN-p1-C0Z"/>
+                                    <include reference="sZ5-1b-HAz"/>
+                                    <include reference="xWI-PG-Py4"/>
+                                    <include reference="o1G-iX-NuW"/>
                                     <include reference="b6y-gj-D2n"/>
+                                    <include reference="5kv-QE-wht"/>
+                                    <include reference="oRg-FQ-8C3"/>
+                                    <include reference="rAx-br-e0n"/>
+                                    <include reference="YYu-sO-YUC"/>
+                                    <include reference="tJk-NY-uLo"/>
+                                    <include reference="1tk-4X-sr1"/>
+                                    <include reference="5aF-EX-Rs6"/>
+                                    <include reference="dJ2-x9-EHs"/>
+                                    <include reference="gGX-3U-TdV"/>
                                     <include reference="5n3-cR-7nH"/>
                                     <include reference="90H-XA-hY8"/>
                                     <include reference="963-ye-p90"/>
@@ -591,12 +596,6 @@
                                     <include reference="hwS-FS-Q8l"/>
                                     <include reference="i3n-yc-3UD"/>
                                     <include reference="rTy-sB-L0m"/>
-                                    <include reference="1tk-4X-sr1"/>
-                                    <include reference="5aF-EX-Rs6"/>
-                                    <include reference="dJ2-x9-EHs"/>
-                                    <include reference="gGX-3U-TdV"/>
-                                    <include reference="7EZ-Rq-hGs"/>
-                                    <include reference="9s0-It-ika"/>
                                     <include reference="ATw-zF-pND"/>
                                     <include reference="Hvh-Jr-rGP"/>
                                     <include reference="KR5-E5-Rvz"/>
@@ -604,15 +603,16 @@
                                     <include reference="PSV-Jq-7cD"/>
                                     <include reference="XTm-YR-rpu"/>
                                     <include reference="Ypx-5I-CQA"/>
-                                    <include reference="Nvy-kY-yTZ"/>
                                     <include reference="Ti6-di-XCu"/>
                                     <include reference="gsy-d3-Pvf"/>
                                     <include reference="wu9-ux-64c"/>
-                                    <include reference="XKS-Fw-Lbo"/>
-                                    <include reference="o1G-iX-NuW"/>
                                     <include reference="7wN-TN-bPd"/>
                                     <include reference="ARx-6y-KZn"/>
                                     <include reference="liy-TW-KqN"/>
+                                    <include reference="4J3-iR-9Ay"/>
+                                    <include reference="6VG-7q-RS9"/>
+                                    <include reference="yFa-fp-9ic"/>
+                                    <include reference="iF6-er-qTB"/>
                                 </mask>
                             </variation>
                         </view>
