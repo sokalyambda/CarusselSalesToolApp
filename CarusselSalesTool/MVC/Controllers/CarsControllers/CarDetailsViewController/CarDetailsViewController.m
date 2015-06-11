@@ -8,6 +8,8 @@
 
 #import "CarDetailsViewController.h"
 
+#import "FullscreenPreviewCarViewController.h"
+
 #import "CSTCar.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
@@ -72,7 +74,12 @@
 
 - (IBAction)fullPhotoClick:(id)sender
 {
-    
+    self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    FullscreenPreviewCarViewController *presentController = [[FullscreenPreviewCarViewController alloc] initWithCar:self.currentCar];
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0f) {
+        presentController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    }
+    [self.navigationController presentViewController:presentController animated:YES completion:nil];
 }
 
 - (IBAction)galleryClick:(id)sender

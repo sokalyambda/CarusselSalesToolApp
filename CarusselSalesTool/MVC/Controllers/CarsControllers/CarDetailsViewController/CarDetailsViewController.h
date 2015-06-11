@@ -6,10 +6,6 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@class CSTCar;
-
 @interface CarDetailsViewController : UIViewController
 
 @property (strong, nonatomic) CSTCar *currentCar;
