@@ -12,6 +12,7 @@
 #import "UIView+MakeFromXib.h"
 #import "CSTBorderedTextField.h"
 #import "CSTBaseDropDownDataSource.h"
+#import "CSTCustomSlider.h"
 
 @interface CarsFiltersViewController () <UITextFieldDelegate, UITextViewDelegate>
 
@@ -60,22 +61,22 @@
 
 #pragma mark - Actions
 
-- (IBAction)priceSliderAction:(UISlider *)slider
+- (IBAction)priceSliderAction:(CSTCustomSlider *)slider
 {
     self.priceValueLabel.text = [NSString stringWithFormat:@"%f", slider.value];
 }
 
-- (IBAction)mileageSliderAction:(UISlider *)slider
+- (IBAction)mileageSliderAction:(CSTCustomSlider *)slider
 {
     self.mileageValueLabel.text = [NSString stringWithFormat:@"%f", slider.value];
 }
 
-- (IBAction)perfomanceSliderAction:(UISlider *)slider
+- (IBAction)perfomanceSliderAction:(CSTCustomSlider *)slider
 {
     self.perfomanceValueLabel.text = [NSString stringWithFormat:@"%f", slider.value];
 }
 
-- (IBAction)displacementSliderAction:(UISlider *)slider
+- (IBAction)displacementSliderAction:(CSTCustomSlider *)slider
 {
     self.displacementValueLabel.text = [NSString stringWithFormat:@"%f", slider.value];
 }

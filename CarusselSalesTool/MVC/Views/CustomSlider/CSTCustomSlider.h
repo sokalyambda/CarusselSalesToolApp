@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class CSTSliderPopup;
+
 @interface CSTCustomSlider : UISlider
+
+@property (strong, nonatomic) CSTSliderPopup *popupView;
+
+@property (assign, nonatomic, readonly) CGRect thumbRect;
 
 @end

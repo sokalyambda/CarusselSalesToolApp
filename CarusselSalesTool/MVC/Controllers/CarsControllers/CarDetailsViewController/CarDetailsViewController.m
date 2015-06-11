@@ -82,7 +82,12 @@
 
 - (IBAction)showCameraClick:(id)sender
 {
-    [self showImagePickerViewWithType:UIImagePickerControllerSourceTypeCamera];
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        ShowAlert(NSLocalizedString(@"Camera is not available", nil));
+        return;
+    } else {
+        [self showImagePickerViewWithType:UIImagePickerControllerSourceTypeCamera];
+    }
 }
 
 - (void)updateCarInformation

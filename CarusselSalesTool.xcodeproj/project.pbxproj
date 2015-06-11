@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837139F1B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m */; };
 		583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 583713A31B1F0FDE00C6C2C8 /* CSTCustomSlider.m */; };
+		584AB3C41B29860C00052A50 /* CSTSliderPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AB3C31B29860C00052A50 /* CSTSliderPopup.m */; };
+		584AB3C61B298A3800052A50 /* CSTSliderPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584AB3C51B298A3800052A50 /* CSTSliderPopup.xib */; };
+		584AB3CA1B29A20D00052A50 /* CSTOfferCarsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AB3C91B29A20D00052A50 /* CSTOfferCarsController.m */; };
+		584AB3CC1B29A22000052A50 /* CSTOfferCarsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584AB3CB1B29A22000052A50 /* CSTOfferCarsController.xib */; };
 		584C015B1B282B8D0047DB7A /* CSTBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C015A1B282B8D0047DB7A /* CSTBadgeLabel.m */; };
 		584C015F1B2832C80047DB7A /* CSTDemoSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C015E1B2832C80047DB7A /* CSTDemoSwitch.m */; };
 		584C01621B284D040047DB7A /* CSTRoundedMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C01611B284D040047DB7A /* CSTRoundedMark.m */; };
@@ -108,6 +112,12 @@
 		5837139F1B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBorderedPlaceholderTextView.m; path = MVC/Views/BorderedPlaceholderTextView/CSTBorderedPlaceholderTextView.m; sourceTree = "<group>"; };
 		583713A21B1F0FDE00C6C2C8 /* CSTCustomSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTCustomSlider.h; path = MVC/Views/CustomSlider/CSTCustomSlider.h; sourceTree = "<group>"; };
 		583713A31B1F0FDE00C6C2C8 /* CSTCustomSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCustomSlider.m; path = MVC/Views/CustomSlider/CSTCustomSlider.m; sourceTree = "<group>"; };
+		584AB3C21B29860C00052A50 /* CSTSliderPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTSliderPopup.h; path = MVC/Views/SliderPopup/CSTSliderPopup.h; sourceTree = "<group>"; };
+		584AB3C31B29860C00052A50 /* CSTSliderPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTSliderPopup.m; path = MVC/Views/SliderPopup/CSTSliderPopup.m; sourceTree = "<group>"; };
+		584AB3C51B298A3800052A50 /* CSTSliderPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTSliderPopup.xib; path = MVC/Views/SliderPopup/CSTSliderPopup.xib; sourceTree = "<group>"; };
+		584AB3C81B29A20D00052A50 /* CSTOfferCarsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTOfferCarsController.h; path = MVC/Controllers/OfferCarsController/CSTOfferCarsController.h; sourceTree = "<group>"; };
+		584AB3C91B29A20D00052A50 /* CSTOfferCarsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTOfferCarsController.m; path = MVC/Controllers/OfferCarsController/CSTOfferCarsController.m; sourceTree = "<group>"; };
+		584AB3CB1B29A22000052A50 /* CSTOfferCarsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTOfferCarsController.xib; path = MVC/Controllers/OfferCarsController/CSTOfferCarsController.xib; sourceTree = "<group>"; };
 		584C01591B282B8D0047DB7A /* CSTBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBadgeLabel.h; path = MVC/Views/BadgeLabel/CSTBadgeLabel.h; sourceTree = "<group>"; };
 		584C015A1B282B8D0047DB7A /* CSTBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBadgeLabel.m; path = MVC/Views/BadgeLabel/CSTBadgeLabel.m; sourceTree = "<group>"; };
 		584C015D1B2832C80047DB7A /* CSTDemoSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTDemoSwitch.h; path = MVC/Views/DemoSwitch/CSTDemoSwitch.h; sourceTree = "<group>"; };
@@ -299,6 +309,26 @@
 				583713A31B1F0FDE00C6C2C8 /* CSTCustomSlider.m */,
 			);
 			name = CustomSlider;
+			sourceTree = "<group>";
+		};
+		584AB3C11B2985EE00052A50 /* SliderPopup */ = {
+			isa = PBXGroup;
+			children = (
+				584AB3C21B29860C00052A50 /* CSTSliderPopup.h */,
+				584AB3C31B29860C00052A50 /* CSTSliderPopup.m */,
+				584AB3C51B298A3800052A50 /* CSTSliderPopup.xib */,
+			);
+			name = SliderPopup;
+			sourceTree = "<group>";
+		};
+		584AB3C71B29A1EC00052A50 /* OfferCarsController */ = {
+			isa = PBXGroup;
+			children = (
+				584AB3C81B29A20D00052A50 /* CSTOfferCarsController.h */,
+				584AB3C91B29A20D00052A50 /* CSTOfferCarsController.m */,
+				584AB3CB1B29A22000052A50 /* CSTOfferCarsController.xib */,
+			);
+			name = OfferCarsController;
 			sourceTree = "<group>";
 		};
 		584C01541B28150C0047DB7A /* RoundedMark */ = {
@@ -535,6 +565,7 @@
 		588EE7281B1473AB00CE2D91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				584AB3C11B2985EE00052A50 /* SliderPopup */,
 				584C015C1B2832240047DB7A /* DemoSwitch */,
 				584C01581B282B6B0047DB7A /* BadgeLabel */,
 				584C01541B28150C0047DB7A /* RoundedMark */,
@@ -559,6 +590,7 @@
 		588EE7291B1473B000CE2D91 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				584AB3C71B29A1EC00052A50 /* OfferCarsController */,
 				5855852C1B25E28900FB0C46 /* CommonTopController */,
 				587398F41B21A7C000633641 /* BaseTabBarController */,
 				588EE7521B14764100CE2D91 /* AuthorizationControllers */,
@@ -1210,11 +1242,13 @@
 				5868675A1B27793400857FB0 /* Lato-Black.ttf in Resources */,
 				586867611B27793400857FB0 /* Lato-Light.ttf in Resources */,
 				5868675E1B27793400857FB0 /* Lato-Hairline.ttf in Resources */,
+				584AB3CC1B29A22000052A50 /* CSTOfferCarsController.xib in Resources */,
 				5877CE7D1B2178C20097DF86 /* CSTTaskCell.xib in Resources */,
 				588EE7811B147D3600CE2D91 /* ProspectDetailsViewController.xib in Resources */,
 				5868675C1B27793400857FB0 /* Lato-Bold.ttf in Resources */,
 				588EE70E1B146F6600CE2D91 /* Images.xcassets in Resources */,
 				5868675F1B27793400857FB0 /* Lato-HairlineItalic.ttf in Resources */,
+				584AB3C61B298A3800052A50 /* CSTSliderPopup.xib in Resources */,
 				58701B6F1B15D5A500F0A21E /* DropDownCell.xib in Resources */,
 				58701B691B15D56A00F0A21E /* DropDownTable.xib in Resources */,
 				5868675B1B27793400857FB0 /* Lato-BlackItalic.ttf in Resources */,
@@ -1281,6 +1315,7 @@
 				584C01621B284D040047DB7A /* CSTRoundedMark.m in Sources */,
 				588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */,
 				589235FF1B243F8C00E79D49 /* CSTMakeCarDataSource.m in Sources */,
+				584AB3C41B29860C00052A50 /* CSTSliderPopup.m in Sources */,
 				841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */,
 				588EE7B31B14B27B00CE2D91 /* CSTProspect.m in Sources */,
 				588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */,
@@ -1310,6 +1345,7 @@
 				587398F71B21A7E000633641 /* CSTBaseTabBarController.m in Sources */,
 				589AC49A1B171C8100577D90 /* DemonstrationViewController.m in Sources */,
 				5877CE7B1B2178AF0097DF86 /* CSTTaskCell.m in Sources */,
+				584AB3CA1B29A20D00052A50 /* CSTOfferCarsController.m in Sources */,
 				84EBD4BC1B2078C7001F4CF5 /* CSTMakeCar.m in Sources */,
 				5892360B1B24401100E79D49 /* CSTCarColorDataSource.m in Sources */,
 				584C015F1B2832C80047DB7A /* CSTDemoSwitch.m in Sources */,
