@@ -96,6 +96,8 @@
 		841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7C1B1EFAD70012BFE3 /* CSTDataManager.m */; };
 		841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */; };
 		84673ABC1B281BBB009D890E /* CSTTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 84673ABB1B281BBB009D890E /* CSTTask.m */; };
+		848494ED1B29CBD200FB67DE /* FullscreenPreviewCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848494EB1B29CBD200FB67DE /* FullscreenPreviewCarViewController.m */; };
+		848494EE1B29CBD200FB67DE /* FullscreenPreviewCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848494EC1B29CBD200FB67DE /* FullscreenPreviewCarViewController.xib */; };
 		84EBD4B71B2078C7001F4CF5 /* CSTCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4A41B2078C7001F4CF5 /* CSTCar.m */; };
 		84EBD4BA1B2078C7001F4CF5 /* CSTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4AD1B2078C7001F4CF5 /* CSTLocation.m */; };
 		84EBD4BC1B2078C7001F4CF5 /* CSTMakeCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4B31B2078C7001F4CF5 /* CSTMakeCar.m */; };
@@ -261,6 +263,9 @@
 		841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTNetworkManager.m; sourceTree = "<group>"; };
 		84673ABA1B281BBB009D890E /* CSTTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTTask.h; sourceTree = "<group>"; };
 		84673ABB1B281BBB009D890E /* CSTTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTTask.m; sourceTree = "<group>"; };
+		848494EA1B29CBD200FB67DE /* FullscreenPreviewCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullscreenPreviewCarViewController.h; sourceTree = "<group>"; };
+		848494EB1B29CBD200FB67DE /* FullscreenPreviewCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullscreenPreviewCarViewController.m; sourceTree = "<group>"; };
+		848494EC1B29CBD200FB67DE /* FullscreenPreviewCarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullscreenPreviewCarViewController.xib; sourceTree = "<group>"; };
 		84EBD4A31B2078C7001F4CF5 /* CSTCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTCar.h; sourceTree = "<group>"; };
 		84EBD4A41B2078C7001F4CF5 /* CSTCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTCar.m; sourceTree = "<group>"; };
 		84EBD4AC1B2078C7001F4CF5 /* CSTLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTLocation.h; sourceTree = "<group>"; };
@@ -706,6 +711,7 @@
 		588EE7611B14779200CE2D91 /* CarsControllers */ = {
 			isa = PBXGroup;
 			children = (
+				848494E91B29CA3E00FB67DE /* FullscreenPreviewCarViewController */,
 				588EE7651B14780500CE2D91 /* CarsFiltersViewController */,
 				588EE7641B1477BA00CE2D91 /* CarDetailsViewController */,
 				588EE7631B1477B200CE2D91 /* CarsListViewController */,
@@ -1092,6 +1098,17 @@
 			path = MVC/Models/Task;
 			sourceTree = "<group>";
 		};
+		848494E91B29CA3E00FB67DE /* FullscreenPreviewCarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				848494EA1B29CBD200FB67DE /* FullscreenPreviewCarViewController.h */,
+				848494EB1B29CBD200FB67DE /* FullscreenPreviewCarViewController.m */,
+				848494EC1B29CBD200FB67DE /* FullscreenPreviewCarViewController.xib */,
+			);
+			name = FullscreenPreviewCarViewController;
+			path = MVC/Controllers/CarsControllers/FullscreenPreviewCarViewController;
+			sourceTree = "<group>";
+		};
 		84EBD4A21B2078C7001F4CF5 /* Car */ = {
 			isa = PBXGroup;
 			children = (
@@ -1297,6 +1314,7 @@
 				5868675F1B27793400857FB0 /* Lato-HairlineItalic.ttf in Resources */,
 				584AB3C61B298A3800052A50 /* CSTSliderPopup.xib in Resources */,
 				58701B6F1B15D5A500F0A21E /* DropDownCell.xib in Resources */,
+				848494EE1B29CBD200FB67DE /* FullscreenPreviewCarViewController.xib in Resources */,
 				58701B691B15D56A00F0A21E /* DropDownTable.xib in Resources */,
 				5868675B1B27793400857FB0 /* Lato-BlackItalic.ttf in Resources */,
 				586867631B27793400857FB0 /* Lato-Regular.ttf in Resources */,
@@ -1378,6 +1396,7 @@
 				84EF161A1B26F1F1008DEC29 /* UIViewController+fixOrientation.m in Sources */,
 				58701B6D1B15D59200F0A21E /* DropDownCell.m in Sources */,
 				584C82F11B18507F0031C063 /* AddProspectViewController.m in Sources */,
+				848494ED1B29CBD200FB67DE /* FullscreenPreviewCarViewController.m in Sources */,
 				84EBD4BD1B2078C7001F4CF5 /* CSTModelGroup.m in Sources */,
 				588EE7591B14771800CE2D91 /* BaseNavigationController.m in Sources */,
 				584C015B1B282B8D0047DB7A /* CSTBadgeLabel.m in Sources */,
