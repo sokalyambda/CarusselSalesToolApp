@@ -15,9 +15,9 @@
     self = [super init];
     if (self) {
         _ID = random()%60;
-        _firstName = [NSString stringWithFormat:@"First Name %li", _ID];
-        _lastName = [NSString stringWithFormat:@"Last Name %li", _ID];
-        _town = [NSString stringWithFormat:@"Town %li", _ID];
+        _firstName = [NSString stringWithFormat:@"First Name %i", _ID];
+        _lastName = [NSString stringWithFormat:@"Last Name %i", _ID];
+        _town = [NSString stringWithFormat:@"Town %i", _ID];
         _born = [NSDate date];
         _carMatches = random()%100;
     }

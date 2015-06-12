@@ -87,7 +87,7 @@
 - (void)getCarsList
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *param = @{StatusType  : @0,
+    NSDictionary *param = @{//StatusType  : @0,
 //                            BrandType   : @1,
 //                            ModelType   : @4,
 //                            LocationType: @(((CSTLocation *)self.dataManager.companyInfo.location[0]).ID),

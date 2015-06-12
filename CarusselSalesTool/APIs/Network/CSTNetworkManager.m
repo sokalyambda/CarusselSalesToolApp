@@ -8,8 +8,8 @@
 
 #import "CSTNetworkManager.h"
 
-NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt.com";
-//NSString *const baseURLString = @"http://mobileapp.vacs.hu.opel.dwt.carusselgroup.com";
+//NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt.com";
+NSString *const baseURLString = @"http://mobileapp.vacs.hu.opel.dwt.carusselgroup.com";
 
 @implementation CSTNetworkManager
 
@@ -31,7 +31,7 @@ NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt
 {
     NSDictionary *parameter = @{@"j_username" : userName,
                                 @"j_password": password};
-    [self POST:@"/vacs-rest/j_spring_security_check" parameters:parameter success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self POST:@"/j_spring_security_check" parameters:parameter success:^(NSURLSessionDataTask *task, id responseObject) {
         CSTCompany *company = [[CSTCompany alloc] initWithDictionary:responseObject];
         return result(YES, company, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -60,7 +60,7 @@ NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt
     }
     [parameterToGet setObject:@(row) forKey:@"rowIndex"];
     [parameterToGet setObject:@(pageSize) forKey:@"pageSize"];
-    [self GET:@"/vacs-rest/vehicle/list" parameters:parameterToGet success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self GET:@"/vehicle/list" parameters:parameterToGet success:^(NSURLSessionDataTask *task, id responseObject) {
         NSMutableArray *listCard = [NSMutableArray new];
         for (NSDictionary *dic in responseObject) {
             [listCard addObject:[[CSTCar alloc] initWithDictionary:dic]];
@@ -73,7 +73,7 @@ NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt
 
 - (void)getCarWithID:(NSInteger)ID result:(CarBlock)result
 {
-    [self GET:[NSString stringWithFormat:@"/vacs-rest/vehicle/%li", ID] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self GET:[NSString stringWithFormat:@"/vacs-rest/vehicle/%i", ID] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         return result([[CSTCar alloc] initWithDictionary:responseObject], nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         return result(nil, error);
@@ -90,7 +90,7 @@ NSString *const baseURLString = @"http://mobileimageuploader.hu.opel.carusseldwt
                                        };
     NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
     
-    [self POST:@"/vacs-rest/vehicle/upload" parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    [self POST:@"/vehicle/upload" parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         [formData appendPartWithFileData:imageData name:@"file" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
     } success:^(NSURLSessionDataTask *task, id responseObject) {
         return result(YES, responseObject);
