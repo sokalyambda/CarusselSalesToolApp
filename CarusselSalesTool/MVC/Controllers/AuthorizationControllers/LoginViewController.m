@@ -7,14 +7,15 @@
 //
 
 #import "LoginViewController.h"
-#import "CSTValidator.h"
+
 #import "CSTAuthorizationTextField.h"
 
+#import "CSTValidator.h"
 #import "CSTDataManager.h"
 
 static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 
-@interface LoginViewController () <UITextFieldDelegate>
+@interface LoginViewController () <UITextFieldDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *authScrollView;
 @property (weak, nonatomic) IBOutlet CSTAuthorizationTextField *userNameField;
@@ -70,37 +71,17 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
         [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
         success ? [weakSelf performSegueWithIdentifier:kMainTabBarSegue sender:weakSelf] : ShowErrorAlert(error);
     }];
-    
-    /*
-    if (![self.validator validateEmailField:self.userNameField andPasswordField:self.passwordField]) {
-        
-        NSMutableString *errString = self.validator.validationErrorString;
-        
-        ShowTitleAlert(NSLocalizedString(@"Warning!", nil), errString);
-        
-        [self.validator cleanValidationErrorString];
-    } else {
-        //TODO: Login action
-        [self performSegueWithIdentifier:@"homeScreenSegue" sender:self];
-    }
-     */
 }
 
 - (IBAction)remindPasswordClick:(id)sender
 {
-    /*
-    if (![self.validator validateEmailField:self.userNameField]) {
-        
-        NSMutableString *errString = self.validator.validationErrorString;
-        
-        ShowTitleAlert(NSLocalizedString(@"Warning!", nil), errString);
-        
-        [self.validator cleanValidationErrorString];
-    } else {
-        //TODO: RemindPassword action
-    }
-     */
+    UIAlertView *forgotPassword = [[UIAlertView alloc] initWithTitle:@"Forgot password" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Forgot", nil];
+    forgotPassword.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [forgotPassword textFieldAtIndex:0].placeholder = @"Please enter your email";
+    [forgotPassword show];
 }
+
+#pragma mark - Metods
 
 - (void)handleKeyboardNotifications
 {
@@ -172,11 +153,18 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
     self.activeField = nil;
 }
 
-#pragma mark - Navigation
+#pragma mark - UIAlertViewDalegate
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if ([segue.identifier isEqualToString:kMainTabBarSegue]) {
+    if (alertView.alertViewStyle == UIAlertViewStylePlainTextInput && buttonIndex != alertView.cancelButtonIndex) {
+        self.validator.validationErrorString = [[NSMutableString alloc] initWithString:@""];
+        UITextField *textField = [alertView textFieldAtIndex:0];
+        if ([self.validator validateEmailField:textField]) {
+            NSLog(@"%@", textField.text);
+        } else {
+            [[[UIAlertView alloc] initWithTitle:@"Error" message:self.validator.validationErrorString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        }
     }
 }
 

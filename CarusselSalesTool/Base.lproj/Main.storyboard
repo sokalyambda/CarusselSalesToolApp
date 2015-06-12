@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1F0-ao-sOY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1F0-ao-sOY">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Lato-Black.ttf">
@@ -1620,6 +1620,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ecJ-Xf-Pd3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yo6-Mn-HXq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer cars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kt-Sa-sN4">
@@ -1683,6 +1684,7 @@
                         <viewControllerLayoutGuide type="bottom" id="E78-iR-uKE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kyn-HM-8g4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMn-AE-akK" userLabel="Prospect Info Holder">
@@ -1758,13 +1760,13 @@
                                         <exclude reference="NWm-8n-86i"/>
                                         <exclude reference="e6F-AF-U4d"/>
                                         <exclude reference="fwJ-Ob-5vu"/>
-                                        <exclude reference="3Ll-m4-hOk"/>
                                         <exclude reference="3ec-Px-t7S"/>
                                         <exclude reference="YSC-wz-G11"/>
                                         <exclude reference="cgS-Rj-0rH"/>
                                         <exclude reference="dgv-vj-alb"/>
                                         <exclude reference="nvU-2R-dAT"/>
                                         <exclude reference="uBp-l5-wOM"/>
+                                        <exclude reference="3Ll-m4-hOk"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -1777,13 +1779,13 @@
                                         <include reference="NWm-8n-86i"/>
                                         <include reference="e6F-AF-U4d"/>
                                         <include reference="fwJ-Ob-5vu"/>
-                                        <include reference="3Ll-m4-hOk"/>
                                         <include reference="3ec-Px-t7S"/>
                                         <include reference="YSC-wz-G11"/>
                                         <include reference="cgS-Rj-0rH"/>
                                         <include reference="dgv-vj-alb"/>
                                         <include reference="nvU-2R-dAT"/>
                                         <include reference="uBp-l5-wOM"/>
+                                        <include reference="3Ll-m4-hOk"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1808,13 +1810,13 @@
                                 <exclude reference="9lZ-57-mjH"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="X0M-d0-WjI"/>
-                                <exclude reference="eHO-4o-zwz"/>
-                                <exclude reference="lak-9K-IXY"/>
+                                <exclude reference="Zac-iq-wLM"/>
                                 <exclude reference="BtJ-Gk-h9Z"/>
                                 <exclude reference="ick-fg-mGd"/>
                                 <exclude reference="ml7-jC-Nij"/>
-                                <exclude reference="Zac-iq-wLM"/>
+                                <exclude reference="X0M-d0-WjI"/>
+                                <exclude reference="eHO-4o-zwz"/>
+                                <exclude reference="lak-9K-IXY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -1823,13 +1825,13 @@
                                 <include reference="9lZ-57-mjH"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="X0M-d0-WjI"/>
-                                <include reference="eHO-4o-zwz"/>
-                                <include reference="lak-9K-IXY"/>
+                                <include reference="Zac-iq-wLM"/>
                                 <include reference="BtJ-Gk-h9Z"/>
                                 <include reference="ick-fg-mGd"/>
                                 <include reference="ml7-jC-Nij"/>
-                                <include reference="Zac-iq-wLM"/>
+                                <include reference="X0M-d0-WjI"/>
+                                <include reference="eHO-4o-zwz"/>
+                                <include reference="lak-9K-IXY"/>
                             </mask>
                         </variation>
                     </view>
@@ -1853,6 +1855,7 @@
                         <viewControllerLayoutGuide type="bottom" id="e0S-WV-KVo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="asv-Hn-NYq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cars by prospect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWm-oP-2I5">
@@ -1916,6 +1919,7 @@
                         <viewControllerLayoutGuide type="bottom" id="MaF-Im-bRs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="c4P-WT-zVW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer history" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hQ-sV-vac">

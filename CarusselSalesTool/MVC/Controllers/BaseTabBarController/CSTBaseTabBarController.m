@@ -34,6 +34,7 @@ static CGFloat const kStatusBarHeight = 20.f;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self initTabBar];
 }
 

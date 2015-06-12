@@ -642,10 +642,10 @@
 		588EE7291B1473B000CE2D91 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				584AB3CD1B29B78B00052A50 /* OffersControllers */,
-				5855852C1B25E28900FB0C46 /* CommonTopController */,
-				587398F41B21A7C000633641 /* BaseTabBarController */,
 				588EE7521B14764100CE2D91 /* AuthorizationControllers */,
+				587398F41B21A7C000633641 /* BaseTabBarController */,
+				5855852C1B25E28900FB0C46 /* CommonTopController */,
+				584AB3CD1B29B78B00052A50 /* OffersControllers */,
 				5877CE741B2178610097DF86 /* TasksListController */,
 				589E20861B1DD9F4006A6C81 /* LeftTabBarController */,
 				589AC4971B171C5B00577D90 /* DemonstrationViewController */,
