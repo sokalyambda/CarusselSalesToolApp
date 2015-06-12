@@ -15,6 +15,7 @@ static NSString *const kOfferHistorySegueIdentifier = @"offerHistorySegue";
 @interface CSTBaseOffersController ()
 
 @property (strong, nonatomic) NSArray *availableIdentifiers;
+@property (assign, nonatomic) NSUInteger selectedControllerIndex;
 
 @end
 
@@ -54,14 +55,22 @@ static NSString *const kOfferHistorySegueIdentifier = @"offerHistorySegue";
     [super viewDidAppear:animated];
     
     if ([self.tabBarButtons count]) {
-        [self performSegueWithIdentifier:kCarsByProspectSegueIdentifier
-                                  sender:self.tabBarButtons[0]];
+        
+        NSString *neededIdentifier = [self.availableIdentifiers objectAtIndex:self.selectedControllerIndex];
+        
+        [self performSegueWithIdentifier:neededIdentifier
+                                  sender:self.tabBarButtons[self.selectedControllerIndex]];
     }
 }
+
+#pragma mark - Navigation
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([self.availableIdentifiers containsObject:segue.identifier]) {
+        
+        self.selectedControllerIndex = [self.availableIdentifiers indexOfObject:segue.identifier];
+        
         for (UIButton *btn in self.tabBarButtons) {
             if (sender && ![btn isEqual:sender]) {
                 [btn setSelected:NO];
@@ -71,5 +80,13 @@ static NSString *const kOfferHistorySegueIdentifier = @"offerHistorySegue";
         }
     }
 }
+
+#pragma mark - Actions
+
+- (IBAction)backClick:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 @end

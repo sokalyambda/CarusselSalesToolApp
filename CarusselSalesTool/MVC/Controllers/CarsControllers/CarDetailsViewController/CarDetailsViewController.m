@@ -103,6 +103,16 @@
     //TODO: update views
 }
 
+- (IBAction)galleryRightClick:(id)sender
+{
+    
+}
+
+- (IBAction)galleryLeftClick:(id)sender
+{
+    
+}
+
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

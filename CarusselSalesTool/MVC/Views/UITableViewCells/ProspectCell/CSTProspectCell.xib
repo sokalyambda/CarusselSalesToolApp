@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,21 +16,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CSTProspectCell" id="eFt-mQ-Rdh" customClass="CSTProspectCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CSTProspectCell" rowHeight="39" id="eFt-mQ-Rdh" customClass="CSTProspectCell">
             <rect key="frame" x="0.0" y="0.0" width="760" height="39"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eFt-mQ-Rdh" id="NT7-QL-tou">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" background="tab_row_1" translatesAutoresizingMaskIntoConstraints="NO" id="KHB-Iz-XmJ" customClass="CSTBorderedTextField">
-                        <rect key="frame" x="8" y="3" width="292" height="32"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="32" id="1P1-VU-R9R"/>
-                        </constraints>
-                        <color key="textColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Town" minimumFontSize="17" background="tab_raw_2" translatesAutoresizingMaskIntoConstraints="NO" id="vcq-ZN-vJU" customClass="CSTBorderedTextField">
                         <rect key="frame" x="306" y="3" width="223" height="32"/>
                         <constraints>
@@ -53,6 +44,15 @@
                         <rect key="frame" x="636" y="3" width="116" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="116" id="RKq-56-NmY"/>
+                        </constraints>
+                        <color key="textColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" background="tab_row_1" translatesAutoresizingMaskIntoConstraints="NO" id="KHB-Iz-XmJ" customClass="CSTBorderedTextField">
+                        <rect key="frame" x="8" y="3" width="292" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="999" constant="32" id="1P1-VU-R9R"/>
                         </constraints>
                         <color key="textColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
