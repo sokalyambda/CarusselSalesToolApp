@@ -11,6 +11,5 @@
 @interface CSTSliderPopup : UIView
 
 @property (assign, nonatomic) CGFloat value;
-@property (strong, nonatomic) NSString *text;
 
 @end

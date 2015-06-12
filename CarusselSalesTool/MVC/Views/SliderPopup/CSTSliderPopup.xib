@@ -10,33 +10,36 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CSTCustomSlider">
+            <connections>
+                <outlet property="popupView" destination="iN0-l3-epB" id="06v-Hr-nah"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CSTSliderPopup">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="1" width="101" height="39"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ev-Uh-DMK">
-                    <rect key="frame" x="4" y="14" width="42" height="21"/>
+                    <rect key="frame" x="2" y="4" width="97" height="21"/>
                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                     <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.18823529410000001" green="0.75686274509999996" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="9Ev-Uh-DMK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="0kG-mx-IlV"/>
-                <constraint firstItem="9Ev-Uh-DMK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="Axw-nw-n9e"/>
-                <constraint firstAttribute="bottom" secondItem="9Ev-Uh-DMK" secondAttribute="bottom" constant="15" id="KVc-28-cyr"/>
-                <constraint firstAttribute="centerY" secondItem="9Ev-Uh-DMK" secondAttribute="centerY" constant="0.5" id="LnH-xj-1P2"/>
+                <constraint firstAttribute="trailing" secondItem="9Ev-Uh-DMK" secondAttribute="trailing" constant="2" id="4Kt-XK-tdp"/>
                 <constraint firstAttribute="centerX" secondItem="9Ev-Uh-DMK" secondAttribute="centerX" id="RTZ-sN-0gt"/>
-                <constraint firstAttribute="trailing" secondItem="9Ev-Uh-DMK" secondAttribute="trailing" constant="4" id="zj4-Zb-a1n"/>
+                <constraint firstItem="9Ev-Uh-DMK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="X6F-pg-Svd"/>
+                <constraint firstItem="9Ev-Uh-DMK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="kJk-qT-6p9"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="textLabel" destination="9Ev-Uh-DMK" id="uR2-HU-S3j"/>
             </connections>
+            <point key="canvasLocation" x="25.5" y="3.5"/>
         </view>
     </objects>
 </document>

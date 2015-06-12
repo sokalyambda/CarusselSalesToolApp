@@ -8,9 +8,13 @@
 
 #import "CSTSliderPopup.h"
 
+static CGFloat const kArrowLength = 10.f;
+static CGFloat const kCornerRadius = 6.f;
+
 @interface CSTSliderPopup ()
 
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (strong, nonatomic) NSString *text;
 
 @end
 
@@ -20,34 +24,16 @@
 
 - (void)setValue:(CGFloat)aValue {
     _value = aValue;
-    self.text = [NSString stringWithFormat:@"%4.2f", _value];
-    [self setNeedsDisplay];
+    self.text = [NSString stringWithFormat:@"%li", (long)_value];
 }
 
-#pragma mark - Init
-
-- (instancetype)initWithCoder:(NSCoder *)coder
+- (void)setText:(NSString *)text
 {
-    self = [super initWithCoder:coder];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
+    _text = text;
+    self.textLabel.text = _text;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
-}
-
-- (void)commonInit
-{
-    [self.textLabel sizeToFit];
-}
+#pragma mark - Drawing
 
 - (void)drawRect:(CGRect)rect {
     
@@ -55,27 +41,22 @@
     [UIColorFromRGB(0x33CC66) setFill];
     
     // Create the path for the rounded rectanble
-    CGRect roundedRect = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height * 0.8f);
-    UIBezierPath *roundedRectPath = [UIBezierPath bezierPathWithRoundedRect:roundedRect cornerRadius:6.f];
+    CGRect roundedRect = CGRectMake(CGRectGetMinX(self.bounds), CGRectGetMinY(self.bounds), CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) * 0.8f);
+    UIBezierPath *roundedRectPath = [UIBezierPath bezierPathWithRoundedRect:roundedRect cornerRadius:kCornerRadius];
     
     // Create the arrow path
     UIBezierPath *arrowPath = [UIBezierPath bezierPath];
     CGFloat midX = CGRectGetMidX(self.bounds);
-    CGPoint p0 = CGPointMake(midX, CGRectGetMaxY(self.bounds));
-    [arrowPath moveToPoint:p0];
-    [arrowPath addLineToPoint:CGPointMake((midX - 10.f), CGRectGetMaxY(roundedRect))];
-    [arrowPath addLineToPoint:CGPointMake((midX + 10.f), CGRectGetMaxY(roundedRect))];
+    CGPoint middleBottomPoint = CGPointMake(midX, CGRectGetMaxY(self.bounds));
+    [arrowPath moveToPoint:middleBottomPoint];
+    [arrowPath addLineToPoint:CGPointMake((midX - kArrowLength), CGRectGetMaxY(roundedRect))];
+    [arrowPath addLineToPoint:CGPointMake((midX + kArrowLength), CGRectGetMaxY(roundedRect))];
     [arrowPath closePath];
     
     // Attach the arrow path to the buble
     [roundedRectPath appendPath:arrowPath];
     
     [roundedRectPath fill];
-    
-    // Draw the text
-    if (self.text) {
-        [self.textLabel setText:self.text];
-    }
 }
 
 @end
