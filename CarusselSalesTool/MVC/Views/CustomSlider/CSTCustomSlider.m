@@ -10,6 +10,15 @@
 #import "CSTSliderPopup.h"
 #import "UIView+MakeFromXib.h"
 
+static CGFloat const kPaddingFromArrow = 5.f;
+static CGFloat const kPopUpAppearanceTime = .25f;
+
+@interface CSTCustomSlider ()
+
+@property (assign, nonatomic, readonly) CGRect thumbRect;
+
+@end
+
 @implementation CSTCustomSlider
 
 #pragma mark - Accessors
@@ -18,92 +27,70 @@
 {
     CGRect trackRect = [self trackRectForBounds:self.bounds];
     CGRect thumbRect = [self thumbRectForBounds:self.bounds
-                                   trackRect:trackRect
-                                       value:self.value];
-    return thumbRect;
+                                      trackRect:trackRect
+                                          value:self.value];
+    CGRect convertedRect = [self convertRect:thumbRect toView:self.superview];
+    return convertedRect;
 }
 
-#pragma mark - Init
-
-- (instancetype)initWithCoder:(NSCoder *)coder
+- (CSTSliderPopup *)popupView
 {
-    self = [super initWithCoder:coder];
-    if (self) {
-        [self commonInit];
+    if (!_popupView) {
+        [self addTarget:self action:@selector(updatePopoverFrame) forControlEvents:UIControlEventValueChanged];
+        _popupView = [CSTSliderPopup makeFromXibWithFileOwner:self];
+        [self updatePopoverFrame];
+        _popupView.alpha = 0;
+        [self.superview addSubview:_popupView];
     }
-    return self;
+    
+    return _popupView;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (void)setValue:(float)value
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
-}
-
-- (void)commonInit
-{
-    self.popupView = [CSTSliderPopup makeFromXib];
-    self.popupView.backgroundColor = [UIColor clearColor];
-    self.popupView.alpha = 0.0;
-    [self addSubview:self.popupView];
+    [super setValue:value];
+    [self updatePopoverFrame];
 }
 
 #pragma mark - Actions
 
-- (void)fadePopupViewInAndOut:(BOOL)aFadeIn
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    WEAK_SELF;
-    [UIView animateWithDuration:.5f animations:^{
-        if (aFadeIn) {
-            weakSelf.popupView.alpha = 1.f;
-        } else {
-            weakSelf.popupView.alpha = 0.f;
-        }
-    }];
+    [self updatePopoverFrame];
+    [self showPopUpView:YES];
+    [super touchesBegan:touches withEvent:event];
 }
 
-- (void)positionAndUpdatePopupView
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    CGRect thumbRect = self.thumbRect;
-    CGRect popupRect = CGRectOffset(thumbRect, 0.f, -(thumbRect.size.height * 1.5f));
-    self.popupView.frame = CGRectInset(popupRect, -20.f, -10.f);
+    [self showPopUpView:NO];
+    [super touchesEnded:touches withEvent:event];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self showPopUpView:NO];
+    [super touchesCancelled:touches withEvent:event];
+}
+
+- (void)updatePopoverFrame
+{
+    self.popupView.center = CGPointMake(CGRectGetMidX(self.thumbRect), CGRectGetMidY(self.thumbRect) - CGRectGetHeight(self.thumbRect) - kPaddingFromArrow);
     self.popupView.value = self.value;
 }
 
-#pragma mark - UIControl touch event tracking
-
-- (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
+- (void)showPopUpView:(BOOL)show
 {
-    // Fade in and update the popup view
-    CGPoint touchPoint = [touch locationInView:self];
-    // Check if the knob is touched. Only in this case show the popup-view
-    if (CGRectContainsPoint(self.thumbRect, touchPoint)) {
-        [self positionAndUpdatePopupView];
-        [self fadePopupViewInAndOut:YES];
+    WEAK_SELF;
+    if (show) {
+        [UIView animateWithDuration:kPopUpAppearanceTime animations:^{
+            weakSelf.popupView.alpha = 1.f;
+        }];
+    } else {
+        [UIView animateWithDuration:kPopUpAppearanceTime animations:^{
+            weakSelf.popupView.alpha = 0.f;
+        }];
     }
-    return [super beginTrackingWithTouch:touch withEvent:event];
-}
-
-- (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    // Update the popup view as slider knob is being moved
-    [self positionAndUpdatePopupView];
-    return [super continueTrackingWithTouch:touch withEvent:event];
-}
-
-- (void)cancelTrackingWithEvent:(UIEvent *)event
-{
-    [super cancelTrackingWithEvent:event];
-}
-
-- (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    // Fade out the popoup view
-    [self fadePopupViewInAndOut:NO];
-    [super endTrackingWithTouch:touch withEvent:event];
 }
 
 @end

@@ -12,8 +12,6 @@
 
 @interface CSTCustomSlider : UISlider
 
-@property (strong, nonatomic) CSTSliderPopup *popupView;
-
-@property (assign, nonatomic, readonly) CGRect thumbRect;
+@property (weak, nonatomic) IBOutlet CSTSliderPopup *popupView;
 
 @end

@@ -17,10 +17,7 @@
 @interface CarsFiltersViewController () <UITextFieldDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *scrollContainer;
-@property (weak, nonatomic) IBOutlet UILabel *priceValueLabel;
-@property (weak, nonatomic) IBOutlet UILabel *mileageValueLabel;
-@property (weak, nonatomic) IBOutlet UILabel *perfomanceValueLabel;
-@property (weak, nonatomic) IBOutlet UILabel *displacementValueLabel;
+
 @property (weak, nonatomic) IBOutlet CSTBorderedPlaceholderTextView *extraDataTextView;
 @property (weak, nonatomic) IBOutlet UIScrollView *carsFiltersScrollView;
 
@@ -63,22 +60,22 @@
 
 - (IBAction)priceSliderAction:(CSTCustomSlider *)slider
 {
-    self.priceValueLabel.text = [NSString stringWithFormat:@"%f", slider.value];
+
 }
 
 - (IBAction)mileageSliderAction:(CSTCustomSlider *)slider
 {
-    self.mileageValueLabel.text = [NSString stringWithFormat:@"%f", slider.value];
+
 }
 
 - (IBAction)perfomanceSliderAction:(CSTCustomSlider *)slider
 {
-    self.perfomanceValueLabel.text = [NSString stringWithFormat:@"%f", slider.value];
+
 }
 
 - (IBAction)displacementSliderAction:(CSTCustomSlider *)slider
 {
-    self.displacementValueLabel.text = [NSString stringWithFormat:@"%f", slider.value];
+
 }
 
 - (void)handleKeyboardNotifications
