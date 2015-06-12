@@ -40,6 +40,7 @@
 {
     [super viewWillAppear:animated];
     [self customizeSearchBar];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 #pragma mark - UITableViewDataSource
@@ -64,9 +65,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CSTBaseOffersController *controller = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CSTBaseOffersController class])];
-    [self.navigationController pushViewController:controller animated:YES];
+//    CSTBaseOffersController *controller = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CSTBaseOffersController class])];
+//    [self.navigationController pushViewController:controller animated:YES];
 //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self performSegueWithIdentifier:@"mainOffersSegue" sender:self];
 }
 
 #pragma mark - Actions
@@ -75,6 +77,16 @@
 {
     [self.prospectsSearchBar setRightImageName:@"icn_search"];
     self.prospectsSearchBar.placeholder = NSLocalizedString(@"Name of prospect", nil);
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"mainOffersSegue"]) {
+        CSTBaseOffersController *controller = (CSTBaseOffersController *)segue.destinationViewController;
+        controller.hidesBottomBarWhenPushed = NO;
+    }
 }
 
 @end
