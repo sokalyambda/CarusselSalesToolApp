@@ -88,10 +88,10 @@
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSDictionary *param = @{StatusType  : @0,
-                            BrandType   : @1,
-                            ModelType   : @4,
-                            LocationType: @(((CSTLocation *)self.dataManager.companyInfo.location[0]).ID),
-                            ImageType   : @"false",
+//                            BrandType   : @1,
+//                            ModelType   : @4,
+//                            LocationType: @(((CSTLocation *)self.dataManager.companyInfo.location[0]).ID),
+//                            ImageType   : @"false",
                             };
     WEAK_SELF;
     [self.dataManager getCarListForRow:0 pageSize:10 parameter:param result:^(NSArray *carList, NSError *error) {

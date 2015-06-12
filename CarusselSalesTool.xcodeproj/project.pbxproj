@@ -464,13 +464,6 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
-		58701B601B15B78C00F0A21E /* BaseViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = BaseViewController;
-			sourceTree = "<group>";
-		};
 		58701B641B15D07D00F0A21E /* DropDownTable */ = {
 			isa = PBXGroup;
 			children = (
@@ -649,7 +642,6 @@
 				5877CE741B2178610097DF86 /* TasksListController */,
 				589E20861B1DD9F4006A6C81 /* LeftTabBarController */,
 				589AC4971B171C5B00577D90 /* DemonstrationViewController */,
-				58701B601B15B78C00F0A21E /* BaseViewController */,
 				588EE77A1B14795100CE2D91 /* ProspectsControllers */,
 				588EE7611B14779200CE2D91 /* CarsControllers */,
 				588EE75D1B14773A00CE2D91 /* HomeViewController */,

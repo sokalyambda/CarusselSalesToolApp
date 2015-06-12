@@ -126,7 +126,7 @@ typedef NS_ENUM(NSInteger, SelectedItem) {
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGSize size = CGSizeZero;
-    NSInteger height = collectionView.bounds.size.height - 10;
+    NSInteger height = collectionView.bounds.size.height - ((UICollectionViewFlowLayout *)collectionViewLayout).minimumInteritemSpacing;
     NSInteger width = collectionView.bounds.size.width;
     if (collectionView == self.carThumbnailsCollectionView) {
         width = height;
