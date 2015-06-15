@@ -1,14 +1,14 @@
 //
-//  OHLocation.m
-//  OpelHu
+//  CSTColor.m
+//  CarusselSalesTool
 //
-//  Created by AnatoliyDalekorey on 10.01.15.
-//  Copyright (c) 2015 Thinkmobiles. All rights reserved.
+//  Created by AnatoliyDalekorey on 15.06.15.
+//  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-#import "CSTLocation.h"
+#import "CSTColor.h"
 
-@implementation CSTLocation
+@implementation CSTColor
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {

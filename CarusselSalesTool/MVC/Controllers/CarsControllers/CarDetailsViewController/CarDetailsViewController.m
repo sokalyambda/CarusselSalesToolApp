@@ -155,7 +155,7 @@
     }
     
     WEAK_SELF;
-    [[CSTDataManager sharedInstance] postImage:chosenImage withID:24498 result:^(BOOL success, CSTImageCar *image) {
+    [[CSTDataManager sharedInstance] postImage:chosenImage withID:self.currentCar.ID result:^(BOOL success, CSTImageCar *image) {
         //TO DO
     }];
     [picker dismissViewControllerAnimated:YES completion:^{
