@@ -6,13 +6,8 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "CSTBaseModel.h"
 
-@interface CSTBody : NSObject
-
-@property (assign) NSInteger ID;
-@property (copy) NSString *title;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+@interface CSTBody : CSTBaseModel
 
 @end

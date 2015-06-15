@@ -1,13 +1,14 @@
 //
-//  CSTTranssmision.m
+//  CSTMappingProtocol.h
 //  CarusselSalesTool
 //
 //  Created by AnatoliyDalekorey on 15.06.15.
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-#import "CSTTranssmision.h"
+@protocol CSTMappingProtocol <NSObject>
 
-@implementation CSTTranssmision
+@required
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

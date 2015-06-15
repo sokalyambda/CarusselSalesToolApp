@@ -86,7 +86,7 @@ NSString *const baseURLString = @"http://mobileapp.vacs.hu.opel.dwt.carusselgrou
                                        @"vehicleId" : @(ID),
                                        //@"photoId" : @224959,
                                        //@"imgIdx" : @2,
-                                       @"defaultImage" : @"false"
+                                       @"defaultImage" : @"true"
                                        };
     NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
     

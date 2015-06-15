@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Thinkmobiles. All rights reserved.
 //
 
+#import "CSTBaseModel.h"
+
 #import <CoreLocation/CoreLocation.h>
 #import "CSTMakeCar.h"
 #import "CSTModelGroup.h"
@@ -15,12 +17,10 @@
 #import "CSTFuel.h"
 #import "CSTBody.h"
 
-@interface CSTCar : NSObject
+@interface CSTCar : CSTBaseModel
 
-@property (assign) NSInteger ID;
 @property (strong) CSTMakeCar *make;
 @property (strong) CSTModelGroup *modelGroup;
-@property (copy) NSString *title;
 @property (strong) CSTImageCar *defaultImage;
 @property (strong) NSMutableArray *images;
 @property (assign) NSInteger status;
@@ -68,7 +68,5 @@
 @property (assign) BOOL noPrice;
 @property (copy) NSString *tarifDate;
 @property (copy) NSString *searchFlags;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

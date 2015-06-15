@@ -6,12 +6,10 @@
 //  Copyright (c) 2014 Thinkmobiles. All rights reserved.
 //
 
-@interface CSTMakeCar : NSObject
+#import "CSTBaseModel.h"
 
-@property (assign) NSInteger ID;
-@property (copy) NSString *title;
+@interface CSTMakeCar : CSTBaseModel
+
 @property (assign, nonatomic) BOOL showModels;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

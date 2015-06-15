@@ -6,11 +6,7 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-@interface CSTColor : NSObject
+#import "CSTBaseModel.h"
 
-@property (assign) NSInteger ID;
-@property (copy) NSString *title;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
+@interface CSTColor : CSTBaseModel
 @end

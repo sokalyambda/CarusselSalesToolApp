@@ -6,11 +6,8 @@
 //  Copyright (c) 2015 Thinkmobiles. All rights reserved.
 //
 
-@interface CSTLocation : NSObject
+#import "CSTBaseModel.h"
 
-@property (assign) NSInteger ID;
-@property (copy) NSString *title;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+@interface CSTLocation : CSTBaseModel
 
 @end

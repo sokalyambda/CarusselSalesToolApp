@@ -12,14 +12,10 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    self = [super init];
+    self = [super initWithDictionary:dictionary];
     if (self) {
-        _ID = [dictionary[@"id"] integerValue];
         _make = [[CSTMakeCar alloc] initWithDictionary:dictionary[@"make"]];
         _modelGroup = [[CSTModelGroup alloc] initWithDictionary:dictionary[@"modelGroup"]];
-        if (![dictionary[@"title"] isKindOfClass:[NSNull class]]) {
-            _title = dictionary[@"title"];
-        }
         _defaultImage = [[CSTImageCar alloc] initWithDictionary:dictionary[@"defaultImage"]];
         if (![dictionary[@"images"] isKindOfClass:[NSNull class]]) {
             NSMutableArray *tempList = [NSMutableArray new];
