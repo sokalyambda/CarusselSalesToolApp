@@ -187,7 +187,7 @@ static CGFloat kSlideTiming = 0.5f;
 
 - (void)carsFiltersController:(CarsFiltersViewController *)controller didSelectFiltersForCarSearch:(NSDictionary *)filters
 {
-    [self.carsListController getCarsListWithFilters:filters];
+    [self.carsListController getCarsListPage:0 withFilters:filters];
     [self movePanelToOriginalPosition];
 }
 

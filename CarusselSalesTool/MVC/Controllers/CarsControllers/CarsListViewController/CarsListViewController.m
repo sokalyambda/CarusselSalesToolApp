@@ -19,8 +19,9 @@
 
 @property (strong, nonatomic) NSArray *cars;
 @property (strong, nonatomic) CSTDataManager *dataManager;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
-@property (weak, nonatomic) IBOutlet UITableView *carListTbleView;
+@property (weak, nonatomic) IBOutlet UITableView *carListTableView;
 
 @end
 
@@ -33,7 +34,9 @@
     [super viewDidLoad];
     
     self.dataManager = [CSTDataManager sharedInstance];
-    [self getCarsListWithFilters:nil];
+    [self getCarsListPage:0 withFilters:nil];
+    
+    [self setupRefreshControl];
 }
 
 #pragma mark - UITableViewDataSource
@@ -54,7 +57,7 @@
     CSTCar *currentCar = self.cars[indexPath.row];
     
     [cell configureCellWithCar:currentCar];
- 
+    
     return cell;
 }
 
@@ -76,26 +79,41 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - Actions 
+#pragma mark - Actions
 
-- (void)getCarsListWithFilters:(NSDictionary *)filters
+- (void)setupRefreshControl
 {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.carListTableView addSubview:self.refreshControl];
+    [self.refreshControl addTarget:self action:@selector(refreshCarsList) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)getCarsListPage:(NSUInteger)page withFilters:(NSDictionary *)filters
+{
+    if(!self.refreshControl.isRefreshing) {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    }
     NSMutableDictionary *param = [@{//StatusType  : @0,
-//                            BrandType   : @1,
-//                            ModelType   : @4,
-//                            LocationType: @(((CSTLocation *)self.dataManager.companyInfo.location[0]).ID),
-//                            ImageType   : @"false",
-                            } mutableCopy];
+                                    //                            BrandType   : @1,
+                                    //                            ModelType   : @4,
+                                    //                            LocationType: @(((CSTLocation *)self.dataManager.companyInfo.location[0]).ID),
+                                    //                            ImageType   : @"false",
+                                    } mutableCopy];
     if (filters) {
         [param addEntriesFromDictionary:filters];
     }
     WEAK_SELF;
-    [self.dataManager getCarListForRow:0 pageSize:10 parameter:param result:^(NSArray *carList, NSError *error) {
+    [self.dataManager getCarListForRow:page pageSize:10 parameter:param result:^(NSArray *carList, NSError *error) {
         [MBProgressHUD hideAllHUDsForView:weakSelf.view animated:YES];
+        [weakSelf.refreshControl endRefreshing];
         weakSelf.cars = carList;
-        [weakSelf.carListTbleView reloadData];
+        [weakSelf.carListTableView reloadData];
     }];
+}
+
+- (void)refreshCarsList
+{
+    [self getCarsListPage:0 withFilters:nil];
 }
 
 @end

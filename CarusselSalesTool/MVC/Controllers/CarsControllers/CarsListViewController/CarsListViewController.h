@@ -14,6 +14,6 @@ typedef void(^CarSelectedCompletion)(CSTCar *car);
 
 @property (copy, nonatomic) CarSelectedCompletion carSelectedCompletion;
 
-- (void)getCarsListWithFilters:(NSDictionary *)filters;
+- (void)getCarsListPage:(NSUInteger)page withFilters:(NSDictionary *)filters;
 
 @end
