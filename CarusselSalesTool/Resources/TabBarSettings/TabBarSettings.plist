@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>selectionIndicatorImageName</key>
+	<string>btn_tab_bar_on</string>
+	<key>firstImageName</key>
+	<string>icn_cars</string>
+	<key>secondImageName</key>
+	<string>icn_prospects</string>
+	<key>thirdImageName</key>
+	<string>add_prospects</string>
+	<key>fourthImageName</key>
+	<string>icn_tasks</string>
+	<key>fifthImageName</key>
+	<string>logout</string>
+	<key>firstSelectedImageName</key>
+	<string>icn_cars_active</string>
+	<key>secondSelectedImageName</key>
+	<string>icn_prospects_active</string>
+	<key>thirdSelectedImageName</key>
+	<string>add_prospects_active</string>
+	<key>fourthSelectedImageName</key>
+	<string>icn_tasks_active</string>
+	<key>fifthSelectedImageName</key>
+	<string>logout_active</string>
+</dict>
+</plist>

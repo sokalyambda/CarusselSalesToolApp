@@ -13,7 +13,7 @@
 
 static CGFloat kSlideTiming = 0.5f;
 
-@interface MainCarsViewController ()
+@interface MainCarsViewController ()<CSTCarsFiltersDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *carsListHolder;
 @property (weak, nonatomic) IBOutlet UIView *carDetailsHolder;
@@ -53,6 +53,11 @@ static CGFloat kSlideTiming = 0.5f;
 }
 
 #pragma mark - Actions
+
+- (void)carsFilteredSuccessfully:(NSNotification *)notification
+{
+    [self movePanelToOriginalPosition];
+}
 
 - (IBAction)showFiltersClick:(id)sender
 {
@@ -94,8 +99,9 @@ static CGFloat kSlideTiming = 0.5f;
         // this is where you define the view for the left panel
         self.carsFiltersController = [[CarsFiltersViewController alloc] initWithNibName:NSStringFromClass([CarsFiltersViewController class]) bundle:nil];
         
-        [self.view addSubview:self.carsFiltersController.view];
-        
+        //setup the delegate
+        self.carsFiltersController.delegate = self;
+                
         [self addChildViewController:self.carsFiltersController];
         [self.carsFiltersController didMoveToParentViewController:self];
         
@@ -103,13 +109,14 @@ static CGFloat kSlideTiming = 0.5f;
     }
     
     UIView *view = self.carsFiltersController.view;
+    
     return view;
 }
 
 - (void)showFilters
 {
     UIView *childView = [self getFiltersView];
-
+    [self.view addSubview:childView];
     //to correct the appearance of left panel
     [self.view bringSubviewToFront:self.searchView];
     
@@ -141,7 +148,6 @@ static CGFloat kSlideTiming = 0.5f;
 {
     if (self.carsFiltersController) {
         [self.carsFiltersController.view removeFromSuperview];
-        self.carsFiltersController = nil;
         self.carsFiltersController.state = CSTFiltersPanelStateClosed;
     }
 }
@@ -150,8 +156,15 @@ static CGFloat kSlideTiming = 0.5f;
     WEAK_SELF;
     [self.carsListController setCarSelectedCompletion:^(CSTCar *car) {
         weakSelf.carDetailsController.currentCar = car;
-        NSLog(@"car with title %@ has been selected", car.title);
     }];
+}
+
+#pragma mark - CSTCarsFiltersDelegate
+
+- (void)carsFiltersController:(CarsFiltersViewController *)controller didSelectFiltersForCarSearch:(NSDictionary *)filters
+{
+    [self.carsListController getCarsListWithFilters:filters];
+    [self movePanelToOriginalPosition];
 }
 
 @end

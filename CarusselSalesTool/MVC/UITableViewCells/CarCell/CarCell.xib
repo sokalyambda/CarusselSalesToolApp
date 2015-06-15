@@ -30,6 +30,10 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_car-list" translatesAutoresizingMaskIntoConstraints="NO" id="diO-ha-zMV">
                         <rect key="frame" x="12" y="8" width="49" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="49" id="G3N-Iz-4xb"/>
+                            <constraint firstAttribute="height" constant="20" id="g3i-wM-1iu"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55q-Dy-zhc" userLabel="Year">
                         <rect key="frame" x="253" y="60" width="139" height="18"/>

@@ -166,6 +166,9 @@
                                         <color key="titleColor" red="0.17254901959999999" green="0.67843137249999996" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="searchCarsClick:" destination="-1" eventType="touchUpInside" id="SrB-2q-S6I"/>
+                                    </connections>
                                 </button>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pa3-NF-Zi2" userLabel="Extra Data Text View" customClass="CSTBorderedPlaceholderTextView">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -561,7 +564,7 @@
                     <include reference="tlc-sa-L75"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="134" y="354"/>
+            <point key="canvasLocation" x="134" y="410.5"/>
         </view>
     </objects>
     <resources>

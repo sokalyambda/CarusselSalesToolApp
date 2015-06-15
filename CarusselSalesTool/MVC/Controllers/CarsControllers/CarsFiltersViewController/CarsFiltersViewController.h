@@ -13,8 +13,19 @@ typedef enum : NSUInteger {
 
 #import <UIKit/UIKit.h>
 
+@class CarsFiltersViewController;
+@protocol CSTCarsFiltersDelegate;
+
 @interface CarsFiltersViewController : UIViewController
 
 @property (assign, nonatomic) CSTFiltersPanelState state;
+@property (weak, nonatomic) id<CSTCarsFiltersDelegate> delegate;
+
+@end
+
+@protocol CSTCarsFiltersDelegate <NSObject>
+
+@optional
+- (void)carsFiltersController:(CarsFiltersViewController *)controller didSelectFiltersForCarSearch:(NSDictionary *)filters;
 
 @end

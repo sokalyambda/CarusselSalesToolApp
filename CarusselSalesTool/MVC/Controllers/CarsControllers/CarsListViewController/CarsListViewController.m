@@ -7,6 +7,7 @@
 //
 
 #import "CarsListViewController.h"
+#import "CarsFiltersViewController.h"
 
 #import "CarCell.h"
 #import "UIView+MakeFromXib.h"
@@ -32,7 +33,7 @@
     [super viewDidLoad];
     
     self.dataManager = [CSTDataManager sharedInstance];
-    [self getCarsList];
+    [self getCarsListWithFilters:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -84,15 +85,18 @@
 
 #pragma mark - Actions 
 
-- (void)getCarsList
+- (void)getCarsListWithFilters:(NSDictionary *)filters
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *param = @{//StatusType  : @0,
+    NSMutableDictionary *param = [@{//StatusType  : @0,
 //                            BrandType   : @1,
 //                            ModelType   : @4,
 //                            LocationType: @(((CSTLocation *)self.dataManager.companyInfo.location[0]).ID),
 //                            ImageType   : @"false",
-                            };
+                            } mutableCopy];
+    if (filters) {
+        [param addEntriesFromDictionary:filters];
+    }
     WEAK_SELF;
     [self.dataManager getCarListForRow:0 pageSize:10 parameter:param result:^(NSArray *carList, NSError *error) {
         [MBProgressHUD hideAllHUDsForView:weakSelf.view animated:YES];
