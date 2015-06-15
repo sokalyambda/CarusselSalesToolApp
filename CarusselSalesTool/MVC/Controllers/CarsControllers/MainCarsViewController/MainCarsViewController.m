@@ -13,7 +13,7 @@
 
 static CGFloat kSlideTiming = 0.5f;
 
-@interface MainCarsViewController ()<CSTCarsFiltersDelegate>
+@interface MainCarsViewController ()<CSTCarsFiltersDelegate, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *carsListHolder;
 @property (weak, nonatomic) IBOutlet UIView *carDetailsHolder;
@@ -49,15 +49,10 @@ static CGFloat kSlideTiming = 0.5f;
 {
     [super viewDidLoad];
     [self setupChildControllers];
-    self.tabBarController.navigationItem.title = NSLocalizedString(@"Carussel Sales Tool", nil);
+    [self setupGestures];
 }
 
 #pragma mark - Actions
-
-- (void)carsFilteredSuccessfully:(NSNotification *)notification
-{
-    [self movePanelToOriginalPosition];
-}
 
 - (IBAction)showFiltersClick:(id)sender
 {
@@ -157,6 +152,35 @@ static CGFloat kSlideTiming = 0.5f;
     [self.carsListController setCarSelectedCompletion:^(CSTCar *car) {
         weakSelf.carDetailsController.currentCar = car;
     }];
+}
+
+#pragma mark - Gestures Actions
+
+- (void)setupGestures
+{
+    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(movePanel:)];
+    [panRecognizer setMinimumNumberOfTouches:1];
+    [panRecognizer setMaximumNumberOfTouches:1];
+    [panRecognizer setDelegate:self];
+    
+    [self.view addGestureRecognizer:panRecognizer];
+}
+
+-(void)movePanel:(UIPanGestureRecognizer *)gesture
+{
+    NSUInteger filtersPanelState = self.carsFiltersController.state;
+    
+    [gesture.view.layer removeAllAnimations];
+    
+    CGPoint velocity = [gesture velocityInView:gesture.view];
+    
+    if(gesture.state == UIGestureRecognizerStateBegan) {
+        if(velocity.x > 0 && filtersPanelState == CSTFiltersPanelStateClosed) {
+            [self showFilters];
+        } else {
+            [self movePanelToOriginalPosition];
+        }
+    }
 }
 
 #pragma mark - CSTCarsFiltersDelegate
