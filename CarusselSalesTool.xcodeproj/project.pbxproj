@@ -1474,6 +1474,7 @@
 				585A22881B2EC705004E5114 /* CSTCanceledListDataSource.m in Sources */,
 				58FC70CB1B1E4A6A005286E1 /* CSTBorderedTextField.m in Sources */,
 				84F2D6FE1B2197D400719617 /* CSTImageCar.m in Sources */,
+				586139891B2DC98E00603268 /* CarImageCell.m in Sources */,
 				84B707891B2EF678009209A5 /* CSTTranssmision.m in Sources */,
 				84EBD4B71B2078C7001F4CF5 /* CSTCar.m in Sources */,
 				5861397F1B2DC97300603268 /* CSTProspectCell.m in Sources */,
