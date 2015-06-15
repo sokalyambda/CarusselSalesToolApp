@@ -147,7 +147,8 @@ static CGFloat kSlideTiming = 0.5f;
     }
 }
 
-- (void)handleCarSelection {
+- (void)handleCarSelection
+{
     WEAK_SELF;
     [self.carsListController setCarSelectedCompletion:^(CSTCar *car) {
         weakSelf.carDetailsController.currentCar = car;
@@ -177,7 +178,7 @@ static CGFloat kSlideTiming = 0.5f;
     if(gesture.state == UIGestureRecognizerStateBegan) {
         if(velocity.x > 0 && filtersPanelState == CSTFiltersPanelStateClosed) {
             [self showFilters];
-        } else {
+        } else if (velocity.x < 0 && filtersPanelState == CSTFiltersPanelStateOpened) {
             [self movePanelToOriginalPosition];
         }
     }
@@ -189,6 +190,17 @@ static CGFloat kSlideTiming = 0.5f;
 {
     [self.carsListController getCarsListPage:0 withFilters:filters];
     [self movePanelToOriginalPosition];
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    // Disallow recognition of tap gestures in the UISwitch.
+    if ([touch.view isKindOfClass:[UISlider class]]) {
+        return NO;
+    }
+    return YES;
 }
 
 @end
