@@ -107,6 +107,7 @@
         [MBProgressHUD hideAllHUDsForView:weakSelf.view animated:YES];
         [weakSelf.refreshControl endRefreshing];
         weakSelf.cars = carList;
+        [weakSelf tableView:weakSelf.carListTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
         [weakSelf.carListTableView reloadData];
     }];
 }
