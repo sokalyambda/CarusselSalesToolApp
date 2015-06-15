@@ -9,7 +9,7 @@
 #import "CarsListViewController.h"
 #import "CarsFiltersViewController.h"
 
-#import "CarCell.h"
+#import "CSTCarCell.h"
 #import "UIView+MakeFromXib.h"
 
 #import "CSTDataManager.h"
@@ -45,22 +45,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CarCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CarCell class])];
+    CSTCarCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CSTCarCell class])];
     
     if (!cell) {
-        cell = [CarCell makeFromXib];
+        cell = [CSTCarCell makeFromXib];
     }
     
     CSTCar *currentCar = self.cars[indexPath.row];
     
-    cell.carPriceLabel.text = [NSString stringWithFormat:@"%i",currentCar.price];
-    cell.carTitleLabel.text = currentCar.title;
-    
-    NSURL *carImageURL = [NSURL URLWithString:currentCar.defaultImage.mediumUrl];
-    
-    if (![carImageURL isEqual:[NSNull null]]) {
-        [cell.carImage sd_setImageWithURL:carImageURL];
-    }
+    [cell configureCellWithCar:currentCar];
  
     return cell;
 }

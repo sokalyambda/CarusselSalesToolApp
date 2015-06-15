@@ -2130,7 +2130,7 @@
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YHv-me-HAp" id="MkR-bF-7QC">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date &amp; Time" textAlignment="center" minimumFontSize="17" background="tab_raw_2" translatesAutoresizingMaskIntoConstraints="NO" id="gjt-fx-ftI" customClass="CSTBorderedTextField">
+                                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date &amp; Time" textAlignment="center" minimumFontSize="17" background="tab_raw_2" translatesAutoresizingMaskIntoConstraints="NO" id="gjt-fx-ftI" customClass="CSTBorderedTextField">
                                                             <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                             <accessibility key="accessibilityConfiguration">
                                                                 <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
@@ -2153,7 +2153,7 @@
                                                                 </mask>
                                                             </variation>
                                                         </textField>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact Method" textAlignment="center" minimumFontSize="17" background="tab_raw_2" translatesAutoresizingMaskIntoConstraints="NO" id="1ks-o1-HDI" customClass="CSTBorderedTextField">
+                                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact Method" textAlignment="center" minimumFontSize="17" background="tab_raw_2" translatesAutoresizingMaskIntoConstraints="NO" id="1ks-o1-HDI" customClass="CSTBorderedTextField">
                                                             <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                             <accessibility key="accessibilityConfiguration">
                                                                 <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
@@ -2175,7 +2175,7 @@
                                                                 </mask>
                                                             </variation>
                                                         </textField>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sales Person" textAlignment="center" minimumFontSize="17" background="tab_row_1" translatesAutoresizingMaskIntoConstraints="NO" id="Tq5-ji-r6f" customClass="CSTBorderedTextField">
+                                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sales Person" textAlignment="center" minimumFontSize="17" background="tab_row_1" translatesAutoresizingMaskIntoConstraints="NO" id="Tq5-ji-r6f" customClass="CSTBorderedTextField">
                                                             <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                             <accessibility key="accessibilityConfiguration">
                                                                 <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>

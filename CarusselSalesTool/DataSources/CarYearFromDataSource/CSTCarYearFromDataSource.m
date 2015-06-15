@@ -18,12 +18,7 @@ static NSString *cellIdentifier = @"YearCell";
 
 @implementation CSTCarYearFromDataSource
 
-- (void)dealloc
-{
-    NSLog(@"object has been deallocated");
-}
-
-#pragma mark - Init
+#pragma mark - Lifecycle
 
 - (instancetype)init
 {

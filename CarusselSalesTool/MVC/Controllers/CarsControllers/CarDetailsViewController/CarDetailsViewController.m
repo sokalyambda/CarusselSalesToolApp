@@ -16,8 +16,18 @@
 #import "CarImageCell.h"
 #import "UIView+MakeFromXib.h"
 #import "CSTAttributedLabel.h"
+#import "DropDownTable.h"
+
+#import "CSTBaseDropDownDataSource.h"
 
 @interface CarDetailsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+@property (strong, nonatomic) DropDownTable *dropDownTable;
+
+@property (weak, nonatomic) IBOutlet UIImageView *prospectsNewListTappedView;
+@property (weak, nonatomic) IBOutlet UIImageView *prospectsFavouritesListTappedView;
+@property (weak, nonatomic) IBOutlet UIImageView *prospectsCanceledListTappedView;
+@property (weak, nonatomic) IBOutlet UIView *headerHolder;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *carDetailsScrollView;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
@@ -46,6 +56,8 @@
 {
     [super viewDidLoad];
     
+    [self initDropDownTableView];
+    
     WEAK_SELF;
     [[CSTDataManager sharedInstance] getCarWithID:24498 result:^(CSTCar *car, NSError *error) {
         weakSelf.currentCar = car;
@@ -71,6 +83,29 @@
 }
 
 #pragma mark - Actions
+
+- (IBAction)newClick:(UITapGestureRecognizer *)sender
+{
+    [self showDropDownForSenderView:sender.view];
+}
+
+- (IBAction)favouritesClick:(UITapGestureRecognizer *)sender
+{
+    [self showDropDownForSenderView:sender.view];
+}
+
+- (IBAction)canceledClick:(UITapGestureRecognizer *)sender
+{
+    [self showDropDownForSenderView:sender.view];
+}
+
+- (void)showDropDownForSenderView:(UIView *)senderView
+{
+     CSTBaseDropDownDataSource *dataSource = [self getCurrentDataSourceForDropDownTableFromTappedView:senderView];
+    [self.dropDownTable dropDownTableBecomeActiveInView:self.view fromAnchorView:self.headerHolder withDataSource:dataSource withCompletion:^(DropDownTable *dropDownTable, BOOL isExpanded, BOOL isApply) {
+        
+    }];
+}
 
 - (IBAction)fullPhotoClick:(id)sender
 {
@@ -111,6 +146,26 @@
 - (IBAction)galleryLeftClick:(id)sender
 {
     
+}
+
+- (void)initDropDownTableView
+{
+    self.dropDownTable = [DropDownTable makeFromXib];
+}
+
+- (CSTBaseDropDownDataSource *)getCurrentDataSourceForDropDownTableFromTappedView:(UIView *)tappedView
+{
+    CSTBaseDropDownDataSource *currentDataSource = nil;
+    
+    if ([tappedView isEqual:self.prospectsNewListTappedView]) {
+        currentDataSource = [[CSTBaseDropDownDataSource alloc] initWithDataSourceType:CSTDropDownDataSourceTypeNew];
+    } else if ([tappedView isEqual:self.prospectsFavouritesListTappedView]) {
+        currentDataSource = [[CSTBaseDropDownDataSource alloc] initWithDataSourceType:CSTDropDownDataSourceTypeFavourites];
+    } else if ([tappedView isEqual:self.prospectsCanceledListTappedView]) {
+        currentDataSource = [[CSTBaseDropDownDataSource alloc] initWithDataSourceType:CSTDropDownDataSourceTypeCanceled];
+    }
+    
+    return currentDataSource;
 }
 
 #pragma mark - UICollectionViewDataSource

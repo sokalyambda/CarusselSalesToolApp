@@ -11,7 +11,11 @@ typedef enum : NSUInteger {
     CSTDropDownDataSourceTypeFuelType,
     CSTDropDownDataSourceTypeBodyType,
     CSTDropDownDataSourceTypeCarColor,
-    CSTDropDownDataSourceTypeYearFrom
+    CSTDropDownDataSourceTypeYearFrom,
+    
+    CSTDropDownDataSourceTypeNew,
+    CSTDropDownDataSourceTypeFavourites,
+    CSTDropDownDataSourceTypeCanceled
 } CSTDropDownDataSourceType;
 
 #import <Foundation/Foundation.h>

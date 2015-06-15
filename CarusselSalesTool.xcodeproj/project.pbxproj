@@ -30,11 +30,14 @@
 		585A22741B2EAC69004E5114 /* CSTFuelTypeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 585A22731B2EAC69004E5114 /* CSTFuelTypeDataSource.m */; };
 		585A22771B2EAC76004E5114 /* CSTMakeCarDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 585A22761B2EAC76004E5114 /* CSTMakeCarDataSource.m */; };
 		585A227A1B2EAC84004E5114 /* CSTBaseDropDownDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 585A22791B2EAC84004E5114 /* CSTBaseDropDownDataSource.m */; };
+		585A22821B2EC6C8004E5114 /* CSTNewListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 585A22811B2EC6C8004E5114 /* CSTNewListDataSource.m */; };
+		585A22851B2EC6ED004E5114 /* CSTFavouritesListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 585A22841B2EC6ED004E5114 /* CSTFavouritesListDataSource.m */; };
+		585A22881B2EC705004E5114 /* CSTCanceledListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 585A22871B2EC705004E5114 /* CSTCanceledListDataSource.m */; };
 		5861396A1B2D83B800603268 /* TabBarSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 586139691B2D83B800603268 /* TabBarSettings.plist */; };
 		586139751B2DC95600603268 /* CSTTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586139731B2DC95600603268 /* CSTTaskCell.m */; };
 		586139761B2DC95600603268 /* CSTTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586139741B2DC95600603268 /* CSTTaskCell.xib */; };
-		5861397A1B2DC96400603268 /* CarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586139781B2DC96400603268 /* CarCell.m */; };
-		5861397B1B2DC96400603268 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586139791B2DC96400603268 /* CarCell.xib */; };
+		5861397A1B2DC96400603268 /* CSTCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586139781B2DC96400603268 /* CSTCarCell.m */; };
+		5861397B1B2DC96400603268 /* CSTCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586139791B2DC96400603268 /* CSTCarCell.xib */; };
 		5861397F1B2DC97300603268 /* CSTProspectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5861397D1B2DC97300603268 /* CSTProspectCell.m */; };
 		586139801B2DC97300603268 /* CSTProspectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5861397E1B2DC97300603268 /* CSTProspectCell.xib */; };
 		586139841B2DC98100603268 /* DropDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586139821B2DC98100603268 /* DropDownCell.m */; };
@@ -154,13 +157,19 @@
 		585A22761B2EAC76004E5114 /* CSTMakeCarDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTMakeCarDataSource.m; path = DataSources/MakeCarDataSource/CSTMakeCarDataSource.m; sourceTree = "<group>"; };
 		585A22781B2EAC84004E5114 /* CSTBaseDropDownDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBaseDropDownDataSource.h; path = DataSources/BaseDropDownDataSource/CSTBaseDropDownDataSource.h; sourceTree = "<group>"; };
 		585A22791B2EAC84004E5114 /* CSTBaseDropDownDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBaseDropDownDataSource.m; path = DataSources/BaseDropDownDataSource/CSTBaseDropDownDataSource.m; sourceTree = "<group>"; };
+		585A22801B2EC6C8004E5114 /* CSTNewListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTNewListDataSource.h; path = DataSources/Prospects/NewListDataSource/CSTNewListDataSource.h; sourceTree = "<group>"; };
+		585A22811B2EC6C8004E5114 /* CSTNewListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTNewListDataSource.m; path = DataSources/Prospects/NewListDataSource/CSTNewListDataSource.m; sourceTree = "<group>"; };
+		585A22831B2EC6ED004E5114 /* CSTFavouritesListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTFavouritesListDataSource.h; path = DataSources/Prospects/FavouritesListDataSource/CSTFavouritesListDataSource.h; sourceTree = "<group>"; };
+		585A22841B2EC6ED004E5114 /* CSTFavouritesListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTFavouritesListDataSource.m; path = DataSources/Prospects/FavouritesListDataSource/CSTFavouritesListDataSource.m; sourceTree = "<group>"; };
+		585A22861B2EC705004E5114 /* CSTCanceledListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTCanceledListDataSource.h; path = DataSources/Prospects/CanceledListDataSource/CSTCanceledListDataSource.h; sourceTree = "<group>"; };
+		585A22871B2EC705004E5114 /* CSTCanceledListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCanceledListDataSource.m; path = DataSources/Prospects/CanceledListDataSource/CSTCanceledListDataSource.m; sourceTree = "<group>"; };
 		586139691B2D83B800603268 /* TabBarSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TabBarSettings.plist; path = Resources/TabBarSettings/TabBarSettings.plist; sourceTree = "<group>"; };
 		586139721B2DC95600603268 /* CSTTaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTTaskCell.h; path = MVC/UITableViewCells/TaskCell/CSTTaskCell.h; sourceTree = "<group>"; };
 		586139731B2DC95600603268 /* CSTTaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTTaskCell.m; path = MVC/UITableViewCells/TaskCell/CSTTaskCell.m; sourceTree = "<group>"; };
 		586139741B2DC95600603268 /* CSTTaskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTTaskCell.xib; path = MVC/UITableViewCells/TaskCell/CSTTaskCell.xib; sourceTree = "<group>"; };
-		586139771B2DC96400603268 /* CarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarCell.h; path = MVC/UITableViewCells/CarCell/CarCell.h; sourceTree = "<group>"; };
-		586139781B2DC96400603268 /* CarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarCell.m; path = MVC/UITableViewCells/CarCell/CarCell.m; sourceTree = "<group>"; };
-		586139791B2DC96400603268 /* CarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarCell.xib; path = MVC/UITableViewCells/CarCell/CarCell.xib; sourceTree = "<group>"; };
+		586139771B2DC96400603268 /* CSTCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTCarCell.h; path = MVC/UITableViewCells/CarCell/CSTCarCell.h; sourceTree = "<group>"; };
+		586139781B2DC96400603268 /* CSTCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCarCell.m; path = MVC/UITableViewCells/CarCell/CSTCarCell.m; sourceTree = "<group>"; };
+		586139791B2DC96400603268 /* CSTCarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTCarCell.xib; path = MVC/UITableViewCells/CarCell/CSTCarCell.xib; sourceTree = "<group>"; };
 		5861397C1B2DC97300603268 /* CSTProspectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTProspectCell.h; path = MVC/UITableViewCells/ProspectCell/CSTProspectCell.h; sourceTree = "<group>"; };
 		5861397D1B2DC97300603268 /* CSTProspectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTProspectCell.m; path = MVC/UITableViewCells/ProspectCell/CSTProspectCell.m; sourceTree = "<group>"; };
 		5861397E1B2DC97300603268 /* CSTProspectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSTProspectCell.xib; path = MVC/UITableViewCells/ProspectCell/CSTProspectCell.xib; sourceTree = "<group>"; };
@@ -435,6 +444,56 @@
 			name = CommonTopController;
 			sourceTree = "<group>";
 		};
+		585A227B1B2EC666004E5114 /* NewListDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				585A22801B2EC6C8004E5114 /* CSTNewListDataSource.h */,
+				585A22811B2EC6C8004E5114 /* CSTNewListDataSource.m */,
+			);
+			name = NewListDataSource;
+			sourceTree = "<group>";
+		};
+		585A227C1B2EC675004E5114 /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				5892360C1B24401800E79D49 /* CarYearFromDataSource */,
+				589236081B243FF200E79D49 /* CarColorDataSource */,
+				589236041B243FD100E79D49 /* BodyTypeDataSource */,
+				589236001B243F9100E79D49 /* FuelTypeDataSource */,
+				589235FC1B243F5300E79D49 /* MakeCarDataSource */,
+				589235F81B243EC900E79D49 /* BaseDropDownDataSource */,
+			);
+			name = Cars;
+			sourceTree = "<group>";
+		};
+		585A227D1B2EC67A004E5114 /* Prospects */ = {
+			isa = PBXGroup;
+			children = (
+				585A227F1B2EC695004E5114 /* CanceledListDataSource */,
+				585A227E1B2EC68A004E5114 /* FavouritesListDataSource */,
+				585A227B1B2EC666004E5114 /* NewListDataSource */,
+			);
+			name = Prospects;
+			sourceTree = "<group>";
+		};
+		585A227E1B2EC68A004E5114 /* FavouritesListDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				585A22831B2EC6ED004E5114 /* CSTFavouritesListDataSource.h */,
+				585A22841B2EC6ED004E5114 /* CSTFavouritesListDataSource.m */,
+			);
+			name = FavouritesListDataSource;
+			sourceTree = "<group>";
+		};
+		585A227F1B2EC695004E5114 /* CanceledListDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				585A22861B2EC705004E5114 /* CSTCanceledListDataSource.h */,
+				585A22871B2EC705004E5114 /* CSTCanceledListDataSource.m */,
+			);
+			name = CanceledListDataSource;
+			sourceTree = "<group>";
+		};
 		586139661B2D834D00603268 /* TabBarPlist */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,9 +554,9 @@
 		586139701B2DC94000603268 /* CarCell */ = {
 			isa = PBXGroup;
 			children = (
-				586139771B2DC96400603268 /* CarCell.h */,
-				586139781B2DC96400603268 /* CarCell.m */,
-				586139791B2DC96400603268 /* CarCell.xib */,
+				586139771B2DC96400603268 /* CSTCarCell.h */,
+				586139781B2DC96400603268 /* CSTCarCell.m */,
+				586139791B2DC96400603268 /* CSTCarCell.xib */,
 			);
 			name = CarCell;
 			sourceTree = "<group>";
@@ -943,12 +1002,8 @@
 		589235F71B243EB900E79D49 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				5892360C1B24401800E79D49 /* CarYearFromDataSource */,
-				589236081B243FF200E79D49 /* CarColorDataSource */,
-				589236041B243FD100E79D49 /* BodyTypeDataSource */,
-				589236001B243F9100E79D49 /* FuelTypeDataSource */,
-				589235FC1B243F5300E79D49 /* MakeCarDataSource */,
-				589235F81B243EC900E79D49 /* BaseDropDownDataSource */,
+				585A227D1B2EC67A004E5114 /* Prospects */,
+				585A227C1B2EC675004E5114 /* Cars */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -1290,7 +1345,7 @@
 				586867601B27793400857FB0 /* Lato-Italic.ttf in Resources */,
 				584AB3DB1B29BCEA00052A50 /* CSTOfferDataController.xib in Resources */,
 				588EE7711B14788500CE2D91 /* CarDetailsViewController.xib in Resources */,
-				5861397B1B2DC96400603268 /* CarCell.xib in Resources */,
+				5861397B1B2DC96400603268 /* CSTCarCell.xib in Resources */,
 				5868675A1B27793400857FB0 /* Lato-Black.ttf in Resources */,
 				586139851B2DC98100603268 /* DropDownCell.xib in Resources */,
 				586867611B27793400857FB0 /* Lato-Light.ttf in Resources */,
@@ -1354,10 +1409,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585A22821B2EC6C8004E5114 /* CSTNewListDataSource.m in Sources */,
 				585A227A1B2EAC84004E5114 /* CSTBaseDropDownDataSource.m in Sources */,
 				584AB3D51B29B7E800052A50 /* CSTCarsByProspectController.m in Sources */,
 				588EE7741B14789F00CE2D91 /* CarsListViewController.m in Sources */,
+				585A22851B2EC6ED004E5114 /* CSTFavouritesListDataSource.m in Sources */,
 				588EE7061B146F6600CE2D91 /* AppDelegate.m in Sources */,
+				585A22881B2EC705004E5114 /* CSTCanceledListDataSource.m in Sources */,
 				58FC70CB1B1E4A6A005286E1 /* CSTBorderedTextField.m in Sources */,
 				84F2D6FE1B2197D400719617 /* CSTImageCar.m in Sources */,
 				586139891B2DC98E00603268 /* CarImageCell.m in Sources */,
@@ -1415,7 +1473,7 @@
 				589E208D1B1DDA74006A6C81 /* CSTNavigationSegue.m in Sources */,
 				583713A01B1EF19900C6C2C8 /* CSTBorderedPlaceholderTextView.m in Sources */,
 				588F295D1B18AD5A00F14AED /* UIView+Shaking.m in Sources */,
-				5861397A1B2DC96400603268 /* CarCell.m in Sources */,
+				5861397A1B2DC96400603268 /* CSTCarCell.m in Sources */,
 				84EF16161B26EF98008DEC29 /* UIImagePickerController+fixOrientation.m in Sources */,
 				58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */,
 				587E82351B2727550081F933 /* CSTUnderlinedButton.m in Sources */,
