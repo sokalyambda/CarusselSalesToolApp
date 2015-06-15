@@ -175,8 +175,8 @@ static CGFloat kSlideTiming = 0.5f;
     
     CGPoint velocity = [gesture velocityInView:gesture.view];
     
-    if(gesture.state == UIGestureRecognizerStateBegan) {
-        if(velocity.x > 0 && filtersPanelState == CSTFiltersPanelStateClosed) {
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        if (velocity.x > 0 && filtersPanelState == CSTFiltersPanelStateClosed) {
             [self showFilters];
         } else if (velocity.x < 0 && filtersPanelState == CSTFiltersPanelStateOpened) {
             [self movePanelToOriginalPosition];

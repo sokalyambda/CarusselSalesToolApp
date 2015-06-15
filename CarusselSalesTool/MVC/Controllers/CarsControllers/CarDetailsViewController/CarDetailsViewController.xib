@@ -28,9 +28,13 @@
                 <outlet property="carDescriptionLabel" destination="S0h-cJ-JVW" id="6Xk-lh-g6f"/>
                 <outlet property="carDetailsScrollView" destination="oML-bX-Vy4" id="3ia-GO-dtD"/>
                 <outlet property="carExtraLabel" destination="87L-Ns-JSI" id="eje-h1-Eks"/>
+                <outlet property="carFuelTypeLabel" destination="Dgs-fP-FJZ" id="dQu-Ph-uBC"/>
                 <outlet property="carImagesCollectionView" destination="7fb-De-7WW" id="wpI-TN-Y6j"/>
                 <outlet property="carOriginalImageView" destination="fpc-XV-nkr" id="vvF-VN-V3p"/>
-                <outlet property="containerView" destination="o3c-Sg-X8j" id="0Zp-cZ-tdl"/>
+                <outlet property="carPowerLabel" destination="iXU-ps-CZx" id="hBD-21-Zp6"/>
+                <outlet property="carTitleLabel" destination="fmX-4p-mdT" id="e2u-s3-biR"/>
+                <outlet property="carTransmissionLabel" destination="rat-Oq-58E" id="UfT-Fj-4kb"/>
+                <outlet property="carYearLabel" destination="Wrz-Md-yB5" id="0Eg-F8-mhd"/>
                 <outlet property="headerHolder" destination="pI3-lN-cIs" id="Twa-2a-ddu"/>
                 <outlet property="prospectsCanceledListTappedView" destination="4or-3x-ung" id="Yyu-ML-Xqv"/>
                 <outlet property="prospectsFavouritesListTappedView" destination="lHA-Mz-6SG" id="1C4-cs-Bom"/>
@@ -82,7 +86,7 @@
                                     <variation key="widthClass=regular">
                                         <mask key="constraints">
                                             <include reference="Fqr-Jq-aPv"/>
-                                            <include reference="nlw-qc-nFA"/>
+                                            <exclude reference="nlw-qc-nFA"/>
                                         </mask>
                                     </variation>
                                 </label>
@@ -874,9 +878,6 @@
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
                             <color key="textColor" red="0.18823529410000001" green="0.75686274509999996" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
-                            <variation key="widthClass=regular" misplaced="YES">
-                                <rect key="frame" x="8" y="9" width="84" height="23"/>
-                            </variation>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_divider" translatesAutoresizingMaskIntoConstraints="NO" id="d0D-Qv-rb8" userLabel="Gradient Divider">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>

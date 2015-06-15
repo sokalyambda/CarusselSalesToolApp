@@ -26,7 +26,7 @@
      initWithString:text];
     [attText addAttribute:NSForegroundColorAttributeName
                       value:color
-                      range:NSMakeRange(0, allCharactersCount - 1)];
+                      range:NSMakeRange(0, allCharactersCount)];
     [self setAttributedText:attText];
 }
 

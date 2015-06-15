@@ -30,13 +30,18 @@
 @property (weak, nonatomic) IBOutlet UIView *headerHolder;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *carDetailsScrollView;
-@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UICollectionView *carImagesCollectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *carOriginalImageView;
 
 //TODO: outlets
 @property (weak, nonatomic) IBOutlet CSTAttributedLabel *carDescriptionLabel;
 @property (weak, nonatomic) IBOutlet CSTAttributedLabel *carExtraLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *carYearLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carFuelTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carTransmissionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carPowerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carTitleLabel;
 
 @end
 
@@ -128,18 +133,31 @@
 
 - (void)updateCarInformation
 {
+    [self collectionView:self.carImagesCollectionView didSelectItemAtIndexPath:0];
+    
+    self.carTitleLabel.text         = self.currentCar.title;
+    self.carFuelTypeLabel.text      = self.currentCar.fuel.title;
+    //self.carYearLabel.text = self.currentCar.licenseDateYear;
+    self.carTransmissionLabel.text  = self.currentCar.transsmision.title;
+    self.carPowerLabel.text         = [NSString stringWithFormat:@"%likW/%lihp", (long)self.currentCar.powerKw, (long)self.currentCar.powerHp];
+    
+    
+    [self.carDescriptionLabel setText:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Description:", nil), self.currentCar.descriptions] withAttributedWordsCount:1 withColor:UIColorFromRGB(0x33CC66)];
+    
+    [self.carExtraLabel setText:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Extra:", nil), self.currentCar.extra] withAttributedWordsCount:1 withColor:UIColorFromRGB(0x33CC66)];
+    
     [self.carImagesCollectionView reloadData];
     //TODO: update views
 }
 
 - (IBAction)galleryRightClick:(id)sender
 {
-    
+
 }
 
 - (IBAction)galleryLeftClick:(id)sender
 {
-    
+
 }
 
 - (void)initDropDownTableView
@@ -160,6 +178,13 @@
     }
     
     return currentDataSource;
+}
+
+- (void)registerCell
+{
+    NSString *nibName = NSStringFromClass([CarImageCell class]);
+    UINib *cellNib = [UINib nibWithNibName:nibName bundle:nil];
+    [self.carImagesCollectionView registerNib:cellNib forCellWithReuseIdentifier:nibName];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -189,6 +214,22 @@
     NSURL *currentImageURL = [NSURL URLWithString:currentImage.origUrl];
     [self.carOriginalImageView sd_setImageWithURL:currentImageURL];
 }
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGSize size = CGSizeZero;
+    NSInteger height = collectionView.bounds.size.height - ((UICollectionViewFlowLayout *)collectionViewLayout).minimumInteritemSpacing;
+    NSInteger width = collectionView.bounds.size.width;
+    if (collectionView == self.carImagesCollectionView) {
+        width = height;
+    }
+    size = CGSizeMake(width, height);
+    return size;
+}
+
+#pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
