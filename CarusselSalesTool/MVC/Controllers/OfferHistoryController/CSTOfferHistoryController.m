@@ -48,9 +48,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CSTBaseOffersController *controller = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CSTBaseOffersController class])];
+    CSTBaseOffersController *controller = (CSTBaseOffersController *)self.parentViewController;
     [controller setSelectedIndex:1];
-
 }
 
 @end

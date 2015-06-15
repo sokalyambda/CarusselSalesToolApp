@@ -69,9 +69,8 @@ static CGFloat const kSlidingTime = .5f;
     self.presentedView = presentedView;
     self.completion = completion;
     
-    
-    //If any action hasn't been called yet, but anchor view has been changed
-    if (![anchorView isEqual:self.anchorView]) {
+    //If any action hasn't been called yet, but data source has been changed
+    if (![dataSource isKindOfClass:[self.dropDownDataSource class]]) {
         self.anchorView = anchorView;
         self.isExpanded = NO;
     }

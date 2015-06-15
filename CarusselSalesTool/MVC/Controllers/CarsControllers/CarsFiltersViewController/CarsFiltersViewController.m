@@ -60,6 +60,14 @@
 
 #pragma mark - Actions
 
+- (IBAction)searchCarsClick:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(carsFiltersController:didSelectFiltersForCarSearch:)]) {
+        self.chosenFiltersDictionary = [@{} mutableCopy];
+        [self.delegate carsFiltersController:self didSelectFiltersForCarSearch:self.chosenFiltersDictionary];
+    }
+}
+
 - (IBAction)priceSliderAction:(CSTCustomSlider *)slider
 {
 

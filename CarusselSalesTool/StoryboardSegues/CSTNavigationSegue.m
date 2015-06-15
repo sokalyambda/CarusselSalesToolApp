@@ -39,6 +39,7 @@
     [tabBarController.placeholderView layoutIfNeeded];
     
     // notify did move
+    [tabBarController addChildViewController:destinationController];
     [destinationController didMoveToParentViewController:tabBarController];
 }
 

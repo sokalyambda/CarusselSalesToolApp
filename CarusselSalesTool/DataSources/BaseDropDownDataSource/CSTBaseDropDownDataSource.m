@@ -14,6 +14,10 @@
 #import "CSTCarColorDataSource.h"
 #import "CSTCarYearFromDataSource.h"
 
+#import "CSTNewListDataSource.h"
+#import "CSTCanceledListDataSource.h"
+#import "CSTFavouritesListDataSource.h"
+
 static NSString *cellIdentifier = @"";
 
 @implementation CSTBaseDropDownDataSource
@@ -37,6 +41,15 @@ static NSString *cellIdentifier = @"";
             break;
         case CSTDropDownDataSourceTypeYearFrom:
             currentDataSource = [[CSTCarYearFromDataSource alloc] init];
+            break;
+        case CSTDropDownDataSourceTypeNew:
+            currentDataSource = [[CSTNewListDataSource alloc] init];
+            break;
+        case CSTDropDownDataSourceTypeFavourites:
+            currentDataSource = [[CSTFavouritesListDataSource alloc] init];
+            break;
+        case CSTDropDownDataSourceTypeCanceled:
+            currentDataSource = [[CSTCanceledListDataSource alloc] init];
             break;
             
         default:

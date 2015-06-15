@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @class CSTCar;
 
 typedef void(^CarSelectedCompletion)(CSTCar *car);
@@ -15,5 +13,7 @@ typedef void(^CarSelectedCompletion)(CSTCar *car);
 @interface CarsListViewController : UIViewController
 
 @property (copy, nonatomic) CarSelectedCompletion carSelectedCompletion;
+
+- (void)getCarsListPage:(NSUInteger)page withFilters:(NSDictionary *)filters;
 
 @end

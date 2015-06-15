@@ -1,5 +1,5 @@
 //
-//  HomeViewController.h
+//  CarCell.h
 //  CarusselSalesTool
 //
 //  Created by Eugenity on 26.05.15.
@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@class CSTCar;
+
+@interface CSTCarCell : UITableViewCell
+
+- (void)configureCellWithCar:(CSTCar *)car;
 
 @end

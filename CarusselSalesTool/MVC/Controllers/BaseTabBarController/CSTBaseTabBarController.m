@@ -16,25 +16,54 @@ typedef enum : NSUInteger {
 
 #import "CSTBaseTabBarController.h"
 #import "CSTCommonTopController.h"
+
 #import "CSTDemoSwitch.h"
 
 static CGFloat const kTopViewHeight = 48.f;
 static CGFloat const kStatusBarHeight = 20.f;
 
+static NSString *const kTabBarSettingsFileName = @"TabBarSettings";
+
+static NSString *const kFirstImageName          = @"firstImageName";
+static NSString *const kSecondImageName         = @"secondImageName";
+static NSString *const kThirdImageName          = @"thirdImageName";
+static NSString *const kFourthImageName         = @"fourthImageName";
+static NSString *const kFifthImageName          = @"fifthImageName";
+static NSString *const kFirstSelectedImageName  = @"firstSelectedImageName";
+static NSString *const kSecondSelectedImageName = @"secondSelectedImageName";
+static NSString *const kThirdSelectedImageName  = @"thirdSelectedImageName";
+static NSString *const kFourthSelectedImageName = @"fourthSelectedImageName";
+static NSString *const kFifthSelectedImageName  = @"fifthSelectedImageName";
+static NSString *const kSelectionIndicatorName  = @"selectionIndicatorImageName";
+
+
 @interface CSTBaseTabBarController () <UITabBarControllerDelegate, CSTDemoSwitchDelegate>
 
 @property (strong, nonatomic) CSTCommonTopController *topController;
 
+@property (strong, nonatomic) NSDictionary *tabBarSettings;
+
 @end
 
 @implementation CSTBaseTabBarController
+
+#pragma mark - Accessors
+
+- (NSDictionary *)tabBarSettings
+{
+    if (!_tabBarSettings) {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:kTabBarSettingsFileName ofType:@"plist"];
+        NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:filePath];
+        _tabBarSettings = dict;
+    }
+    return _tabBarSettings;
+}
 
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self initTabBar];
 }
 
@@ -49,52 +78,12 @@ static CGFloat const kStatusBarHeight = 20.f;
 
 - (void)initTabBar
 {
-    UIImage *selectedItemBackground = [UIImage imageNamed:@"btn_tab_bar_on"];
+    UIImage *selectedItemBackground = [UIImage imageNamed:self.tabBarSettings[kSelectionIndicatorName]];
+    
     [self.tabBar setSelectionIndicatorImage:selectedItemBackground];
     self.delegate = self;
-    
-    //load images for icons
-    UIImage *firstImage             = [UIImage imageNamed:@"icn_cars"];
-    UIImage *secondImage            = [UIImage imageNamed:@"icn_prospects"];
-    UIImage *thirdImage             = [UIImage imageNamed:@"add_prospects"];
-    UIImage *fourthImage            = [UIImage imageNamed:@"icn_tasks"];
-    UIImage *firstSelectedImage     = [UIImage imageNamed:@"icn_cars_active"];
-    UIImage *secondSelectedImage    = [UIImage imageNamed:@"icn_prospects_active"];
-    UIImage *thirdSelectedImage     = [UIImage imageNamed:@"add_prospects_active"];
-    UIImage *fourthSelectedImage    = [UIImage imageNamed:@"icn_tasks_active"];
-    UIImage *fifthImage             = [UIImage imageNamed:@"logout"];
-    UIImage *fifthSelectedImage     = [UIImage imageNamed:@"logout_active"];
-    
-    //get the tab bar elements
-    UITabBarItem *firstItem     = self.tabBar.items[0];
-    UITabBarItem *secondItem    = self.tabBar.items[1];
-    UITabBarItem *thirdItem     = self.tabBar.items[2];
-    UITabBarItem *fourthItem    = self.tabBar.items[3];
-    UITabBarItem *fifthItem     = self.tabBar.items[4];
-    
-    for (UITabBarItem *item in self.tabBar.items) {
-        [item setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColorFromRGB(0xCCCFD1)} forState:UIControlStateNormal];
-        [item setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: UIColorFromRGB(0x336666), NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
-    }
-    
-    //set up icons for all tabs and rendering mode for they
-    firstImage = [firstImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    secondImage = [secondImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    thirdImage = [thirdImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    fourthImage = [fourthImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    fifthImage = [fifthImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    firstSelectedImage = [firstSelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    secondSelectedImage = [secondSelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    thirdSelectedImage = [thirdSelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    fourthSelectedImage = [fourthSelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    fifthSelectedImage = [fifthSelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    firstItem = [firstItem initWithTitle:NSLocalizedString(@"Cars", nil) image:firstImage selectedImage:firstSelectedImage];
-    secondItem = [secondItem initWithTitle:NSLocalizedString(@"Prospects", nil) image:secondImage selectedImage:secondSelectedImage];
-    thirdItem = [thirdItem initWithTitle:NSLocalizedString(@"Add Prospect", nil) image:thirdImage selectedImage:thirdSelectedImage];
-    fourthItem = [fourthItem initWithTitle:NSLocalizedString(@"Tasks", nil) image:fourthImage selectedImage:fourthSelectedImage];
-    fifthItem = [fifthItem initWithTitle:NSLocalizedString(@"Logout", nil) image:fifthImage selectedImage:fifthSelectedImage];
+
+    [self reInitTabBaItems];
 }
 
 - (void)addTopController
@@ -106,6 +95,39 @@ static CGFloat const kStatusBarHeight = 20.f;
     [self.topController didMoveToParentViewController:self];
     
     self.topController.demoSwitch.delegate = self;
+}
+
+- (void)reInitTabBaItems
+{
+    //load images for icons
+    UIImage *firstImage             = [[UIImage imageNamed:self.tabBarSettings[kFirstImageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *secondImage            = [[UIImage imageNamed:self.tabBarSettings[kSecondImageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *thirdImage             = [[UIImage imageNamed:self.tabBarSettings[kThirdImageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *fourthImage            = [[UIImage imageNamed:self.tabBarSettings[kFourthImageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *fifthImage             = [[UIImage imageNamed:self.tabBarSettings[kFifthImageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *firstSelectedImage     = [[UIImage imageNamed:self.tabBarSettings[kFirstSelectedImageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *secondSelectedImage    = [[UIImage imageNamed:self.tabBarSettings[kSecondSelectedImageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *thirdSelectedImage     = [[UIImage imageNamed:self.tabBarSettings[kThirdSelectedImageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *fourthSelectedImage    = [[UIImage imageNamed:self.tabBarSettings[kFourthSelectedImageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *fifthSelectedImage     = [[UIImage imageNamed:self.tabBarSettings[kFifthSelectedImageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        
+    for (UITabBarItem *item in self.tabBar.items) {
+        [item setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColorFromRGB(0xCCCFD1)} forState:UIControlStateNormal];
+        [item setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: UIColorFromRGB(0x336666), NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+    }
+
+    //get the tab bar elements
+    UITabBarItem *firstItem     = self.tabBar.items[0];
+    UITabBarItem *secondItem    = self.tabBar.items[1];
+    UITabBarItem *thirdItem     = self.tabBar.items[2];
+    UITabBarItem *fourthItem    = self.tabBar.items[3];
+    UITabBarItem *fifthItem     = self.tabBar.items[4];
+    
+    firstItem = [firstItem initWithTitle:NSLocalizedString(@"Cars", nil) image:firstImage selectedImage:firstSelectedImage];
+    secondItem = [secondItem initWithTitle:NSLocalizedString(@"Prospects", nil) image:secondImage selectedImage:secondSelectedImage];
+    thirdItem = [thirdItem initWithTitle:NSLocalizedString(@"Add Prospect", nil) image:thirdImage selectedImage:thirdSelectedImage];
+    fourthItem = [fourthItem initWithTitle:NSLocalizedString(@"Tasks", nil) image:fourthImage selectedImage:fourthSelectedImage];
+    fifthItem = [fifthItem initWithTitle:NSLocalizedString(@"Logout", nil) image:fifthImage selectedImage:fifthSelectedImage];
 }
 
 #pragma mark - UITabBarControllerDelegaet
