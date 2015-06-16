@@ -9,22 +9,23 @@
 #import "CSTProspectCell.h"
 
 @interface CSTProspectCell ()
-    @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-    @property (weak, nonatomic) IBOutlet UITextField *townTextField;
-    @property (weak, nonatomic) IBOutlet UITextField *yearTextField;
-    @property (weak, nonatomic) IBOutlet UITextField *carsMatchesTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *townTextField;
+@property (weak, nonatomic) IBOutlet UITextField *yearTextField;
+@property (weak, nonatomic) IBOutlet UITextField *carsMatchesTextField;
+
 @end
 
 @implementation CSTProspectCell
 
-- (void)awakeFromNib {
-    // Initialization code
+#pragma mark - Actions
+
+- (void)configureCellWithProspect:(CSTProspect *)prospect
+{
+    self.nameTextField.text = prospect.fullName;
+    self.townTextField.text = prospect.town;
+    self.yearTextField.text = [NSString stringWithFormat:@"%@", prospect.born];
+    self.carsMatchesTextField.text = [NSString stringWithFormat:@"%i", prospect.carMatches];
 }
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 @end

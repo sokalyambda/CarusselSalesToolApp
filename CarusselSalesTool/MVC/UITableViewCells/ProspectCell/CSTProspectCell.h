@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface CSTProspectCell : UITableViewCell
 
+- (void)configureCellWithProspect:(CSTProspect *)prospect;
 
 @end

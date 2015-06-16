@@ -32,8 +32,12 @@
 
 - (void)commonInit
 {
-    self.layer.backgroundColor = UIColorFromRGB(0x33CC66).CGColor;
+    CALayer *backgroundLayer = [CALayer layer];
+    [backgroundLayer setFrame:self.bounds];
+    backgroundLayer.backgroundColor = UIColorFromRGB(0x33CC66).CGColor;
     self.layer.cornerRadius = CGRectGetHeight(self.bounds) / 2;
+    backgroundLayer.cornerRadius = CGRectGetHeight(self.bounds) / 2;
+    [self.layer addSublayer:backgroundLayer];
 }
 
 @end

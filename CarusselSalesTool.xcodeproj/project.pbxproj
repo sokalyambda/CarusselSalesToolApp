@@ -44,6 +44,8 @@
 		586139851B2DC98100603268 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586139831B2DC98100603268 /* DropDownCell.xib */; };
 		586139891B2DC98E00603268 /* CarImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586139871B2DC98E00603268 /* CarImageCell.m */; };
 		5861398A1B2DC98E00603268 /* CarImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586139881B2DC98E00603268 /* CarImageCell.xib */; };
+		5867EEDD1B2FF78500C46DB3 /* MNMBottomPullToRefreshManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5867EED71B2FF78500C46DB3 /* MNMBottomPullToRefreshManager.m */; };
+		5867EEDE1B2FF78500C46DB3 /* MNMBottomPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5867EED91B2FF78500C46DB3 /* MNMBottomPullToRefreshView.m */; };
 		5868675A1B27793400857FB0 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 586867501B27793400857FB0 /* Lato-Black.ttf */; };
 		5868675B1B27793400857FB0 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 586867511B27793400857FB0 /* Lato-BlackItalic.ttf */; };
 		5868675C1B27793400857FB0 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 586867521B27793400857FB0 /* Lato-Bold.ttf */; };
@@ -185,6 +187,10 @@
 		586139861B2DC98E00603268 /* CarImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarImageCell.h; path = MVC/UICollectionViewCells/CarImageCell/CarImageCell.h; sourceTree = "<group>"; };
 		586139871B2DC98E00603268 /* CarImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarImageCell.m; path = MVC/UICollectionViewCells/CarImageCell/CarImageCell.m; sourceTree = "<group>"; };
 		586139881B2DC98E00603268 /* CarImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarImageCell.xib; path = MVC/UICollectionViewCells/CarImageCell/CarImageCell.xib; sourceTree = "<group>"; };
+		5867EED61B2FF78500C46DB3 /* MNMBottomPullToRefreshManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNMBottomPullToRefreshManager.h; path = Libraries/MNMBottomPullToRefresh/MNMBottomPullToRefreshManager.h; sourceTree = "<group>"; };
+		5867EED71B2FF78500C46DB3 /* MNMBottomPullToRefreshManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNMBottomPullToRefreshManager.m; path = Libraries/MNMBottomPullToRefresh/MNMBottomPullToRefreshManager.m; sourceTree = "<group>"; };
+		5867EED81B2FF78500C46DB3 /* MNMBottomPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNMBottomPullToRefreshView.h; path = Libraries/MNMBottomPullToRefresh/MNMBottomPullToRefreshView.h; sourceTree = "<group>"; };
+		5867EED91B2FF78500C46DB3 /* MNMBottomPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNMBottomPullToRefreshView.m; path = Libraries/MNMBottomPullToRefresh/MNMBottomPullToRefreshView.m; sourceTree = "<group>"; };
 		586867501B27793400857FB0 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Black.ttf"; path = "Resources/LatoFont/Lato-Black.ttf"; sourceTree = "<group>"; };
 		586867511B27793400857FB0 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BlackItalic.ttf"; path = "Resources/LatoFont/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		586867521B27793400857FB0 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "Resources/LatoFont/Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -590,6 +596,25 @@
 			name = TaskCell;
 			sourceTree = "<group>";
 		};
+		5867EEC51B2FF71500C46DB3 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5867EEC61B2FF72600C46DB3 /* MNMBottomPullToRefresh */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		5867EEC61B2FF72600C46DB3 /* MNMBottomPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				5867EED61B2FF78500C46DB3 /* MNMBottomPullToRefreshManager.h */,
+				5867EED71B2FF78500C46DB3 /* MNMBottomPullToRefreshManager.m */,
+				5867EED81B2FF78500C46DB3 /* MNMBottomPullToRefreshView.h */,
+				5867EED91B2FF78500C46DB3 /* MNMBottomPullToRefreshView.m */,
+			);
+			name = MNMBottomPullToRefresh;
+			sourceTree = "<group>";
+		};
 		5868674E1B2778DA00857FB0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -935,6 +960,7 @@
 		588F294D1B18AC1A00F14AED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5867EEC51B2FF71500C46DB3 /* Libraries */,
 				84DACB621B2F31920060365A /* Protocols */,
 				841DFB771B1EFAD70012BFE3 /* APIs */,
 				589E208A1B1DDA38006A6C81 /* StoryboardSegues */,
@@ -1554,8 +1580,10 @@
 				584C015B1B282B8D0047DB7A /* CSTBadgeLabel.m in Sources */,
 				588EE77F1B147D2600CE2D91 /* ProspectDetailsViewController.m in Sources */,
 				84EBD4BA1B2078C7001F4CF5 /* CSTLocation.m in Sources */,
+				5867EEDD1B2FF78500C46DB3 /* MNMBottomPullToRefreshManager.m in Sources */,
 				587E82311B271AAE0081F933 /* CSTCommonSearchBar.m in Sources */,
 				588EE7791B1478CA00CE2D91 /* MainCarsViewController.m in Sources */,
+				5867EEDE1B2FF78500C46DB3 /* MNMBottomPullToRefreshView.m in Sources */,
 				5877CE771B21787D0097DF86 /* CSTTasksListController.m in Sources */,
 				84EBD4C91B20BC64001F4CF5 /* CSTRoundBorderedView.m in Sources */,
 				583713A41B1F0FDE00C6C2C8 /* CSTCustomSlider.m in Sources */,
