@@ -196,7 +196,6 @@
     NSURL *currentImageURL = [NSURL URLWithString:currentImage.thumbnailUrl];
     
     CarImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CarImageCell class]) forIndexPath:indexPath];
-    
     [cell.carImage sd_setImageWithURL:currentImageURL];
     
     return cell;

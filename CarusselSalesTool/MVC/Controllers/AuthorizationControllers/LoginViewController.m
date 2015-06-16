@@ -12,6 +12,7 @@
 
 #import "CSTValidator.h"
 #import "CSTDataManager.h"
+#import "KeychainItemWrapper.h"
 
 static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
 
@@ -69,7 +70,13 @@ static NSString *const kMainTabBarSegue = @"mainTabBarSegue";
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[CSTDataManager sharedInstance] signInWithUserName:self.userNameField.text password:self.passwordField.text withResult:^(BOOL success, NSError *error) {
         [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
-        success ? [weakSelf performSegueWithIdentifier:kMainTabBarSegue sender:weakSelf] : ShowErrorAlert(error);
+        if (success) {
+            KeychainItemWrapper *wrapper = [[KeychainItemWrapper alloc] initWithIdentifier:@"Password" accessGroup:nil];
+            [wrapper setObject:self.passwordField.text forKey:(__bridge id)(kSecValueData)];
+            [weakSelf performSegueWithIdentifier:kMainTabBarSegue sender:weakSelf];
+        } else {
+            ShowErrorAlert(error);
+        }
     }];
 }
 

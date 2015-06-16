@@ -98,6 +98,7 @@
 		841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7C1B1EFAD70012BFE3 /* CSTDataManager.m */; };
 		841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */; };
 		84673ABC1B281BBB009D890E /* CSTTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 84673ABB1B281BBB009D890E /* CSTTask.m */; };
+		847308211B301AC4006C16AD /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 847308201B301AC4006C16AD /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		848494ED1B29CBD200FB67DE /* FullscreenPreviewCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848494EB1B29CBD200FB67DE /* FullscreenPreviewCarViewController.m */; };
 		848494EE1B29CBD200FB67DE /* FullscreenPreviewCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848494EC1B29CBD200FB67DE /* FullscreenPreviewCarViewController.xib */; };
 		84B707851B2EE6AD009209A5 /* CSTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B707841B2EE6AD009209A5 /* CSTColor.m */; };
@@ -273,6 +274,8 @@
 		841DFB7F1B1EFAD70012BFE3 /* CSTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTNetworkManager.m; sourceTree = "<group>"; };
 		84673ABA1B281BBB009D890E /* CSTTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTTask.h; sourceTree = "<group>"; };
 		84673ABB1B281BBB009D890E /* CSTTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTTask.m; sourceTree = "<group>"; };
+		8473081F1B301AC4006C16AD /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		847308201B301AC4006C16AD /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		848494EA1B29CBD200FB67DE /* FullscreenPreviewCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullscreenPreviewCarViewController.h; sourceTree = "<group>"; };
 		848494EB1B29CBD200FB67DE /* FullscreenPreviewCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullscreenPreviewCarViewController.m; sourceTree = "<group>"; };
 		848494EC1B29CBD200FB67DE /* FullscreenPreviewCarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullscreenPreviewCarViewController.xib; sourceTree = "<group>"; };
@@ -785,6 +788,7 @@
 		588EE72B1B1473D600CE2D91 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8473081E1B301AC4006C16AD /* KeyChain */,
 				588F29621B18AD8800F14AED /* Constants */,
 				588F29611B18AD7D00F14AED /* AlertMessageServices */,
 				588EE7901B14841B00CE2D91 /* Validator */,
@@ -1160,6 +1164,16 @@
 			path = MVC/Models/Task;
 			sourceTree = "<group>";
 		};
+		8473081E1B301AC4006C16AD /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				8473081F1B301AC4006C16AD /* KeychainItemWrapper.h */,
+				847308201B301AC4006C16AD /* KeychainItemWrapper.m */,
+			);
+			name = KeyChain;
+			path = Utilities/KeyChain;
+			sourceTree = "<group>";
+		};
 		848494E91B29CA3E00FB67DE /* FullscreenPreviewCarViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1399,6 +1413,7 @@
 				TargetAttributes = {
 					588EE6FC1B146F6600CE2D91 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = WS3PE3NE4X;
 					};
 				};
 			};
@@ -1521,6 +1536,7 @@
 				841DFB801B1EFAD70012BFE3 /* CSTCache.m in Sources */,
 				588EE7B31B14B27B00CE2D91 /* CSTProspect.m in Sources */,
 				588F29601B18AD6E00F14AED /* UIView+MakeFromXib.m in Sources */,
+				847308211B301AC4006C16AD /* KeychainItemWrapper.m in Sources */,
 				588F29651B18ADD300F14AED /* Constants.m in Sources */,
 				584AB3D21B29B7CB00052A50 /* CSTOfferHistoryController.m in Sources */,
 				585A22741B2EAC69004E5114 /* CSTFuelTypeDataSource.m in Sources */,

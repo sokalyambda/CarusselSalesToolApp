@@ -108,7 +108,10 @@ typedef NS_ENUM(NSInteger, SelectedItem) {
     NSURL *originImagelUrl = [NSURL URLWithString:image.origUrl];
     
     CarImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CarImageCell class]) forIndexPath:indexPath];
-    [cell.carImage sd_setImageWithURL:(collectionView == self.carThumbnailsCollectionView ? thumbnailUrl : originImagelUrl)];
+    [cell.loaderCellActivityIndicator startAnimating];
+    [cell.carImage sd_setImageWithURL:(collectionView == self.carThumbnailsCollectionView ? thumbnailUrl : originImagelUrl) completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [cell.loaderCellActivityIndicator stopAnimating];
+    }];
     return cell;
 }
 

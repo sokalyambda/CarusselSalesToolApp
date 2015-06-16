@@ -11,5 +11,6 @@
 @interface CarImageCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *carImage;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loaderCellActivityIndicator;
 
 @end
