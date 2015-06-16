@@ -13,6 +13,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *carImage;
 @property (weak, nonatomic) IBOutlet UILabel *carPriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *carTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carYearLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carPowerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carFuelLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carTransmissionLabel;
 
 @end
 
@@ -27,11 +31,13 @@
 
 - (void)configureCellWithCar:(CSTCar *)car
 {
-    self.carPriceLabel.text = [NSString stringWithFormat:@"%li", (long)car.price];
-    self.carTitleLabel.text = car.title;
+    self.carPriceLabel.text         = [NSString stringWithFormat:@"%li", (long)car.price];
+    self.carTitleLabel.text         = car.title;
+    self.carPowerLabel.text         = [NSString stringWithFormat:@"%likW/%lihp", (long)car.powerKw, (long)car.powerHp];
+    self.carFuelLabel.text          = car.fuel.title;
+    self.carTransmissionLabel.text  = car.transsmision.title;
     
     NSURL *carImageURL = [NSURL URLWithString:car.defaultImage.mediumUrl];
-    
     if (![carImageURL isEqual:[NSNull null]]) {
         [self.carImage sd_setImageWithURL:carImageURL];
     }

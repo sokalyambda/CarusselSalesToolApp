@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Thinkmobiles. All rights reserved.
 //
 
-@interface CSTImageCar : NSObject
+#import "CSTMappingProtocol.h"
+
+@interface CSTImageCar : NSObject <CSTMappingProtocol>
 
 @property (assign) NSInteger ID;
 @property (copy) NSString *thumbnailUrl;
 @property (copy) NSString *mediumUrl;
 @property (copy) NSString *origUrl;
 @property (assign) NSInteger orderIndex;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

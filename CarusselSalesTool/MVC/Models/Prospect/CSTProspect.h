@@ -6,7 +6,9 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-@interface CSTProspect : NSObject
+#import "CSTMappingProtocol.h"
+
+@interface CSTProspect : NSObject <CSTMappingProtocol>
 
 @property (assign, readonly) NSInteger ID;
 @property (assign) NSString *firstName;
@@ -15,7 +17,5 @@
 @property (strong) NSString *town;
 @property (strong) NSDate *born;
 @property (assign) NSInteger carMatches;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

@@ -100,6 +100,11 @@
 		84673ABC1B281BBB009D890E /* CSTTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 84673ABB1B281BBB009D890E /* CSTTask.m */; };
 		848494ED1B29CBD200FB67DE /* FullscreenPreviewCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848494EB1B29CBD200FB67DE /* FullscreenPreviewCarViewController.m */; };
 		848494EE1B29CBD200FB67DE /* FullscreenPreviewCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848494EC1B29CBD200FB67DE /* FullscreenPreviewCarViewController.xib */; };
+		84B707851B2EE6AD009209A5 /* CSTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B707841B2EE6AD009209A5 /* CSTColor.m */; };
+		84B707891B2EF678009209A5 /* CSTTranssmision.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B707881B2EF678009209A5 /* CSTTranssmision.m */; };
+		84B7078E1B2EF862009209A5 /* CSTBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B7078D1B2EF862009209A5 /* CSTBody.m */; };
+		84B707911B2EF879009209A5 /* CSTFuel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B707901B2EF879009209A5 /* CSTFuel.m */; };
+		84DACB611B2F31040060365A /* CSTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DACB601B2F31040060365A /* CSTBaseModel.m */; };
 		84EBD4B71B2078C7001F4CF5 /* CSTCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4A41B2078C7001F4CF5 /* CSTCar.m */; };
 		84EBD4BA1B2078C7001F4CF5 /* CSTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4AD1B2078C7001F4CF5 /* CSTLocation.m */; };
 		84EBD4BC1B2078C7001F4CF5 /* CSTMakeCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBD4B31B2078C7001F4CF5 /* CSTMakeCar.m */; };
@@ -271,6 +276,17 @@
 		848494EA1B29CBD200FB67DE /* FullscreenPreviewCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullscreenPreviewCarViewController.h; sourceTree = "<group>"; };
 		848494EB1B29CBD200FB67DE /* FullscreenPreviewCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullscreenPreviewCarViewController.m; sourceTree = "<group>"; };
 		848494EC1B29CBD200FB67DE /* FullscreenPreviewCarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullscreenPreviewCarViewController.xib; sourceTree = "<group>"; };
+		84B707831B2EE6AD009209A5 /* CSTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTColor.h; sourceTree = "<group>"; };
+		84B707841B2EE6AD009209A5 /* CSTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTColor.m; sourceTree = "<group>"; };
+		84B707871B2EF678009209A5 /* CSTTranssmision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTTranssmision.h; sourceTree = "<group>"; };
+		84B707881B2EF678009209A5 /* CSTTranssmision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTTranssmision.m; sourceTree = "<group>"; };
+		84B7078C1B2EF862009209A5 /* CSTBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTBody.h; sourceTree = "<group>"; };
+		84B7078D1B2EF862009209A5 /* CSTBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTBody.m; sourceTree = "<group>"; };
+		84B7078F1B2EF879009209A5 /* CSTFuel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTFuel.h; sourceTree = "<group>"; };
+		84B707901B2EF879009209A5 /* CSTFuel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTFuel.m; sourceTree = "<group>"; };
+		84DACB5F1B2F31040060365A /* CSTBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTBaseModel.h; sourceTree = "<group>"; };
+		84DACB601B2F31040060365A /* CSTBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTBaseModel.m; sourceTree = "<group>"; };
+		84DACB641B2F32030060365A /* CSTMappingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTMappingProtocol.h; sourceTree = "<group>"; };
 		84EBD4A31B2078C7001F4CF5 /* CSTCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTCar.h; sourceTree = "<group>"; };
 		84EBD4A41B2078C7001F4CF5 /* CSTCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTCar.m; sourceTree = "<group>"; };
 		84EBD4AC1B2078C7001F4CF5 /* CSTLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTLocation.h; sourceTree = "<group>"; };
@@ -710,6 +726,11 @@
 		588EE7271B1473A600CE2D91 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84DACB5E1B2F30C60060365A /* BaseModel */,
+				84B7078A1B2EF7EB009209A5 /* Body */,
+				84B7078B1B2EF7EB009209A5 /* Fuel */,
+				84B707861B2EF654009209A5 /* Transsmision */,
+				84B707821B2EE513009209A5 /* Color */,
 				84673AB91B281B94009D890E /* Task */,
 				84EBD4BE1B20A6E7001F4CF5 /* Company */,
 				84EBD4AB1B2078C7001F4CF5 /* Location */,
@@ -910,6 +931,7 @@
 		588F294D1B18AC1A00F14AED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				84DACB621B2F31920060365A /* Protocols */,
 				841DFB771B1EFAD70012BFE3 /* APIs */,
 				589E208A1B1DDA38006A6C81 /* StoryboardSegues */,
 				588EE72C1B1473E900CE2D91 /* Categories */,
@@ -1147,6 +1169,72 @@
 			);
 			name = FullscreenPreviewCarViewController;
 			path = MVC/Controllers/CarsControllers/FullscreenPreviewCarViewController;
+			sourceTree = "<group>";
+		};
+		84B707821B2EE513009209A5 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				84B707831B2EE6AD009209A5 /* CSTColor.h */,
+				84B707841B2EE6AD009209A5 /* CSTColor.m */,
+			);
+			name = Color;
+			path = MVC/Models/Color;
+			sourceTree = "<group>";
+		};
+		84B707861B2EF654009209A5 /* Transsmision */ = {
+			isa = PBXGroup;
+			children = (
+				84B707871B2EF678009209A5 /* CSTTranssmision.h */,
+				84B707881B2EF678009209A5 /* CSTTranssmision.m */,
+			);
+			name = Transsmision;
+			path = MVC/Models/Transsmision;
+			sourceTree = "<group>";
+		};
+		84B7078A1B2EF7EB009209A5 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				84B7078C1B2EF862009209A5 /* CSTBody.h */,
+				84B7078D1B2EF862009209A5 /* CSTBody.m */,
+			);
+			name = Body;
+			path = MVC/Models/Body;
+			sourceTree = "<group>";
+		};
+		84B7078B1B2EF7EB009209A5 /* Fuel */ = {
+			isa = PBXGroup;
+			children = (
+				84B7078F1B2EF879009209A5 /* CSTFuel.h */,
+				84B707901B2EF879009209A5 /* CSTFuel.m */,
+			);
+			name = Fuel;
+			path = MVC/Models/Fuel;
+			sourceTree = "<group>";
+		};
+		84DACB5E1B2F30C60060365A /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				84DACB5F1B2F31040060365A /* CSTBaseModel.h */,
+				84DACB601B2F31040060365A /* CSTBaseModel.m */,
+			);
+			name = BaseModel;
+			path = MVC/Models/BaseModel;
+			sourceTree = "<group>";
+		};
+		84DACB621B2F31920060365A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84DACB631B2F31C70060365A /* Mapping */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84DACB631B2F31C70060365A /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				84DACB641B2F32030060365A /* CSTMappingProtocol.h */,
+			);
+			path = Mapping;
 			sourceTree = "<group>";
 		};
 		84EBD4A21B2078C7001F4CF5 /* Car */ = {
@@ -1419,11 +1507,13 @@
 				58FC70CB1B1E4A6A005286E1 /* CSTBorderedTextField.m in Sources */,
 				84F2D6FE1B2197D400719617 /* CSTImageCar.m in Sources */,
 				586139891B2DC98E00603268 /* CarImageCell.m in Sources */,
+				84B707891B2EF678009209A5 /* CSTTranssmision.m in Sources */,
 				84EBD4B71B2078C7001F4CF5 /* CSTCar.m in Sources */,
 				5861397F1B2DC97300603268 /* CSTProspectCell.m in Sources */,
 				585A22711B2EAC59004E5114 /* CSTBodyTypeDataSource.m in Sources */,
 				5877CE811B2181010097DF86 /* CSTCheckBoxButton.m in Sources */,
 				58701B671B15D23D00F0A21E /* DropDownTable.m in Sources */,
+				84B707851B2EE6AD009209A5 /* CSTColor.m in Sources */,
 				84EBD4C51B20BC25001F4CF5 /* CSTAttributedLabel.m in Sources */,
 				584C01621B284D040047DB7A /* CSTRoundedMark.m in Sources */,
 				588F29571B18AD3900F14AED /* NSDictionary+JSONRepresentation.m in Sources */,
@@ -1467,6 +1557,7 @@
 				588EE7031B146F6600CE2D91 /* main.m in Sources */,
 				841DFB821B1EFAD70012BFE3 /* CSTNetworkManager.m in Sources */,
 				588EE7931B14843400CE2D91 /* CSTValidator.m in Sources */,
+				84B707911B2EF879009209A5 /* CSTFuel.m in Sources */,
 				84673ABC1B281BBB009D890E /* CSTTask.m in Sources */,
 				841DFB811B1EFAD70012BFE3 /* CSTDataManager.m in Sources */,
 				585A226B1B2EAC3D004E5114 /* CSTCarYearFromDataSource.m in Sources */,
@@ -1476,7 +1567,9 @@
 				5861397A1B2DC96400603268 /* CSTCarCell.m in Sources */,
 				84EF16161B26EF98008DEC29 /* UIImagePickerController+fixOrientation.m in Sources */,
 				58A522AD1B20A70500773273 /* AlertMessageService.m in Sources */,
+				84B7078E1B2EF862009209A5 /* CSTBody.m in Sources */,
 				587E82351B2727550081F933 /* CSTUnderlinedButton.m in Sources */,
+				84DACB611B2F31040060365A /* CSTBaseModel.m in Sources */,
 				589E20891B1DDA29006A6C81 /* CSTBaseOffersController.m in Sources */,
 				5855852F1B25E2BD00FB0C46 /* CSTCommonTopController.m in Sources */,
 			);

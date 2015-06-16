@@ -16,7 +16,7 @@
     if (self) {
         _ID = random()%20;
         _prospectID = random()%40;
-        _prospectName = [NSString stringWithFormat:@"User %li", _prospectID];
+        _prospectName = [NSString stringWithFormat:@"User %i", _prospectID];
         _date = [NSDate date];
     }
     return self;

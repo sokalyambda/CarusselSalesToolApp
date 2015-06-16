@@ -30,13 +30,18 @@
 @property (weak, nonatomic) IBOutlet UIView *headerHolder;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *carDetailsScrollView;
-@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UICollectionView *carImagesCollectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *carOriginalImageView;
 
 //TODO: outlets
 @property (weak, nonatomic) IBOutlet CSTAttributedLabel *carDescriptionLabel;
 @property (weak, nonatomic) IBOutlet CSTAttributedLabel *carExtraLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *carYearLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carFuelTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carTransmissionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carPowerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carTitleLabel;
 
 @end
 
@@ -57,17 +62,7 @@
     [super viewDidLoad];
     
     [self initDropDownTableView];
-    
-    WEAK_SELF;
-    [[CSTDataManager sharedInstance] getCarWithID:24498 result:^(CSTCar *car, NSError *error) {
-        weakSelf.currentCar = car;
-    }];
-    
-    [self.carDescriptionLabel setText:@"Description: In literary theory, a text is any object that can be read, whether this object is a work of literature, a street sign, an arrangement of buildings on a city block, or styles of clothing. It is a coherent set of signs that transmits some kind of informative message.[1] This set of symbols is considered in terms of the informative message's content, rather than in terms of its physical form or the medium in which it is represented.Within the field of literary criticism, text also refers to the original information content of a particular piece of writing; that is, the text of a work is that primal symbolic arrangement of letters as originally composed, apart from later alterations, deterioration, commentary, translations, paratext, etc. Therefore, when literary criticism is concerned with the determination of a text, it is concerned with the distinguishing of the original information content from whatever has been added to or subtracted from that content as it appears in a given textual document (that is, a physical representation of text)." withAttributedWordsCount:1 withColor:[UIColor greenColor]];
-
-    [self.carExtraLabel setText:@"Extra: paratext, etc. Therefore, when literary criticism is concerned with the determination of a text, it is concerned with the distinguishing of the original information content from whatever has been added to or subtracted from that content as it appears in a given textual document (that is, a physical representation of text).s, paratext, etc. Therefore, when literary criticism is concerned with the determination of a text, it is concerned with the distinguishing of the original information content from whatever has been added to or subtracted from that content as it appears in a given textual document (that is, a physical representation of text).s, paratext, etc. Therefore, when literary criticism is concerned with the determination of a text, it is concerned with the distinguishing of the original information content from whatever has been added to or subtracted from that content as it appears in a given textual document (that is, a physical representation" withAttributedWordsCount:1 withColor:[UIColor greenColor]];
-    
-    [self.carImagesCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CarImageCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([CarImageCell class])];
+    [self registerCell];
 }
 
 #pragma mark - Metods
@@ -134,18 +129,31 @@
 
 - (void)updateCarInformation
 {
+    [self collectionView:self.carImagesCollectionView didSelectItemAtIndexPath:0];
+    
+    self.carTitleLabel.text         = self.currentCar.title;
+    self.carFuelTypeLabel.text      = self.currentCar.fuel.title;
+    //self.carYearLabel.text = self.currentCar.licenseDateYear;
+    self.carTransmissionLabel.text  = self.currentCar.transsmision.title;
+    self.carPowerLabel.text         = [NSString stringWithFormat:@"%likW/%lihp", (long)self.currentCar.powerKw, (long)self.currentCar.powerHp];
+    
+    
+    [self.carDescriptionLabel setText:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Description:", nil), self.currentCar.descriptions] withAttributedWordsCount:1 withColor:UIColorFromRGB(0x33CC66)];
+    
+    [self.carExtraLabel setText:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Extra:", nil), self.currentCar.extra] withAttributedWordsCount:1 withColor:UIColorFromRGB(0x33CC66)];
+    
     [self.carImagesCollectionView reloadData];
     //TODO: update views
 }
 
 - (IBAction)galleryRightClick:(id)sender
 {
-    
+
 }
 
 - (IBAction)galleryLeftClick:(id)sender
 {
-    
+
 }
 
 - (void)initDropDownTableView
@@ -166,6 +174,13 @@
     }
     
     return currentDataSource;
+}
+
+- (void)registerCell
+{
+    NSString *nibName = NSStringFromClass([CarImageCell class]);
+    UINib *cellNib = [UINib nibWithNibName:nibName bundle:nil];
+    [self.carImagesCollectionView registerNib:cellNib forCellWithReuseIdentifier:nibName];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -196,6 +211,22 @@
     [self.carOriginalImageView sd_setImageWithURL:currentImageURL];
 }
 
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGSize size = CGSizeZero;
+    NSInteger height = collectionView.bounds.size.height - ((UICollectionViewFlowLayout *)collectionViewLayout).minimumInteritemSpacing;
+    NSInteger width = collectionView.bounds.size.width;
+    if (collectionView == self.carImagesCollectionView) {
+        width = height;
+    }
+    size = CGSizeMake(width, height);
+    return size;
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
@@ -210,7 +241,7 @@
     }
     
     WEAK_SELF;
-    [[CSTDataManager sharedInstance] postImage:chosenImage withID:24498 result:^(BOOL success, CSTImageCar *image) {
+    [[CSTDataManager sharedInstance] postImage:chosenImage withID:self.currentCar.ID result:^(BOOL success, CSTImageCar *image) {
         //TO DO
     }];
     [picker dismissViewControllerAnimated:YES completion:^{

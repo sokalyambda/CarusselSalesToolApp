@@ -6,11 +6,8 @@
 //  Copyright (c) 2014 Thinkmobiles. All rights reserved.
 //
 
-@interface CSTModelGroup : NSObject
+#import "CSTBaseModel.h"
 
-@property (assign) NSInteger ID;
-@property (copy) NSString *title;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+@interface CSTModelGroup : CSTBaseModel
 
 @end

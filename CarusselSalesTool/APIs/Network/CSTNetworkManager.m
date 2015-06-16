@@ -73,7 +73,7 @@ NSString *const baseURLString = @"http://mobileapp.vacs.hu.opel.dwt.carusselgrou
 
 - (void)getCarWithID:(NSInteger)ID result:(CarBlock)result
 {
-    [self GET:[NSString stringWithFormat:@"/vacs-rest/vehicle/%i", ID] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self GET:[NSString stringWithFormat:@"/vehicle/%i", ID] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         return result([[CSTCar alloc] initWithDictionary:responseObject], nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         return result(nil, error);

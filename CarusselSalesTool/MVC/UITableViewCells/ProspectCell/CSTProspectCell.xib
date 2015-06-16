@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Lato-Light.ttf">
@@ -40,19 +39,19 @@
                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cars matches" minimumFontSize="17" background="tab_raw_3" translatesAutoresizingMaskIntoConstraints="NO" id="TZK-Du-Rr9" customClass="CSTBorderedTextField">
-                        <rect key="frame" x="636" y="3" width="116" height="32"/>
+                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" background="tab_row_1" translatesAutoresizingMaskIntoConstraints="NO" id="KHB-Iz-XmJ" customClass="CSTBorderedTextField">
+                        <rect key="frame" x="8" y="3" width="292" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="116" id="RKq-56-NmY"/>
+                            <constraint firstAttribute="height" priority="999" constant="32" id="1P1-VU-R9R"/>
                         </constraints>
                         <color key="textColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" background="tab_row_1" translatesAutoresizingMaskIntoConstraints="NO" id="KHB-Iz-XmJ" customClass="CSTBorderedTextField">
-                        <rect key="frame" x="8" y="3" width="292" height="32"/>
+                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cars matches" minimumFontSize="17" background="tab_raw_3" translatesAutoresizingMaskIntoConstraints="NO" id="TZK-Du-Rr9" customClass="CSTBorderedTextField">
+                        <rect key="frame" x="636" y="3" width="116" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="height" priority="999" constant="32" id="1P1-VU-R9R"/>
+                            <constraint firstAttribute="width" constant="116" id="RKq-56-NmY"/>
                         </constraints>
                         <color key="textColor" red="0.25098039220000001" green="0.33725490200000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
@@ -68,7 +67,7 @@
                     <constraint firstItem="TGR-lu-hnm" firstAttribute="leading" secondItem="vcq-ZN-vJU" secondAttribute="trailing" constant="6" id="GGv-HA-7lL"/>
                     <constraint firstAttribute="bottom" secondItem="KHB-Iz-XmJ" secondAttribute="bottom" constant="3" id="Lpc-1b-0lj"/>
                     <constraint firstItem="vcq-ZN-vJU" firstAttribute="top" secondItem="NT7-QL-tou" secondAttribute="top" constant="3" id="Oks-4L-mJn"/>
-                    <constraint firstItem="TZK-Du-Rr9" firstAttribute="trailing" secondItem="NT7-QL-tou" secondAttribute="trailingMargin" id="SZD-IL-Yxp"/>
+                    <constraint firstAttribute="trailing" secondItem="TZK-Du-Rr9" secondAttribute="trailing" constant="8" id="Tb3-86-MFv"/>
                     <constraint firstItem="TZK-Du-Rr9" firstAttribute="top" secondItem="NT7-QL-tou" secondAttribute="top" constant="3" id="YYY-c3-wiz"/>
                     <constraint firstAttribute="bottom" secondItem="vcq-ZN-vJU" secondAttribute="bottom" constant="3" id="cvs-UX-I4E"/>
                     <constraint firstItem="KHB-Iz-XmJ" firstAttribute="top" secondItem="NT7-QL-tou" secondAttribute="top" constant="3" id="iL5-mo-z7P"/>
@@ -83,7 +82,7 @@
                 <outlet property="townTextField" destination="vcq-ZN-vJU" id="kQE-Hm-Ujp"/>
                 <outlet property="yearTextField" destination="TGR-lu-hnm" id="Czp-Gh-xfd"/>
             </connections>
-            <point key="canvasLocation" x="417" y="138.5"/>
+            <point key="canvasLocation" x="649" y="113.5"/>
         </tableViewCell>
     </objects>
     <resources>

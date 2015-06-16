@@ -10,14 +10,4 @@
 
 @implementation CSTLocation
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
-{
-    self = [super init];
-    if (self) {
-        _ID = [dictionary[@"id"] integerValue];
-        _title = dictionary[@"title"];
-    }
-    return self;
-}
-
 @end

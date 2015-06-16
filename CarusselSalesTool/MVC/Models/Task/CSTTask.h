@@ -6,15 +6,13 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "CSTMappingProtocol.h"
 
-@interface CSTTask : NSObject
+@interface CSTTask : NSObject <CSTMappingProtocol>
 
 @property (assign) NSInteger ID;
 @property (assign) NSInteger prospectID;
 @property (strong) NSString *prospectName;
 @property (strong) NSDate *date;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
