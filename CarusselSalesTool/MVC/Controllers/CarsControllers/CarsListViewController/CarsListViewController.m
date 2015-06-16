@@ -7,7 +7,6 @@
 //
 
 #import "CarsListViewController.h"
-#import "CarsFiltersViewController.h"
 
 #import "CSTCarCell.h"
 #import "UIView+MakeFromXib.h"
@@ -158,6 +157,14 @@ static NSUInteger const kBottomPullRefreshHeight = 60.f;
 - (void)bottomPullToRefreshTriggered:(MNMBottomPullToRefreshManager *)manager
 {
     [self refreshCarsList];
+}
+
+#pragma mark - CSTCarsFiltersDelegate
+
+- (void)carsFiltersController:(CarsFiltersViewController *)controller didSelectFiltersForCarSearch:(NSDictionary *)filters
+{
+    [self getCarsListPage:0 withFilters:filters];
+    //    [self movePanelToOriginalPosition];
 }
 
 @end

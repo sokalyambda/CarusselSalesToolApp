@@ -6,11 +6,13 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
+#import "CarsFiltersViewController.h"
+
 @class CSTCar;
 
 typedef void(^CarSelectedCompletion)(CSTCar *car);
 
-@interface CarsListViewController : UIViewController
+@interface CarsListViewController : UIViewController<CSTCarsFiltersDelegate>
 
 @property (copy, nonatomic) CarSelectedCompletion carSelectedCompletion;
 

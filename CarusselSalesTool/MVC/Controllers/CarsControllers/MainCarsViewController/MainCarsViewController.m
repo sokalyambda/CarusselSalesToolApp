@@ -11,9 +11,7 @@
 #import "CarDetailsViewController.h"
 #import "CarsFiltersViewController.h"
 
-static CGFloat kSlideTiming = 0.5f;
-
-@interface MainCarsViewController ()<CSTCarsFiltersDelegate, UIGestureRecognizerDelegate>
+@interface MainCarsViewController ()<CSTCarsFiltersDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *carsListHolder;
 @property (weak, nonatomic) IBOutlet UIView *carDetailsHolder;
@@ -35,7 +33,7 @@ static CGFloat kSlideTiming = 0.5f;
 {
     if (CGRectEqualToRect(_originalPanelPosition, CGRectZero)) {
         _originalPanelPosition = (CGRect) {
-            .origin = CGPointMake(-CGRectGetWidth(self.carsListHolder.frame), CGRectGetMinY(self.carsListHolder.frame)),
+            .origin = CGPointMake(-CGRectGetWidth(self.carsListHolder.frame) + CGRectGetWidth(self.searchView.frame), CGRectGetMinY(self.carsListHolder.frame)),
             .size = self.carsListHolder.frame.size
         };
     }
@@ -49,29 +47,35 @@ static CGFloat kSlideTiming = 0.5f;
 {
     [super viewDidLoad];
     [self setupChildControllers];
-    [self setupGestures];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self setupFiltersController];
 }
 
 #pragma mark - Actions
 
-- (IBAction)showFiltersClick:(id)sender
+- (void)setupFiltersController
 {
-    NSUInteger filtersPanelState = self.carsFiltersController.state;
-    switch (filtersPanelState) {
-        case CSTFiltersPanelStateOpened: {
-            [self movePanelToOriginalPosition];
-            break;
-        }
-        case CSTFiltersPanelStateClosed: {
-            [self showFilters];
-            break;
-        }
-        default:
-            break;
-    }
+    self.carsFiltersController = [[CarsFiltersViewController alloc] initWithNibName:NSStringFromClass([CarsFiltersViewController class]) bundle:nil];
+    //setup the delegate
+    self.carsFiltersController.delegate = self.carsListController;
+    
+    [self addChildViewController:self.carsFiltersController];
+    [self.carsFiltersController didMoveToParentViewController:self];
+    
+    [self.view addSubview:self.carsFiltersController.view];
+    //to correct the appearance of left panel
+    [self.view bringSubviewToFront:self.carsFiltersController.view];
+    self.carsFiltersController.containerFrame = self.carsListHolder.frame;
+    
+    self.carsFiltersController.view.frame = self.originalPanelPosition;
 }
 
-- (void)setupChildControllers
+- (void)setupCarsListController
 {
     self.carsListController = [[CarsListViewController alloc] initWithNibName:NSStringFromClass([CarsListViewController class]) bundle:nil];
     [self.carsListController.view setFrame:self.carsListHolder.frame];
@@ -80,7 +84,10 @@ static CGFloat kSlideTiming = 0.5f;
     [self.carsListController didMoveToParentViewController:self];
     //setup completion block for carsListController to determine what car has been selected
     [self handleCarSelection];
-    
+}
+
+- (void)setupCarDetailsController
+{
     self.carDetailsController = [[CarDetailsViewController alloc] initWithNibName:NSStringFromClass([CarDetailsViewController class]) bundle:nil];
     [self.carDetailsController.view setFrame:self.carDetailsHolder.frame];
     [self.carDetailsHolder addSubview:self.carDetailsController.view];
@@ -88,63 +95,10 @@ static CGFloat kSlideTiming = 0.5f;
     [self.carDetailsController didMoveToParentViewController:self];
 }
 
-- (UIView *)getFiltersView
+- (void)setupChildControllers
 {
-    if (!self.carsFiltersController) {
-        // this is where you define the view for the left panel
-        self.carsFiltersController = [[CarsFiltersViewController alloc] initWithNibName:NSStringFromClass([CarsFiltersViewController class]) bundle:nil];
-        
-        //setup the delegate
-        self.carsFiltersController.delegate = self;
-                
-        [self addChildViewController:self.carsFiltersController];
-        [self.carsFiltersController didMoveToParentViewController:self];
-        
-        self.carsFiltersController.view.frame = self.originalPanelPosition;
-    }
-    
-    UIView *view = self.carsFiltersController.view;
-    
-    return view;
-}
-
-- (void)showFilters
-{
-    UIView *childView = [self getFiltersView];
-    [self.view addSubview:childView];
-    //to correct the appearance of left panel
-    [self.view bringSubviewToFront:self.searchView];
-    
-    [UIView animateWithDuration:kSlideTiming delay:0 options:UIViewAnimationOptionBeginFromCurrentState
-                     animations:^{
-                         childView.frame = self.carsListHolder.frame;
-                     }
-                     completion:^(BOOL finished) {
-                         if (finished) {
-                             self.carsFiltersController.state = CSTFiltersPanelStateOpened;
-                         }
-                     }];
-}
-
-- (void)movePanelToOriginalPosition
-{
-    [UIView animateWithDuration:kSlideTiming delay:0 options:UIViewAnimationOptionBeginFromCurrentState
-                     animations:^{
-                         self.carsFiltersController.view.frame = self.originalPanelPosition;
-                     }
-                     completion:^(BOOL finished) {
-                         if (finished) {
-                             [self resetFiltersPanel];
-                         }
-                     }];
-}
-
-- (void)resetFiltersPanel
-{
-    if (self.carsFiltersController) {
-        [self.carsFiltersController.view removeFromSuperview];
-        self.carsFiltersController.state = CSTFiltersPanelStateClosed;
-    }
+    [self setupCarsListController];
+    [self setupCarDetailsController];
 }
 
 - (void)handleCarSelection
@@ -153,54 +107,6 @@ static CGFloat kSlideTiming = 0.5f;
     [self.carsListController setCarSelectedCompletion:^(CSTCar *car) {
         weakSelf.carDetailsController.currentCar = car;
     }];
-}
-
-#pragma mark - Gestures Actions
-
-- (void)setupGestures
-{
-    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(movePanel:)];
-    [panRecognizer setMinimumNumberOfTouches:1];
-    [panRecognizer setMaximumNumberOfTouches:1];
-    [panRecognizer setDelegate:self];
-    
-    [self.view addGestureRecognizer:panRecognizer];
-}
-
--(void)movePanel:(UIPanGestureRecognizer *)gesture
-{
-    NSUInteger filtersPanelState = self.carsFiltersController.state;
-    
-    [gesture.view.layer removeAllAnimations];
-    
-    CGPoint velocity = [gesture velocityInView:gesture.view];
-    
-    if (gesture.state == UIGestureRecognizerStateBegan) {
-        if (velocity.x > 0 && filtersPanelState == CSTFiltersPanelStateClosed) {
-            [self showFilters];
-        } else if (velocity.x < 0 && filtersPanelState == CSTFiltersPanelStateOpened) {
-            [self movePanelToOriginalPosition];
-        }
-    }
-}
-
-#pragma mark - CSTCarsFiltersDelegate
-
-- (void)carsFiltersController:(CarsFiltersViewController *)controller didSelectFiltersForCarSearch:(NSDictionary *)filters
-{
-    [self.carsListController getCarsListPage:0 withFilters:filters];
-    [self movePanelToOriginalPosition];
-}
-
-#pragma mark - UIGestureRecognizerDelegate
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-{
-    // Disallow recognition of tap gestures in the UISwitch.
-    if ([touch.view isKindOfClass:[UISlider class]]) {
-        return NO;
-    }
-    return YES;
 }
 
 @end
