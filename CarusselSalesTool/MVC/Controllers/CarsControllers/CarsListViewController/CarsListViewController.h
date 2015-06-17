@@ -9,13 +9,17 @@
 #import "CarsFiltersViewController.h"
 
 @class CSTCar;
-
-typedef void(^CarSelectedCompletion)(CSTCar *car);
+@protocol CSTCarsListDelegate;
 
 @interface CarsListViewController : UIViewController<CSTCarsFiltersDelegate>
 
-@property (copy, nonatomic) CarSelectedCompletion carSelectedCompletion;
+@property (weak, nonatomic) id<CSTCarsListDelegate> delegate;
 
-- (void)getCarsListPage:(NSUInteger)page withFilters:(NSDictionary *)filters;
+@end
+
+@protocol CSTCarsListDelegate <NSObject>
+
+@optional
+- (void)carsListTable:(UITableView *)carsListTable didSelectCar:(CSTCar *)car;
 
 @end

@@ -11,13 +11,11 @@
 #import "CarDetailsViewController.h"
 #import "CarsFiltersViewController.h"
 
-@interface MainCarsViewController ()<CSTCarsFiltersDelegate>
+@interface MainCarsViewController ()<CSTCarsListDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *carsListHolder;
 @property (weak, nonatomic) IBOutlet UIView *carDetailsHolder;
 @property (weak, nonatomic) IBOutlet UIView *searchView;
-
-@property (assign, nonatomic) CGRect originalPanelPosition;
 
 @property (strong, nonatomic) CarsListViewController *carsListController;
 @property (strong, nonatomic) CarsFiltersViewController *carsFiltersController;
@@ -26,20 +24,6 @@
 @end
 
 @implementation MainCarsViewController
-
-#pragma mark - Accessors
-
-- (CGRect)originalPanelPosition
-{
-    if (CGRectEqualToRect(_originalPanelPosition, CGRectZero)) {
-        _originalPanelPosition = (CGRect) {
-            .origin = CGPointMake(-CGRectGetWidth(self.carsListHolder.frame) + CGRectGetWidth(self.searchView.frame), CGRectGetMinY(self.carsListHolder.frame)),
-            .size = self.carsListHolder.frame.size
-        };
-    }
-    
-    return _originalPanelPosition;
-}
 
 #pragma mark - View Lifecycle
 
@@ -72,7 +56,10 @@
     [self.view bringSubviewToFront:self.carsFiltersController.view];
     self.carsFiltersController.containerFrame = self.carsListHolder.frame;
     
-    self.carsFiltersController.view.frame = self.originalPanelPosition;
+    self.carsFiltersController.view.frame = (CGRect) {
+        .origin = CGPointMake(-CGRectGetWidth(self.carsListHolder.frame) + CGRectGetMinX(self.carsListHolder.frame), CGRectGetMinY(self.carsListHolder.frame)),
+        .size = self.carsListHolder.frame.size
+    };;
 }
 
 - (void)setupCarsListController
@@ -82,8 +69,7 @@
     [self.carsListHolder addSubview:self.carsListController.view];
     [self addChildViewController:self.carsListController];
     [self.carsListController didMoveToParentViewController:self];
-    //setup completion block for carsListController to determine what car has been selected
-    [self handleCarSelection];
+    self.carsListController.delegate = self;
 }
 
 - (void)setupCarDetailsController
@@ -101,12 +87,11 @@
     [self setupCarDetailsController];
 }
 
-- (void)handleCarSelection
+#pragma mark - CSTCarsListDelegate
+
+- (void)carsListTable:(UITableView *)carsListTable didSelectCar:(CSTCar *)car
 {
-    WEAK_SELF;
-    [self.carsListController setCarSelectedCompletion:^(CSTCar *car) {
-        weakSelf.carDetailsController.currentCar = car;
-    }];
+    self.carDetailsController.currentCar = car;
 }
 
 @end
