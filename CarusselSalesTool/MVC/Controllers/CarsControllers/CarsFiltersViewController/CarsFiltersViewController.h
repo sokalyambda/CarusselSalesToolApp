@@ -19,6 +19,10 @@ typedef enum : NSUInteger {
 @interface CarsFiltersViewController : UIViewController
 
 @property (assign, nonatomic) CSTFiltersPanelState state;
+
+@property (assign, nonatomic) CGRect containerFrame;
+
+
 @property (weak, nonatomic) id<CSTCarsFiltersDelegate> delegate;
 
 @end

@@ -1,30 +1,8 @@
-/*
- * Copyright (c) 2012 Mario Negro Martín
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
- * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
- * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
- */
 
 #import "MNMBottomPullToRefreshManager.h"
 #import "MNMBottomPullToRefreshView.h"
 
-CGFloat const kAnimationDuration = 0.2f;
+static CGFloat const kAnimationDuration = 0.4f;
 
 @interface MNMBottomPullToRefreshManager()
 
@@ -70,13 +48,12 @@ CGFloat const kAnimationDuration = 0.2f;
 /*
  * Initializes the manager object with the information to link view and table
  */
-- (id)initWithPullToRefreshViewHeight:(CGFloat)height tableView:(UITableView *)table withClient:(id<MNMBottomPullToRefreshManagerClient>)client {
-
+- (id)initWithPullToRefreshViewHeight:(CGFloat)height tableView:(UITableView *)table withClient:(id<MNMBottomPullToRefreshManagerClient>)client
+{
     if (self = [super init]) {
-        
         _client = client;
         _table = table;
-        _pullToRefreshView = [[MNMBottomPullToRefreshView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth([_table frame]), height)];
+        _pullToRefreshView = [[MNMBottomPullToRefreshView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(_table.frame), height)];
     }
     
     return self;
@@ -88,17 +65,14 @@ CGFloat const kAnimationDuration = 0.2f;
 /*
  * Returns the correct offset to apply to the pull-to-refresh view, depending on contentSize
  */
-- (CGFloat)tableScrollOffset {
+- (CGFloat)tableScrollOffset
+{
+    CGFloat offset = 0.0f;
     
-    CGFloat offset = 0.0f;        
-    
-    if ([_table contentSize].height < CGRectGetHeight([_table frame])) {
-        
-        offset = -[_table contentOffset].y;
-        
+    if (self.table.contentSize.height < CGRectGetHeight(self.table.frame)) {
+        offset = -self.table.contentOffset.y;
     } else {
-        
-        offset = ([_table contentSize].height - [_table contentOffset].y) - CGRectGetHeight([_table frame]);
+        offset = (self.table.contentSize.height - self.table.contentOffset.y) - CGRectGetHeight(self.table.frame);
     }
     
     return offset;
@@ -107,32 +81,29 @@ CGFloat const kAnimationDuration = 0.2f;
 /*
  * Relocate pull-to-refresh view
  */
-- (void)relocatePullToRefreshView {
-    
+- (void)relocatePullToRefreshView
+{
     CGFloat yOrigin = 0.0f;
     
-    if ([_table contentSize].height >= CGRectGetHeight([_table frame])) {
-        
-        yOrigin = [_table contentSize].height;
-        
+    if (self.table.contentSize.height >= CGRectGetHeight(self.table.frame)) {
+        yOrigin = self.table.contentSize.height;
     } else {
-        
-        yOrigin = CGRectGetHeight([_table frame]);
+        yOrigin = CGRectGetHeight(self.table.frame);
     }
     
-    CGRect frame = [_pullToRefreshView frame];
+    CGRect frame = self.pullToRefreshView.frame;
     frame.origin.y = yOrigin;
-    [_pullToRefreshView setFrame:frame];
+    [self.pullToRefreshView setFrame:frame];
     
-    [_table addSubview:_pullToRefreshView];
+    [self.table addSubview:self.pullToRefreshView];
 }
 
 /*
  * Sets the pull-to-refresh view visible or not. Visible by default
  */
-- (void)setPullToRefreshViewVisible:(BOOL)visible {
-    
-    [_pullToRefreshView setHidden:!visible];
+- (void)setPullToRefreshViewVisible:(BOOL)visible
+{
+    [self.pullToRefreshView setHidden:!visible];
 }
 
 #pragma mark -
@@ -141,23 +112,18 @@ CGFloat const kAnimationDuration = 0.2f;
 /*
  * Checks state of control depending on tableView scroll offset
  */
-- (void)tableViewScrolled {
-    
-    if (![_pullToRefreshView isHidden] && ![_pullToRefreshView isLoading]) {
+- (void)tableViewScrolled
+{
+    if (!self.pullToRefreshView.isHidden && !self.pullToRefreshView.isLoading) {
         
-        CGFloat offset = [self tableScrollOffset];
+        CGFloat offset = self.tableScrollOffset;
 
         if (offset >= 0.0f) {
-            
-            [_pullToRefreshView changeStateOfControl:MNMBottomPullToRefreshViewStateIdle offset:offset];
-            
-        } else if (offset <= 0.0f && offset >= -[_pullToRefreshView fixedHeight]) {
-                
-            [_pullToRefreshView changeStateOfControl:MNMBottomPullToRefreshViewStatePull offset:offset];
-            
+            [self.pullToRefreshView changeStateOfControl:MNMBottomPullToRefreshViewStateIdle offset:offset];
+        } else if (offset <= 0.0f && offset >= -self.pullToRefreshView.fixedHeight) {
+            [self.pullToRefreshView changeStateOfControl:MNMBottomPullToRefreshViewStatePull offset:offset];
         } else {
-            
-            [_pullToRefreshView changeStateOfControl:MNMBottomPullToRefreshViewStateRelease offset:offset];
+            [self.pullToRefreshView changeStateOfControl:MNMBottomPullToRefreshViewStateRelease offset:offset];
         }
     }
 }
@@ -165,28 +131,28 @@ CGFloat const kAnimationDuration = 0.2f;
 /*
  * Checks releasing of the tableView
  */
-- (void)tableViewReleased {
-    
-    if (![_pullToRefreshView isHidden]) {
+- (void)tableViewReleased
+{
+    if (!self.pullToRefreshView.isHidden) {
         
-        CGFloat offset = [self tableScrollOffset];
-        CGFloat height = -[_pullToRefreshView fixedHeight];
+        CGFloat offset = self.tableScrollOffset;
+        CGFloat height = -self.pullToRefreshView.fixedHeight;
         
         if (offset <= 0.0f && offset < height) {
             
-            [_client bottomPullToRefreshTriggered:self];
+            [self.client bottomPullToRefreshTriggered:self];
             
-            [_pullToRefreshView changeStateOfControl:MNMBottomPullToRefreshViewStateLoading offset:offset];
+            [self.pullToRefreshView changeStateOfControl:MNMBottomPullToRefreshViewStateLoading offset:offset];
             
             [UIView animateWithDuration:kAnimationDuration animations:^{
                 
-                if ([_table contentSize].height >= CGRectGetHeight([_table frame])) {
+                if (self.table.contentSize.height >= CGRectGetHeight(self.table.frame)) {
                 
-                    [_table setContentInset:UIEdgeInsetsMake(0.0f, 0.0f, -height, 0.0f)];
+                    [self.table setContentInset:UIEdgeInsetsMake(0.0f, 0.0f, -height, 0.0f)];
                     
                 } else {
                     
-                    [_table setContentInset:UIEdgeInsetsMake(height, 0.0f, 0.0f, 0.0f)];
+                    [self.table setContentInset:UIEdgeInsetsMake(height, 0.0f, 0.0f, 0.0f)];
                 }
             }];
         }
@@ -196,13 +162,13 @@ CGFloat const kAnimationDuration = 0.2f;
 /*
  * The reload of the table is completed
  */
-- (void)tableViewReloadFinished {
-    
-    [_table setContentInset:UIEdgeInsetsZero];
+- (void)tableViewReloadFinished
+{
+    [self.table setContentInset:UIEdgeInsetsZero];
 
     [self relocatePullToRefreshView];
-
-    [_pullToRefreshView changeStateOfControl:MNMBottomPullToRefreshViewStateIdle offset:CGFLOAT_MAX];
+    
+    [self.pullToRefreshView changeStateOfControl:MNMBottomPullToRefreshViewStateIdle offset:CGFLOAT_MAX];
 }
 
 @end

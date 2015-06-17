@@ -466,7 +466,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exh-v7-s1n" userLabel="Cars Filters Tapped View">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exh-v7-s1n" userLabel="Cars Filters Tapped View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_search" translatesAutoresizingMaskIntoConstraints="NO" id="V2l-k3-38G" userLabel="Search Icon">
@@ -523,9 +523,6 @@
                                         <include reference="ksh-rG-gBS"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="GSg-8d-pmf" appends="YES" id="9Z2-Ma-LX5"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5Y-Fu-UBa" userLabel="Car Details Holder">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -611,11 +608,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2R9-cU-wtb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="GSg-8d-pmf">
-                    <connections>
-                        <action selector="showFiltersClick:" destination="fgw-Vp-Mj5" id="7Jh-K4-oUX"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3291" y="-570"/>
         </scene>

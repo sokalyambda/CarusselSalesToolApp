@@ -6,14 +6,20 @@
 //  Copyright (c) 2015 ThinkMobiles. All rights reserved.
 //
 
+#import "CarsFiltersViewController.h"
+
 @class CSTCar;
+@protocol CSTCarsListDelegate;
 
-typedef void(^CarSelectedCompletion)(CSTCar *car);
+@interface CarsListViewController : UIViewController<CSTCarsFiltersDelegate>
 
-@interface CarsListViewController : UIViewController
+@property (weak, nonatomic) id<CSTCarsListDelegate> delegate;
 
-@property (copy, nonatomic) CarSelectedCompletion carSelectedCompletion;
+@end
 
-- (void)getCarsListPage:(NSUInteger)page withFilters:(NSDictionary *)filters;
+@protocol CSTCarsListDelegate <NSObject>
+
+@optional
+- (void)carsListTable:(UITableView *)carsListTable didSelectCar:(CSTCar *)car;
 
 @end

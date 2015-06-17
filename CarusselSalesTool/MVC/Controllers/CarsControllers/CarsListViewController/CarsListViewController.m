@@ -7,7 +7,6 @@
 //
 
 #import "CarsListViewController.h"
-#import "CarsFiltersViewController.h"
 
 #import "CSTCarCell.h"
 #import "UIView+MakeFromXib.h"
@@ -15,12 +14,12 @@
 #import "CSTDataManager.h"
 #import "MNMBottomPullToRefreshManager.h"
 
-static NSUInteger const kCarsPerPage = 10.f;
-static NSUInteger const kBottomPullRefreshHeight = 60.f;
+static NSInteger const kCarsPerPage = 10.f;
+static NSInteger const kBottomPullRefreshHeight = 60.f;
 
 @interface CarsListViewController () <UITableViewDataSource, UITableViewDelegate, MNMBottomPullToRefreshManagerClient>
 
-@property (strong, nonatomic) NSArray *cars;
+@property (strong, nonatomic) NSMutableArray *cars;
 
 @property (strong, nonatomic) CSTDataManager *dataManager;
 
@@ -29,11 +28,36 @@ static NSUInteger const kBottomPullRefreshHeight = 60.f;
 
 @property (weak, nonatomic) IBOutlet UITableView *carListTableView;
 
-@property (assign, nonatomic) NSUInteger currentCarsPage;
+@property (assign, nonatomic) NSInteger currentCarsPage;
+@property (assign, nonatomic) NSInteger totalCarsCount;
+@property (assign, nonatomic) NSInteger possibleCarsCount;
 
 @end
 
 @implementation CarsListViewController
+
+#pragma mark - Accessors
+
+- (NSMutableArray *)cars
+{
+    if (!_cars) {
+        _cars = [NSMutableArray array];
+    }
+    return _cars;
+}
+
+- (NSInteger)possibleCarsCount
+{
+    NSInteger diff = self.totalCarsCount - [self.cars count];
+    if (diff >= 0 && diff < kCarsPerPage) {
+        _possibleCarsCount = diff;
+    } else if (diff >= kCarsPerPage) {
+        _possibleCarsCount = kCarsPerPage;
+    } else {
+        _possibleCarsCount = 0;
+    }
+    return _possibleCarsCount;
+}
 
 #pragma mark - View Lifecycle
 
@@ -42,7 +66,8 @@ static NSUInteger const kBottomPullRefreshHeight = 60.f;
     [super viewDidLoad];
     
     self.dataManager = [CSTDataManager sharedInstance];
-    [self getCarsListPage:0 withFilters:nil];
+    [self receiveTotalCarsCount];
+    [self getCarsListPage:self.currentCarsPage withCount:self.possibleCarsCount withFilters:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -51,13 +76,12 @@ static NSUInteger const kBottomPullRefreshHeight = 60.f;
     [self setupRefreshControl];
 }
 
-- (void)viewDidLayoutSubviews {
-    
+- (void)viewDidLayoutSubviews
+{
     [super viewDidLayoutSubviews];
     
     [self.bottomRefreshManager relocatePullToRefreshView];
 }
-
 
 #pragma mark - UITableViewDataSource
 
@@ -86,13 +110,13 @@ static NSUInteger const kBottomPullRefreshHeight = 60.f;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CSTCar *chosenCar = self.cars[indexPath.row];
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     WEAK_SELF;
     [self.dataManager getCarWithID:chosenCar.ID result:^(CSTCar *car, NSError *error) {
         [MBProgressHUD hideAllHUDsForView:weakSelf.view animated:YES];
-        if (weakSelf.carSelectedCompletion && car) {
-            weakSelf.carSelectedCompletion(car);
+        if ([weakSelf.delegate respondsToSelector:@selector(carsListTable:didSelectCar:)] && car) {
+            [weakSelf.delegate carsListTable:weakSelf.carListTableView didSelectCar:car];
         }
     }];
 }
@@ -108,7 +132,7 @@ static NSUInteger const kBottomPullRefreshHeight = 60.f;
     self.bottomRefreshManager = [[MNMBottomPullToRefreshManager alloc] initWithPullToRefreshViewHeight:kBottomPullRefreshHeight tableView:self.carListTableView withClient:self];
 }
 
-- (void)getCarsListPage:(NSUInteger)page withFilters:(NSDictionary *)filters
+- (void)getCarsListPage:(NSUInteger)page withCount:(NSInteger)count withFilters:(NSDictionary *)filters
 {
     if(!self.refreshControl.isRefreshing && !self.bottomRefreshManager.isLoading) {
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -122,25 +146,45 @@ static NSUInteger const kBottomPullRefreshHeight = 60.f;
     if (filters) {
         [param addEntriesFromDictionary:filters];
     }
+    
     WEAK_SELF;
-    [self.dataManager getCarListForRow:page pageSize:kCarsPerPage parameter:param result:^(NSArray *carList, NSError *error) {
+    [self.dataManager getCarListForRow:page pageSize:count parameter:param result:^(NSArray *carList, NSError *error) {
+        
+        ++weakSelf.currentCarsPage;
+        
         [MBProgressHUD hideAllHUDsForView:weakSelf.view animated:YES];
         
         [weakSelf.refreshControl endRefreshing];
         
-        weakSelf.cars = carList;
-        
-        [weakSelf tableView:weakSelf.carListTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-        
+        [weakSelf.cars addObjectsFromArray:carList];
+                
         [weakSelf.carListTableView reloadData];
         
         [weakSelf.bottomRefreshManager tableViewReloadFinished];
     }];
+    
 }
 
 - (void)refreshCarsList
 {
-    [self getCarsListPage:0 withFilters:nil];
+    self.cars = nil;
+    self.currentCarsPage = 0;
+    [self getCarsListPage:0 withCount:self.possibleCarsCount withFilters:nil];
+}
+
+- (void)receiveTotalCarsCount
+{
+//    WEAK_SELF;
+//    [self.dataManager getCarsCount:^(NSInteger count, NSError *error) {
+//        if (!error) {
+//            weakSelf.totalCarsCount = count;
+//        } else {
+//            ShowTitleErrorAlert(NSLocalizedString(@"Cars count hasn't received.", nil), error);
+//        }
+//        NSLog(@"total count %li", (long)count);
+//    }];
+#warning hardCode!
+    self.totalCarsCount = 37;
 }
 
 #pragma mark - MNMBottomPullToRefreshManagerClient
@@ -157,7 +201,14 @@ static NSUInteger const kBottomPullRefreshHeight = 60.f;
 
 - (void)bottomPullToRefreshTriggered:(MNMBottomPullToRefreshManager *)manager
 {
-    [self refreshCarsList];
+    [self getCarsListPage:self.currentCarsPage withCount:self.possibleCarsCount withFilters:nil];
+}
+
+#pragma mark - CSTCarsFiltersDelegate
+
+- (void)carsFiltersController:(CarsFiltersViewController *)controller didSelectFiltersForCarSearch:(NSDictionary *)filters
+{
+    [self getCarsListPage:self.currentCarsPage withCount:self.possibleCarsCount withFilters:filters];
 }
 
 @end

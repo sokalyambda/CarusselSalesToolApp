@@ -32,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *carDetailsScrollView;
 @property (weak, nonatomic) IBOutlet UICollectionView *carImagesCollectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *carOriginalImageView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loaderActivityIndicator;
 
 //TODO: outlets
 @property (weak, nonatomic) IBOutlet CSTAttributedLabel *carDescriptionLabel;
@@ -147,7 +148,6 @@
     [self.carExtraLabel setText:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Extra:", nil), self.currentCar.extra] withAttributedWordsCount:1 withColor:UIColorFromRGB(0x33CC66)];
     
     [self.carImagesCollectionView reloadData];
-    //TODO: update views
 }
 
 - (IBAction)galleryRightClick:(id)sender
@@ -200,7 +200,11 @@
     NSURL *currentImageURL = [NSURL URLWithString:currentImage.thumbnailUrl];
     
     CarImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CarImageCell class]) forIndexPath:indexPath];
-    [cell.carImage sd_setImageWithURL:currentImageURL];
+    
+    [cell.loaderCellActivityIndicator startAnimating];
+    [cell.carImage sd_setImageWithURL:currentImageURL completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [cell.loaderCellActivityIndicator stopAnimating];
+    }];
     
     return cell;
 }
@@ -211,7 +215,12 @@
 {
     CSTImageCar *currentImage = self.currentCar.images[indexPath.row];
     NSURL *currentImageURL = [NSURL URLWithString:currentImage.origUrl];
-    [self.carOriginalImageView sd_setImageWithURL:currentImageURL];
+    
+    WEAK_SELF;
+    [self.loaderActivityIndicator startAnimating];
+    [self.carOriginalImageView sd_setImageWithURL:currentImageURL completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [weakSelf.loaderActivityIndicator stopAnimating];
+    }];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
