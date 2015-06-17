@@ -43,11 +43,19 @@ NSString *const baseURLString = @"http://mobileapp.vacs.hu.opel.dwt.carusselgrou
 
 - (void)getCarsCount:(IntBlock)result
 {
-    [self POST:@"/vehicle/count" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        return result((NSInteger)responseObject, nil);
+    self.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [self GET:@"/vehicle/count" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        return result([self intFromData:responseObject], nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         return result(0, error);
     }];
+    self.responseSerializer = [AFJSONResponseSerializer serializer];
+}
+
+- (NSInteger)intFromData:(NSData *)data
+{
+    NSString* newStr = [NSString stringWithUTF8String:[data bytes]];
+    return [newStr integerValue];
 }
 
 - (void)getCarListForRow:(NSInteger)row pageSize:(NSInteger)pageSize parameter:(NSDictionary *)parameters result:(CarListBlock)result

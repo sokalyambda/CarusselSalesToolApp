@@ -63,6 +63,10 @@
     
     [self initDropDownTableView];
     [self registerCell];
+    
+    [[CSTDataManager sharedInstance] getCarsCount:^(NSInteger count, NSError *error) {
+        //
+    }];
 }
 
 #pragma mark - Metods
